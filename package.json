@@ -29,5 +29,7 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12"
-  }
+  },
+  "author": "Carlos Cárdenas <unimauro@gmail.com> (https://github.com/unimauro)",
+  "license": "MIT"
 }

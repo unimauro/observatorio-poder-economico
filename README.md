@@ -84,6 +84,11 @@ relación lleva su fuente. El HHI se calcula **solo sobre la muestra**, no sobre
 real. Este proyecto muestra **estructuras societarias declaradas ante el regulador**; no
 imputa conducta alguna.
 
+## ✍️ Autoría
+
+**Carlos Cárdenas** — [@unimauro](https://github.com/unimauro) · [unimauro.github.io](https://unimauro.github.io)
+Proyecto de transparencia económica con datos públicos, hecho en el Perú 🇵🇪.
+
 ## 📄 Licencia
 
 MIT — úsalo, fiscalízalo, mejóralo.

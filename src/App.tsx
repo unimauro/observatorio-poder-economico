@@ -103,8 +103,13 @@ export default function App() {
             </a>
           </span>
           <span className="firma">
-            {datos ? `v${datos.meta.version} · actualizado ${datos.meta.actualizado}` : ''} · hecho
-            en el Perú
+            Un proyecto de{' '}
+            <a href="https://unimauro.github.io" target="_blank" rel="noopener noreferrer">
+              Carlos Cárdenas
+            </a>{' '}
+            (<a href="https://github.com/unimauro" target="_blank" rel="noopener noreferrer">@unimauro</a>)
+            {datos ? ` · v${datos.meta.version} · actualizado ${datos.meta.actualizado}` : ''} ·
+            hecho en el Perú 🇵🇪
           </span>
         </div>
       </footer>
