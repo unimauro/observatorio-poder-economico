@@ -6,6 +6,9 @@ import { fmtNum, fmtSoles } from '../types'
 
 const COMP_LABEL: Record<string, string> = {
   ingresos: 'Ingresos',
+  utilidad: 'Utilidad',
+  activos: 'Activos',
+  ebitda: 'EBITDA',
   empleados: 'Empleo',
   empresas: 'N° empresas',
   sectores: 'Diversificación',
@@ -15,9 +18,12 @@ const COMP_LABEL: Record<string, string> = {
 }
 const COMP_COLOR: Record<string, string> = {
   ingresos: '#e8442e',
-  empleados: '#b32417',
+  utilidad: '#b32417',
+  activos: '#c47fd4',
+  ebitda: '#e87ea1',
+  empleados: '#f2a65a',
   empresas: '#d9a441',
-  sectores: '#f2a65a',
+  sectores: '#90be6d',
   pagerank: '#6da3d8',
   betweenness: '#4ecdc4',
   grado: '#8d99ae',
@@ -87,10 +93,12 @@ export default function Ranking({ datos }: { datos: Datos }) {
               <tr>
                 <th>#</th><th>Grupo</th><th>Control</th>
                 <th className="num">EPI</th>
-                <th className="num">Ingresos aprox.</th>
+                <th className="num">Ingresos</th>
+                <th className="num">Utilidad</th>
+                <th className="num">Activos</th>
+                <th className="num">Market cap</th>
                 <th className="num">Empleados</th>
-                <th className="num">Empresas</th>
-                <th>Sectores</th>
+                <th className="num">Empr.</th>
               </tr>
             </thead>
             <tbody>
@@ -101,9 +109,11 @@ export default function Ranking({ datos }: { datos: Datos }) {
                   <td className="dim">{r.control}</td>
                   <td className="num"><span className={`score-pill ${r.epi >= 60 ? 'score-hi' : r.epi >= 35 ? 'score-mid' : 'score-lo'}`}>{r.epi}</span></td>
                   <td className="num">{fmtSoles(r.ingresos)}</td>
+                  <td className="num">{fmtSoles(r.utilidad)}</td>
+                  <td className="num">{fmtSoles(r.activos)}</td>
+                  <td className="num">{r.market_cap ? fmtSoles(r.market_cap) : '—'}</td>
                   <td className="num">{fmtNum(r.empleados)}</td>
                   <td className="num">{r.empresas}</td>
-                  <td className="dim">{r.lista_sectores.join(' · ')}</td>
                 </tr>
               ))}
             </tbody>

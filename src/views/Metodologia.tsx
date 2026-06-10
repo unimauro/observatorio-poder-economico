@@ -38,8 +38,36 @@ export default function Metodologia({ datos }: { datos: Datos }) {
         <p>Índice 0–100 por grupo económico. Cada variable se normaliza min–max (logarítmica para magnitudes monetarias) y se pondera:</p>
         <div className="formula">{`EPI = ${Object.entries(m.epi_pesos).map(([k, v]) => `${v}·${k}`).join(' + ')}
 
-donde ingresos y empleados se agregan sobre las empresas del grupo,
-y pagerank/betweenness/grado son los máximos del grupo en la red.`}</div>
+donde ingresos, utilidad, ebitda, activos y empleados se agregan (suma)
+sobre las empresas del grupo, y pagerank/betweenness/grado son los
+máximos del grupo en la red.`}</div>
+
+        <h3>Análisis de estados financieros</h3>
+        <p>
+          Cada empresa lleva (cuando la fuente lo permite) ingresos, EBITDA, utilidad neta, activos
+          y patrimonio aproximados, en millones de soles. A partir de ahí se calculan los ratios:
+        </p>
+        <div className="formula">{`margen neto   = utilidad / ingresos
+margen EBITDA = ebitda  / ingresos      (no aplica a bancos/aseguradoras)
+ROE           = utilidad / patrimonio
+ROA           = utilidad / activos
+apalancamiento = activos / patrimonio`}</div>
+        <p>
+          En <strong>bancos y aseguradoras</strong> el EBITDA no es un indicador estándar (su negocio
+          es de balance, no operativo-industrial): se deja vacío y sus activos —la cartera y el
+          balance— dominan cualquier comparación de tamaño. El P/U de la pestaña Bolsa es
+          <code> market cap / utilidad</code>, indicativo.
+        </p>
+
+        <h3>Gerencias</h3>
+        <p>
+          El grafo distingue <strong>directores</strong> (presidencia y directorio) de
+          <strong> gerentes generales</strong> (la línea ejecutiva). Como la SMV bloquea el scraping
+          automatizado, las gerencias generales aparecen por ahora como <em>slots «por confirmar»</em>:
+          el cargo existe y está ubicado en su empresa, pero el nombre del titular se completará
+          corriendo <code>etl/scraper_directorios.py</code> desde una conexión en el Perú. No
+          inventamos nombres de personas.
+        </p>
 
         <h3>Network Affinity Score</h3>
         <p>Puntaje 0–100 para pares de empresas conectadas por señales societarias:</p>

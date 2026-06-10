@@ -1,3 +1,11 @@
+export interface Ratios {
+  margen_ebitda: number | null
+  margen_neto: number | null
+  roe: number | null
+  roa: number | null
+  apalancamiento: number | null
+}
+
 export interface Nodo {
   id: string
   label: string
@@ -9,6 +17,13 @@ export interface Nodo {
   bvl: boolean
   ingresos: number | null
   empleados: number | null
+  ebitda: number | null
+  utilidad: number | null
+  activos: number | null
+  patrimonio: number | null
+  market_cap: number | null
+  ratios: Ratios | null
+  por_confirmar: boolean
   nota: string | null
   fuente: string | null
   grado: number
@@ -16,6 +31,31 @@ export interface Nodo {
   betweenness: number
   eigenvector: number
   comunidad: number
+}
+
+export interface Finanza {
+  id: string
+  nombre: string
+  sector: string
+  grupo_nombre: string | null
+  bvl: boolean
+  ingresos: number | null
+  ebitda: number | null
+  utilidad: number | null
+  activos: number | null
+  patrimonio: number | null
+  market_cap: number | null
+  empleados: number | null
+  ratios: Ratios | null
+  fuente: string | null
+}
+
+export interface Bolsa {
+  n_listadas: number
+  market_cap_total: number
+  por_market_cap: Finanza[]
+  por_sector: { sector: string; market_cap: number }[]
+  emisores: Finanza[]
 }
 
 export interface Arista {
@@ -35,8 +75,14 @@ export interface RankingItem {
   componentes: Record<string, number>
   ingresos: number
   empleados: number
+  utilidad: number
+  ebitda: number
+  activos: number
+  patrimonio: number
+  market_cap: number
   empresas: number
   sectores: number
+  margen_neto: number | null
   lista_sectores: string[]
 }
 
@@ -98,6 +144,8 @@ export interface Datos {
   ranking: RankingItem[]
   conexiones: { pares: ParConexo[]; personas: PersonaConexa[] }
   sectores: SectorInfo[]
+  finanzas: Finanza[]
+  bolsa: Bolsa
   puentes: Puente[]
 }
 
@@ -111,3 +159,13 @@ export const fmtSoles = (v: number | null | undefined): string =>
 
 export const fmtNum = (v: number | null | undefined): string =>
   v == null ? '—' : v.toLocaleString('es-PE')
+
+/** S/ 12 450 M → "S/ 12.5 mil M" para ejes/tooltips compactos. */
+export const fmtSolesCorto = (v: number | null | undefined): string => {
+  if (v == null) return '—'
+  if (v >= 1000) return `S/ ${(v / 1000).toLocaleString('es-PE', { maximumFractionDigits: 1 })} mil M`
+  return `S/ ${v.toLocaleString('es-PE')} M`
+}
+
+export const fmtPct = (v: number | null | undefined): string =>
+  v == null ? '—' : `${v.toLocaleString('es-PE', { maximumFractionDigits: 1 })}%`

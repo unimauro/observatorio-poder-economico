@@ -12,13 +12,19 @@ const ROL_LABEL: Record<string, string> = {
   gerente_general: 'gerencia',
 }
 
+type Filtro = 'todos' | 'directores' | 'gerentes'
+
 /** Mapa de distribución de cargos: grafo bipartito personas ↔ empresas. */
 export default function Directorios({ datos }: { datos: Datos }) {
   const [sel, setSel] = useState<string | null>(null)
   const [soloMulti, setSoloMulti] = useState(false)
+  const [filtro, setFiltro] = useState<Filtro>('todos')
 
   const elements = useMemo<ElementDefinition[]>(() => {
-    const cargos = datos.edges.filter((e) => ROLES.includes(e.tipo))
+    const rolesAct = filtro === 'gerentes' ? ['gerente_general']
+      : filtro === 'directores' ? ['presidente', 'director']
+      : ROLES
+    const cargos = datos.edges.filter((e) => rolesAct.includes(e.tipo))
     const personas = new Set(cargos.map((e) => e.source))
     const multi = new Set(
       datos.conexiones.personas.filter((p) => p.n_empresas > 1).map((p) => p.id),
@@ -45,7 +51,7 @@ export default function Directorios({ datos }: { datos: Datos }) {
         data: { id: `${e.source}->${e.target}-${e.tipo}`, source: e.source, target: e.target, tipo: e.tipo },
       })),
     ]
-  }, [datos, soloMulti, sel])
+  }, [datos, soloMulti, sel, filtro])
 
   const nodoSel = sel ? datos.nodes.find((n) => n.id === sel) : null
   const pares = datos.conexiones.pares.filter((p) => p.directores.length > 0)
@@ -54,20 +60,32 @@ export default function Directorios({ datos }: { datos: Datos }) {
   return (
     <section>
       <div className="section-head">
-        <h2>Red de directorios</h2>
+        <h2>Directorios y gerencias</h2>
         <p>
           Quién se sienta en qué mesa: cada rombo es una persona, cada círculo una empresa, y cada
           arista un cargo (presidencia, dirección o gerencia general). Las personas que aparecen en
-          varios directorios son los <strong>puentes humanos</strong> entre empresas y grupos.
+          varios directorios son los <strong>puentes humanos</strong> entre empresas y grupos. Las
+          gerencias marcadas <em>«por confirmar»</em> son slots que poblará el scraper SMV.
         </p>
       </div>
       <div className="grid2">
         <div className="panel">
           <div className="panel-head">
-            mapa de distribución de cargos
+            <div className="filtros">
+              {(['todos', 'directores', 'gerentes'] as const).map((f) => (
+                <button key={f}
+                  style={{ background: filtro === f ? 'var(--carmin-deep)' : 'var(--bg2)',
+                    color: filtro === f ? '#fff' : 'var(--muted)', border: '1px solid var(--line)',
+                    fontFamily: 'var(--mono)', fontSize: 11, padding: '4px 10px', cursor: 'pointer',
+                    textTransform: 'capitalize' }}
+                  onClick={() => setFiltro(f)}>
+                  {f}
+                </button>
+              ))}
+            </div>
             <label className="chk">
               <input type="checkbox" checked={soloMulti} onChange={(e) => setSoloMulti(e.target.checked)} />
-              solo personas con 2+ directorios
+              solo personas con 2+ cargos
             </label>
           </div>
           <Grafo elements={elements} stylesheet={estiloBase(false)} onSelect={setSel} className="short" />

@@ -4,14 +4,18 @@ import Red from './views/Red'
 import Directorios from './views/Directorios'
 import Ranking from './views/Ranking'
 import Sectores from './views/Sectores'
+import Finanzas from './views/Finanzas'
+import Bolsa from './views/Bolsa'
 import Puentes from './views/Puentes'
 import Metodologia from './views/Metodologia'
 import { fmtNum } from './types'
 
 const TABS = [
   { id: 'red', label: '🕸️ Mapa de la red' },
-  { id: 'directorios', label: '🪑 Directorios' },
+  { id: 'directorios', label: '🪑 Directorios y gerencias' },
   { id: 'ranking', label: '🏆 Ranking EPI' },
+  { id: 'finanzas', label: '💰 Finanzas' },
+  { id: 'bolsa', label: '📈 Bolsa (BVL)' },
   { id: 'sectores', label: '🏭 Sectores' },
   { id: 'puentes', label: '🌉 Puentes' },
   { id: 'metodologia', label: '📜 Metodología' },
@@ -19,9 +23,20 @@ const TABS = [
 
 type TabId = (typeof TABS)[number]['id']
 
+const TAB_IDS = TABS.map((t) => t.id)
+const hashTab = (): TabId => {
+  const h = window.location.hash.replace('#', '') as TabId
+  return TAB_IDS.includes(h) ? h : 'red'
+}
+
 export default function App() {
   const { datos, error } = useDatos()
-  const [tab, setTab] = useState<TabId>('red')
+  const [tab, setTabState] = useState<TabId>(hashTab)
+  const setTab = (t: TabId) => {
+    setTabState(t)
+    window.location.hash = t
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
 
   return (
     <>
@@ -81,6 +96,8 @@ export default function App() {
               {tab === 'red' && <Red datos={datos} />}
               {tab === 'directorios' && <Directorios datos={datos} />}
               {tab === 'ranking' && <Ranking datos={datos} />}
+              {tab === 'finanzas' && <Finanzas datos={datos} />}
+              {tab === 'bolsa' && <Bolsa datos={datos} />}
               {tab === 'sectores' && <Sectores datos={datos} />}
               {tab === 'puentes' && <Puentes datos={datos} />}
               {tab === 'metodologia' && <Metodologia datos={datos} />}

@@ -1,5 +1,5 @@
 import type { Arista, Datos, Nodo } from '../types'
-import { fmtNum, fmtSoles } from '../types'
+import { fmtNum, fmtPct, fmtSoles } from '../types'
 
 const REL_LABEL: Record<string, string> = {
   control: 'controla',
@@ -36,11 +36,34 @@ export default function FichaNodo({ nodo, datos }: { nodo: Nodo; datos: Datos })
         {nodo.pais && nodo.pais !== 'Perú' ? ` · ${nodo.pais}` : ''}
       </span>
       <h3>{nodo.label}</h3>
+      {nodo.por_confirmar && (
+        <span className="etiqueta" style={{ color: 'var(--ocre)', borderStyle: 'solid' }}>
+          ⚠ titular por confirmar (scraper SMV)
+        </span>
+      )}
       {nodo.grupo_nombre && <div className="dim" style={{ marginTop: 4 }}>Grupo: {nodo.grupo_nombre}</div>}
       {nodo.nota && <p className="nota">{nodo.nota}</p>}
       <div className="metricas">
         {nodo.ingresos != null && (
           <div><b>{fmtSoles(nodo.ingresos)}</b><span>ingresos aprox.</span></div>
+        )}
+        {nodo.ebitda != null && (
+          <div><b>{fmtSoles(nodo.ebitda)}</b><span>ebitda aprox.</span></div>
+        )}
+        {nodo.utilidad != null && (
+          <div><b>{fmtSoles(nodo.utilidad)}</b><span>utilidad neta</span></div>
+        )}
+        {nodo.activos != null && (
+          <div><b>{fmtSoles(nodo.activos)}</b><span>activos aprox.</span></div>
+        )}
+        {nodo.market_cap != null && (
+          <div><b>{fmtSoles(nodo.market_cap)}</b><span>market cap (BVL)</span></div>
+        )}
+        {nodo.ratios?.margen_neto != null && (
+          <div><b>{fmtPct(nodo.ratios.margen_neto)}</b><span>margen neto</span></div>
+        )}
+        {nodo.ratios?.roe != null && (
+          <div><b>{fmtPct(nodo.ratios.roe)}</b><span>ROE</span></div>
         )}
         {nodo.empleados != null && (
           <div><b>{fmtNum(nodo.empleados)}</b><span>empleados aprox.</span></div>

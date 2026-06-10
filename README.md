@@ -13,8 +13,10 @@
 | Módulo | Qué muestra |
 |---|---|
 | 🕸️ **Mapa de la red** | Grafo interactivo (Cytoscape): grupos → empresas → personas, con filtros por sector, carteras AFP y comunidades Louvain |
-| 🪑 **Directorios** | Mapa de distribución de cargos: grafo bipartito persona ↔ empresa + pares de empresas con directores compartidos y su **Network Affinity Score** |
-| 🏆 **Ranking EPI** | **Economic Power Index** (0–100) por grupo: tamaño + amplitud + posición en la red, desagregado por componente |
+| 🪑 **Directorios y gerencias** | Grafo bipartito persona ↔ empresa con filtro directores/gerentes + pares de empresas con directores compartidos y su **Network Affinity Score** |
+| 🏆 **Ranking EPI** | **Economic Power Index** (0–100) por grupo: tamaño financiero + amplitud + posición en la red, desagregado por componente |
+| 💰 **Finanzas** | Análisis de estados financieros: scatter tamaño/rentabilidad, ranking ordenable y ratios (margen neto/EBITDA, ROE, ROA, apalancamiento) |
+| 📈 **Bolsa (BVL)** | Emisores listados: capitalización bursátil por emisor y sector + P/U indicativo |
 | 🏭 **Sectores** | Treemap de ingresos por sector + concentración (HHI sobre la muestra) |
 | 🌉 **Puentes** | Betweenness centrality: holdings bisagra y empresas que conectan mundos |
 | 📜 **Metodología** | Fórmulas, pesos, fuentes y límites — todo auditable |
@@ -65,7 +67,8 @@ editorial: nada entra al grafo sin fuente).
 
 ## 📐 Métricas
 
-- **EPI** = 35·ingresos + 15·empleados + 10·n_empresas + 10·n_sectores + 15·pagerank + 10·betweenness + 5·grado (normalización min–max, log para magnitudes monetarias)
+- **EPI** = 22·ingresos + 12·utilidad + 11·activos + 8·ebitda + 10·empleados + 8·n_empresas + 7·n_sectores + 12·pagerank + 5·betweenness + 5·grado (normalización min–max, log para magnitudes monetarias)
+- **Ratios** = margen neto (utilidad/ingresos), margen EBITDA, ROE (utilidad/patrimonio), ROA (utilidad/activos), apalancamiento (activos/patrimonio)
 - **Affinity Score** = 30·director compartido (×2 máx) + 25·accionista común + 25·mismo grupo + 10·mismo sector + 10·AFP común
 - **PageRank** sobre el grafo de control invertido: la influencia se acumula en quien controla
 - **Louvain** para comunidades; **betweenness** para nodos puente
