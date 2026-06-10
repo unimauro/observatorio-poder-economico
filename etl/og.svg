@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f0d0a"/>
+  <!-- glow -->
+  <ellipse cx="220" cy="-40" rx="600" ry="260" fill="#e8442e" opacity="0.10"/>
+  <ellipse cx="1020" cy="0" rx="480" ry="220" fill="#d9a441" opacity="0.08"/>
+  <!-- red de fondo -->
+  <g stroke="#3d362b" stroke-width="2">
+    <line x1="880" y1="170" x2="1060" y2="240"/>
+    <line x1="880" y1="170" x2="930" y2="360"/>
+    <line x1="1060" y1="240" x2="930" y2="360"/>
+    <line x1="1060" y1="240" x2="1110" y2="430"/>
+    <line x1="930" y1="360" x2="1110" y2="430"/>
+    <line x1="930" y1="360" x2="800" y2="470"/>
+    <line x1="1110" y1="430" x2="980" y2="520"/>
+    <line x1="800" y1="470" x2="980" y2="520"/>
+  </g>
+  <circle cx="880" cy="170" r="34" fill="#e8442e"/>
+  <circle cx="1060" cy="240" r="22" fill="#d9a441"/>
+  <circle cx="930" cy="360" r="26" fill="#ece4d3"/>
+  <circle cx="1110" cy="430" r="16" fill="#6da3d8"/>
+  <rect x="784" y="454" width="32" height="32" rx="6" fill="#d9a441"/>
+  <circle cx="980" cy="520" r="14" fill="#ece4d3"/>
+  <!-- kicker -->
+  <text x="80" y="150" font-family="Courier New, monospace" font-size="22" letter-spacing="8" fill="#d9a441">INTELIGENCIA ECONÓMICA ABIERTA · PERÚ</text>
+  <!-- título -->
+  <text x="76" y="245" font-family="Georgia, serif" font-weight="bold" font-size="76" fill="#ece4d3">Observatorio de</text>
+  <text x="76" y="330" font-family="Georgia, serif" font-weight="bold" font-size="76" fill="#e8442e" font-style="italic">Poder Económico</text>
+  <text x="76" y="415" font-family="Georgia, serif" font-weight="bold" font-size="76" fill="#ece4d3">del Perú</text>
+  <!-- sub -->
+  <text x="80" y="480" font-family="Courier New, monospace" font-size="24" fill="#9d9180">Quién controla qué: grupos, directorios y redes</text>
+  <text x="80" y="514" font-family="Courier New, monospace" font-size="24" fill="#9d9180">empresariales con análisis de grafos (SMV · BVL)</text>
+  <!-- regla -->
+  <rect x="80" y="552" width="520" height="4" fill="#b32417"/>
+  <text x="80" y="592" font-family="Courier New, monospace" font-size="19" fill="#6e6557">unimauro.github.io/observatorio-poder-economico</text>
+</svg>

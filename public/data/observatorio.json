@@ -1,0 +1,4899 @@
+{
+ "meta": {
+  "version": "0.1.0",
+  "actualizado": "2026-06-10",
+  "disclaimer": "Conjunto de datos SEMILLA con fines demostrativos, elaborado a partir de información pública (memorias anuales, SMV, BVL, SBS, sitios corporativos). Las cifras son aproximadas, los porcentajes accionariales son referenciales y los cargos directivos pueden haber cambiado. Verificar contra la fuente primaria antes de citar.",
+  "fuentes": [
+   {
+    "nombre": "SMV — Superintendencia del Mercado de Valores",
+    "url": "https://www.smv.gob.pe"
+   },
+   {
+    "nombre": "BVL — Bolsa de Valores de Lima",
+    "url": "https://www.bvl.com.pe"
+   },
+   {
+    "nombre": "SBS — Superintendencia de Banca, Seguros y AFP",
+    "url": "https://www.sbs.gob.pe"
+   },
+   {
+    "nombre": "Memorias anuales y EEFF auditados de los emisores (2023–2024)",
+    "url": "https://www.smv.gob.pe/Frm_InformacionFinanciera"
+   }
+  ],
+  "n_grupos": 15,
+  "n_empresas": 59,
+  "n_personas": 12,
+  "n_relaciones": 105,
+  "n_comunidades": 10,
+  "epi_pesos": {
+   "ingresos": 35,
+   "empleados": 15,
+   "empresas": 10,
+   "sectores": 10,
+   "pagerank": 15,
+   "betweenness": 10,
+   "grado": 5
+  },
+  "afinidad_pesos": {
+   "director_compartido": 30,
+   "accionista_comun": 25,
+   "mismo_grupo": 25,
+   "mismo_sector": 10,
+   "institucional_comun": 10
+  }
+ },
+ "nodes": [
+  {
+   "id": "g-intercorp",
+   "label": "Intercorp",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Conglomerado diversificado: banca, retail, educación, salud, inmobiliario, entretenimiento.",
+   "fuente": "Memoria anual Intercorp Perú / IFS (SMV)",
+   "grado": 7,
+   "pagerank": 0.04304,
+   "betweenness": 0.0839,
+   "eigenvector": 0.0597,
+   "comunidad": 4
+  },
+  {
+   "id": "g-romero",
+   "label": "Grupo Romero",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Consumo masivo, combustibles, logística, agroindustria; accionista de referencia de Credicorp.",
+   "fuente": "Memorias Alicorp / Credicorp (SMV)",
+   "grado": 5,
+   "pagerank": 0.02554,
+   "betweenness": 0.0343,
+   "eigenvector": 0.2484,
+   "comunidad": 7
+  },
+  {
+   "id": "g-credicorp",
+   "label": "Credicorp",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Holding financiero listado en NYSE y BVL: banca, seguros, AFP, banca de inversión.",
+   "fuente": "Form 20-F Credicorp / SMV",
+   "grado": 1,
+   "pagerank": 0.01054,
+   "betweenness": 0.0,
+   "eigenvector": 0.1168,
+   "comunidad": 7
+  },
+  {
+   "id": "g-breca",
+   "label": "Breca",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Minería, seguros, banca (con BBVA), pesca, inmobiliario, salud, hotelería.",
+   "fuente": "Memorias Minsur / Rímac (SMV)",
+   "grado": 6,
+   "pagerank": 0.02698,
+   "betweenness": 0.0118,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "g-gloria",
+   "label": "Grupo Gloria",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Lácteos y alimentos, cemento, azúcar, papeles y empaques.",
+   "fuente": "Memoria Leche Gloria / Yura (SMV)",
+   "grado": 4,
+   "pagerank": 0.01972,
+   "betweenness": 0.0027,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "g-ferreycorp",
+   "label": "Ferreycorp",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Corporación listada sin grupo familiar de control: maquinaria y bienes de capital.",
+   "fuente": "Memoria Ferreycorp (SMV)",
+   "grado": 1,
+   "pagerank": 0.01102,
+   "betweenness": 0.0,
+   "eigenvector": 0.0472,
+   "comunidad": 1
+  },
+  {
+   "id": "g-benavides",
+   "label": "Familia Benavides",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Accionista de referencia de Compañía de Minas Buenaventura.",
+   "fuente": "Memoria Buenaventura (SMV)",
+   "grado": 1,
+   "pagerank": 0.00932,
+   "betweenness": 0.0,
+   "eigenvector": 0.0212,
+   "comunidad": 5
+  },
+  {
+   "id": "g-hochschild",
+   "label": "Grupo Hochschild",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Perú",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Minería de metales preciosos y cemento.",
+   "fuente": "Memorias Hochschild Mining / Cementos Pacasmayo",
+   "grado": 2,
+   "pagerank": 0.01162,
+   "betweenness": 0.0001,
+   "eigenvector": 0.0,
+   "comunidad": 6
+  },
+  {
+   "id": "g-falabella",
+   "label": "Falabella",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Chile",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Retail multinacional chileno con fuerte presencia en el Perú.",
+   "fuente": "Memoria Falabella Perú (SMV)",
+   "grado": 5,
+   "pagerank": 0.03299,
+   "betweenness": 0.0028,
+   "eigenvector": 0.0,
+   "comunidad": 0
+  },
+  {
+   "id": "g-bns",
+   "label": "Bank of Nova Scotia",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Canadá",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Matriz canadiense de Scotiabank Perú y Profuturo AFP.",
+   "fuente": "Memoria Scotiabank Perú (SMV)",
+   "grado": 1,
+   "pagerank": 0.02266,
+   "betweenness": 0.0,
+   "eigenvector": 0.0091,
+   "comunidad": 4
+  },
+  {
+   "id": "g-sura",
+   "label": "Grupo SURA",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Colombia",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Matriz colombiana de AFP Integra.",
+   "fuente": "Memoria AFP Integra (SBS)",
+   "grado": 1,
+   "pagerank": 0.02326,
+   "betweenness": 0.0,
+   "eigenvector": 0.0648,
+   "comunidad": 7
+  },
+  {
+   "id": "g-habitat",
+   "label": "Habitat",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Chile",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Matriz chilena de AFP Habitat Perú.",
+   "fuente": "Memoria AFP Habitat (SBS)",
+   "grado": 1,
+   "pagerank": 0.01705,
+   "betweenness": 0.0,
+   "eigenvector": 0.031,
+   "comunidad": 1
+  },
+  {
+   "id": "g-bbva",
+   "label": "BBVA",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "España",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Socio 50/50 de Breca en Holding Continental, matriz de BBVA Perú.",
+   "fuente": "Memoria BBVA Perú (SMV)",
+   "grado": 1,
+   "pagerank": 0.00971,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "g-freeport",
+   "label": "Freeport-McMoRan",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "EE.UU.",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Operador y accionista mayoritario de Sociedad Minera Cerro Verde.",
+   "fuente": "Memoria Cerro Verde (SMV)",
+   "grado": 1,
+   "pagerank": 0.00806,
+   "betweenness": 0.0,
+   "eigenvector": 0.0072,
+   "comunidad": 5
+  },
+  {
+   "id": "g-ig4",
+   "label": "IG4 Capital",
+   "tipo": "grupo",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": "Brasil",
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Accionista de control de AENZA (ex Graña y Montero).",
+   "fuente": "Hechos de importancia AENZA (SMV)",
+   "grado": 1,
+   "pagerank": 0.01616,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 2
+  },
+  {
+   "id": "ifs",
+   "label": "Intercorp Financial Services",
+   "tipo": "holding",
+   "sector": "Finanzas y banca",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 7800,
+   "empleados": 9000,
+   "nota": "Holding financiero del grupo (Interbank, Interseguro, Inteligo). Listado en BVL y NYSE.",
+   "fuente": "Memoria IFS 2024 (aprox.)",
+   "grado": 6,
+   "pagerank": 0.01874,
+   "betweenness": 0.038,
+   "eigenvector": 0.038,
+   "comunidad": 3
+  },
+  {
+   "id": "interbank",
+   "label": "Interbank",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 6200,
+   "empleados": 7000,
+   "nota": "Cuarto banco del sistema por colocaciones.",
+   "fuente": "EEFF Interbank 2024 (aprox.)",
+   "grado": 3,
+   "pagerank": 0.00628,
+   "betweenness": 0.0037,
+   "eigenvector": 0.0235,
+   "comunidad": 3
+  },
+  {
+   "id": "interseguro",
+   "label": "Interseguro",
+   "tipo": "empresa",
+   "sector": "Seguros",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 1300,
+   "empleados": 700,
+   "nota": "Seguros de vida y rentas vitalicias.",
+   "fuente": "SBS (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0088,
+   "comunidad": 3
+  },
+  {
+   "id": "inteligo",
+   "label": "Inteligo",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 400,
+   "empleados": 400,
+   "nota": "Banca privada y gestión patrimonial.",
+   "fuente": "Memoria IFS (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0088,
+   "comunidad": 3
+  },
+  {
+   "id": "inretail",
+   "label": "InRetail Perú",
+   "tipo": "holding",
+   "sector": "Retail",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 22000,
+   "empleados": 60000,
+   "nota": "Holding retail: supermercados, farmacias y centros comerciales.",
+   "fuente": "Memoria InRetail 2024 (aprox.)",
+   "grado": 7,
+   "pagerank": 0.0223,
+   "betweenness": 0.1571,
+   "eigenvector": 0.1512,
+   "comunidad": 4
+  },
+  {
+   "id": "spsa",
+   "label": "Supermercados Peruanos (Plaza Vea)",
+   "tipo": "empresa",
+   "sector": "Retail",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 9500,
+   "empleados": 30000,
+   "nota": "Plaza Vea, Vivanda, Mass.",
+   "fuente": "Memoria InRetail (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.035,
+   "comunidad": 4
+  },
+  {
+   "id": "inkafarma",
+   "label": "InRetail Pharma (Inkafarma · Mifarma)",
+   "tipo": "empresa",
+   "sector": "Salud",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 8500,
+   "empleados": 20000,
+   "nota": "Mayor cadena de farmacias del país tras la fusión Inkafarma–Mifarma (Quicorp, 2018).",
+   "fuente": "Memoria InRetail (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.035,
+   "comunidad": 4
+  },
+  {
+   "id": "real-plaza",
+   "label": "Real Plaza",
+   "tipo": "empresa",
+   "sector": "Inmobiliario",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 800,
+   "empleados": 1500,
+   "nota": "Mayor operador de centros comerciales del Perú.",
+   "fuente": "Memoria InRetail (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.035,
+   "comunidad": 4
+  },
+  {
+   "id": "utp",
+   "label": "UTP — Universidad Tecnológica del Perú",
+   "tipo": "empresa",
+   "sector": "Educación",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 1200,
+   "empleados": 8000,
+   "nota": "Brazo universitario de Intercorp Education.",
+   "fuente": "Sitio corporativo (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0138,
+   "comunidad": 4
+  },
+  {
+   "id": "innova-schools",
+   "label": "Innova Schools",
+   "tipo": "empresa",
+   "sector": "Educación",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 500,
+   "empleados": 5000,
+   "nota": "Red de colegios privados de bajo costo.",
+   "fuente": "Sitio corporativo (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0138,
+   "comunidad": 4
+  },
+  {
+   "id": "cineplanet",
+   "label": "Cineplanet",
+   "tipo": "empresa",
+   "sector": "Turismo y entretenimiento",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 600,
+   "empleados": 4000,
+   "nota": "Mayor cadena de cines del Perú.",
+   "fuente": "Memoria Cineplex (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0138,
+   "comunidad": 4
+  },
+  {
+   "id": "casa-andina",
+   "label": "Casa Andina",
+   "tipo": "empresa",
+   "sector": "Turismo y entretenimiento",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 350,
+   "empleados": 2000,
+   "nota": "Mayor cadena hotelera peruana.",
+   "fuente": "Sitio corporativo (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0138,
+   "comunidad": 4
+  },
+  {
+   "id": "financiera-oh",
+   "label": "Financiera Oh!",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-intercorp",
+   "grupo_nombre": "Intercorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 700,
+   "empleados": 1500,
+   "nota": "Financiera de consumo vinculada al retail del grupo.",
+   "fuente": "SBS (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0138,
+   "comunidad": 4
+  },
+  {
+   "id": "credicorp",
+   "label": "Credicorp Ltd.",
+   "tipo": "holding",
+   "sector": "Finanzas y banca",
+   "grupo": "g-credicorp",
+   "grupo_nombre": "Credicorp",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 22000,
+   "empleados": 37000,
+   "nota": "Mayor holding financiero del país; listado en NYSE y BVL.",
+   "fuente": "Form 20-F 2024 (aprox.)",
+   "grado": 11,
+   "pagerank": 0.03506,
+   "betweenness": 0.1387,
+   "eigenvector": 0.5051,
+   "comunidad": 7
+  },
+  {
+   "id": "bcp",
+   "label": "Banco de Crédito del Perú (BCP)",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-credicorp",
+   "grupo_nombre": "Credicorp",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 14000,
+   "empleados": 18000,
+   "nota": "Mayor banco del sistema financiero peruano.",
+   "fuente": "EEFF BCP 2024 (aprox.)",
+   "grado": 4,
+   "pagerank": 0.01162,
+   "betweenness": 0.0137,
+   "eigenvector": 0.2255,
+   "comunidad": 7
+  },
+  {
+   "id": "mibanco",
+   "label": "Mibanco",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-credicorp",
+   "grupo_nombre": "Credicorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 2800,
+   "empleados": 10000,
+   "nota": "Líder en microfinanzas.",
+   "fuente": "SBS (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0522,
+   "comunidad": 7
+  },
+  {
+   "id": "pacifico",
+   "label": "Pacífico Seguros",
+   "tipo": "empresa",
+   "sector": "Seguros",
+   "grupo": "g-credicorp",
+   "grupo_nombre": "Credicorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 5000,
+   "empleados": 4000,
+   "nota": "Segunda aseguradora del mercado.",
+   "fuente": "SBS (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.1168,
+   "comunidad": 7
+  },
+  {
+   "id": "prima-afp",
+   "label": "Prima AFP",
+   "tipo": "empresa",
+   "sector": "AFP y fondos",
+   "grupo": "g-credicorp",
+   "grupo_nombre": "Credicorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 400,
+   "empleados": 600,
+   "nota": "AFP del grupo Credicorp; inversionista institucional en la BVL.",
+   "fuente": "SBS (aprox.)",
+   "grado": 4,
+   "pagerank": 0.01741,
+   "betweenness": 0.1155,
+   "eigenvector": 0.2788,
+   "comunidad": 7
+  },
+  {
+   "id": "credicorp-capital",
+   "label": "Credicorp Capital",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-credicorp",
+   "grupo_nombre": "Credicorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 800,
+   "empleados": 1500,
+   "nota": "Banca de inversión regional (Perú, Chile, Colombia).",
+   "fuente": "Memoria Credicorp (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.1168,
+   "comunidad": 7
+  },
+  {
+   "id": "alicorp",
+   "label": "Alicorp",
+   "tipo": "empresa",
+   "sector": "Consumo masivo",
+   "grupo": "g-romero",
+   "grupo_nombre": "Grupo Romero",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 12500,
+   "empleados": 11000,
+   "nota": "Mayor empresa de consumo masivo del Perú; opera en 5 países.",
+   "fuente": "Memoria Alicorp 2024 (aprox.)",
+   "grado": 7,
+   "pagerank": 0.01162,
+   "betweenness": 0.0603,
+   "eigenvector": 0.3451,
+   "comunidad": 7
+  },
+  {
+   "id": "vitapro",
+   "label": "Vitapro",
+   "tipo": "empresa",
+   "sector": "Agroindustria",
+   "grupo": "g-romero",
+   "grupo_nombre": "Grupo Romero",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 3000,
+   "empleados": 2000,
+   "nota": "Nutrición acuícola (subsidiaria de Alicorp).",
+   "fuente": "Memoria Alicorp (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0798,
+   "comunidad": 7
+  },
+  {
+   "id": "primax",
+   "label": "Primax",
+   "tipo": "empresa",
+   "sector": "Energía y combustibles",
+   "grupo": "g-romero",
+   "grupo_nombre": "Grupo Romero",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 19000,
+   "empleados": 5000,
+   "nota": "Mayor red de estaciones de servicio (Perú, Ecuador, Colombia).",
+   "fuente": "Memoria Primax (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.0003,
+   "eigenvector": 0.1088,
+   "comunidad": 7
+  },
+  {
+   "id": "ransa",
+   "label": "Ransa",
+   "tipo": "empresa",
+   "sector": "Logística",
+   "grupo": "g-romero",
+   "grupo_nombre": "Grupo Romero",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 1500,
+   "empleados": 6500,
+   "nota": "Operador logístico regional. En 2021 el grupo vendió participación mayoritaria a H.I.G. Capital (se mantiene vínculo histórico).",
+   "fuente": "Hechos de importancia (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0575,
+   "comunidad": 7
+  },
+  {
+   "id": "palmas",
+   "label": "Palmas del Espino",
+   "tipo": "empresa",
+   "sector": "Agroindustria",
+   "grupo": "g-romero",
+   "grupo_nombre": "Grupo Romero",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 900,
+   "empleados": 4000,
+   "nota": "Palma aceitera en San Martín.",
+   "fuente": "Memoria Palmas (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0575,
+   "comunidad": 7
+  },
+  {
+   "id": "rimac",
+   "label": "Rímac Seguros",
+   "tipo": "empresa",
+   "sector": "Seguros",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 6500,
+   "empleados": 4500,
+   "nota": "Mayor aseguradora del Perú.",
+   "fuente": "SBS / Memoria Rímac (aprox.)",
+   "grado": 4,
+   "pagerank": 0.01162,
+   "betweenness": 0.0057,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "minsur",
+   "label": "Minsur",
+   "tipo": "empresa",
+   "sector": "Minería",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 7500,
+   "empleados": 4000,
+   "nota": "Uno de los mayores productores de estaño del mundo (San Rafael) y cobre (Mina Justa).",
+   "fuente": "Memoria Minsur 2024 (aprox.)",
+   "grado": 4,
+   "pagerank": 0.01162,
+   "betweenness": 0.0049,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "marcobre",
+   "label": "Marcobre (Mina Justa)",
+   "tipo": "empresa",
+   "sector": "Minería",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 4500,
+   "empleados": 2500,
+   "nota": "Operación cuprífera en Ica; Minsur 60%, Alxar (Chile) 40%.",
+   "fuente": "Memoria Minsur (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "tasa",
+   "label": "TASA — Tecnológica de Alimentos",
+   "tipo": "empresa",
+   "sector": "Pesca",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 2500,
+   "empleados": 3000,
+   "nota": "Mayor productora mundial de harina y aceite de pescado.",
+   "fuente": "Memoria TASA (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.0007,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "intursa",
+   "label": "Intursa (hoteles Westin, Libertador)",
+   "tipo": "empresa",
+   "sector": "Turismo y entretenimiento",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 400,
+   "empleados": 1500,
+   "nota": "Brazo hotelero de Breca.",
+   "fuente": "Memoria Intursa (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.001,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "urbanova",
+   "label": "Urbanova",
+   "tipo": "empresa",
+   "sector": "Inmobiliario",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 300,
+   "empleados": 300,
+   "nota": "Inmobiliaria de oficinas prime (San Isidro).",
+   "fuente": "Sitio corporativo (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "clinica-internacional",
+   "label": "Clínica Internacional",
+   "tipo": "empresa",
+   "sector": "Salud",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 900,
+   "empleados": 4000,
+   "nota": "Red de clínicas privadas vinculada a Rímac.",
+   "fuente": "Sitio corporativo (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "holding-continental",
+   "label": "Holding Continental",
+   "tipo": "holding",
+   "sector": "Finanzas y banca",
+   "grupo": "g-breca",
+   "grupo_nombre": "Breca",
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Vehículo 50/50 entre Breca y BBVA que controla BBVA Perú.",
+   "fuente": "Memoria BBVA Perú",
+   "grado": 3,
+   "pagerank": 0.00806,
+   "betweenness": 0.0042,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "bbva-peru",
+   "label": "BBVA Perú",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": true,
+   "ingresos": 6800,
+   "empleados": 6500,
+   "nota": "Segundo banco del sistema; control compartido Breca–BBVA vía Holding Continental.",
+   "fuente": "EEFF BBVA Perú 2024 (aprox.)",
+   "grado": 3,
+   "pagerank": 0.00628,
+   "betweenness": 0.0015,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "leche-gloria",
+   "label": "Leche Gloria",
+   "tipo": "empresa",
+   "sector": "Consumo masivo",
+   "grupo": "g-gloria",
+   "grupo_nombre": "Grupo Gloria",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 6500,
+   "empleados": 6000,
+   "nota": "Líder en lácteos; matriz industrial del grupo.",
+   "fuente": "Memoria Leche Gloria 2024 (aprox.)",
+   "grado": 3,
+   "pagerank": 0.00628,
+   "betweenness": 0.0008,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "yura",
+   "label": "Yura",
+   "tipo": "empresa",
+   "sector": "Cemento y construcción",
+   "grupo": "g-gloria",
+   "grupo_nombre": "Grupo Gloria",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 3200,
+   "empleados": 3000,
+   "nota": "Cementera del sur del Perú; opera también en Bolivia y Ecuador.",
+   "fuente": "Memoria Yura (aprox.)",
+   "grado": 3,
+   "pagerank": 0.00628,
+   "betweenness": 0.0008,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "coazucar",
+   "label": "Coazucar",
+   "tipo": "holding",
+   "sector": "Agroindustria",
+   "grupo": "g-gloria",
+   "grupo_nombre": "Grupo Gloria",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 2800,
+   "empleados": 13000,
+   "nota": "Holding azucarero (Casa Grande, Cartavio, San Jacinto).",
+   "fuente": "Memoria Coazucar (aprox.)",
+   "grado": 4,
+   "pagerank": 0.01696,
+   "betweenness": 0.0038,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "casa-grande",
+   "label": "Casa Grande",
+   "tipo": "empresa",
+   "sector": "Agroindustria",
+   "grupo": "g-gloria",
+   "grupo_nombre": "Grupo Gloria",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 900,
+   "empleados": 4000,
+   "nota": "Mayor azucarera del país (La Libertad).",
+   "fuente": "Memoria Casa Grande (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "cartavio",
+   "label": "Cartavio",
+   "tipo": "empresa",
+   "sector": "Agroindustria",
+   "grupo": "g-gloria",
+   "grupo_nombre": "Grupo Gloria",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 700,
+   "empleados": 3000,
+   "nota": "Azucarera del valle Chicama.",
+   "fuente": "Memoria Cartavio (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "trupal",
+   "label": "Trupal",
+   "tipo": "empresa",
+   "sector": "Papel y empaques",
+   "grupo": "g-gloria",
+   "grupo_nombre": "Grupo Gloria",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 800,
+   "empleados": 2000,
+   "nota": "Papeles y empaques a partir de bagazo de caña.",
+   "fuente": "Memoria Trupal (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.0003,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "ferreycorp",
+   "label": "Ferreycorp",
+   "tipo": "holding",
+   "sector": "Industria y maquinaria",
+   "grupo": "g-ferreycorp",
+   "grupo_nombre": "Ferreycorp",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 8200,
+   "empleados": 10000,
+   "nota": "Corporación de bienes de capital; representante histórico de Caterpillar.",
+   "fuente": "Memoria Ferreycorp 2024 (aprox.)",
+   "grado": 7,
+   "pagerank": 0.0223,
+   "betweenness": 0.0702,
+   "eigenvector": 0.2039,
+   "comunidad": 1
+  },
+  {
+   "id": "ferreyros",
+   "label": "Ferreyros",
+   "tipo": "empresa",
+   "sector": "Industria y maquinaria",
+   "grupo": "g-ferreycorp",
+   "grupo_nombre": "Ferreycorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 5500,
+   "empleados": 6000,
+   "nota": "Distribuidor Caterpillar en el Perú.",
+   "fuente": "Memoria Ferreycorp (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0472,
+   "comunidad": 1
+  },
+  {
+   "id": "unimaq",
+   "label": "Unimaq",
+   "tipo": "empresa",
+   "sector": "Industria y maquinaria",
+   "grupo": "g-ferreycorp",
+   "grupo_nombre": "Ferreycorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 700,
+   "empleados": 1000,
+   "nota": "Equipos ligeros multimarcas.",
+   "fuente": "Memoria Ferreycorp (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0472,
+   "comunidad": 1
+  },
+  {
+   "id": "soltrak",
+   "label": "Soltrak",
+   "tipo": "empresa",
+   "sector": "Industria y maquinaria",
+   "grupo": "g-ferreycorp",
+   "grupo_nombre": "Ferreycorp",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 500,
+   "empleados": 800,
+   "nota": "Neumáticos, lubricantes e insumos.",
+   "fuente": "Memoria Ferreycorp (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0472,
+   "comunidad": 1
+  },
+  {
+   "id": "buenaventura",
+   "label": "Cía. de Minas Buenaventura",
+   "tipo": "empresa",
+   "sector": "Minería",
+   "grupo": "g-benavides",
+   "grupo_nombre": "Familia Benavides",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 4200,
+   "empleados": 4500,
+   "nota": "Mayor minera de metales preciosos de capital peruano; listada en NYSE y BVL.",
+   "fuente": "Form 20-F Buenaventura (aprox.)",
+   "grado": 5,
+   "pagerank": 0.01073,
+   "betweenness": 0.063,
+   "eigenvector": 0.0918,
+   "comunidad": 5
+  },
+  {
+   "id": "el-brocal",
+   "label": "El Brocal",
+   "tipo": "empresa",
+   "sector": "Minería",
+   "grupo": "g-benavides",
+   "grupo_nombre": "Familia Benavides",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 1800,
+   "empleados": 1500,
+   "nota": "Polimetálica en Pasco; subsidiaria de Buenaventura.",
+   "fuente": "Memoria El Brocal (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0294,
+   "comunidad": 5
+  },
+  {
+   "id": "cerro-verde",
+   "label": "Sociedad Minera Cerro Verde",
+   "tipo": "empresa",
+   "sector": "Minería",
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": true,
+   "ingresos": 16500,
+   "empleados": 6000,
+   "nota": "Una de las mayores minas de cobre del mundo (Arequipa). Freeport ~53.6%, Buenaventura ~19.6%, SMM Cerro Verde (Sumitomo) ~21%.",
+   "fuente": "Memoria Cerro Verde 2024 (aprox.)",
+   "grado": 3,
+   "pagerank": 0.00628,
+   "betweenness": 0.0134,
+   "eigenvector": 0.031,
+   "comunidad": 5
+  },
+  {
+   "id": "hochschild-mining",
+   "label": "Hochschild Mining",
+   "tipo": "empresa",
+   "sector": "Minería",
+   "grupo": "g-hochschild",
+   "grupo_nombre": "Grupo Hochschild",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 3600,
+   "empleados": 5000,
+   "nota": "Oro y plata (Perú y Brasil); listada en Londres.",
+   "fuente": "Annual Report Hochschild (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.0001,
+   "eigenvector": 0.0,
+   "comunidad": 6
+  },
+  {
+   "id": "pacasmayo",
+   "label": "Cementos Pacasmayo",
+   "tipo": "empresa",
+   "sector": "Cemento y construcción",
+   "grupo": "g-hochschild",
+   "grupo_nombre": "Grupo Hochschild",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 2000,
+   "empleados": 1700,
+   "nota": "Cementera del norte del Perú; listada en NYSE y BVL.",
+   "fuente": "Memoria Pacasmayo 2024 (aprox.)",
+   "grado": 2,
+   "pagerank": 0.00628,
+   "betweenness": 0.0001,
+   "eigenvector": 0.0,
+   "comunidad": 6
+  },
+  {
+   "id": "saga-falabella",
+   "label": "Falabella Retail Perú (Saga Falabella)",
+   "tipo": "empresa",
+   "sector": "Retail",
+   "grupo": "g-falabella",
+   "grupo_nombre": "Falabella",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 4500,
+   "empleados": 10000,
+   "nota": "Tiendas por departamento.",
+   "fuente": "Memoria Falabella Perú (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 0
+  },
+  {
+   "id": "tottus",
+   "label": "Tottus",
+   "tipo": "empresa",
+   "sector": "Retail",
+   "grupo": "g-falabella",
+   "grupo_nombre": "Falabella",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 4000,
+   "empleados": 12000,
+   "nota": "Supermercados.",
+   "fuente": "Memoria Falabella Perú (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 0
+  },
+  {
+   "id": "sodimac",
+   "label": "Sodimac Perú",
+   "tipo": "empresa",
+   "sector": "Retail",
+   "grupo": "g-falabella",
+   "grupo_nombre": "Falabella",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 3000,
+   "empleados": 8000,
+   "nota": "Mejoramiento del hogar (incluye Maestro).",
+   "fuente": "Memoria Falabella Perú (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 0
+  },
+  {
+   "id": "banco-falabella",
+   "label": "Banco Falabella Perú",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-falabella",
+   "grupo_nombre": "Falabella",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 900,
+   "empleados": 2500,
+   "nota": "Banca de consumo vinculada al retail.",
+   "fuente": "SBS (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 0
+  },
+  {
+   "id": "mallplaza",
+   "label": "Mallplaza Perú",
+   "tipo": "empresa",
+   "sector": "Inmobiliario",
+   "grupo": "g-falabella",
+   "grupo_nombre": "Falabella",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 400,
+   "empleados": 500,
+   "nota": "Centros comerciales (incluye los ex Open Plaza).",
+   "fuente": "Memoria Mallplaza (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 0
+  },
+  {
+   "id": "scotiabank-peru",
+   "label": "Scotiabank Perú",
+   "tipo": "empresa",
+   "sector": "Finanzas y banca",
+   "grupo": "g-bns",
+   "grupo_nombre": "Bank of Nova Scotia",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 5000,
+   "empleados": 6000,
+   "nota": "Tercer banco del sistema.",
+   "fuente": "EEFF Scotiabank Perú (aprox.)",
+   "grado": 2,
+   "pagerank": 0.01927,
+   "betweenness": 0.0134,
+   "eigenvector": 0.0393,
+   "comunidad": 4
+  },
+  {
+   "id": "profuturo-afp",
+   "label": "Profuturo AFP",
+   "tipo": "empresa",
+   "sector": "AFP y fondos",
+   "grupo": "g-bns",
+   "grupo_nombre": "Bank of Nova Scotia",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 380,
+   "empleados": 500,
+   "nota": "AFP del grupo Scotiabank.",
+   "fuente": "SBS (aprox.)",
+   "grado": 3,
+   "pagerank": 0.01528,
+   "betweenness": 0.0599,
+   "eigenvector": 0.1609,
+   "comunidad": 4
+  },
+  {
+   "id": "afp-integra",
+   "label": "AFP Integra",
+   "tipo": "empresa",
+   "sector": "AFP y fondos",
+   "grupo": "g-sura",
+   "grupo_nombre": "Grupo SURA",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 450,
+   "empleados": 600,
+   "nota": "Mayor AFP por fondos administrados; inversionista institucional en la BVL.",
+   "fuente": "SBS (aprox.)",
+   "grado": 5,
+   "pagerank": 0.01997,
+   "betweenness": 0.0966,
+   "eigenvector": 0.28,
+   "comunidad": 7
+  },
+  {
+   "id": "afp-habitat",
+   "label": "AFP Habitat Perú",
+   "tipo": "empresa",
+   "sector": "AFP y fondos",
+   "grupo": "g-habitat",
+   "grupo_nombre": "Habitat",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 250,
+   "empleados": 400,
+   "nota": "AFP de matriz chilena; ganó licitaciones de afiliados nuevos.",
+   "fuente": "SBS (aprox.)",
+   "grado": 3,
+   "pagerank": 0.01267,
+   "betweenness": 0.0161,
+   "eigenvector": 0.1342,
+   "comunidad": 1
+  },
+  {
+   "id": "aenza",
+   "label": "AENZA (ex Graña y Montero)",
+   "tipo": "holding",
+   "sector": "Infraestructura",
+   "grupo": "g-ig4",
+   "grupo_nombre": "IG4 Capital",
+   "pais": null,
+   "bvl": true,
+   "ingresos": 5000,
+   "empleados": 12000,
+   "nota": "Mayor grupo de ingeniería e infraestructura; controlado por IG4 Capital tras crisis reputacional.",
+   "fuente": "Memoria AENZA (aprox.)",
+   "grado": 2,
+   "pagerank": 0.01162,
+   "betweenness": 0.0003,
+   "eigenvector": 0.0,
+   "comunidad": 2
+  },
+  {
+   "id": "cumbra",
+   "label": "Cumbra (ex GyM)",
+   "tipo": "empresa",
+   "sector": "Infraestructura",
+   "grupo": "g-ig4",
+   "grupo_nombre": "IG4 Capital",
+   "pais": null,
+   "bvl": false,
+   "ingresos": 2500,
+   "empleados": 8000,
+   "nota": "Constructora insignia de AENZA.",
+   "fuente": "Memoria AENZA (aprox.)",
+   "grado": 1,
+   "pagerank": 0.00628,
+   "betweenness": 0.0,
+   "eigenvector": 0.0,
+   "comunidad": 2
+  },
+  {
+   "id": "p-crp",
+   "label": "Carlos Rodríguez-Pastor Persivale",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Cabeza de Intercorp.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01811,
+   "betweenness": 0.0337,
+   "eigenvector": 0.0492,
+   "comunidad": 3
+  },
+  {
+   "id": "p-drp",
+   "label": "Dionisio Romero Paoletti",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Presidente del directorio de Credicorp y BCP; familia Romero.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01548,
+   "betweenness": 0.0038,
+   "eigenvector": 0.2488,
+   "comunidad": 7
+  },
+  {
+   "id": "p-lrb",
+   "label": "Luis Romero Belismelis",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Presidente ejecutivo del Grupo Romero; preside Alicorp.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01486,
+   "betweenness": 0.0077,
+   "eigenvector": 0.2218,
+   "comunidad": 7
+  },
+  {
+   "id": "p-gferrari",
+   "label": "Gianfranco Ferrari de las Casas",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "CEO de Credicorp (desde 2022).",
+   "fuente": null,
+   "grado": 2,
+   "pagerank": 0.01383,
+   "betweenness": 0.0,
+   "eigenvector": 0.169,
+   "comunidad": 7
+  },
+  {
+   "id": "p-afb",
+   "label": "Alex Fort Brescia",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Copresidente de Breca; preside el directorio de BBVA Perú.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01465,
+   "betweenness": 0.0022,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "p-fbm",
+   "label": "Fortunato Brescia Moreyra",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Copresidente de Breca; preside Minsur.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01403,
+   "betweenness": 0.001,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "p-pbm",
+   "label": "Pedro Brescia Moreyra",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Familia Brescia; preside Rímac.",
+   "fuente": null,
+   "grado": 2,
+   "pagerank": 0.01225,
+   "betweenness": 0.0004,
+   "eigenvector": 0.0,
+   "comunidad": 8
+  },
+  {
+   "id": "p-jrr",
+   "label": "Jorge Rodríguez Rodríguez",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Presidente del Grupo Gloria.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01705,
+   "betweenness": 0.0013,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "p-vrr",
+   "label": "Vito Rodríguez Rodríguez",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Vicepresidente del Grupo Gloria.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01251,
+   "betweenness": 0.0005,
+   "eigenvector": 0.0,
+   "comunidad": 9
+  },
+  {
+   "id": "p-rbg",
+   "label": "Roque Benavides Ganoza",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Familia Benavides; histórico líder de Buenaventura.",
+   "fuente": null,
+   "grado": 3,
+   "pagerank": 0.01377,
+   "betweenness": 0.0003,
+   "eigenvector": 0.0352,
+   "comunidad": 5
+  },
+  {
+   "id": "p-ehb",
+   "label": "Eduardo Hochschild Beeck",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "Preside Hochschild Mining y Cementos Pacasmayo.",
+   "fuente": null,
+   "grado": 2,
+   "pagerank": 0.01162,
+   "betweenness": 0.0001,
+   "eigenvector": 0.0,
+   "comunidad": 6
+  },
+  {
+   "id": "p-lfc",
+   "label": "Luis Felipe Castellanos",
+   "tipo": "persona",
+   "sector": null,
+   "grupo": null,
+   "grupo_nombre": null,
+   "pais": null,
+   "bvl": false,
+   "ingresos": null,
+   "empleados": null,
+   "nota": "CEO de Intercorp Financial Services.",
+   "fuente": null,
+   "grado": 2,
+   "pagerank": 0.01337,
+   "betweenness": 0.0,
+   "eigenvector": 0.0142,
+   "comunidad": 3
+  }
+ ],
+ "edges": [
+  {
+   "source": "g-intercorp",
+   "target": "ifs",
+   "tipo": "control",
+   "pct": 70,
+   "fuente": "Memoria IFS (aprox.)"
+  },
+  {
+   "source": "ifs",
+   "target": "interbank",
+   "tipo": "control",
+   "pct": 99,
+   "fuente": "Memoria IFS"
+  },
+  {
+   "source": "ifs",
+   "target": "interseguro",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria IFS"
+  },
+  {
+   "source": "ifs",
+   "target": "inteligo",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria IFS"
+  },
+  {
+   "source": "g-intercorp",
+   "target": "inretail",
+   "tipo": "control",
+   "pct": 70,
+   "fuente": "Memoria InRetail (aprox.)"
+  },
+  {
+   "source": "inretail",
+   "target": "spsa",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "source": "inretail",
+   "target": "inkafarma",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "source": "inretail",
+   "target": "real-plaza",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "source": "g-intercorp",
+   "target": "utp",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Intercorp Education"
+  },
+  {
+   "source": "g-intercorp",
+   "target": "innova-schools",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Intercorp Education"
+  },
+  {
+   "source": "g-intercorp",
+   "target": "cineplanet",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Cineplex"
+  },
+  {
+   "source": "g-intercorp",
+   "target": "casa-andina",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Sitio corporativo"
+  },
+  {
+   "source": "g-intercorp",
+   "target": "financiera-oh",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "source": "g-romero",
+   "target": "credicorp",
+   "tipo": "participacion",
+   "pct": 16,
+   "fuente": "Form 20-F (accionista de referencia, aprox.)"
+  },
+  {
+   "source": "g-credicorp",
+   "target": "credicorp",
+   "tipo": "matriz",
+   "pct": null,
+   "fuente": "Estructura societaria"
+  },
+  {
+   "source": "credicorp",
+   "target": "bcp",
+   "tipo": "control",
+   "pct": 97,
+   "fuente": "Form 20-F"
+  },
+  {
+   "source": "bcp",
+   "target": "mibanco",
+   "tipo": "control",
+   "pct": 95,
+   "fuente": "Memoria BCP (aprox.)"
+  },
+  {
+   "source": "credicorp",
+   "target": "pacifico",
+   "tipo": "control",
+   "pct": 98,
+   "fuente": "Form 20-F (aprox.)"
+  },
+  {
+   "source": "credicorp",
+   "target": "prima-afp",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Form 20-F"
+  },
+  {
+   "source": "credicorp",
+   "target": "credicorp-capital",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Form 20-F"
+  },
+  {
+   "source": "g-romero",
+   "target": "alicorp",
+   "tipo": "control",
+   "pct": 46,
+   "fuente": "Memoria Alicorp (aprox.)"
+  },
+  {
+   "source": "alicorp",
+   "target": "vitapro",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria Alicorp"
+  },
+  {
+   "source": "g-romero",
+   "target": "primax",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Primax"
+  },
+  {
+   "source": "g-romero",
+   "target": "ransa",
+   "tipo": "participacion",
+   "pct": null,
+   "fuente": "Vínculo histórico; control vendido a H.I.G. (2021)"
+  },
+  {
+   "source": "g-romero",
+   "target": "palmas",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Palmas"
+  },
+  {
+   "source": "g-breca",
+   "target": "rimac",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Rímac"
+  },
+  {
+   "source": "g-breca",
+   "target": "minsur",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Minsur"
+  },
+  {
+   "source": "minsur",
+   "target": "marcobre",
+   "tipo": "control",
+   "pct": 60,
+   "fuente": "Memoria Minsur"
+  },
+  {
+   "source": "g-breca",
+   "target": "tasa",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria TASA"
+  },
+  {
+   "source": "g-breca",
+   "target": "intursa",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Intursa"
+  },
+  {
+   "source": "g-breca",
+   "target": "urbanova",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Sitio corporativo"
+  },
+  {
+   "source": "rimac",
+   "target": "clinica-internacional",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "source": "g-breca",
+   "target": "holding-continental",
+   "tipo": "participacion",
+   "pct": 50,
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "source": "g-bbva",
+   "target": "holding-continental",
+   "tipo": "participacion",
+   "pct": 50,
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "source": "holding-continental",
+   "target": "bbva-peru",
+   "tipo": "control",
+   "pct": 92,
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "source": "g-gloria",
+   "target": "leche-gloria",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Leche Gloria"
+  },
+  {
+   "source": "g-gloria",
+   "target": "yura",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Yura"
+  },
+  {
+   "source": "g-gloria",
+   "target": "coazucar",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Coazucar"
+  },
+  {
+   "source": "coazucar",
+   "target": "casa-grande",
+   "tipo": "control",
+   "pct": 57,
+   "fuente": "Memoria Casa Grande"
+  },
+  {
+   "source": "coazucar",
+   "target": "cartavio",
+   "tipo": "control",
+   "pct": 90,
+   "fuente": "Memoria Cartavio (aprox.)"
+  },
+  {
+   "source": "g-gloria",
+   "target": "trupal",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Trupal"
+  },
+  {
+   "source": "g-ferreycorp",
+   "target": "ferreycorp",
+   "tipo": "matriz",
+   "pct": null,
+   "fuente": "Estructura societaria"
+  },
+  {
+   "source": "ferreycorp",
+   "target": "ferreyros",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria Ferreycorp"
+  },
+  {
+   "source": "ferreycorp",
+   "target": "unimaq",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria Ferreycorp"
+  },
+  {
+   "source": "ferreycorp",
+   "target": "soltrak",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria Ferreycorp"
+  },
+  {
+   "source": "g-benavides",
+   "target": "buenaventura",
+   "tipo": "participacion",
+   "pct": 27,
+   "fuente": "Form 20-F (aprox.)"
+  },
+  {
+   "source": "buenaventura",
+   "target": "el-brocal",
+   "tipo": "control",
+   "pct": 61,
+   "fuente": "Memoria El Brocal (aprox.)"
+  },
+  {
+   "source": "buenaventura",
+   "target": "cerro-verde",
+   "tipo": "participacion",
+   "pct": 19.58,
+   "fuente": "Memoria Cerro Verde"
+  },
+  {
+   "source": "g-freeport",
+   "target": "cerro-verde",
+   "tipo": "control",
+   "pct": 53.56,
+   "fuente": "Memoria Cerro Verde"
+  },
+  {
+   "source": "g-hochschild",
+   "target": "hochschild-mining",
+   "tipo": "control",
+   "pct": 38,
+   "fuente": "Annual Report (aprox.)"
+  },
+  {
+   "source": "g-hochschild",
+   "target": "pacasmayo",
+   "tipo": "control",
+   "pct": 50,
+   "fuente": "Memoria Pacasmayo (vía Inv. ASPI, aprox.)"
+  },
+  {
+   "source": "g-falabella",
+   "target": "saga-falabella",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Falabella Perú"
+  },
+  {
+   "source": "g-falabella",
+   "target": "tottus",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Falabella Perú"
+  },
+  {
+   "source": "g-falabella",
+   "target": "sodimac",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Falabella Perú"
+  },
+  {
+   "source": "g-falabella",
+   "target": "banco-falabella",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "SBS"
+  },
+  {
+   "source": "g-falabella",
+   "target": "mallplaza",
+   "tipo": "control",
+   "pct": null,
+   "fuente": "Memoria Mallplaza"
+  },
+  {
+   "source": "g-bns",
+   "target": "scotiabank-peru",
+   "tipo": "control",
+   "pct": 98,
+   "fuente": "Memoria Scotiabank Perú (aprox.)"
+  },
+  {
+   "source": "scotiabank-peru",
+   "target": "profuturo-afp",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "source": "g-sura",
+   "target": "afp-integra",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "SBS"
+  },
+  {
+   "source": "g-habitat",
+   "target": "afp-habitat",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "SBS"
+  },
+  {
+   "source": "g-ig4",
+   "target": "aenza",
+   "tipo": "control",
+   "pct": 25,
+   "fuente": "Hechos de importancia SMV (control efectivo, aprox.)"
+  },
+  {
+   "source": "aenza",
+   "target": "cumbra",
+   "tipo": "control",
+   "pct": 100,
+   "fuente": "Memoria AENZA"
+  },
+  {
+   "source": "prima-afp",
+   "target": "alicorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "prima-afp",
+   "target": "ferreycorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "prima-afp",
+   "target": "inretail",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "afp-integra",
+   "target": "credicorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "afp-integra",
+   "target": "alicorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "afp-integra",
+   "target": "buenaventura",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "afp-integra",
+   "target": "ferreycorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "profuturo-afp",
+   "target": "credicorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "profuturo-afp",
+   "target": "inretail",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "afp-habitat",
+   "target": "ferreycorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "afp-habitat",
+   "target": "alicorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "source": "p-crp",
+   "target": "ifs",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria IFS 2024"
+  },
+  {
+   "source": "p-crp",
+   "target": "interbank",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Interbank"
+  },
+  {
+   "source": "p-crp",
+   "target": "inretail",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "source": "p-lfc",
+   "target": "ifs",
+   "tipo": "gerente_general",
+   "pct": null,
+   "fuente": "Memoria IFS"
+  },
+  {
+   "source": "p-lfc",
+   "target": "interbank",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Interbank (aprox.)"
+  },
+  {
+   "source": "p-drp",
+   "target": "credicorp",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Form 20-F 2024"
+  },
+  {
+   "source": "p-drp",
+   "target": "bcp",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria BCP"
+  },
+  {
+   "source": "p-drp",
+   "target": "alicorp",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Alicorp (aprox.)"
+  },
+  {
+   "source": "p-lrb",
+   "target": "alicorp",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Alicorp"
+  },
+  {
+   "source": "p-lrb",
+   "target": "primax",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Primax (aprox.)"
+  },
+  {
+   "source": "p-lrb",
+   "target": "credicorp",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Form 20-F (aprox.)"
+  },
+  {
+   "source": "p-gferrari",
+   "target": "credicorp",
+   "tipo": "gerente_general",
+   "pct": null,
+   "fuente": "Form 20-F"
+  },
+  {
+   "source": "p-gferrari",
+   "target": "bcp",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria BCP (aprox.)"
+  },
+  {
+   "source": "p-afb",
+   "target": "bbva-peru",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "source": "p-afb",
+   "target": "rimac",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Rímac (aprox.)"
+  },
+  {
+   "source": "p-afb",
+   "target": "minsur",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Minsur (aprox.)"
+  },
+  {
+   "source": "p-fbm",
+   "target": "minsur",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Minsur"
+  },
+  {
+   "source": "p-fbm",
+   "target": "tasa",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria TASA (aprox.)"
+  },
+  {
+   "source": "p-fbm",
+   "target": "bbva-peru",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria BBVA Perú (aprox.)"
+  },
+  {
+   "source": "p-pbm",
+   "target": "rimac",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Rímac"
+  },
+  {
+   "source": "p-pbm",
+   "target": "intursa",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Intursa (aprox.)"
+  },
+  {
+   "source": "p-jrr",
+   "target": "leche-gloria",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Leche Gloria"
+  },
+  {
+   "source": "p-jrr",
+   "target": "yura",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Yura"
+  },
+  {
+   "source": "p-jrr",
+   "target": "coazucar",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Coazucar"
+  },
+  {
+   "source": "p-vrr",
+   "target": "leche-gloria",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Leche Gloria"
+  },
+  {
+   "source": "p-vrr",
+   "target": "yura",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Yura"
+  },
+  {
+   "source": "p-vrr",
+   "target": "trupal",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Trupal (aprox.)"
+  },
+  {
+   "source": "p-rbg",
+   "target": "buenaventura",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Buenaventura"
+  },
+  {
+   "source": "p-rbg",
+   "target": "el-brocal",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria El Brocal (aprox.)"
+  },
+  {
+   "source": "p-rbg",
+   "target": "cerro-verde",
+   "tipo": "director",
+   "pct": null,
+   "fuente": "Memoria Cerro Verde (representación de Buenaventura, aprox.)"
+  },
+  {
+   "source": "p-ehb",
+   "target": "hochschild-mining",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Annual Report Hochschild"
+  },
+  {
+   "source": "p-ehb",
+   "target": "pacasmayo",
+   "tipo": "presidente",
+   "pct": null,
+   "fuente": "Memoria Pacasmayo"
+  }
+ ],
+ "ranking": [
+  {
+   "id": "g-intercorp",
+   "nombre": "Intercorp",
+   "pais": "Perú",
+   "control": "Familia Rodríguez-Pastor",
+   "epi": 97.8,
+   "componentes": {
+    "ingresos": 35.0,
+    "empleados": 15.0,
+    "empresas": 10.0,
+    "sectores": 10.0,
+    "pagerank": 15.0,
+    "betweenness": 10.0,
+    "grado": 2.8
+   },
+   "ingresos": 59850,
+   "empleados": 149100,
+   "empresas": 13,
+   "sectores": 7,
+   "lista_sectores": [
+    "Educación",
+    "Finanzas y banca",
+    "Inmobiliario",
+    "Retail",
+    "Salud",
+    "Seguros",
+    "Turismo y entretenimiento"
+   ]
+  },
+  {
+   "id": "g-credicorp",
+   "nombre": "Credicorp",
+   "pais": "Perú",
+   "control": "Accionariado difundido; Familia Romero como accionista de referencia",
+   "epi": 78.9,
+   "componentes": {
+    "ingresos": 33.2,
+    "empleados": 13.1,
+    "empresas": 4.2,
+    "sectores": 3.3,
+    "pagerank": 11.3,
+    "betweenness": 8.8,
+    "grado": 5.0
+   },
+   "ingresos": 45000,
+   "empleados": 71100,
+   "empresas": 6,
+   "sectores": 3,
+   "lista_sectores": [
+    "AFP y fondos",
+    "Finanzas y banca",
+    "Seguros"
+   ]
+  },
+  {
+   "id": "g-breca",
+   "nombre": "Breca",
+   "pais": "Perú",
+   "control": "Familia Brescia",
+   "epi": 65.0,
+   "componentes": {
+    "ingresos": 28.8,
+    "empleados": 9.9,
+    "empresas": 5.8,
+    "sectores": 10.0,
+    "pagerank": 7.5,
+    "betweenness": 0.7,
+    "grado": 2.2
+   },
+   "ingresos": 22600,
+   "empleados": 19800,
+   "empresas": 8,
+   "sectores": 7,
+   "lista_sectores": [
+    "Finanzas y banca",
+    "Inmobiliario",
+    "Minería",
+    "Pesca",
+    "Salud",
+    "Seguros",
+    "Turismo y entretenimiento"
+   ]
+  },
+  {
+   "id": "g-romero",
+   "nombre": "Grupo Romero",
+   "pais": "Perú",
+   "control": "Familia Romero",
+   "epi": 64.5,
+   "componentes": {
+    "ingresos": 31.9,
+    "empleados": 10.8,
+    "empresas": 3.3,
+    "sectores": 5.0,
+    "pagerank": 6.9,
+    "betweenness": 3.8,
+    "grado": 2.8
+   },
+   "ingresos": 36900,
+   "empleados": 28500,
+   "empresas": 5,
+   "sectores": 4,
+   "lista_sectores": [
+    "Agroindustria",
+    "Consumo masivo",
+    "Energía y combustibles",
+    "Logística"
+   ]
+  },
+  {
+   "id": "g-falabella",
+   "nombre": "Falabella",
+   "pais": "Chile",
+   "control": "Familias Solari / Del Río (Chile)",
+   "epi": 55.2,
+   "componentes": {
+    "ingresos": 25.1,
+    "empleados": 11.2,
+    "empresas": 3.3,
+    "sectores": 3.3,
+    "pagerank": 10.3,
+    "betweenness": 0.2,
+    "grado": 1.7
+   },
+   "ingresos": 12800,
+   "empleados": 33000,
+   "empresas": 5,
+   "sectores": 3,
+   "lista_sectores": [
+    "Finanzas y banca",
+    "Inmobiliario",
+    "Retail"
+   ]
+  },
+  {
+   "id": "g-gloria",
+   "nombre": "Grupo Gloria",
+   "pais": "Perú",
+   "control": "Familia Rodríguez Rodríguez",
+   "epi": 51.8,
+   "componentes": {
+    "ingresos": 26.1,
+    "empleados": 11.0,
+    "empresas": 4.2,
+    "sectores": 5.0,
+    "pagerank": 4.2,
+    "betweenness": 0.2,
+    "grado": 1.1
+   },
+   "ingresos": 14900,
+   "empleados": 31000,
+   "empresas": 6,
+   "sectores": 4,
+   "lista_sectores": [
+    "Agroindustria",
+    "Cemento y construcción",
+    "Consumo masivo",
+    "Papel y empaques"
+   ]
+  },
+  {
+   "id": "g-ferreycorp",
+   "nombre": "Ferreycorp",
+   "pais": "Perú",
+   "control": "Corporación de accionariado difundido (AFPs y fondos ~40%)",
+   "epi": 50.8,
+   "componentes": {
+    "ingresos": 26.1,
+    "empleados": 9.6,
+    "empresas": 2.5,
+    "sectores": 0.0,
+    "pagerank": 5.4,
+    "betweenness": 4.5,
+    "grado": 2.8
+   },
+   "ingresos": 14900,
+   "empleados": 17800,
+   "empresas": 4,
+   "sectores": 1,
+   "lista_sectores": [
+    "Industria y maquinaria"
+   ]
+  },
+  {
+   "id": "g-bns",
+   "nombre": "Bank of Nova Scotia",
+   "pais": "Canadá",
+   "control": "Accionariado difundido (Canadá)",
+   "epi": 39.1,
+   "componentes": {
+    "ingresos": 19.6,
+    "empleados": 7.1,
+    "empresas": 0.8,
+    "sectores": 1.7,
+    "pagerank": 5.5,
+    "betweenness": 3.8,
+    "grado": 0.6
+   },
+   "ingresos": 5380,
+   "empleados": 6500,
+   "empresas": 2,
+   "sectores": 2,
+   "lista_sectores": [
+    "AFP y fondos",
+    "Finanzas y banca"
+   ]
+  },
+  {
+   "id": "g-ig4",
+   "nombre": "IG4 Capital",
+   "pais": "Brasil",
+   "control": "Fondo de inversión (Brasil)",
+   "epi": 35.0,
+   "componentes": {
+    "ingresos": 21.7,
+    "empleados": 9.9,
+    "empresas": 0.8,
+    "sectores": 0.0,
+    "pagerank": 2.5,
+    "betweenness": 0.0,
+    "grado": 0.0
+   },
+   "ingresos": 7500,
+   "empleados": 20000,
+   "empresas": 2,
+   "sectores": 1,
+   "lista_sectores": [
+    "Infraestructura"
+   ]
+  },
+  {
+   "id": "g-benavides",
+   "nombre": "Familia Benavides",
+   "pais": "Perú",
+   "control": "Familia Benavides",
+   "epi": 33.7,
+   "componentes": {
+    "ingresos": 20.3,
+    "empleados": 6.9,
+    "empresas": 0.8,
+    "sectores": 0.0,
+    "pagerank": 0.0,
+    "betweenness": 4.0,
+    "grado": 1.7
+   },
+   "ingresos": 6000,
+   "empleados": 6000,
+   "empresas": 2,
+   "sectores": 1,
+   "lista_sectores": [
+    "Minería"
+   ]
+  },
+  {
+   "id": "g-hochschild",
+   "nombre": "Grupo Hochschild",
+   "pais": "Perú",
+   "control": "Familia Hochschild",
+   "epi": 29.9,
+   "componentes": {
+    "ingresos": 19.9,
+    "empleados": 7.1,
+    "empresas": 0.8,
+    "sectores": 1.7,
+    "pagerank": 0.4,
+    "betweenness": 0.0,
+    "grado": 0.0
+   },
+   "ingresos": 5600,
+   "empleados": 6700,
+   "empresas": 2,
+   "sectores": 2,
+   "lista_sectores": [
+    "Cemento y construcción",
+    "Minería"
+   ]
+  },
+  {
+   "id": "g-sura",
+   "nombre": "Grupo SURA",
+   "pais": "Colombia",
+   "control": "Accionariado difundido (Colombia)",
+   "epi": 18.4,
+   "componentes": {
+    "ingresos": 3.7,
+    "empleados": 1.0,
+    "empresas": 0.0,
+    "sectores": 0.0,
+    "pagerank": 5.8,
+    "betweenness": 6.1,
+    "grado": 1.7
+   },
+   "ingresos": 450,
+   "empleados": 600,
+   "empresas": 1,
+   "sectores": 1,
+   "lista_sectores": [
+    "AFP y fondos"
+   ]
+  },
+  {
+   "id": "g-habitat",
+   "nombre": "Habitat",
+   "pais": "Chile",
+   "control": "Cámara Chilena de la Construcción / Prudential (Chile)",
+   "epi": 4.5,
+   "componentes": {
+    "ingresos": 0.0,
+    "empleados": 0.0,
+    "empresas": 0.0,
+    "sectores": 0.0,
+    "pagerank": 2.9,
+    "betweenness": 1.0,
+    "grado": 0.6
+   },
+   "ingresos": 250,
+   "empleados": 400,
+   "empresas": 1,
+   "sectores": 1,
+   "lista_sectores": [
+    "AFP y fondos"
+   ]
+  }
+ ],
+ "conexiones": {
+  "pares": [
+   {
+    "a": "leche-gloria",
+    "b": "yura",
+    "score": 100,
+    "directores": [
+     "Jorge Rodríguez Rodríguez",
+     "Vito Rodríguez Rodríguez"
+    ],
+    "accionistas": [
+     "Grupo Gloria"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "alicorp",
+    "b": "credicorp",
+    "score": 95,
+    "directores": [
+     "Dionisio Romero Paoletti",
+     "Luis Romero Belismelis"
+    ],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [
+     "AFP Integra"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "bcp",
+    "b": "credicorp",
+    "score": 95,
+    "directores": [
+     "Dionisio Romero Paoletti",
+     "Gianfranco Ferrari de las Casas"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "ifs",
+    "b": "interbank",
+    "score": 95,
+    "directores": [
+     "Carlos Rodríguez-Pastor Persivale",
+     "Luis Felipe Castellanos"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "alicorp",
+    "b": "primax",
+    "score": 80,
+    "directores": [
+     "Luis Romero Belismelis"
+    ],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "coazucar",
+    "b": "leche-gloria",
+    "score": 80,
+    "directores": [
+     "Jorge Rodríguez Rodríguez"
+    ],
+    "accionistas": [
+     "Grupo Gloria"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "coazucar",
+    "b": "yura",
+    "score": 80,
+    "directores": [
+     "Jorge Rodríguez Rodríguez"
+    ],
+    "accionistas": [
+     "Grupo Gloria"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "hochschild-mining",
+    "b": "pacasmayo",
+    "score": 80,
+    "directores": [
+     "Eduardo Hochschild Beeck"
+    ],
+    "accionistas": [
+     "Grupo Hochschild"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "ifs",
+    "b": "inretail",
+    "score": 80,
+    "directores": [
+     "Carlos Rodríguez-Pastor Persivale"
+    ],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "intursa",
+    "b": "rimac",
+    "score": 80,
+    "directores": [
+     "Pedro Brescia Moreyra"
+    ],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "leche-gloria",
+    "b": "trupal",
+    "score": 80,
+    "directores": [
+     "Vito Rodríguez Rodríguez"
+    ],
+    "accionistas": [
+     "Grupo Gloria"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "minsur",
+    "b": "rimac",
+    "score": 80,
+    "directores": [
+     "Alex Fort Brescia"
+    ],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "minsur",
+    "b": "tasa",
+    "score": 80,
+    "directores": [
+     "Fortunato Brescia Moreyra"
+    ],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "trupal",
+    "b": "yura",
+    "score": 80,
+    "directores": [
+     "Vito Rodríguez Rodríguez"
+    ],
+    "accionistas": [
+     "Grupo Gloria"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "buenaventura",
+    "b": "el-brocal",
+    "score": 65,
+    "directores": [
+     "Roque Benavides Ganoza"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "cerro-verde",
+    "b": "el-brocal",
+    "score": 65,
+    "directores": [
+     "Roque Benavides Ganoza"
+    ],
+    "accionistas": [
+     "Cía. de Minas Buenaventura"
+    ],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": true
+   },
+   {
+    "a": "bbva-peru",
+    "b": "minsur",
+    "score": 60,
+    "directores": [
+     "Alex Fort Brescia",
+     "Fortunato Brescia Moreyra"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "bcp",
+    "b": "credicorp-capital",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Credicorp Ltd."
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "cartavio",
+    "b": "casa-grande",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Coazucar"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "casa-andina",
+    "b": "cineplanet",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "ferreyros",
+    "b": "soltrak",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Ferreycorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "ferreyros",
+    "b": "unimaq",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Ferreycorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "financiera-oh",
+    "b": "ifs",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "innova-schools",
+    "b": "utp",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "inteligo",
+    "b": "interbank",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Intercorp Financial Services"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "saga-falabella",
+    "b": "sodimac",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "saga-falabella",
+    "b": "tottus",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "sodimac",
+    "b": "tottus",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "soltrak",
+    "b": "unimaq",
+    "score": 60,
+    "directores": [],
+    "accionistas": [
+     "Ferreycorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": true
+   },
+   {
+    "a": "credicorp",
+    "b": "primax",
+    "score": 55,
+    "directores": [
+     "Luis Romero Belismelis"
+    ],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "inretail",
+    "b": "interbank",
+    "score": 55,
+    "directores": [
+     "Carlos Rodríguez-Pastor Persivale"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "alicorp",
+    "b": "palmas",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "alicorp",
+    "b": "ransa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "banco-falabella",
+    "b": "mallplaza",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "banco-falabella",
+    "b": "saga-falabella",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "banco-falabella",
+    "b": "sodimac",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "banco-falabella",
+    "b": "tottus",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "bcp",
+    "b": "pacifico",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Credicorp Ltd."
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "bcp",
+    "b": "prima-afp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Credicorp Ltd."
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "casa-andina",
+    "b": "financiera-oh",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "casa-andina",
+    "b": "ifs",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "casa-andina",
+    "b": "innova-schools",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "casa-andina",
+    "b": "inretail",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "casa-andina",
+    "b": "utp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "cineplanet",
+    "b": "financiera-oh",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "cineplanet",
+    "b": "ifs",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "cineplanet",
+    "b": "innova-schools",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "cineplanet",
+    "b": "inretail",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "cineplanet",
+    "b": "utp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "coazucar",
+    "b": "trupal",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Grupo Gloria"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "credicorp-capital",
+    "b": "pacifico",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Credicorp Ltd."
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "credicorp-capital",
+    "b": "prima-afp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Credicorp Ltd."
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "financiera-oh",
+    "b": "innova-schools",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "financiera-oh",
+    "b": "inretail",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "financiera-oh",
+    "b": "utp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "holding-continental",
+    "b": "intursa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "holding-continental",
+    "b": "minsur",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "holding-continental",
+    "b": "rimac",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "holding-continental",
+    "b": "tasa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "holding-continental",
+    "b": "urbanova",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "ifs",
+    "b": "innova-schools",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "ifs",
+    "b": "utp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "inkafarma",
+    "b": "real-plaza",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "InRetail Perú"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "inkafarma",
+    "b": "spsa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "InRetail Perú"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "innova-schools",
+    "b": "inretail",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "inretail",
+    "b": "utp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "inteligo",
+    "b": "interseguro",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp Financial Services"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "interbank",
+    "b": "interseguro",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Intercorp Financial Services"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "intursa",
+    "b": "minsur",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "intursa",
+    "b": "tasa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "intursa",
+    "b": "urbanova",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "mallplaza",
+    "b": "saga-falabella",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "mallplaza",
+    "b": "sodimac",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "mallplaza",
+    "b": "tottus",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Falabella"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "minsur",
+    "b": "urbanova",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "pacifico",
+    "b": "prima-afp",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Credicorp Ltd."
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "palmas",
+    "b": "primax",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "palmas",
+    "b": "ransa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "primax",
+    "b": "ransa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "real-plaza",
+    "b": "spsa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "InRetail Perú"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "rimac",
+    "b": "tasa",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "rimac",
+    "b": "urbanova",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "tasa",
+    "b": "urbanova",
+    "score": 50,
+    "directores": [],
+    "accionistas": [
+     "Breca"
+    ],
+    "institucionales": [],
+    "mismo_grupo": true,
+    "mismo_sector": false
+   },
+   {
+    "a": "buenaventura",
+    "b": "cerro-verde",
+    "score": 40,
+    "directores": [
+     "Roque Benavides Ganoza"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": true
+   },
+   {
+    "a": "alicorp",
+    "b": "bcp",
+    "score": 30,
+    "directores": [
+     "Dionisio Romero Paoletti"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "bbva-peru",
+    "b": "rimac",
+    "score": 30,
+    "directores": [
+     "Alex Fort Brescia"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "bbva-peru",
+    "b": "tasa",
+    "score": 30,
+    "directores": [
+     "Fortunato Brescia Moreyra"
+    ],
+    "accionistas": [],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "credicorp",
+    "b": "palmas",
+    "score": 25,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "credicorp",
+    "b": "ransa",
+    "score": 25,
+    "directores": [],
+    "accionistas": [
+     "Grupo Romero"
+    ],
+    "institucionales": [],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "alicorp",
+    "b": "buenaventura",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "AFP Integra"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "alicorp",
+    "b": "ferreycorp",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "AFP Habitat Perú",
+     "AFP Integra",
+     "Prima AFP"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "alicorp",
+    "b": "inretail",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "Prima AFP"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "buenaventura",
+    "b": "credicorp",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "AFP Integra"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "buenaventura",
+    "b": "ferreycorp",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "AFP Integra"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "credicorp",
+    "b": "ferreycorp",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "AFP Integra"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "credicorp",
+    "b": "inretail",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "Profuturo AFP"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   },
+   {
+    "a": "ferreycorp",
+    "b": "inretail",
+    "score": 10,
+    "directores": [],
+    "accionistas": [],
+    "institucionales": [
+     "Prima AFP"
+    ],
+    "mismo_grupo": false,
+    "mismo_sector": false
+   }
+  ],
+  "personas": [
+   {
+    "id": "p-crp",
+    "nombre": "Carlos Rodríguez-Pastor Persivale",
+    "nota": "Cabeza de Intercorp.",
+    "cargos": [
+     {
+      "empresa": "ifs",
+      "empresa_nombre": "Intercorp Financial Services",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "interbank",
+      "empresa_nombre": "Interbank",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "inretail",
+      "empresa_nombre": "InRetail Perú",
+      "rol": "presidente"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0337,
+    "pagerank": 0.01811
+   },
+   {
+    "id": "p-drp",
+    "nombre": "Dionisio Romero Paoletti",
+    "nota": "Presidente del directorio de Credicorp y BCP; familia Romero.",
+    "cargos": [
+     {
+      "empresa": "credicorp",
+      "empresa_nombre": "Credicorp Ltd.",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "bcp",
+      "empresa_nombre": "Banco de Crédito del Perú (BCP)",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "alicorp",
+      "empresa_nombre": "Alicorp",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0038,
+    "pagerank": 0.01548
+   },
+   {
+    "id": "p-lrb",
+    "nombre": "Luis Romero Belismelis",
+    "nota": "Presidente ejecutivo del Grupo Romero; preside Alicorp.",
+    "cargos": [
+     {
+      "empresa": "alicorp",
+      "empresa_nombre": "Alicorp",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "primax",
+      "empresa_nombre": "Primax",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "credicorp",
+      "empresa_nombre": "Credicorp Ltd.",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0077,
+    "pagerank": 0.01486
+   },
+   {
+    "id": "p-afb",
+    "nombre": "Alex Fort Brescia",
+    "nota": "Copresidente de Breca; preside el directorio de BBVA Perú.",
+    "cargos": [
+     {
+      "empresa": "bbva-peru",
+      "empresa_nombre": "BBVA Perú",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "rimac",
+      "empresa_nombre": "Rímac Seguros",
+      "rol": "director"
+     },
+     {
+      "empresa": "minsur",
+      "empresa_nombre": "Minsur",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0022,
+    "pagerank": 0.01465
+   },
+   {
+    "id": "p-fbm",
+    "nombre": "Fortunato Brescia Moreyra",
+    "nota": "Copresidente de Breca; preside Minsur.",
+    "cargos": [
+     {
+      "empresa": "minsur",
+      "empresa_nombre": "Minsur",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "tasa",
+      "empresa_nombre": "TASA — Tecnológica de Alimentos",
+      "rol": "director"
+     },
+     {
+      "empresa": "bbva-peru",
+      "empresa_nombre": "BBVA Perú",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.001,
+    "pagerank": 0.01403
+   },
+   {
+    "id": "p-jrr",
+    "nombre": "Jorge Rodríguez Rodríguez",
+    "nota": "Presidente del Grupo Gloria.",
+    "cargos": [
+     {
+      "empresa": "leche-gloria",
+      "empresa_nombre": "Leche Gloria",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "yura",
+      "empresa_nombre": "Yura",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "coazucar",
+      "empresa_nombre": "Coazucar",
+      "rol": "presidente"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0013,
+    "pagerank": 0.01705
+   },
+   {
+    "id": "p-vrr",
+    "nombre": "Vito Rodríguez Rodríguez",
+    "nota": "Vicepresidente del Grupo Gloria.",
+    "cargos": [
+     {
+      "empresa": "leche-gloria",
+      "empresa_nombre": "Leche Gloria",
+      "rol": "director"
+     },
+     {
+      "empresa": "yura",
+      "empresa_nombre": "Yura",
+      "rol": "director"
+     },
+     {
+      "empresa": "trupal",
+      "empresa_nombre": "Trupal",
+      "rol": "presidente"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0005,
+    "pagerank": 0.01251
+   },
+   {
+    "id": "p-rbg",
+    "nombre": "Roque Benavides Ganoza",
+    "nota": "Familia Benavides; histórico líder de Buenaventura.",
+    "cargos": [
+     {
+      "empresa": "buenaventura",
+      "empresa_nombre": "Cía. de Minas Buenaventura",
+      "rol": "director"
+     },
+     {
+      "empresa": "el-brocal",
+      "empresa_nombre": "El Brocal",
+      "rol": "director"
+     },
+     {
+      "empresa": "cerro-verde",
+      "empresa_nombre": "Sociedad Minera Cerro Verde",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 3,
+    "betweenness": 0.0003,
+    "pagerank": 0.01377
+   },
+   {
+    "id": "p-lfc",
+    "nombre": "Luis Felipe Castellanos",
+    "nota": "CEO de Intercorp Financial Services.",
+    "cargos": [
+     {
+      "empresa": "ifs",
+      "empresa_nombre": "Intercorp Financial Services",
+      "rol": "gerente_general"
+     },
+     {
+      "empresa": "interbank",
+      "empresa_nombre": "Interbank",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 2,
+    "betweenness": 0.0,
+    "pagerank": 0.01337
+   },
+   {
+    "id": "p-gferrari",
+    "nombre": "Gianfranco Ferrari de las Casas",
+    "nota": "CEO de Credicorp (desde 2022).",
+    "cargos": [
+     {
+      "empresa": "credicorp",
+      "empresa_nombre": "Credicorp Ltd.",
+      "rol": "gerente_general"
+     },
+     {
+      "empresa": "bcp",
+      "empresa_nombre": "Banco de Crédito del Perú (BCP)",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 2,
+    "betweenness": 0.0,
+    "pagerank": 0.01383
+   },
+   {
+    "id": "p-pbm",
+    "nombre": "Pedro Brescia Moreyra",
+    "nota": "Familia Brescia; preside Rímac.",
+    "cargos": [
+     {
+      "empresa": "rimac",
+      "empresa_nombre": "Rímac Seguros",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "intursa",
+      "empresa_nombre": "Intursa (hoteles Westin, Libertador)",
+      "rol": "director"
+     }
+    ],
+    "n_empresas": 2,
+    "betweenness": 0.0004,
+    "pagerank": 0.01225
+   },
+   {
+    "id": "p-ehb",
+    "nombre": "Eduardo Hochschild Beeck",
+    "nota": "Preside Hochschild Mining y Cementos Pacasmayo.",
+    "cargos": [
+     {
+      "empresa": "hochschild-mining",
+      "empresa_nombre": "Hochschild Mining",
+      "rol": "presidente"
+     },
+     {
+      "empresa": "pacasmayo",
+      "empresa_nombre": "Cementos Pacasmayo",
+      "rol": "presidente"
+     }
+    ],
+    "n_empresas": 2,
+    "betweenness": 0.0001,
+    "pagerank": 0.01162
+   }
+  ]
+ },
+ "sectores": [
+  {
+   "sector": "Finanzas y banca",
+   "ingresos_total": 67400,
+   "n_empresas": 11,
+   "n_grupos": 4,
+   "hhi_muestra": 1894,
+   "empresas": [
+    {
+     "id": "credicorp",
+     "nombre": "Credicorp Ltd.",
+     "grupo": "Credicorp",
+     "ingresos": 22000,
+     "share": 32.6
+    },
+    {
+     "id": "bcp",
+     "nombre": "Banco de Crédito del Perú (BCP)",
+     "grupo": "Credicorp",
+     "ingresos": 14000,
+     "share": 20.8
+    },
+    {
+     "id": "ifs",
+     "nombre": "Intercorp Financial Services",
+     "grupo": "Intercorp",
+     "ingresos": 7800,
+     "share": 11.6
+    },
+    {
+     "id": "bbva-peru",
+     "nombre": "BBVA Perú",
+     "grupo": null,
+     "ingresos": 6800,
+     "share": 10.1
+    },
+    {
+     "id": "interbank",
+     "nombre": "Interbank",
+     "grupo": "Intercorp",
+     "ingresos": 6200,
+     "share": 9.2
+    },
+    {
+     "id": "scotiabank-peru",
+     "nombre": "Scotiabank Perú",
+     "grupo": "Bank of Nova Scotia",
+     "ingresos": 5000,
+     "share": 7.4
+    },
+    {
+     "id": "mibanco",
+     "nombre": "Mibanco",
+     "grupo": "Credicorp",
+     "ingresos": 2800,
+     "share": 4.2
+    },
+    {
+     "id": "banco-falabella",
+     "nombre": "Banco Falabella Perú",
+     "grupo": "Falabella",
+     "ingresos": 900,
+     "share": 1.3
+    },
+    {
+     "id": "credicorp-capital",
+     "nombre": "Credicorp Capital",
+     "grupo": "Credicorp",
+     "ingresos": 800,
+     "share": 1.2
+    },
+    {
+     "id": "financiera-oh",
+     "nombre": "Financiera Oh!",
+     "grupo": "Intercorp",
+     "ingresos": 700,
+     "share": 1.0
+    },
+    {
+     "id": "inteligo",
+     "nombre": "Inteligo",
+     "grupo": "Intercorp",
+     "ingresos": 400,
+     "share": 0.6
+    }
+   ]
+  },
+  {
+   "sector": "Retail",
+   "ingresos_total": 43000,
+   "n_empresas": 5,
+   "n_grupos": 2,
+   "hhi_muestra": 3350,
+   "empresas": [
+    {
+     "id": "inretail",
+     "nombre": "InRetail Perú",
+     "grupo": "Intercorp",
+     "ingresos": 22000,
+     "share": 51.2
+    },
+    {
+     "id": "spsa",
+     "nombre": "Supermercados Peruanos (Plaza Vea)",
+     "grupo": "Intercorp",
+     "ingresos": 9500,
+     "share": 22.1
+    },
+    {
+     "id": "saga-falabella",
+     "nombre": "Falabella Retail Perú (Saga Falabella)",
+     "grupo": "Falabella",
+     "ingresos": 4500,
+     "share": 10.5
+    },
+    {
+     "id": "tottus",
+     "nombre": "Tottus",
+     "grupo": "Falabella",
+     "ingresos": 4000,
+     "share": 9.3
+    },
+    {
+     "id": "sodimac",
+     "nombre": "Sodimac Perú",
+     "grupo": "Falabella",
+     "ingresos": 3000,
+     "share": 7.0
+    }
+   ]
+  },
+  {
+   "sector": "Minería",
+   "ingresos_total": 38100,
+   "n_empresas": 6,
+   "n_grupos": 3,
+   "hhi_muestra": 2636,
+   "empresas": [
+    {
+     "id": "cerro-verde",
+     "nombre": "Sociedad Minera Cerro Verde",
+     "grupo": null,
+     "ingresos": 16500,
+     "share": 43.3
+    },
+    {
+     "id": "minsur",
+     "nombre": "Minsur",
+     "grupo": "Breca",
+     "ingresos": 7500,
+     "share": 19.7
+    },
+    {
+     "id": "marcobre",
+     "nombre": "Marcobre (Mina Justa)",
+     "grupo": "Breca",
+     "ingresos": 4500,
+     "share": 11.8
+    },
+    {
+     "id": "buenaventura",
+     "nombre": "Cía. de Minas Buenaventura",
+     "grupo": "Familia Benavides",
+     "ingresos": 4200,
+     "share": 11.0
+    },
+    {
+     "id": "hochschild-mining",
+     "nombre": "Hochschild Mining",
+     "grupo": "Grupo Hochschild",
+     "ingresos": 3600,
+     "share": 9.4
+    },
+    {
+     "id": "el-brocal",
+     "nombre": "El Brocal",
+     "grupo": "Familia Benavides",
+     "ingresos": 1800,
+     "share": 4.7
+    }
+   ]
+  },
+  {
+   "sector": "Consumo masivo",
+   "ingresos_total": 19000,
+   "n_empresas": 2,
+   "n_grupos": 2,
+   "hhi_muestra": 5499,
+   "empresas": [
+    {
+     "id": "alicorp",
+     "nombre": "Alicorp",
+     "grupo": "Grupo Romero",
+     "ingresos": 12500,
+     "share": 65.8
+    },
+    {
+     "id": "leche-gloria",
+     "nombre": "Leche Gloria",
+     "grupo": "Grupo Gloria",
+     "ingresos": 6500,
+     "share": 34.2
+    }
+   ]
+  },
+  {
+   "sector": "Energía y combustibles",
+   "ingresos_total": 19000,
+   "n_empresas": 1,
+   "n_grupos": 1,
+   "hhi_muestra": 10000,
+   "empresas": [
+    {
+     "id": "primax",
+     "nombre": "Primax",
+     "grupo": "Grupo Romero",
+     "ingresos": 19000,
+     "share": 100.0
+    }
+   ]
+  },
+  {
+   "sector": "Industria y maquinaria",
+   "ingresos_total": 14900,
+   "n_empresas": 4,
+   "n_grupos": 1,
+   "hhi_muestra": 4425,
+   "empresas": [
+    {
+     "id": "ferreycorp",
+     "nombre": "Ferreycorp",
+     "grupo": "Ferreycorp",
+     "ingresos": 8200,
+     "share": 55.0
+    },
+    {
+     "id": "ferreyros",
+     "nombre": "Ferreyros",
+     "grupo": "Ferreycorp",
+     "ingresos": 5500,
+     "share": 36.9
+    },
+    {
+     "id": "unimaq",
+     "nombre": "Unimaq",
+     "grupo": "Ferreycorp",
+     "ingresos": 700,
+     "share": 4.7
+    },
+    {
+     "id": "soltrak",
+     "nombre": "Soltrak",
+     "grupo": "Ferreycorp",
+     "ingresos": 500,
+     "share": 3.4
+    }
+   ]
+  },
+  {
+   "sector": "Seguros",
+   "ingresos_total": 12800,
+   "n_empresas": 3,
+   "n_grupos": 3,
+   "hhi_muestra": 4208,
+   "empresas": [
+    {
+     "id": "rimac",
+     "nombre": "Rímac Seguros",
+     "grupo": "Breca",
+     "ingresos": 6500,
+     "share": 50.8
+    },
+    {
+     "id": "pacifico",
+     "nombre": "Pacífico Seguros",
+     "grupo": "Credicorp",
+     "ingresos": 5000,
+     "share": 39.1
+    },
+    {
+     "id": "interseguro",
+     "nombre": "Interseguro",
+     "grupo": "Intercorp",
+     "ingresos": 1300,
+     "share": 10.2
+    }
+   ]
+  },
+  {
+   "sector": "Salud",
+   "ingresos_total": 9400,
+   "n_empresas": 2,
+   "n_grupos": 2,
+   "hhi_muestra": 8268,
+   "empresas": [
+    {
+     "id": "inkafarma",
+     "nombre": "InRetail Pharma (Inkafarma · Mifarma)",
+     "grupo": "Intercorp",
+     "ingresos": 8500,
+     "share": 90.4
+    },
+    {
+     "id": "clinica-internacional",
+     "nombre": "Clínica Internacional",
+     "grupo": "Breca",
+     "ingresos": 900,
+     "share": 9.6
+    }
+   ]
+  },
+  {
+   "sector": "Agroindustria",
+   "ingresos_total": 8300,
+   "n_empresas": 5,
+   "n_grupos": 2,
+   "hhi_muestra": 2751,
+   "empresas": [
+    {
+     "id": "vitapro",
+     "nombre": "Vitapro",
+     "grupo": "Grupo Romero",
+     "ingresos": 3000,
+     "share": 36.1
+    },
+    {
+     "id": "coazucar",
+     "nombre": "Coazucar",
+     "grupo": "Grupo Gloria",
+     "ingresos": 2800,
+     "share": 33.7
+    },
+    {
+     "id": "palmas",
+     "nombre": "Palmas del Espino",
+     "grupo": "Grupo Romero",
+     "ingresos": 900,
+     "share": 10.8
+    },
+    {
+     "id": "casa-grande",
+     "nombre": "Casa Grande",
+     "grupo": "Grupo Gloria",
+     "ingresos": 900,
+     "share": 10.8
+    },
+    {
+     "id": "cartavio",
+     "nombre": "Cartavio",
+     "grupo": "Grupo Gloria",
+     "ingresos": 700,
+     "share": 8.4
+    }
+   ]
+  },
+  {
+   "sector": "Infraestructura",
+   "ingresos_total": 7500,
+   "n_empresas": 2,
+   "n_grupos": 1,
+   "hhi_muestra": 5556,
+   "empresas": [
+    {
+     "id": "aenza",
+     "nombre": "AENZA (ex Graña y Montero)",
+     "grupo": "IG4 Capital",
+     "ingresos": 5000,
+     "share": 66.7
+    },
+    {
+     "id": "cumbra",
+     "nombre": "Cumbra (ex GyM)",
+     "grupo": "IG4 Capital",
+     "ingresos": 2500,
+     "share": 33.3
+    }
+   ]
+  },
+  {
+   "sector": "Cemento y construcción",
+   "ingresos_total": 5200,
+   "n_empresas": 2,
+   "n_grupos": 2,
+   "hhi_muestra": 5266,
+   "empresas": [
+    {
+     "id": "yura",
+     "nombre": "Yura",
+     "grupo": "Grupo Gloria",
+     "ingresos": 3200,
+     "share": 61.5
+    },
+    {
+     "id": "pacasmayo",
+     "nombre": "Cementos Pacasmayo",
+     "grupo": "Grupo Hochschild",
+     "ingresos": 2000,
+     "share": 38.5
+    }
+   ]
+  },
+  {
+   "sector": "Pesca",
+   "ingresos_total": 2500,
+   "n_empresas": 1,
+   "n_grupos": 1,
+   "hhi_muestra": 10000,
+   "empresas": [
+    {
+     "id": "tasa",
+     "nombre": "TASA — Tecnológica de Alimentos",
+     "grupo": "Breca",
+     "ingresos": 2500,
+     "share": 100.0
+    }
+   ]
+  },
+  {
+   "sector": "Educación",
+   "ingresos_total": 1700,
+   "n_empresas": 2,
+   "n_grupos": 1,
+   "hhi_muestra": 5848,
+   "empresas": [
+    {
+     "id": "utp",
+     "nombre": "UTP — Universidad Tecnológica del Perú",
+     "grupo": "Intercorp",
+     "ingresos": 1200,
+     "share": 70.6
+    },
+    {
+     "id": "innova-schools",
+     "nombre": "Innova Schools",
+     "grupo": "Intercorp",
+     "ingresos": 500,
+     "share": 29.4
+    }
+   ]
+  },
+  {
+   "sector": "Inmobiliario",
+   "ingresos_total": 1500,
+   "n_empresas": 3,
+   "n_grupos": 3,
+   "hhi_muestra": 3956,
+   "empresas": [
+    {
+     "id": "real-plaza",
+     "nombre": "Real Plaza",
+     "grupo": "Intercorp",
+     "ingresos": 800,
+     "share": 53.3
+    },
+    {
+     "id": "mallplaza",
+     "nombre": "Mallplaza Perú",
+     "grupo": "Falabella",
+     "ingresos": 400,
+     "share": 26.7
+    },
+    {
+     "id": "urbanova",
+     "nombre": "Urbanova",
+     "grupo": "Breca",
+     "ingresos": 300,
+     "share": 20.0
+    }
+   ]
+  },
+  {
+   "sector": "Logística",
+   "ingresos_total": 1500,
+   "n_empresas": 1,
+   "n_grupos": 1,
+   "hhi_muestra": 10000,
+   "empresas": [
+    {
+     "id": "ransa",
+     "nombre": "Ransa",
+     "grupo": "Grupo Romero",
+     "ingresos": 1500,
+     "share": 100.0
+    }
+   ]
+  },
+  {
+   "sector": "AFP y fondos",
+   "ingresos_total": 1480,
+   "n_empresas": 4,
+   "n_grupos": 4,
+   "hhi_muestra": 2600,
+   "empresas": [
+    {
+     "id": "afp-integra",
+     "nombre": "AFP Integra",
+     "grupo": "Grupo SURA",
+     "ingresos": 450,
+     "share": 30.4
+    },
+    {
+     "id": "prima-afp",
+     "nombre": "Prima AFP",
+     "grupo": "Credicorp",
+     "ingresos": 400,
+     "share": 27.0
+    },
+    {
+     "id": "profuturo-afp",
+     "nombre": "Profuturo AFP",
+     "grupo": "Bank of Nova Scotia",
+     "ingresos": 380,
+     "share": 25.7
+    },
+    {
+     "id": "afp-habitat",
+     "nombre": "AFP Habitat Perú",
+     "grupo": "Habitat",
+     "ingresos": 250,
+     "share": 16.9
+    }
+   ]
+  },
+  {
+   "sector": "Turismo y entretenimiento",
+   "ingresos_total": 1350,
+   "n_empresas": 3,
+   "n_grupos": 2,
+   "hhi_muestra": 3525,
+   "empresas": [
+    {
+     "id": "cineplanet",
+     "nombre": "Cineplanet",
+     "grupo": "Intercorp",
+     "ingresos": 600,
+     "share": 44.4
+    },
+    {
+     "id": "intursa",
+     "nombre": "Intursa (hoteles Westin, Libertador)",
+     "grupo": "Breca",
+     "ingresos": 400,
+     "share": 29.6
+    },
+    {
+     "id": "casa-andina",
+     "nombre": "Casa Andina",
+     "grupo": "Intercorp",
+     "ingresos": 350,
+     "share": 25.9
+    }
+   ]
+  },
+  {
+   "sector": "Papel y empaques",
+   "ingresos_total": 800,
+   "n_empresas": 1,
+   "n_grupos": 1,
+   "hhi_muestra": 10000,
+   "empresas": [
+    {
+     "id": "trupal",
+     "nombre": "Trupal",
+     "grupo": "Grupo Gloria",
+     "ingresos": 800,
+     "share": 100.0
+    }
+   ]
+  }
+ ],
+ "puentes": [
+  {
+   "id": "inretail",
+   "label": "InRetail Perú",
+   "tipo": "holding",
+   "grupo_nombre": "Intercorp",
+   "betweenness": 0.1571,
+   "grado": 7
+  },
+  {
+   "id": "credicorp",
+   "label": "Credicorp Ltd.",
+   "tipo": "holding",
+   "grupo_nombre": "Credicorp",
+   "betweenness": 0.1387,
+   "grado": 11
+  },
+  {
+   "id": "prima-afp",
+   "label": "Prima AFP",
+   "tipo": "empresa",
+   "grupo_nombre": "Credicorp",
+   "betweenness": 0.1155,
+   "grado": 4
+  },
+  {
+   "id": "afp-integra",
+   "label": "AFP Integra",
+   "tipo": "empresa",
+   "grupo_nombre": "Grupo SURA",
+   "betweenness": 0.0966,
+   "grado": 5
+  },
+  {
+   "id": "g-intercorp",
+   "label": "Intercorp",
+   "tipo": "grupo",
+   "grupo_nombre": null,
+   "betweenness": 0.0839,
+   "grado": 7
+  },
+  {
+   "id": "ferreycorp",
+   "label": "Ferreycorp",
+   "tipo": "holding",
+   "grupo_nombre": "Ferreycorp",
+   "betweenness": 0.0702,
+   "grado": 7
+  },
+  {
+   "id": "buenaventura",
+   "label": "Cía. de Minas Buenaventura",
+   "tipo": "empresa",
+   "grupo_nombre": "Familia Benavides",
+   "betweenness": 0.063,
+   "grado": 5
+  },
+  {
+   "id": "alicorp",
+   "label": "Alicorp",
+   "tipo": "empresa",
+   "grupo_nombre": "Grupo Romero",
+   "betweenness": 0.0603,
+   "grado": 7
+  },
+  {
+   "id": "profuturo-afp",
+   "label": "Profuturo AFP",
+   "tipo": "empresa",
+   "grupo_nombre": "Bank of Nova Scotia",
+   "betweenness": 0.0599,
+   "grado": 3
+  },
+  {
+   "id": "ifs",
+   "label": "Intercorp Financial Services",
+   "tipo": "holding",
+   "grupo_nombre": "Intercorp",
+   "betweenness": 0.038,
+   "grado": 6
+  },
+  {
+   "id": "g-romero",
+   "label": "Grupo Romero",
+   "tipo": "grupo",
+   "grupo_nombre": null,
+   "betweenness": 0.0343,
+   "grado": 5
+  },
+  {
+   "id": "afp-habitat",
+   "label": "AFP Habitat Perú",
+   "tipo": "empresa",
+   "grupo_nombre": "Habitat",
+   "betweenness": 0.0161,
+   "grado": 3
+  }
+ ]
+}
