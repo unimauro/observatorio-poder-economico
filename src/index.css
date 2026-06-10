@@ -359,6 +359,52 @@ table.tabla { width: 100%; border-collapse: collapse; font-size: 13.5px; }
   color: var(--text);
 }
 
+/* ── Línea de tiempo ── */
+.timeline { display: flex; flex-direction: column; }
+.hito { display: grid; grid-template-columns: 54px 24px 1fr; gap: 0; align-items: stretch; }
+.hito-anio {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ocre);
+  padding-top: 2px;
+  text-align: right;
+  padding-right: 8px;
+}
+.hito-linea { position: relative; display: flex; justify-content: center; }
+.hito-linea::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--line);
+}
+.hito:first-child .hito-linea::before { top: 8px; }
+.hito:last-child .hito-linea::before { bottom: calc(100% - 8px); }
+.hito-punto {
+  position: relative;
+  z-index: 2;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--carmin);
+  border: 2px solid var(--bg);
+  margin-top: 3px;
+}
+.hito-card { padding: 0 0 22px 14px; }
+.hito-titulo { font-family: var(--serif); font-size: 16px; font-weight: 600; line-height: 1.25; }
+.hito-emoji { margin-right: 6px; }
+.hito-grupo {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--azul);
+  margin: 3px 0 6px;
+}
+.hito-desc { color: var(--muted); font-size: 13.5px; margin-bottom: 6px; }
+
 /* ── ECharts boxes ── */
 .chart { width: 100%; }
 

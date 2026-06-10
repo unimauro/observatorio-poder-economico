@@ -24,7 +24,7 @@
   "n_grupos": 15,
   "n_empresas": 59,
   "n_personas": 22,
-  "n_relaciones": 115,
+  "n_relaciones": 116,
   "n_comunidades": 10,
   "epi_pesos": {
    "ingresos": 22,
@@ -68,7 +68,7 @@
    "nota": "Conglomerado diversificado: banca, retail, educación, salud, inmobiliario, entretenimiento.",
    "fuente": "Memoria anual Intercorp Perú / IFS (SMV)",
    "grado": 7,
-   "pagerank": 0.03983,
+   "pagerank": 0.03962,
    "betweenness": 0.0759,
    "eigenvector": 0.0602,
    "comunidad": 3
@@ -94,7 +94,7 @@
    "nota": "Consumo masivo, combustibles, logística, agroindustria; accionista de referencia de Credicorp.",
    "fuente": "Memorias Alicorp / Credicorp (SMV)",
    "grado": 5,
-   "pagerank": 0.02371,
+   "pagerank": 0.02345,
    "betweenness": 0.0311,
    "eigenvector": 0.2422,
    "comunidad": 4
@@ -120,7 +120,7 @@
    "nota": "Holding financiero listado en NYSE y BVL: banca, seguros, AFP, banca de inversión.",
    "fuente": "Form 20-F Credicorp / SMV",
    "grado": 1,
-   "pagerank": 0.0097,
+   "pagerank": 0.00951,
    "betweenness": 0.0,
    "eigenvector": 0.1118,
    "comunidad": 4
@@ -146,7 +146,7 @@
    "nota": "Minería, seguros, banca (con BBVA), pesca, inmobiliario, salud, hotelería.",
    "fuente": "Memorias Minsur / Rímac (SMV)",
    "grado": 6,
-   "pagerank": 0.02405,
+   "pagerank": 0.02392,
    "betweenness": 0.0123,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -172,7 +172,7 @@
    "nota": "Lácteos y alimentos, cemento, azúcar, papeles y empaques.",
    "fuente": "Memoria Leche Gloria / Yura (SMV)",
    "grado": 4,
-   "pagerank": 0.0183,
+   "pagerank": 0.0182,
    "betweenness": 0.0027,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -198,7 +198,7 @@
    "nota": "Corporación listada sin grupo familiar de control: maquinaria y bienes de capital.",
    "fuente": "Memoria Ferreycorp (SMV)",
    "grado": 1,
-   "pagerank": 0.00956,
+   "pagerank": 0.00951,
    "betweenness": 0.0,
    "eigenvector": 0.0488,
    "comunidad": 1
@@ -224,7 +224,7 @@
    "nota": "Accionista de referencia de Compañía de Minas Buenaventura.",
    "fuente": "Memoria Buenaventura (SMV)",
    "grado": 1,
-   "pagerank": 0.00813,
+   "pagerank": 0.00809,
    "betweenness": 0.0,
    "eigenvector": 0.0219,
    "comunidad": 8
@@ -250,7 +250,7 @@
    "nota": "Minería de metales preciosos y cemento.",
    "fuente": "Memorias Hochschild Mining / Cementos Pacasmayo",
    "grado": 2,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0001,
    "eigenvector": 0.0,
    "comunidad": 7
@@ -276,7 +276,7 @@
    "nota": "Retail multinacional chileno con fuerte presencia en el Perú.",
    "fuente": "Memoria Falabella Perú (SMV)",
    "grado": 5,
-   "pagerank": 0.03131,
+   "pagerank": 0.03115,
    "betweenness": 0.0022,
    "eigenvector": 0.0,
    "comunidad": 0
@@ -302,7 +302,7 @@
    "nota": "Matriz canadiense de Scotiabank Perú y Profuturo AFP.",
    "fuente": "Memoria Scotiabank Perú (SMV)",
    "grado": 1,
-   "pagerank": 0.02065,
+   "pagerank": 0.02043,
    "betweenness": 0.0,
    "eigenvector": 0.0086,
    "comunidad": 3
@@ -328,7 +328,7 @@
    "nota": "Matriz colombiana de AFP Integra.",
    "fuente": "Memoria AFP Integra (SBS)",
    "grado": 1,
-   "pagerank": 0.02025,
+   "pagerank": 0.02002,
    "betweenness": 0.0,
    "eigenvector": 0.0635,
    "comunidad": 4
@@ -354,7 +354,7 @@
    "nota": "Matriz chilena de AFP Habitat Perú.",
    "fuente": "Memoria AFP Habitat (SBS)",
    "grado": 1,
-   "pagerank": 0.01523,
+   "pagerank": 0.01515,
    "betweenness": 0.0,
    "eigenvector": 0.0313,
    "comunidad": 1
@@ -380,7 +380,7 @@
    "nota": "Socio 50/50 de Breca en Holding Continental, matriz de BBVA Perú.",
    "fuente": "Memoria BBVA Perú (SMV)",
    "grado": 1,
-   "pagerank": 0.00922,
+   "pagerank": 0.00917,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -406,7 +406,7 @@
    "nota": "Operador y accionista mayoritario de Sociedad Minera Cerro Verde.",
    "fuente": "Memoria Cerro Verde (SMV)",
    "grado": 1,
-   "pagerank": 0.00765,
+   "pagerank": 0.00761,
    "betweenness": 0.0,
    "eigenvector": 0.0072,
    "comunidad": 8
@@ -432,7 +432,7 @@
    "nota": "Accionista de control de AENZA (ex Graña y Montero).",
    "fuente": "Hechos de importancia AENZA (SMV)",
    "grado": 1,
-   "pagerank": 0.01065,
+   "pagerank": 0.0106,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 2
@@ -464,7 +464,7 @@
    "nota": "Holding financiero del grupo (Interbank, Interseguro, Inteligo). Listado en BVL y NYSE.",
    "fuente": "Memoria IFS 2024 (aprox.)",
    "grado": 6,
-   "pagerank": 0.01737,
+   "pagerank": 0.01728,
    "betweenness": 0.0352,
    "eigenvector": 0.0381,
    "comunidad": 9
@@ -496,7 +496,7 @@
    "nota": "Cuarto banco del sistema por colocaciones.",
    "fuente": "EEFF Interbank 2024 (aprox.)",
    "grado": 4,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0154,
    "eigenvector": 0.0247,
    "comunidad": 9
@@ -528,7 +528,7 @@
    "nota": "Seguros de vida y rentas vitalicias.",
    "fuente": "SBS (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0087,
    "comunidad": 9
@@ -560,7 +560,7 @@
    "nota": "Banca privada y gestión patrimonial.",
    "fuente": "Memoria IFS (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0087,
    "comunidad": 9
@@ -592,7 +592,7 @@
    "nota": "Holding retail: supermercados, farmacias y centros comerciales.",
    "fuente": "Memoria InRetail 2024 (aprox.)",
    "grado": 8,
-   "pagerank": 0.02117,
+   "pagerank": 0.02106,
    "betweenness": 0.1607,
    "eigenvector": 0.157,
    "comunidad": 3
@@ -624,7 +624,7 @@
    "nota": "Plaza Vea, Vivanda, Mass.",
    "fuente": "Memoria InRetail (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0358,
    "comunidad": 3
@@ -656,7 +656,7 @@
    "nota": "Mayor cadena de farmacias del país tras la fusión Inkafarma–Mifarma (Quicorp, 2018).",
    "fuente": "Memoria InRetail (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0358,
    "comunidad": 3
@@ -688,7 +688,7 @@
    "nota": "Mayor operador de centros comerciales del Perú.",
    "fuente": "Memoria InRetail (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0358,
    "comunidad": 3
@@ -720,7 +720,7 @@
    "nota": "Brazo universitario de Intercorp Education.",
    "fuente": "Sitio corporativo (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0137,
    "comunidad": 3
@@ -752,7 +752,7 @@
    "nota": "Red de colegios privados de bajo costo.",
    "fuente": "Sitio corporativo (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0137,
    "comunidad": 3
@@ -784,7 +784,7 @@
    "nota": "Mayor cadena de cines del Perú.",
    "fuente": "Memoria Cineplex (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0137,
    "comunidad": 3
@@ -816,7 +816,7 @@
    "nota": "Mayor cadena hotelera peruana.",
    "fuente": "Sitio corporativo (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0137,
    "comunidad": 3
@@ -848,7 +848,7 @@
    "nota": "Financiera de consumo vinculada al retail del grupo.",
    "fuente": "SBS (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0137,
    "comunidad": 3
@@ -880,7 +880,7 @@
    "nota": "Mayor holding financiero del país; listado en NYSE y BVL.",
    "fuente": "Form 20-F 2024 (aprox.)",
    "grado": 11,
-   "pagerank": 0.03078,
+   "pagerank": 0.03365,
    "betweenness": 0.1358,
    "eigenvector": 0.4896,
    "comunidad": 4
@@ -912,7 +912,7 @@
    "nota": "Mayor banco del sistema financiero peruano.",
    "fuente": "EEFF BCP 2024 (aprox.)",
    "grado": 5,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0242,
    "eigenvector": 0.2291,
    "comunidad": 4
@@ -944,7 +944,7 @@
    "nota": "Líder en microfinanzas.",
    "fuente": "SBS (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0523,
    "comunidad": 4
@@ -976,7 +976,7 @@
    "nota": "Segunda aseguradora del mercado.",
    "fuente": "SBS (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.1118,
    "comunidad": 4
@@ -1008,7 +1008,7 @@
    "nota": "AFP del grupo Credicorp; inversionista institucional en la BVL.",
    "fuente": "SBS (aprox.)",
    "grado": 4,
-   "pagerank": 0.0145,
+   "pagerank": 0.018,
    "betweenness": 0.119,
    "eigenvector": 0.2777,
    "comunidad": 4
@@ -1040,7 +1040,7 @@
    "nota": "Banca de inversión regional (Perú, Chile, Colombia).",
    "fuente": "Memoria Credicorp (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.1118,
    "comunidad": 4
@@ -1072,7 +1072,7 @@
    "nota": "Mayor empresa de consumo masivo del Perú; opera en 5 países.",
    "fuente": "Memoria Alicorp 2024 (aprox.)",
    "grado": 8,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0669,
    "eigenvector": 0.3562,
    "comunidad": 4
@@ -1104,7 +1104,7 @@
    "nota": "Nutrición acuícola (subsidiaria de Alicorp).",
    "fuente": "Memoria Alicorp (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0813,
    "comunidad": 4
@@ -1136,7 +1136,7 @@
    "nota": "Mayor red de estaciones de servicio (Perú, Ecuador, Colombia).",
    "fuente": "Memoria Primax (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0002,
    "eigenvector": 0.1048,
    "comunidad": 4
@@ -1168,7 +1168,7 @@
    "nota": "Operador logístico regional. En 2021 el grupo vendió participación mayoritaria a H.I.G. Capital (se mantiene vínculo histórico).",
    "fuente": "Hechos de importancia (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0553,
    "comunidad": 4
@@ -1200,7 +1200,7 @@
    "nota": "Palma aceitera en San Martín.",
    "fuente": "Memoria Palmas (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0553,
    "comunidad": 4
@@ -1232,7 +1232,7 @@
    "nota": "Mayor aseguradora del Perú.",
    "fuente": "SBS / Memoria Rímac (aprox.)",
    "grado": 5,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0081,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1264,7 +1264,7 @@
    "nota": "Uno de los mayores productores de estaño del mundo (San Rafael) y cobre (Mina Justa).",
    "fuente": "Memoria Minsur 2024 (aprox.)",
    "grado": 5,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0074,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1296,7 +1296,7 @@
    "nota": "Operación cuprífera en Ica; Minsur 60%, Alxar (Chile) 40%.",
    "fuente": "Memoria Minsur (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1328,7 +1328,7 @@
    "nota": "Mayor productora mundial de harina y aceite de pescado.",
    "fuente": "Memoria TASA (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0006,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1360,7 +1360,7 @@
    "nota": "Brazo hotelero de Breca.",
    "fuente": "Memoria Intursa (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0009,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1392,7 +1392,7 @@
    "nota": "Inmobiliaria de oficinas prime (San Isidro).",
    "fuente": "Sitio corporativo (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1424,7 +1424,7 @@
    "nota": "Red de clínicas privadas vinculada a Rímac.",
    "fuente": "Sitio corporativo (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1456,7 +1456,7 @@
    "nota": "Vehículo 50/50 entre Breca y BBVA que controla BBVA Perú.",
    "fuente": "Memoria BBVA Perú",
    "grado": 3,
-   "pagerank": 0.00765,
+   "pagerank": 0.00761,
    "betweenness": 0.0038,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1488,7 +1488,7 @@
    "nota": "Segundo banco del sistema; control compartido Breca–BBVA vía Holding Continental.",
    "fuente": "EEFF BBVA Perú 2024 (aprox.)",
    "grado": 3,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0013,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -1520,7 +1520,7 @@
    "nota": "Líder en lácteos; matriz industrial del grupo.",
    "fuente": "Memoria Leche Gloria 2024 (aprox.)",
    "grado": 4,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0024,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -1552,7 +1552,7 @@
    "nota": "Cementera del sur del Perú; opera también en Bolivia y Ecuador.",
    "fuente": "Memoria Yura (aprox.)",
    "grado": 3,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0006,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -1584,7 +1584,7 @@
    "nota": "Holding azucarero (Casa Grande, Cartavio, San Jacinto).",
    "fuente": "Memoria Coazucar (aprox.)",
    "grado": 4,
-   "pagerank": 0.0161,
+   "pagerank": 0.01602,
    "betweenness": 0.0035,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -1616,7 +1616,7 @@
    "nota": "Mayor azucarera del país (La Libertad).",
    "fuente": "Memoria Casa Grande (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -1648,7 +1648,7 @@
    "nota": "Azucarera del valle Chicama.",
    "fuente": "Memoria Cartavio (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -1680,7 +1680,7 @@
    "nota": "Papeles y empaques a partir de bagazo de caña.",
    "fuente": "Memoria Trupal (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0002,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -1712,7 +1712,7 @@
    "nota": "Corporación de bienes de capital; representante histórico de Caterpillar.",
    "fuente": "Memoria Ferreycorp 2024 (aprox.)",
    "grado": 8,
-   "pagerank": 0.02117,
+   "pagerank": 0.02106,
    "betweenness": 0.0753,
    "eigenvector": 0.214,
    "comunidad": 1
@@ -1744,7 +1744,7 @@
    "nota": "Distribuidor Caterpillar en el Perú.",
    "fuente": "Memoria Ferreycorp (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0488,
    "comunidad": 1
@@ -1776,7 +1776,7 @@
    "nota": "Equipos ligeros multimarcas.",
    "fuente": "Memoria Ferreycorp (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0488,
    "comunidad": 1
@@ -1808,7 +1808,7 @@
    "nota": "Neumáticos, lubricantes e insumos.",
    "fuente": "Memoria Ferreycorp (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0488,
    "comunidad": 1
@@ -1840,7 +1840,7 @@
    "nota": "Mayor minera de metales preciosos de capital peruano; listada en NYSE y BVL.",
    "fuente": "Form 20-F Buenaventura (aprox.)",
    "grado": 6,
-   "pagerank": 0.01019,
+   "pagerank": 0.01013,
    "betweenness": 0.0681,
    "eigenvector": 0.0958,
    "comunidad": 8
@@ -1872,7 +1872,7 @@
    "nota": "Polimetálica en Pasco; subsidiaria de Buenaventura.",
    "fuente": "Memoria El Brocal (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0301,
    "comunidad": 8
@@ -1904,7 +1904,7 @@
    "nota": "Una de las mayores minas de cobre del mundo (Arequipa). Freeport ~53.6%, Buenaventura ~19.6%, SMM Cerro Verde (Sumitomo) ~21%.",
    "fuente": "Memoria Cerro Verde 2024 (aprox.)",
    "grado": 3,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0121,
    "eigenvector": 0.0317,
    "comunidad": 8
@@ -1936,7 +1936,7 @@
    "nota": "Oro y plata (Perú y Brasil); listada en Londres.",
    "fuente": "Annual Report Hochschild (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0001,
    "eigenvector": 0.0,
    "comunidad": 7
@@ -1968,7 +1968,7 @@
    "nota": "Cementera del norte del Perú; listada en NYSE y BVL.",
    "fuente": "Memoria Pacasmayo 2024 (aprox.)",
    "grado": 2,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0001,
    "eigenvector": 0.0,
    "comunidad": 7
@@ -2000,7 +2000,7 @@
    "nota": "Tiendas por departamento.",
    "fuente": "Memoria Falabella Perú (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 0
@@ -2032,7 +2032,7 @@
    "nota": "Supermercados.",
    "fuente": "Memoria Falabella Perú (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 0
@@ -2064,7 +2064,7 @@
    "nota": "Mejoramiento del hogar (incluye Maestro).",
    "fuente": "Memoria Falabella Perú (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 0
@@ -2096,7 +2096,7 @@
    "nota": "Banca de consumo vinculada al retail.",
    "fuente": "SBS (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 0
@@ -2128,7 +2128,7 @@
    "nota": "Centros comerciales (incluye los ex Open Plaza).",
    "fuente": "Memoria Mallplaza (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 0
@@ -2160,7 +2160,7 @@
    "nota": "Tercer banco del sistema.",
    "fuente": "EEFF Scotiabank Perú (aprox.)",
    "grado": 2,
-   "pagerank": 0.01727,
+   "pagerank": 0.01706,
    "betweenness": 0.0121,
    "eigenvector": 0.0376,
    "comunidad": 3
@@ -2192,7 +2192,7 @@
    "nota": "AFP del grupo Scotiabank.",
    "fuente": "SBS (aprox.)",
    "grado": 3,
-   "pagerank": 0.0133,
+   "pagerank": 0.01309,
    "betweenness": 0.057,
    "eigenvector": 0.1562,
    "comunidad": 3
@@ -2224,7 +2224,7 @@
    "nota": "Mayor AFP por fondos administrados; inversionista institucional en la BVL.",
    "fuente": "SBS (aprox.)",
    "grado": 5,
-   "pagerank": 0.01681,
+   "pagerank": 0.01658,
    "betweenness": 0.099,
    "eigenvector": 0.2783,
    "comunidad": 4
@@ -2256,7 +2256,7 @@
    "nota": "AFP de matriz chilena; ganó licitaciones de afiliados nuevos.",
    "fuente": "SBS (aprox.)",
    "grado": 3,
-   "pagerank": 0.0109,
+   "pagerank": 0.01085,
    "betweenness": 0.0151,
    "eigenvector": 0.1373,
    "comunidad": 1
@@ -2288,7 +2288,7 @@
    "nota": "Mayor grupo de ingeniería e infraestructura; controlado por IG4 Capital tras crisis reputacional.",
    "fuente": "Memoria AENZA (aprox.)",
    "grado": 3,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0007,
    "eigenvector": 0.0,
    "comunidad": 2
@@ -2320,7 +2320,7 @@
    "nota": "Constructora insignia de AENZA.",
    "fuente": "Memoria AENZA (aprox.)",
    "grado": 1,
-   "pagerank": 0.00596,
+   "pagerank": 0.00593,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 2
@@ -2346,7 +2346,7 @@
    "nota": "Cabeza de Intercorp.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01575,
+   "pagerank": 0.01567,
    "betweenness": 0.0401,
    "eigenvector": 0.0502,
    "comunidad": 9
@@ -2372,7 +2372,7 @@
    "nota": "Presidente del directorio de Credicorp y BCP; familia Romero.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01339,
+   "pagerank": 0.01317,
    "betweenness": 0.005,
    "eigenvector": 0.2454,
    "comunidad": 4
@@ -2398,7 +2398,7 @@
    "nota": "Presidente ejecutivo del Grupo Romero; preside Alicorp.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01358,
+   "pagerank": 0.01336,
    "betweenness": 0.0072,
    "eigenvector": 0.217,
    "comunidad": 4
@@ -2424,7 +2424,7 @@
    "nota": "CEO de Credicorp (desde 2022).",
    "fuente": null,
    "grado": 2,
-   "pagerank": 0.01205,
+   "pagerank": 0.01184,
    "betweenness": 0.0,
    "eigenvector": 0.1641,
    "comunidad": 4
@@ -2450,7 +2450,7 @@
    "nota": "Copresidente de Breca; preside el directorio de BBVA Perú.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01234,
+   "pagerank": 0.01228,
    "betweenness": 0.0029,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -2476,7 +2476,7 @@
    "nota": "Copresidente de Breca; preside Minsur.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01253,
+   "pagerank": 0.01247,
    "betweenness": 0.001,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -2502,7 +2502,7 @@
    "nota": "Familia Brescia; preside Rímac.",
    "fuente": null,
    "grado": 2,
-   "pagerank": 0.01084,
+   "pagerank": 0.01079,
    "betweenness": 0.0004,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -2528,7 +2528,7 @@
    "nota": "Presidente del Grupo Gloria.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01576,
+   "pagerank": 0.01568,
    "betweenness": 0.0014,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -2554,7 +2554,7 @@
    "nota": "Vicepresidente del Grupo Gloria.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01146,
+   "pagerank": 0.0114,
    "betweenness": 0.0006,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -2580,7 +2580,7 @@
    "nota": "Familia Benavides; histórico líder de Buenaventura.",
    "fuente": null,
    "grado": 3,
-   "pagerank": 0.01235,
+   "pagerank": 0.01229,
    "betweenness": 0.0002,
    "eigenvector": 0.036,
    "comunidad": 8
@@ -2606,7 +2606,7 @@
    "nota": "Preside Hochschild Mining y Cementos Pacasmayo.",
    "fuente": null,
    "grado": 2,
-   "pagerank": 0.01103,
+   "pagerank": 0.01098,
    "betweenness": 0.0001,
    "eigenvector": 0.0,
    "comunidad": 7
@@ -2632,7 +2632,7 @@
    "nota": "CEO de Intercorp Financial Services.",
    "fuente": null,
    "grado": 2,
-   "pagerank": 0.01215,
+   "pagerank": 0.01209,
    "betweenness": 0.0,
    "eigenvector": 0.0143,
    "comunidad": 9
@@ -2658,7 +2658,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.0073,
+   "pagerank": 0.00727,
    "betweenness": 0.0,
    "eigenvector": 0.0813,
    "comunidad": 4
@@ -2684,7 +2684,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00723,
+   "pagerank": 0.00719,
    "betweenness": 0.0,
    "eigenvector": 0.0056,
    "comunidad": 9
@@ -2710,7 +2710,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00831,
+   "pagerank": 0.00826,
    "betweenness": 0.0,
    "eigenvector": 0.0523,
    "comunidad": 4
@@ -2736,7 +2736,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00831,
+   "pagerank": 0.00826,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -2762,7 +2762,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00956,
+   "pagerank": 0.00951,
    "betweenness": 0.0,
    "eigenvector": 0.0488,
    "comunidad": 1
@@ -2788,7 +2788,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00723,
+   "pagerank": 0.00719,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 6
@@ -2814,7 +2814,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00956,
+   "pagerank": 0.00951,
    "betweenness": 0.0,
    "eigenvector": 0.0358,
    "comunidad": 3
@@ -2840,7 +2840,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00813,
+   "pagerank": 0.00809,
    "betweenness": 0.0,
    "eigenvector": 0.0219,
    "comunidad": 8
@@ -2866,7 +2866,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.00831,
+   "pagerank": 0.00826,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 5
@@ -2892,7 +2892,7 @@
    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
    "fuente": null,
    "grado": 1,
-   "pagerank": 0.01065,
+   "pagerank": 0.0106,
    "betweenness": 0.0,
    "eigenvector": 0.0,
    "comunidad": 2
@@ -3411,6 +3411,13 @@
    "fuente": "Cartera AFP (SBS/SMV, aprox.)"
   },
   {
+   "source": "prima-afp",
+   "target": "credicorp",
+   "tipo": "portafolio",
+   "pct": null,
+   "fuente": "Cartera Prima AFP — Credicorp es la mayor ponderación de la BVL (SBS/SMV, aprox.)"
+  },
+  {
    "source": "p-crp",
    "target": "ifs",
    "tipo": "presidente",
@@ -3749,7 +3756,7 @@
    "nombre": "Credicorp",
    "pais": "Perú",
    "control": "Accionariado difundido; Familia Romero como accionista de referencia",
-   "epi": 75.8,
+   "epi": 77.1,
    "componentes": {
     "ingresos": 20.9,
     "utilidad": 12.0,
@@ -3758,7 +3765,7 @@
     "empleados": 8.7,
     "empresas": 3.3,
     "sectores": 2.3,
-    "pagerank": 8.3,
+    "pagerank": 9.6,
     "betweenness": 4.2,
     "grado": 5.0
    },
@@ -3821,7 +3828,7 @@
    "nombre": "Grupo Romero",
    "pais": "Perú",
    "control": "Familia Romero",
-   "epi": 63.7,
+   "epi": 63.6,
    "componentes": {
     "ingresos": 20.1,
     "utilidad": 6.0,
@@ -3830,7 +3837,7 @@
     "empleados": 7.2,
     "empresas": 2.7,
     "sectores": 3.5,
-    "pagerank": 5.5,
+    "pagerank": 5.4,
     "betweenness": 2.1,
     "grado": 3.3
    },
@@ -4096,7 +4103,7 @@
     "empleados": 0.7,
     "empresas": 0.0,
     "sectores": 0.0,
-    "pagerank": 4.1,
+    "pagerank": 4.0,
     "betweenness": 3.1,
     "grado": 1.7
    },
@@ -4176,7 +4183,8 @@
      "Grupo Romero"
     ],
     "institucionales": [
-     "AFP Integra"
+     "AFP Integra",
+     "Prima AFP"
     ],
     "mismo_grupo": false,
     "mismo_sector": false
@@ -5321,7 +5329,8 @@
     "directores": [],
     "accionistas": [],
     "institucionales": [
-     "AFP Integra"
+     "AFP Integra",
+     "Prima AFP"
     ],
     "mismo_grupo": false,
     "mismo_sector": false
@@ -5333,6 +5342,7 @@
     "directores": [],
     "accionistas": [],
     "institucionales": [
+     "Prima AFP",
      "Profuturo AFP"
     ],
     "mismo_grupo": false,
@@ -5375,7 +5385,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.0401,
-    "pagerank": 0.01575
+    "pagerank": 0.01567
    },
    {
     "id": "p-drp",
@@ -5400,7 +5410,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.005,
-    "pagerank": 0.01339
+    "pagerank": 0.01317
    },
    {
     "id": "p-lrb",
@@ -5425,7 +5435,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.0072,
-    "pagerank": 0.01358
+    "pagerank": 0.01336
    },
    {
     "id": "p-afb",
@@ -5450,7 +5460,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.0029,
-    "pagerank": 0.01234
+    "pagerank": 0.01228
    },
    {
     "id": "p-fbm",
@@ -5475,7 +5485,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.001,
-    "pagerank": 0.01253
+    "pagerank": 0.01247
    },
    {
     "id": "p-jrr",
@@ -5500,7 +5510,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.0014,
-    "pagerank": 0.01576
+    "pagerank": 0.01568
    },
    {
     "id": "p-vrr",
@@ -5525,7 +5535,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.0006,
-    "pagerank": 0.01146
+    "pagerank": 0.0114
    },
    {
     "id": "p-rbg",
@@ -5550,7 +5560,7 @@
     ],
     "n_empresas": 3,
     "betweenness": 0.0002,
-    "pagerank": 0.01235
+    "pagerank": 0.01229
    },
    {
     "id": "p-lfc",
@@ -5570,7 +5580,7 @@
     ],
     "n_empresas": 2,
     "betweenness": 0.0,
-    "pagerank": 0.01215
+    "pagerank": 0.01209
    },
    {
     "id": "p-gferrari",
@@ -5590,7 +5600,7 @@
     ],
     "n_empresas": 2,
     "betweenness": 0.0,
-    "pagerank": 0.01205
+    "pagerank": 0.01184
    },
    {
     "id": "p-pbm",
@@ -5610,7 +5620,7 @@
     ],
     "n_empresas": 2,
     "betweenness": 0.0004,
-    "pagerank": 0.01084
+    "pagerank": 0.01079
    },
    {
     "id": "p-ehb",
@@ -5630,7 +5640,7 @@
     ],
     "n_empresas": 2,
     "betweenness": 0.0001,
-    "pagerank": 0.01103
+    "pagerank": 0.01098
    },
    {
     "id": "gg-alicorp",
@@ -5645,7 +5655,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.0073
+    "pagerank": 0.00727
    },
    {
     "id": "gg-interbank",
@@ -5660,7 +5670,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00723
+    "pagerank": 0.00719
    },
    {
     "id": "gg-bcp",
@@ -5675,7 +5685,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00831
+    "pagerank": 0.00826
    },
    {
     "id": "gg-minsur",
@@ -5690,7 +5700,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00831
+    "pagerank": 0.00826
    },
    {
     "id": "gg-ferreycorp",
@@ -5705,7 +5715,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00956
+    "pagerank": 0.00951
    },
    {
     "id": "gg-leche-gloria",
@@ -5720,7 +5730,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00723
+    "pagerank": 0.00719
    },
    {
     "id": "gg-inretail",
@@ -5735,7 +5745,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00956
+    "pagerank": 0.00951
    },
    {
     "id": "gg-buenaventura",
@@ -5750,7 +5760,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00813
+    "pagerank": 0.00809
    },
    {
     "id": "gg-rimac",
@@ -5765,7 +5775,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.00831
+    "pagerank": 0.00826
    },
    {
     "id": "gg-aenza",
@@ -5780,7 +5790,7 @@
     ],
     "n_empresas": 1,
     "betweenness": 0.0,
-    "pagerank": 0.01065
+    "pagerank": 0.0106
    }
   ]
  },
@@ -8441,6 +8451,423 @@
      "apalancamiento": 1.36
     },
     "fuente": "Memoria Cartavio (aprox.)"
+   }
+  ]
+ },
+ "conflictos": {
+  "resumen": {
+   "total": 10,
+   "alta": 7,
+   "media": 3,
+   "por_tipo": {
+    "afp_parte_relacionada": 1,
+    "interlock_cruzado": 3,
+    "vehiculo_compartido": 2,
+    "conglomerado_financiero": 4
+   }
+  },
+  "casos": [
+   {
+    "tipo": "conglomerado_financiero",
+    "titulo": "Credicorp: conglomerado en 3 verticales financieras",
+    "severidad": "alta",
+    "score": 91,
+    "entidades": [
+     "Credicorp",
+     "AFP y fondos",
+     "Finanzas y banca",
+     "Seguros"
+    ],
+    "por_que": "Un mismo grupo que controla banca, seguros y/o AFP concentra el sistema financiero: el ahorro, el crédito y la previsión pasan por la misma caja.",
+    "evidencia": [
+     "Credicorp Ltd.",
+     "Banco de Crédito del Perú (BCP)",
+     "Mibanco",
+     "Pacífico Seguros",
+     "Prima AFP",
+     "Credicorp Capital"
+    ]
+   },
+   {
+    "tipo": "vehiculo_compartido",
+    "titulo": "Holding Continental: control compartido entre grupos rivales",
+    "severidad": "alta",
+    "score": 90,
+    "entidades": [
+     "Holding Continental",
+     "BBVA",
+     "Breca"
+    ],
+    "por_que": "Una misma empresa controlada por dos o más grupos económicos crea un espacio donde competidores comparten información, directorio y decisiones.",
+    "evidencia": [
+     "Memoria BBVA Perú"
+    ]
+   },
+   {
+    "tipo": "vehiculo_compartido",
+    "titulo": "Sociedad Minera Cerro Verde: control compartido entre grupos rivales",
+    "severidad": "alta",
+    "score": 90,
+    "entidades": [
+     "Sociedad Minera Cerro Verde",
+     "Familia Benavides",
+     "Freeport-McMoRan"
+    ],
+    "por_que": "Una misma empresa controlada por dos o más grupos económicos crea un espacio donde competidores comparten información, directorio y decisiones.",
+    "evidencia": [
+     "Memoria Cerro Verde"
+    ]
+   },
+   {
+    "tipo": "interlock_cruzado",
+    "titulo": "Dionisio Romero Paoletti enlaza 2 grupos económicos",
+    "severidad": "alta",
+    "score": 85,
+    "entidades": [
+     "Dionisio Romero Paoletti",
+     "Credicorp",
+     "Grupo Romero"
+    ],
+    "por_que": "Un mismo director sentado en empresas de grupos distintos es un canal directo de coordinación e información entre ellos (interlocking directorate).",
+    "evidencia": [
+     "Credicorp: Credicorp Ltd., Banco de Crédito del Perú (BCP)",
+     "Grupo Romero: Alicorp"
+    ]
+   },
+   {
+    "tipo": "interlock_cruzado",
+    "titulo": "Luis Romero Belismelis enlaza 2 grupos económicos",
+    "severidad": "alta",
+    "score": 85,
+    "entidades": [
+     "Luis Romero Belismelis",
+     "Credicorp",
+     "Grupo Romero"
+    ],
+    "por_que": "Un mismo director sentado en empresas de grupos distintos es un canal directo de coordinación e información entre ellos (interlocking directorate).",
+    "evidencia": [
+     "Grupo Romero: Alicorp, Primax",
+     "Credicorp: Credicorp Ltd."
+    ]
+   },
+   {
+    "tipo": "interlock_cruzado",
+    "titulo": "Roque Benavides Ganoza enlaza 2 grupos económicos",
+    "severidad": "alta",
+    "score": 85,
+    "entidades": [
+     "Roque Benavides Ganoza",
+     "Familia Benavides",
+     "Freeport-McMoRan"
+    ],
+    "por_que": "Un mismo director sentado en empresas de grupos distintos es un canal directo de coordinación e información entre ellos (interlocking directorate).",
+    "evidencia": [
+     "Familia Benavides: Cía. de Minas Buenaventura, El Brocal",
+     "Freeport-McMoRan: Sociedad Minera Cerro Verde"
+    ]
+   },
+   {
+    "tipo": "conglomerado_financiero",
+    "titulo": "Intercorp: conglomerado en 2 verticales financieras",
+    "severidad": "media",
+    "score": 79,
+    "entidades": [
+     "Intercorp",
+     "Finanzas y banca",
+     "Seguros"
+    ],
+    "por_que": "Un mismo grupo que controla banca, seguros y/o AFP concentra el sistema financiero: el ahorro, el crédito y la previsión pasan por la misma caja.",
+    "evidencia": [
+     "Intercorp Financial Services",
+     "Interbank",
+     "Interseguro",
+     "Inteligo",
+     "Financiera Oh!"
+    ]
+   },
+   {
+    "tipo": "conglomerado_financiero",
+    "titulo": "Breca: conglomerado en 2 verticales financieras",
+    "severidad": "media",
+    "score": 79,
+    "entidades": [
+     "Breca",
+     "Finanzas y banca",
+     "Seguros"
+    ],
+    "por_que": "Un mismo grupo que controla banca, seguros y/o AFP concentra el sistema financiero: el ahorro, el crédito y la previsión pasan por la misma caja.",
+    "evidencia": [
+     "Rímac Seguros",
+     "Holding Continental"
+    ]
+   },
+   {
+    "tipo": "conglomerado_financiero",
+    "titulo": "Bank of Nova Scotia: conglomerado en 2 verticales financieras",
+    "severidad": "media",
+    "score": 79,
+    "entidades": [
+     "Bank of Nova Scotia",
+     "AFP y fondos",
+     "Finanzas y banca"
+    ],
+    "por_que": "Un mismo grupo que controla banca, seguros y/o AFP concentra el sistema financiero: el ahorro, el crédito y la previsión pasan por la misma caja.",
+    "evidencia": [
+     "Scotiabank Perú",
+     "Profuturo AFP"
+    ]
+   },
+   {
+    "tipo": "afp_parte_relacionada",
+    "titulo": "Prima AFP invierte en Credicorp Ltd. (mismo grupo)",
+    "severidad": "alta",
+    "score": 75,
+    "entidades": [
+     "Prima AFP",
+     "Credicorp Ltd.",
+     "Credicorp"
+    ],
+    "por_que": "Una AFP que coloca el ahorro previsional en empresas de su propio grupo económico enfrenta un conflicto fiduciario: gestiona dinero ajeno con incentivo a favorecer a la casa matriz.",
+    "evidencia": [
+     "Cartera Prima AFP — Credicorp es la mayor ponderación de la BVL (SBS/SMV, aprox.)"
+    ]
+   }
+  ]
+ },
+ "temporal": {
+  "nota": "Hitos corporativos documentados (años aproximados) y trayectoria de ingresos por grupo en S/ miles de millones (ILUSTRATIVA, para mostrar forma de crecimiento; no son cifras auditadas año a año). Verificar antes de citar.",
+  "eventos": [
+   {
+    "anio": 1994,
+    "tipo": "fundacion",
+    "grupo": "g-intercorp",
+    "titulo": "Rodríguez-Pastor compra el Banco Internacional (luego Interbank)",
+    "descripcion": "Nace el núcleo del futuro conglomerado Intercorp.",
+    "fuente": "Memoria Intercorp",
+    "grupo_nombre": "Intercorp"
+   },
+   {
+    "anio": 1995,
+    "tipo": "consolidacion",
+    "grupo": "g-credicorp",
+    "titulo": "Se crea Credicorp como holding (cotiza en NYSE)",
+    "descripcion": "El BCP y sus afiliadas se agrupan bajo Credicorp Ltd., listado en Nueva York.",
+    "fuente": "Form 20-F Credicorp",
+    "grupo_nombre": "Credicorp"
+   },
+   {
+    "anio": 2004,
+    "tipo": "fusion",
+    "grupo": "g-gloria",
+    "titulo": "Grupo Gloria consolida el negocio azucarero (Coazucar)",
+    "descripcion": "Adquisición de Casa Grande y otras azucareras del norte.",
+    "fuente": "Memoria Coazucar",
+    "grupo_nombre": "Grupo Gloria"
+   },
+   {
+    "anio": 2007,
+    "tipo": "salida_bolsa",
+    "grupo": "g-intercorp",
+    "titulo": "InRetail e IFS preparan su expansión",
+    "descripcion": "El grupo estructura sus brazos de retail y financiero para listarlos.",
+    "fuente": "Memoria InRetail",
+    "grupo_nombre": "Intercorp"
+   },
+   {
+    "anio": 2011,
+    "tipo": "salida_bolsa",
+    "grupo": "g-intercorp",
+    "titulo": "InRetail Perú sale a bolsa (BVL)",
+    "descripcion": "IPO que financia la expansión de supermercados, farmacias y malls.",
+    "fuente": "Memoria InRetail",
+    "grupo_nombre": "Intercorp"
+   },
+   {
+    "anio": 2018,
+    "tipo": "fusion",
+    "grupo": "g-intercorp",
+    "titulo": "Inkafarma + Mifarma: nace InRetail Pharma",
+    "descripcion": "La compra de Quicorp (Mifarma, BTL, Fasa) crea la mayor cadena de farmacias del país; observada por Indecopi.",
+    "fuente": "Hechos de importancia SMV / Indecopi",
+    "grupo_nombre": "Intercorp"
+   },
+   {
+    "anio": 2019,
+    "tipo": "crisis",
+    "grupo": "g-ig4",
+    "titulo": "Graña y Montero en el caso Lava Jato",
+    "descripcion": "La crisis reputacional por colusión hunde el valor y abre la puerta a un nuevo controlador.",
+    "fuente": "Hechos de importancia SMV",
+    "grupo_nombre": "IG4 Capital"
+   },
+   {
+    "anio": 2020,
+    "tipo": "cambio_control",
+    "grupo": "g-ig4",
+    "titulo": "El fondo IG4 Capital toma el control de Graña y Montero",
+    "descripcion": "El fondo brasileño se convierte en accionista de control del grupo de infraestructura.",
+    "fuente": "Hechos de importancia SMV",
+    "grupo_nombre": "IG4 Capital"
+   },
+   {
+    "anio": 2021,
+    "tipo": "rebranding",
+    "grupo": "g-ig4",
+    "titulo": "Graña y Montero se renombra AENZA; GyM pasa a Cumbra",
+    "descripcion": "Cambio de marca para distanciarse del pasado reputacional.",
+    "fuente": "Hechos de importancia SMV",
+    "grupo_nombre": "IG4 Capital"
+   },
+   {
+    "anio": 2021,
+    "tipo": "inauguracion",
+    "grupo": "g-breca",
+    "titulo": "Mina Justa (Marcobre) entra en producción",
+    "descripcion": "Minsur (60%) y Alxar (40%) ponen en marcha la operación cuprífera en Ica.",
+    "fuente": "Memoria Minsur",
+    "grupo_nombre": "Breca"
+   },
+   {
+    "anio": 2021,
+    "tipo": "venta",
+    "grupo": "g-romero",
+    "titulo": "El Grupo Romero vende el control de Ransa a H.I.G. Capital",
+    "descripcion": "El operador logístico pasa a manos del fondo estadounidense.",
+    "fuente": "Hechos de importancia SMV",
+    "grupo_nombre": "Grupo Romero"
+   },
+   {
+    "anio": 2022,
+    "tipo": "relevo",
+    "grupo": "g-credicorp",
+    "titulo": "Gianfranco Ferrari asume como CEO de Credicorp",
+    "descripcion": "Relevo en la cabeza ejecutiva del mayor holding financiero.",
+    "fuente": "Form 20-F Credicorp",
+    "grupo_nombre": "Credicorp"
+   },
+   {
+    "anio": 2023,
+    "tipo": "expansion",
+    "grupo": "g-intercorp",
+    "titulo": "Intercorp profundiza su apuesta digital (Plin, banca abierta)",
+    "descripcion": "Integración de pagos y datos a través del ecosistema del grupo.",
+    "fuente": "Memoria Intercorp",
+    "grupo_nombre": "Intercorp"
+   },
+   {
+    "anio": 2024,
+    "tipo": "consolidacion",
+    "grupo": "g-breca",
+    "titulo": "Minsur consolida cobre (Mina Justa) y estaño como motor",
+    "descripcion": "El cobre eleva los ingresos del brazo minero de Breca.",
+    "fuente": "Memoria Minsur",
+    "grupo_nombre": "Breca"
+   }
+  ],
+  "anios": [
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024"
+  ],
+  "series_grupo": [
+   {
+    "id": "g-intercorp",
+    "nombre": "Intercorp",
+    "valores": [
+     28,
+     26,
+     32,
+     37,
+     39,
+     41
+    ]
+   },
+   {
+    "id": "g-credicorp",
+    "nombre": "Credicorp",
+    "valores": [
+     14,
+     13,
+     16,
+     19,
+     21,
+     22
+    ]
+   },
+   {
+    "id": "g-breca",
+    "nombre": "Breca",
+    "valores": [
+     11,
+     10,
+     15,
+     18,
+     18,
+     19
+    ]
+   },
+   {
+    "id": "g-romero",
+    "nombre": "Grupo Romero",
+    "valores": [
+     24,
+     25,
+     30,
+     34,
+     34,
+     35
+    ]
+   },
+   {
+    "id": "g-gloria",
+    "nombre": "Grupo Gloria",
+    "valores": [
+     11,
+     11,
+     13,
+     14,
+     14,
+     15
+    ]
+   },
+   {
+    "id": "g-ferreycorp",
+    "nombre": "Ferreycorp",
+    "valores": [
+     5,
+     4,
+     6,
+     7,
+     8,
+     8
+    ]
+   },
+   {
+    "id": "g-falabella",
+    "nombre": "Falabella",
+    "valores": [
+     13,
+     11,
+     14,
+     15,
+     15,
+     15
+    ]
+   },
+   {
+    "id": "g-ig4",
+    "nombre": "IG4 Capital",
+    "valores": [
+     8,
+     4,
+     4,
+     5,
+     5,
+     5
+    ]
    }
   ]
  },

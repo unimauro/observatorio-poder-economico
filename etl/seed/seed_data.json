@@ -185,7 +185,8 @@
     {"de": "profuturo-afp", "a": "credicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
     {"de": "profuturo-afp", "a": "inretail", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
     {"de": "afp-habitat", "a": "ferreycorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-habitat", "a": "alicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"}
+    {"de": "afp-habitat", "a": "alicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
+    {"de": "prima-afp", "a": "credicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera Prima AFP — Credicorp es la mayor ponderación de la BVL (SBS/SMV, aprox.)"}
   ],
   "directorios": [
     {"persona": "p-crp", "empresa": "ifs", "rol": "presidente", "fuente": "Memoria IFS 2024"},
@@ -282,5 +283,34 @@
     "sodimac":      {"ebitda": 260,  "utilidad": 70,   "activos": 2600,   "patrimonio": 900,   "market_cap": null},
     "aenza":        {"ebitda": 420,  "utilidad": 150,  "activos": 6000,   "patrimonio": 1500,  "market_cap": 1500},
     "cumbra":       {"ebitda": 230,  "utilidad": 90,   "activos": 3000,   "patrimonio": 900,   "market_cap": null}
+  },
+  "temporal": {
+    "_nota": "Hitos corporativos documentados (años aproximados) y trayectoria de ingresos por grupo en S/ miles de millones (ILUSTRATIVA, para mostrar forma de crecimiento; no son cifras auditadas año a año). Verificar antes de citar.",
+    "eventos": [
+      {"anio": 1994, "tipo": "fundacion", "grupo": "g-intercorp", "titulo": "Rodríguez-Pastor compra el Banco Internacional (luego Interbank)", "descripcion": "Nace el núcleo del futuro conglomerado Intercorp.", "fuente": "Memoria Intercorp"},
+      {"anio": 1995, "tipo": "consolidacion", "grupo": "g-credicorp", "titulo": "Se crea Credicorp como holding (cotiza en NYSE)", "descripcion": "El BCP y sus afiliadas se agrupan bajo Credicorp Ltd., listado en Nueva York.", "fuente": "Form 20-F Credicorp"},
+      {"anio": 2004, "tipo": "fusion", "grupo": "g-gloria", "titulo": "Grupo Gloria consolida el negocio azucarero (Coazucar)", "descripcion": "Adquisición de Casa Grande y otras azucareras del norte.", "fuente": "Memoria Coazucar"},
+      {"anio": 2007, "tipo": "salida_bolsa", "grupo": "g-intercorp", "titulo": "InRetail e IFS preparan su expansión", "descripcion": "El grupo estructura sus brazos de retail y financiero para listarlos.", "fuente": "Memoria InRetail"},
+      {"anio": 2011, "tipo": "salida_bolsa", "grupo": "g-intercorp", "titulo": "InRetail Perú sale a bolsa (BVL)", "descripcion": "IPO que financia la expansión de supermercados, farmacias y malls.", "fuente": "Memoria InRetail"},
+      {"anio": 2018, "tipo": "fusion", "grupo": "g-intercorp", "titulo": "Inkafarma + Mifarma: nace InRetail Pharma", "descripcion": "La compra de Quicorp (Mifarma, BTL, Fasa) crea la mayor cadena de farmacias del país; observada por Indecopi.", "fuente": "Hechos de importancia SMV / Indecopi"},
+      {"anio": 2019, "tipo": "crisis", "grupo": "g-ig4", "titulo": "Graña y Montero en el caso Lava Jato", "descripcion": "La crisis reputacional por colusión hunde el valor y abre la puerta a un nuevo controlador.", "fuente": "Hechos de importancia SMV"},
+      {"anio": 2020, "tipo": "cambio_control", "grupo": "g-ig4", "titulo": "El fondo IG4 Capital toma el control de Graña y Montero", "descripcion": "El fondo brasileño se convierte en accionista de control del grupo de infraestructura.", "fuente": "Hechos de importancia SMV"},
+      {"anio": 2021, "tipo": "rebranding", "grupo": "g-ig4", "titulo": "Graña y Montero se renombra AENZA; GyM pasa a Cumbra", "descripcion": "Cambio de marca para distanciarse del pasado reputacional.", "fuente": "Hechos de importancia SMV"},
+      {"anio": 2021, "tipo": "inauguracion", "grupo": "g-breca", "titulo": "Mina Justa (Marcobre) entra en producción", "descripcion": "Minsur (60%) y Alxar (40%) ponen en marcha la operación cuprífera en Ica.", "fuente": "Memoria Minsur"},
+      {"anio": 2021, "tipo": "venta", "grupo": "g-romero", "titulo": "El Grupo Romero vende el control de Ransa a H.I.G. Capital", "descripcion": "El operador logístico pasa a manos del fondo estadounidense.", "fuente": "Hechos de importancia SMV"},
+      {"anio": 2022, "tipo": "relevo", "grupo": "g-credicorp", "titulo": "Gianfranco Ferrari asume como CEO de Credicorp", "descripcion": "Relevo en la cabeza ejecutiva del mayor holding financiero.", "fuente": "Form 20-F Credicorp"},
+      {"anio": 2023, "tipo": "expansion", "grupo": "g-intercorp", "titulo": "Intercorp profundiza su apuesta digital (Plin, banca abierta)", "descripcion": "Integración de pagos y datos a través del ecosistema del grupo.", "fuente": "Memoria Intercorp"},
+      {"anio": 2024, "tipo": "consolidacion", "grupo": "g-breca", "titulo": "Minsur consolida cobre (Mina Justa) y estaño como motor", "descripcion": "El cobre eleva los ingresos del brazo minero de Breca.", "fuente": "Memoria Minsur"}
+    ],
+    "ingresos_grupo": {
+      "g-intercorp":  {"2019": 28, "2020": 26, "2021": 32, "2022": 37, "2023": 39, "2024": 41},
+      "g-credicorp":  {"2019": 14, "2020": 13, "2021": 16, "2022": 19, "2023": 21, "2024": 22},
+      "g-breca":      {"2019": 11, "2020": 10, "2021": 15, "2022": 18, "2023": 18, "2024": 19},
+      "g-romero":     {"2019": 24, "2020": 25, "2021": 30, "2022": 34, "2023": 34, "2024": 35},
+      "g-gloria":     {"2019": 11, "2020": 11, "2021": 13, "2022": 14, "2023": 14, "2024": 15},
+      "g-ferreycorp": {"2019": 5,  "2020": 4,  "2021": 6,  "2022": 7,  "2023": 8,  "2024": 8},
+      "g-falabella":  {"2019": 13, "2020": 11, "2021": 14, "2022": 15, "2023": 15, "2024": 15},
+      "g-ig4":        {"2019": 8,  "2020": 4,  "2021": 4,  "2022": 5,  "2023": 5,  "2024": 5}
+    }
   }
 }

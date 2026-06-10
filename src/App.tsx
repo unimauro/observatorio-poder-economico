@@ -6,6 +6,8 @@ import Ranking from './views/Ranking'
 import Sectores from './views/Sectores'
 import Finanzas from './views/Finanzas'
 import Bolsa from './views/Bolsa'
+import Conflictos from './views/Conflictos'
+import Temporal from './views/Temporal'
 import Puentes from './views/Puentes'
 import Metodologia from './views/Metodologia'
 import { fmtNum } from './types'
@@ -17,6 +19,8 @@ const TABS = [
   { id: 'finanzas', label: '💰 Finanzas' },
   { id: 'bolsa', label: '📈 Bolsa (BVL)' },
   { id: 'sectores', label: '🏭 Sectores' },
+  { id: 'conflictos', label: '🔍 Conflictos' },
+  { id: 'temporal', label: '🕰️ Mapa temporal' },
   { id: 'puentes', label: '🌉 Puentes' },
   { id: 'metodologia', label: '📜 Metodología' },
 ] as const
@@ -99,6 +103,8 @@ export default function App() {
               {tab === 'finanzas' && <Finanzas datos={datos} />}
               {tab === 'bolsa' && <Bolsa datos={datos} />}
               {tab === 'sectores' && <Sectores datos={datos} />}
+              {tab === 'conflictos' && <Conflictos datos={datos} />}
+              {tab === 'temporal' && <Temporal datos={datos} />}
               {tab === 'puentes' && <Puentes datos={datos} />}
               {tab === 'metodologia' && <Metodologia datos={datos} />}
             </>

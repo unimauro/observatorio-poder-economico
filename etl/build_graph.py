@@ -175,6 +175,137 @@ def main() -> None:
         })
     personas_out.sort(key=lambda x: -x["n_empresas"])
 
+    # ── Detección de superficies de conflicto de interés ─────────────────────
+    # NO acusa: marca ESTRUCTURAS societarias declaradas que merecen vigilancia.
+    SECTORES_FIN = {"Finanzas y banca", "Seguros", "AFP y fondos"}
+
+    def grupo_de(node, _seen=None):
+        """Grupo controlador de un nodo (empresa→su grupo, o resuelto vía dueño)."""
+        _seen = _seen or set()
+        if node in grupos or node in _seen:
+            return node if node in grupos else None
+        _seen.add(node)
+        if node in empresas:
+            g = empresas[node].get("grupo")
+            if g:
+                return g
+            # el control/matriz manda sobre la participación minoritaria
+            for tipos in (("control", "matriz"), ("participacion",)):
+                for o in seed["propiedad"]:
+                    if o["a"] == node and o["tipo"] in tipos:
+                        r = grupo_de(o["de"], _seen)
+                        if r:
+                            return r
+        return None
+
+    nombre_de = lambda x: (grupos.get(x) or empresas.get(x) or personas.get(x) or {}).get("nombre", x)
+    conflictos = []
+
+    # 1) Vehículos de control compartido: empresa con 2+ grupos en control/participación
+    #    (se excluyen las aristas 'matriz': son la estructura normal del holding)
+    duenos_reales = defaultdict(set)
+    for o in seed["propiedad"]:
+        if o["tipo"] in ("control", "participacion"):
+            duenos_reales[o["a"]].add(o["de"])
+    for eid in empresas:
+        gs = {grupo_de(o) for o in duenos_reales[eid]}
+        gs.discard(None)
+        if len(gs) >= 2:
+            conflictos.append({
+                "tipo": "vehiculo_compartido",
+                "titulo": f"{empresas[eid]['nombre']}: control compartido entre grupos rivales",
+                "severidad": "alta", "score": 80 + 5 * len(gs),
+                "entidades": [empresas[eid]["nombre"]] + sorted(nombre_de(g) for g in gs),
+                "por_que": "Una misma empresa controlada por dos o más grupos económicos crea un "
+                           "espacio donde competidores comparten información, directorio y decisiones.",
+                "evidencia": sorted({o["fuente"] for o in seed["propiedad"]
+                                     if o["a"] == eid and o.get("fuente")}),
+            })
+
+    # 2) Directorios entrelazados: persona que se sienta en empresas de 2+ grupos
+    for pid, cargos in seats_of.items():
+        if personas[pid].get("por_confirmar"):
+            continue
+        por_grupo = defaultdict(list)
+        for e, r in cargos:
+            g = grupo_de(e)
+            if g:
+                por_grupo[g].append(empresas[e]["nombre"])
+        if len(por_grupo) >= 2:
+            conflictos.append({
+                "tipo": "interlock_cruzado",
+                "titulo": f"{personas[pid]['nombre']} enlaza {len(por_grupo)} grupos económicos",
+                "severidad": "alta" if len(por_grupo) >= 2 and len(cargos) >= 3 else "media",
+                "score": 60 + 8 * len(por_grupo) + 3 * len(cargos),
+                "entidades": [personas[pid]["nombre"]] + sorted(nombre_de(g) for g in por_grupo),
+                "por_que": "Un mismo director sentado en empresas de grupos distintos es un canal "
+                           "directo de coordinación e información entre ellos (interlocking directorate).",
+                "evidencia": [f"{nombre_de(g)}: {', '.join(es)}" for g, es in por_grupo.items()],
+            })
+
+    # 3) AFP con inversión en parte relacionada (mismo grupo económico)
+    for eid in empresas:
+        for inv in portfolio[eid]:
+            if empresas.get(inv, {}).get("grupo") and empresas[inv]["grupo"] == grupo_de(eid):
+                conflictos.append({
+                    "tipo": "afp_parte_relacionada",
+                    "titulo": f"{empresas[inv]['nombre']} invierte en {empresas[eid]['nombre']} (mismo grupo)",
+                    "severidad": "alta", "score": 75,
+                    "entidades": [empresas[inv]["nombre"], empresas[eid]["nombre"],
+                                  nombre_de(grupo_de(eid))],
+                    "por_que": "Una AFP que coloca el ahorro previsional en empresas de su propio "
+                               "grupo económico enfrenta un conflicto fiduciario: gestiona dinero "
+                               "ajeno con incentivo a favorecer a la casa matriz.",
+                    "evidencia": sorted({o["fuente"] for o in seed["propiedad"]
+                                         if o["a"] == eid and o["de"] == inv and o.get("fuente")}),
+                })
+
+    # 4) Conglomerado financiero integrado: grupo presente en 2+ de banca/seguros/AFP
+    miembros_grupo = defaultdict(list)
+    for eid, e in empresas.items():
+        if e.get("grupo"):
+            miembros_grupo[e["grupo"]].append(eid)
+    for gid, mids in miembros_grupo.items():
+        fin_sectores = {empresas[m]["sector"] for m in mids} & SECTORES_FIN
+        if len(fin_sectores) >= 2:
+            empresas_fin = [empresas[m]["nombre"] for m in mids
+                            if empresas[m]["sector"] in SECTORES_FIN]
+            conflictos.append({
+                "tipo": "conglomerado_financiero",
+                "titulo": f"{grupos[gid]['nombre']}: conglomerado en {len(fin_sectores)} verticales financieras",
+                "severidad": "alta" if len(fin_sectores) >= 3 else "media",
+                "score": 55 + 12 * len(fin_sectores),
+                "entidades": [grupos[gid]["nombre"]] + sorted(fin_sectores),
+                "por_que": "Un mismo grupo que controla banca, seguros y/o AFP concentra el sistema "
+                           "financiero: el ahorro, el crédito y la previsión pasan por la misma caja.",
+                "evidencia": empresas_fin,
+            })
+
+    # ── Línea de tiempo: hitos corporativos + trayectoria de ingresos ────────
+    temporal_seed = seed.get("temporal", {})
+    eventos = sorted(temporal_seed.get("eventos", []), key=lambda e: e["anio"])
+    for ev in eventos:
+        ev["grupo_nombre"] = grupos.get(ev.get("grupo"), {}).get("nombre", ev.get("grupo"))
+    anios = sorted({a for serie in temporal_seed.get("ingresos_grupo", {}).values() for a in serie})
+    series_grupo = [
+        {"id": gid, "nombre": grupos.get(gid, {}).get("nombre", gid),
+         "valores": [serie.get(a) for a in anios]}
+        for gid, serie in temporal_seed.get("ingresos_grupo", {}).items()
+    ]
+    temporal_out = {
+        "nota": temporal_seed.get("_nota", ""),
+        "eventos": eventos, "anios": anios, "series_grupo": series_grupo,
+    }
+
+    conflictos.sort(key=lambda x: -x["score"])
+    conflictos_resumen = {
+        "total": len(conflictos),
+        "alta": sum(1 for c in conflictos if c["severidad"] == "alta"),
+        "media": sum(1 for c in conflictos if c["severidad"] == "media"),
+        "por_tipo": {t: sum(1 for c in conflictos if c["tipo"] == t)
+                     for t in {c["tipo"] for c in conflictos}},
+    }
+
     # ── Economic Power Index por grupo ────────────────────────────────────────
     members = defaultdict(list)
     for eid, e in empresas.items():
@@ -321,6 +452,8 @@ def main() -> None:
         "sectores": sectores_out,
         "finanzas": finanzas_out,
         "bolsa": bolsa,
+        "conflictos": {"resumen": conflictos_resumen, "casos": conflictos},
+        "temporal": temporal_out,
         "puentes": [{"id": p["id"], "label": p["label"], "tipo": p["tipo"],
                      "grupo_nombre": p["grupo_nombre"], "betweenness": p["betweenness"],
                      "grado": p["grado"]} for p in puentes],
@@ -332,6 +465,9 @@ def main() -> None:
           f"{len(communities)} comunidades)")
     print(f"  {len(finanzas_out)} empresas con finanzas · {bolsa['n_listadas']} listadas BVL "
           f"· cap. total ~S/ {bolsa['market_cap_total']:,} M")
+    print(f"  {conflictos_resumen['total']} superficies de conflicto "
+          f"({conflictos_resumen['alta']} alta · {conflictos_resumen['media']} media): "
+          f"{conflictos_resumen['por_tipo']}")
     print(f"  Top EPI: {', '.join(r['nombre'] for r in ranking[:5])}")
 
 

@@ -116,6 +116,33 @@ export interface SectorInfo {
   empresas: { id: string; nombre: string; grupo: string | null; ingresos: number; share: number }[]
 }
 
+export interface Conflicto {
+  tipo: 'vehiculo_compartido' | 'interlock_cruzado' | 'afp_parte_relacionada' | 'conglomerado_financiero'
+  titulo: string
+  severidad: 'alta' | 'media' | 'baja'
+  score: number
+  entidades: string[]
+  por_que: string
+  evidencia: string[]
+}
+
+export interface EventoTemporal {
+  anio: number
+  tipo: string
+  grupo: string | null
+  grupo_nombre: string
+  titulo: string
+  descripcion: string
+  fuente: string
+}
+
+export interface Temporal {
+  nota: string
+  eventos: EventoTemporal[]
+  anios: number[]
+  series_grupo: { id: string; nombre: string; valores: (number | null)[] }[]
+}
+
 export interface Puente {
   id: string
   label: string
@@ -146,6 +173,11 @@ export interface Datos {
   sectores: SectorInfo[]
   finanzas: Finanza[]
   bolsa: Bolsa
+  conflictos: {
+    resumen: { total: number; alta: number; media: number; por_tipo: Record<string, number> }
+    casos: Conflicto[]
+  }
+  temporal: Temporal
   puentes: Puente[]
 }
 

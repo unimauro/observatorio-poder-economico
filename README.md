@@ -18,6 +18,8 @@
 | 💰 **Finanzas** | Análisis de estados financieros: scatter tamaño/rentabilidad, ranking ordenable y ratios (margen neto/EBITDA, ROE, ROA, apalancamiento) |
 | 📈 **Bolsa (BVL)** | Emisores listados: capitalización bursátil por emisor y sector + P/U indicativo |
 | 🏭 **Sectores** | Treemap de ingresos por sector + concentración (HHI sobre la muestra) |
+| 🔍 **Conflictos de interés** | Detección automática de superficies estructurales: control compartido, directorios entrelazados, AFP en parte relacionada, conglomerado financiero — con severidad y evidencia |
+| 🕰️ **Mapa temporal** | Hitos corporativos documentados (M&A, salidas a bolsa, cambios de control) + trayectoria de ingresos por grupo |
 | 🌉 **Puentes** | Betweenness centrality: holdings bisagra y empresas que conectan mundos |
 | 📜 **Metodología** | Fórmulas, pesos, fuentes y límites — todo auditable |
 
@@ -76,8 +78,10 @@ editorial: nada entra al grafo sin fuente).
 ## 🗺️ Hoja de ruta
 
 - [x] **Fase 1** — sitio estático, grafo pre-calculado, datos semilla con fuentes
-- [ ] **Fase 1.5** — scraper SMV/BVL de directorios y gerencias (+ hechos de importancia)
-- [ ] **Fase 2** — series temporales (evolución de la red), API FastAPI + Neo4j para rutas indirectas entre grupos (`MATCH p=(g)-[*1..4]-(e) RETURN p`)
+- [x] **Finanzas + Bolsa** — EEFF, ratios, capitalización BVL; EPI con dimensión financiera
+- [x] **Conflictos + Mapa temporal** — detección de superficies estructurales e hitos corporativos
+- [ ] **Fase 1.5** — scraper SMV/BVL de directorios y gerencias (+ hechos de importancia) para reemplazar slots «por confirmar» y cifras semilla
+- [ ] **Fase 2** — series financieras reales año a año, API FastAPI + Neo4j para rutas indirectas entre grupos (`MATCH p=(g)-[*1..4]-(e) RETURN p`)
 
 ## ⚠️ Límites (léelos antes de citar)
 

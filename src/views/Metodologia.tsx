@@ -73,6 +73,28 @@ apalancamiento = activos / patrimonio`}</div>
         <p>Puntaje 0–100 para pares de empresas conectadas por señales societarias:</p>
         <div className="formula">{Object.entries(m.afinidad_pesos).map(([k, v]) => `${String(v).padStart(3)}  ${k.replaceAll('_', ' ')}`).join('\n')}</div>
 
+        <h3>Detección de conflictos de interés</h3>
+        <p>
+          Sobre el grafo de propiedad y directorios se detectan cuatro <strong>superficies
+          estructurales</strong> (no acusaciones): <strong>control compartido</strong> (una empresa
+          con dos o más grupos en control/participación, excluyendo la matriz natural del holding),
+          <strong> directorios entrelazados</strong> (una persona que se sienta en empresas de grupos
+          distintos), <strong>AFP en parte relacionada</strong> (una AFP que invierte en empresas de
+          su propio grupo) y <strong>conglomerado financiero</strong> (un grupo presente en dos o más
+          de banca/seguros/AFP). Cada caso lleva severidad, el porqué y su evidencia. Una estructura
+          declarada no implica conducta indebida: el observatorio la <em>muestra</em> para que se
+          fiscalice.
+        </p>
+
+        <h3>Mapa temporal</h3>
+        <p>
+          Combina <strong>hitos corporativos documentados</strong> (fusiones, salidas a bolsa,
+          cambios de control, con su fuente) y una <strong>trayectoria de ingresos ilustrativa</strong>
+          por grupo. Las curvas muestran la <em>forma</em> del crecimiento, no son cifras auditadas
+          año a año — están marcadas como ilustrativas y se reemplazarán por series reales conforme
+          se transcriban los EEFF históricos.
+        </p>
+
         <h3>Métricas de red</h3>
         <ul>
           <li><strong>PageRank</strong> sobre el grafo de control invertido: la influencia se acumula en quien controla.</li>
