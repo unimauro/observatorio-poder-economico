@@ -78,10 +78,20 @@ editorial: nada entra al grafo sin fuente).
 
 ## 🗺️ Hoja de ruta
 
+**Hecho**
 - [x] **Fase 1** — sitio estático, grafo pre-calculado, datos semilla con fuentes
 - [x] **Finanzas + Bolsa** — EEFF, ratios, capitalización BVL; EPI con dimensión financiera
+- [x] **Composición accionarial** — estructura de propiedad por empresa + free float
 - [x] **Conflictos + Mapa temporal** — detección de superficies estructurales e hitos corporativos
-- [ ] **Fase 1.5** — scraper SMV/BVL de directorios y gerencias (+ hechos de importancia) para reemplazar slots «por confirmar» y cifras semilla
+- [x] **CEOs / gerencias reales** — gerentes generales con fuente + tabla de liderazgo ejecutivo
+- [x] **Tema día/noche** + barra de apoyo (WhatsApp · Yape · café) y analítica
+- [x] **Universo BVL** — 98 emisores listados (de 21 iniciales), 46 grupos económicos
+
+**Pendiente** (orden de valor)
+- [ ] **EEFF reales de las ~77 empresas BVL nuevas** — hoy con nombre/sector/grupo/market cap; faltan ingresos/utilidad/activos para que entren al análisis financiero con números
+- [ ] **Fase 1.5 — scraper SMV** (desde Perú): directorios y gerencias completos, hechos de importancia, % de composición hoy «no detallado»
+- [ ] **Artículos editoriales** por hallazgo (SEO + monetización)
+- [ ] **Cruce con datos del Estado** (API OCDS del OECE): empresas-proveedoras → nuevos conflictos
 - [ ] **Fase 2** — series financieras reales año a año, API FastAPI + Neo4j para rutas indirectas entre grupos (`MATCH p=(g)-[*1..4]-(e) RETURN p`)
 
 ## ⚠️ Límites (léelos antes de citar)
