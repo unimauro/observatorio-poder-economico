@@ -8461,9 +8461,9 @@
    "media": 3,
    "por_tipo": {
     "afp_parte_relacionada": 1,
-    "interlock_cruzado": 3,
     "vehiculo_compartido": 2,
-    "conglomerado_financiero": 4
+    "conglomerado_financiero": 4,
+    "interlock_cruzado": 3
    }
   },
   "casos": [
@@ -8871,6 +8871,1811 @@
    }
   ]
  },
+ "composicion": [
+  {
+   "id": "afp-habitat",
+   "nombre": "AFP Habitat Perú",
+   "sector": "AFP y fondos",
+   "grupo_nombre": "Habitat",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Habitat",
+     "id": "g-habitat",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "SBS"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Habitat"
+  },
+  {
+   "id": "afp-integra",
+   "nombre": "AFP Integra",
+   "sector": "AFP y fondos",
+   "grupo_nombre": "Grupo SURA",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Grupo SURA",
+     "id": "g-sura",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "SBS"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Grupo SURA"
+  },
+  {
+   "id": "credicorp-capital",
+   "nombre": "Credicorp Capital",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Credicorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Credicorp Ltd.",
+     "id": "credicorp",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Form 20-F"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Credicorp Ltd."
+  },
+  {
+   "id": "cumbra",
+   "nombre": "Cumbra (ex GyM)",
+   "sector": "Infraestructura",
+   "grupo_nombre": "IG4 Capital",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "AENZA (ex Graña y Montero)",
+     "id": "aenza",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria AENZA"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "AENZA (ex Graña y Montero)"
+  },
+  {
+   "id": "ferreyros",
+   "nombre": "Ferreyros",
+   "sector": "Industria y maquinaria",
+   "grupo_nombre": "Ferreycorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Ferreycorp",
+     "id": "ferreycorp",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Ferreycorp"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Ferreycorp"
+  },
+  {
+   "id": "holding-continental",
+   "nombre": "Holding Continental",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Breca",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Breca",
+     "id": "g-breca",
+     "pct": 50,
+     "tipo": "participacion",
+     "tipo_label": "participación",
+     "fuente": "Memoria BBVA Perú"
+    },
+    {
+     "nombre": "BBVA",
+     "id": "g-bbva",
+     "pct": 50,
+     "tipo": "participacion",
+     "tipo_label": "participación",
+     "fuente": "Memoria BBVA Perú"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": null
+  },
+  {
+   "id": "inkafarma",
+   "nombre": "InRetail Pharma (Inkafarma · Mifarma)",
+   "sector": "Salud",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "InRetail Perú",
+     "id": "inretail",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria InRetail"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "InRetail Perú"
+  },
+  {
+   "id": "inteligo",
+   "nombre": "Inteligo",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp Financial Services",
+     "id": "ifs",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria IFS"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Intercorp Financial Services"
+  },
+  {
+   "id": "interseguro",
+   "nombre": "Interseguro",
+   "sector": "Seguros",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp Financial Services",
+     "id": "ifs",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria IFS"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Intercorp Financial Services"
+  },
+  {
+   "id": "prima-afp",
+   "nombre": "Prima AFP",
+   "sector": "AFP y fondos",
+   "grupo_nombre": "Credicorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Credicorp Ltd.",
+     "id": "credicorp",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Form 20-F"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Credicorp Ltd."
+  },
+  {
+   "id": "profuturo-afp",
+   "nombre": "Profuturo AFP",
+   "sector": "AFP y fondos",
+   "grupo_nombre": "Bank of Nova Scotia",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Scotiabank Perú",
+     "id": "scotiabank-peru",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "SBS (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Scotiabank Perú"
+  },
+  {
+   "id": "real-plaza",
+   "nombre": "Real Plaza",
+   "sector": "Inmobiliario",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "InRetail Perú",
+     "id": "inretail",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria InRetail"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "InRetail Perú"
+  },
+  {
+   "id": "soltrak",
+   "nombre": "Soltrak",
+   "sector": "Industria y maquinaria",
+   "grupo_nombre": "Ferreycorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Ferreycorp",
+     "id": "ferreycorp",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Ferreycorp"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Ferreycorp"
+  },
+  {
+   "id": "spsa",
+   "nombre": "Supermercados Peruanos (Plaza Vea)",
+   "sector": "Retail",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "InRetail Perú",
+     "id": "inretail",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria InRetail"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "InRetail Perú"
+  },
+  {
+   "id": "unimaq",
+   "nombre": "Unimaq",
+   "sector": "Industria y maquinaria",
+   "grupo_nombre": "Ferreycorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Ferreycorp",
+     "id": "ferreycorp",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Ferreycorp"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Ferreycorp"
+  },
+  {
+   "id": "vitapro",
+   "nombre": "Vitapro",
+   "sector": "Agroindustria",
+   "grupo_nombre": "Grupo Romero",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Alicorp",
+     "id": "alicorp",
+     "pct": 100,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Alicorp"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 100,
+   "resto": 0.0,
+   "tiene_numerico": true,
+   "controlador": "Alicorp"
+  },
+  {
+   "id": "interbank",
+   "nombre": "Interbank",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Intercorp",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Intercorp Financial Services",
+     "id": "ifs",
+     "pct": 99,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria IFS"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 99,
+   "resto": 1,
+   "tiene_numerico": true,
+   "controlador": "Intercorp Financial Services"
+  },
+  {
+   "id": "pacifico",
+   "nombre": "Pacífico Seguros",
+   "sector": "Seguros",
+   "grupo_nombre": "Credicorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Credicorp Ltd.",
+     "id": "credicorp",
+     "pct": 98,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Form 20-F (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 98,
+   "resto": 2,
+   "tiene_numerico": true,
+   "controlador": "Credicorp Ltd."
+  },
+  {
+   "id": "scotiabank-peru",
+   "nombre": "Scotiabank Perú",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Bank of Nova Scotia",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Bank of Nova Scotia",
+     "id": "g-bns",
+     "pct": 98,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Scotiabank Perú (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 98,
+   "resto": 2,
+   "tiene_numerico": true,
+   "controlador": "Bank of Nova Scotia"
+  },
+  {
+   "id": "bcp",
+   "nombre": "Banco de Crédito del Perú (BCP)",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Credicorp",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Credicorp Ltd.",
+     "id": "credicorp",
+     "pct": 97,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Form 20-F"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 97,
+   "resto": 3,
+   "tiene_numerico": true,
+   "controlador": "Credicorp Ltd."
+  },
+  {
+   "id": "mibanco",
+   "nombre": "Mibanco",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Credicorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Banco de Crédito del Perú (BCP)",
+     "id": "bcp",
+     "pct": 95,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria BCP (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 95,
+   "resto": 5,
+   "tiene_numerico": true,
+   "controlador": "Banco de Crédito del Perú (BCP)"
+  },
+  {
+   "id": "bbva-peru",
+   "nombre": "BBVA Perú",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": null,
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Holding Continental",
+     "id": "holding-continental",
+     "pct": 92,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria BBVA Perú"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 92,
+   "resto": 8,
+   "tiene_numerico": true,
+   "controlador": "Holding Continental"
+  },
+  {
+   "id": "cartavio",
+   "nombre": "Cartavio",
+   "sector": "Agroindustria",
+   "grupo_nombre": "Grupo Gloria",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Coazucar",
+     "id": "coazucar",
+     "pct": 90,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Cartavio (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 90,
+   "resto": 10,
+   "tiene_numerico": true,
+   "controlador": "Coazucar"
+  },
+  {
+   "id": "cerro-verde",
+   "nombre": "Sociedad Minera Cerro Verde",
+   "sector": "Minería",
+   "grupo_nombre": null,
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Freeport-McMoRan",
+     "id": "g-freeport",
+     "pct": 53.56,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Cerro Verde"
+    },
+    {
+     "nombre": "Cía. de Minas Buenaventura",
+     "id": "buenaventura",
+     "pct": 19.58,
+     "tipo": "participacion",
+     "tipo_label": "participación",
+     "fuente": "Memoria Cerro Verde"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 73.14,
+   "resto": 26.86,
+   "tiene_numerico": true,
+   "controlador": "Freeport-McMoRan"
+  },
+  {
+   "id": "inretail",
+   "nombre": "InRetail Perú",
+   "sector": "Retail",
+   "grupo_nombre": "Intercorp",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": 70,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria InRetail (aprox.)"
+    }
+   ],
+   "institucionales": [
+    "Prima AFP",
+    "Profuturo AFP"
+   ],
+   "pct_conocido": 70,
+   "resto": 30,
+   "tiene_numerico": true,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "ifs",
+   "nombre": "Intercorp Financial Services",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Intercorp",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": 70,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria IFS (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 70,
+   "resto": 30,
+   "tiene_numerico": true,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "el-brocal",
+   "nombre": "El Brocal",
+   "sector": "Minería",
+   "grupo_nombre": "Familia Benavides",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Cía. de Minas Buenaventura",
+     "id": "buenaventura",
+     "pct": 61,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria El Brocal (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 61,
+   "resto": 39,
+   "tiene_numerico": true,
+   "controlador": "Cía. de Minas Buenaventura"
+  },
+  {
+   "id": "marcobre",
+   "nombre": "Marcobre (Mina Justa)",
+   "sector": "Minería",
+   "grupo_nombre": "Breca",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Minsur",
+     "id": "minsur",
+     "pct": 60,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Minsur"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 60,
+   "resto": 40,
+   "tiene_numerico": true,
+   "controlador": "Minsur"
+  },
+  {
+   "id": "casa-grande",
+   "nombre": "Casa Grande",
+   "sector": "Agroindustria",
+   "grupo_nombre": "Grupo Gloria",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Coazucar",
+     "id": "coazucar",
+     "pct": 57,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Casa Grande"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 57,
+   "resto": 43,
+   "tiene_numerico": true,
+   "controlador": "Coazucar"
+  },
+  {
+   "id": "pacasmayo",
+   "nombre": "Cementos Pacasmayo",
+   "sector": "Cemento y construcción",
+   "grupo_nombre": "Grupo Hochschild",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Grupo Hochschild",
+     "id": "g-hochschild",
+     "pct": 50,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Pacasmayo (vía Inv. ASPI, aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 50,
+   "resto": 50,
+   "tiene_numerico": true,
+   "controlador": "Grupo Hochschild"
+  },
+  {
+   "id": "alicorp",
+   "nombre": "Alicorp",
+   "sector": "Consumo masivo",
+   "grupo_nombre": "Grupo Romero",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Grupo Romero",
+     "id": "g-romero",
+     "pct": 46,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Alicorp (aprox.)"
+    }
+   ],
+   "institucionales": [
+    "AFP Habitat Perú",
+    "AFP Integra",
+    "Prima AFP"
+   ],
+   "pct_conocido": 46,
+   "resto": 54,
+   "tiene_numerico": true,
+   "controlador": "Grupo Romero"
+  },
+  {
+   "id": "hochschild-mining",
+   "nombre": "Hochschild Mining",
+   "sector": "Minería",
+   "grupo_nombre": "Grupo Hochschild",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Grupo Hochschild",
+     "id": "g-hochschild",
+     "pct": 38,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Annual Report (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 38,
+   "resto": 62,
+   "tiene_numerico": true,
+   "controlador": "Grupo Hochschild"
+  },
+  {
+   "id": "buenaventura",
+   "nombre": "Cía. de Minas Buenaventura",
+   "sector": "Minería",
+   "grupo_nombre": "Familia Benavides",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Familia Benavides",
+     "id": "g-benavides",
+     "pct": 27,
+     "tipo": "participacion",
+     "tipo_label": "participación",
+     "fuente": "Form 20-F (aprox.)"
+    }
+   ],
+   "institucionales": [
+    "AFP Integra"
+   ],
+   "pct_conocido": 27,
+   "resto": 73,
+   "tiene_numerico": true,
+   "controlador": null
+  },
+  {
+   "id": "aenza",
+   "nombre": "AENZA (ex Graña y Montero)",
+   "sector": "Infraestructura",
+   "grupo_nombre": "IG4 Capital",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "IG4 Capital",
+     "id": "g-ig4",
+     "pct": 25,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Hechos de importancia SMV (control efectivo, aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": 25,
+   "resto": 75,
+   "tiene_numerico": true,
+   "controlador": "IG4 Capital"
+  },
+  {
+   "id": "credicorp",
+   "nombre": "Credicorp Ltd.",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Credicorp",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Grupo Romero",
+     "id": "g-romero",
+     "pct": 16,
+     "tipo": "participacion",
+     "tipo_label": "participación",
+     "fuente": "Form 20-F (accionista de referencia, aprox.)"
+    },
+    {
+     "nombre": "Credicorp",
+     "id": "g-credicorp",
+     "pct": null,
+     "tipo": "matriz",
+     "tipo_label": "matriz (holding)",
+     "fuente": "Estructura societaria"
+    }
+   ],
+   "institucionales": [
+    "AFP Integra",
+    "Prima AFP",
+    "Profuturo AFP"
+   ],
+   "pct_conocido": 16,
+   "resto": 84,
+   "tiene_numerico": true,
+   "controlador": "Credicorp"
+  },
+  {
+   "id": "banco-falabella",
+   "nombre": "Banco Falabella Perú",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Falabella",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Falabella",
+     "id": "g-falabella",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "SBS"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Falabella"
+  },
+  {
+   "id": "casa-andina",
+   "nombre": "Casa Andina",
+   "sector": "Turismo y entretenimiento",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Sitio corporativo"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "cineplanet",
+   "nombre": "Cineplanet",
+   "sector": "Turismo y entretenimiento",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Cineplex"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "clinica-internacional",
+   "nombre": "Clínica Internacional",
+   "sector": "Salud",
+   "grupo_nombre": "Breca",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Rímac Seguros",
+     "id": "rimac",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Sitio corporativo (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Rímac Seguros"
+  },
+  {
+   "id": "coazucar",
+   "nombre": "Coazucar",
+   "sector": "Agroindustria",
+   "grupo_nombre": "Grupo Gloria",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Grupo Gloria",
+     "id": "g-gloria",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Coazucar"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Grupo Gloria"
+  },
+  {
+   "id": "saga-falabella",
+   "nombre": "Falabella Retail Perú (Saga Falabella)",
+   "sector": "Retail",
+   "grupo_nombre": "Falabella",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Falabella",
+     "id": "g-falabella",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Falabella Perú"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Falabella"
+  },
+  {
+   "id": "ferreycorp",
+   "nombre": "Ferreycorp",
+   "sector": "Industria y maquinaria",
+   "grupo_nombre": "Ferreycorp",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Ferreycorp",
+     "id": "g-ferreycorp",
+     "pct": null,
+     "tipo": "matriz",
+     "tipo_label": "matriz (holding)",
+     "fuente": "Estructura societaria"
+    }
+   ],
+   "institucionales": [
+    "AFP Habitat Perú",
+    "AFP Integra",
+    "Prima AFP"
+   ],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Ferreycorp"
+  },
+  {
+   "id": "financiera-oh",
+   "nombre": "Financiera Oh!",
+   "sector": "Finanzas y banca",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "SBS (aprox.)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "innova-schools",
+   "nombre": "Innova Schools",
+   "sector": "Educación",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Intercorp Education"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "intursa",
+   "nombre": "Intursa (hoteles Westin, Libertador)",
+   "sector": "Turismo y entretenimiento",
+   "grupo_nombre": "Breca",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Breca",
+     "id": "g-breca",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Intursa"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Breca"
+  },
+  {
+   "id": "leche-gloria",
+   "nombre": "Leche Gloria",
+   "sector": "Consumo masivo",
+   "grupo_nombre": "Grupo Gloria",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Grupo Gloria",
+     "id": "g-gloria",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Leche Gloria"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Grupo Gloria"
+  },
+  {
+   "id": "mallplaza",
+   "nombre": "Mallplaza Perú",
+   "sector": "Inmobiliario",
+   "grupo_nombre": "Falabella",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Falabella",
+     "id": "g-falabella",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Mallplaza"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Falabella"
+  },
+  {
+   "id": "minsur",
+   "nombre": "Minsur",
+   "sector": "Minería",
+   "grupo_nombre": "Breca",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Breca",
+     "id": "g-breca",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Minsur"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Breca"
+  },
+  {
+   "id": "palmas",
+   "nombre": "Palmas del Espino",
+   "sector": "Agroindustria",
+   "grupo_nombre": "Grupo Romero",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Grupo Romero",
+     "id": "g-romero",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Palmas"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Grupo Romero"
+  },
+  {
+   "id": "primax",
+   "nombre": "Primax",
+   "sector": "Energía y combustibles",
+   "grupo_nombre": "Grupo Romero",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Grupo Romero",
+     "id": "g-romero",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Primax"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Grupo Romero"
+  },
+  {
+   "id": "ransa",
+   "nombre": "Ransa",
+   "sector": "Logística",
+   "grupo_nombre": "Grupo Romero",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Grupo Romero",
+     "id": "g-romero",
+     "pct": null,
+     "tipo": "participacion",
+     "tipo_label": "participación",
+     "fuente": "Vínculo histórico; control vendido a H.I.G. (2021)"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": null
+  },
+  {
+   "id": "rimac",
+   "nombre": "Rímac Seguros",
+   "sector": "Seguros",
+   "grupo_nombre": "Breca",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Breca",
+     "id": "g-breca",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Rímac"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Breca"
+  },
+  {
+   "id": "sodimac",
+   "nombre": "Sodimac Perú",
+   "sector": "Retail",
+   "grupo_nombre": "Falabella",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Falabella",
+     "id": "g-falabella",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Falabella Perú"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Falabella"
+  },
+  {
+   "id": "tasa",
+   "nombre": "TASA — Tecnológica de Alimentos",
+   "sector": "Pesca",
+   "grupo_nombre": "Breca",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Breca",
+     "id": "g-breca",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria TASA"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Breca"
+  },
+  {
+   "id": "tottus",
+   "nombre": "Tottus",
+   "sector": "Retail",
+   "grupo_nombre": "Falabella",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Falabella",
+     "id": "g-falabella",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Falabella Perú"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Falabella"
+  },
+  {
+   "id": "trupal",
+   "nombre": "Trupal",
+   "sector": "Papel y empaques",
+   "grupo_nombre": "Grupo Gloria",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Grupo Gloria",
+     "id": "g-gloria",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Trupal"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Grupo Gloria"
+  },
+  {
+   "id": "utp",
+   "nombre": "UTP — Universidad Tecnológica del Perú",
+   "sector": "Educación",
+   "grupo_nombre": "Intercorp",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Intercorp",
+     "id": "g-intercorp",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Intercorp Education"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Intercorp"
+  },
+  {
+   "id": "urbanova",
+   "nombre": "Urbanova",
+   "sector": "Inmobiliario",
+   "grupo_nombre": "Breca",
+   "bvl": false,
+   "accionistas": [
+    {
+     "nombre": "Breca",
+     "id": "g-breca",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Sitio corporativo"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Breca"
+  },
+  {
+   "id": "yura",
+   "nombre": "Yura",
+   "sector": "Cemento y construcción",
+   "grupo_nombre": "Grupo Gloria",
+   "bvl": true,
+   "accionistas": [
+    {
+     "nombre": "Grupo Gloria",
+     "id": "g-gloria",
+     "pct": null,
+     "tipo": "control",
+     "tipo_label": "control",
+     "fuente": "Memoria Yura"
+    }
+   ],
+   "institucionales": [],
+   "pct_conocido": null,
+   "resto": null,
+   "tiene_numerico": false,
+   "controlador": "Grupo Gloria"
+  }
+ ],
+ "fin_por_grupo": [
+  {
+   "id": "g-intercorp",
+   "nombre": "Intercorp",
+   "ingresos": 59850,
+   "utilidad": 4960,
+   "ebitda": 5470,
+   "activos": 239500,
+   "patrimonio": 39000,
+   "market_cap": 26500,
+   "margen_neto": 8.3,
+   "roe": 12.7,
+   "empresas": [
+    {
+     "nombre": "InRetail Perú",
+     "ingresos": 22000,
+     "utilidad": 900
+    },
+    {
+     "nombre": "Supermercados Peruanos (Plaza Vea)",
+     "ingresos": 9500,
+     "utilidad": 260
+    },
+    {
+     "nombre": "InRetail Pharma (Inkafarma · Mifarma)",
+     "ingresos": 8500,
+     "utilidad": 240
+    },
+    {
+     "nombre": "Intercorp Financial Services",
+     "ingresos": 7800,
+     "utilidad": 1550
+    },
+    {
+     "nombre": "Interbank",
+     "ingresos": 6200,
+     "utilidad": 1150
+    },
+    {
+     "nombre": "Interseguro",
+     "ingresos": 1300,
+     "utilidad": 210
+    },
+    {
+     "nombre": "UTP — Universidad Tecnológica del Perú",
+     "ingresos": 1200,
+     "utilidad": 0
+    },
+    {
+     "nombre": "Real Plaza",
+     "ingresos": 800,
+     "utilidad": 300
+    },
+    {
+     "nombre": "Financiera Oh!",
+     "ingresos": 700,
+     "utilidad": 120
+    },
+    {
+     "nombre": "Cineplanet",
+     "ingresos": 600,
+     "utilidad": 0
+    },
+    {
+     "nombre": "Innova Schools",
+     "ingresos": 500,
+     "utilidad": 0
+    },
+    {
+     "nombre": "Inteligo",
+     "ingresos": 400,
+     "utilidad": 230
+    },
+    {
+     "nombre": "Casa Andina",
+     "ingresos": 350,
+     "utilidad": 0
+    }
+   ]
+  },
+  {
+   "id": "g-credicorp",
+   "nombre": "Credicorp",
+   "ingresos": 45000,
+   "utilidad": 11780,
+   "ebitda": 0,
+   "activos": 539000,
+   "patrimonio": 74400,
+   "market_cap": 138000,
+   "margen_neto": 26.2,
+   "roe": 15.8,
+   "empresas": [
+    {
+     "nombre": "Credicorp Ltd.",
+     "ingresos": 22000,
+     "utilidad": 5500
+    },
+    {
+     "nombre": "Banco de Crédito del Perú (BCP)",
+     "ingresos": 14000,
+     "utilidad": 5000
+    },
+    {
+     "nombre": "Pacífico Seguros",
+     "ingresos": 5000,
+     "utilidad": 620
+    },
+    {
+     "nombre": "Mibanco",
+     "ingresos": 2800,
+     "utilidad": 320
+    },
+    {
+     "nombre": "Credicorp Capital",
+     "ingresos": 800,
+     "utilidad": 110
+    },
+    {
+     "nombre": "Prima AFP",
+     "ingresos": 400,
+     "utilidad": 230
+    }
+   ]
+  },
+  {
+   "id": "g-breca",
+   "nombre": "Breca",
+   "ingresos": 22600,
+   "utilidad": 3060,
+   "ebitda": 5600,
+   "activos": 44500,
+   "patrimonio": 16300,
+   "market_cap": 10500,
+   "margen_neto": 13.5,
+   "roe": 18.8,
+   "empresas": [
+    {
+     "nombre": "Minsur",
+     "ingresos": 7500,
+     "utilidad": 1500
+    },
+    {
+     "nombre": "Rímac Seguros",
+     "ingresos": 6500,
+     "utilidad": 520
+    },
+    {
+     "nombre": "Marcobre (Mina Justa)",
+     "ingresos": 4500,
+     "utilidad": 800
+    },
+    {
+     "nombre": "TASA — Tecnológica de Alimentos",
+     "ingresos": 2500,
+     "utilidad": 180
+    },
+    {
+     "nombre": "Clínica Internacional",
+     "ingresos": 900,
+     "utilidad": 60
+    },
+    {
+     "nombre": "Intursa (hoteles Westin, Libertador)",
+     "ingresos": 400,
+     "utilidad": 0
+    },
+    {
+     "nombre": "Urbanova",
+     "ingresos": 300,
+     "utilidad": 0
+    }
+   ]
+  },
+  {
+   "id": "g-romero",
+   "nombre": "Grupo Romero",
+   "ingresos": 36900,
+   "utilidad": 1030,
+   "ebitda": 3080,
+   "activos": 25300,
+   "patrimonio": 10500,
+   "market_cap": 5500,
+   "margen_neto": 2.8,
+   "roe": 9.8,
+   "empresas": [
+    {
+     "nombre": "Primax",
+     "ingresos": 19000,
+     "utilidad": 350
+    },
+    {
+     "nombre": "Alicorp",
+     "ingresos": 12500,
+     "utilidad": 400
+    },
+    {
+     "nombre": "Vitapro",
+     "ingresos": 3000,
+     "utilidad": 120
+    },
+    {
+     "nombre": "Ransa",
+     "ingresos": 1500,
+     "utilidad": 70
+    },
+    {
+     "nombre": "Palmas del Espino",
+     "ingresos": 900,
+     "utilidad": 90
+    }
+   ]
+  },
+  {
+   "id": "g-gloria",
+   "nombre": "Grupo Gloria",
+   "ingresos": 14900,
+   "utilidad": 1300,
+   "ebitda": 2740,
+   "activos": 23100,
+   "patrimonio": 13000,
+   "market_cap": 9150,
+   "margen_neto": 8.7,
+   "roe": 10.0,
+   "empresas": [
+    {
+     "nombre": "Leche Gloria",
+     "ingresos": 6500,
+     "utilidad": 350
+    },
+    {
+     "nombre": "Yura",
+     "ingresos": 3200,
+     "utilidad": 500
+    },
+    {
+     "nombre": "Coazucar",
+     "ingresos": 2800,
+     "utilidad": 200
+    },
+    {
+     "nombre": "Casa Grande",
+     "ingresos": 900,
+     "utilidad": 110
+    },
+    {
+     "nombre": "Trupal",
+     "ingresos": 800,
+     "utilidad": 60
+    },
+    {
+     "nombre": "Cartavio",
+     "ingresos": 700,
+     "utilidad": 80
+    }
+   ]
+  },
+  {
+   "id": "g-falabella",
+   "nombre": "Falabella",
+   "ingresos": 12800,
+   "utilidad": 420,
+   "ebitda": 980,
+   "activos": 15300,
+   "patrimonio": 4000,
+   "market_cap": 0,
+   "margen_neto": 3.3,
+   "roe": 10.5,
+   "empresas": [
+    {
+     "nombre": "Falabella Retail Perú (Saga Falabella)",
+     "ingresos": 4500,
+     "utilidad": 110
+    },
+    {
+     "nombre": "Tottus",
+     "ingresos": 4000,
+     "utilidad": 90
+    },
+    {
+     "nombre": "Sodimac Perú",
+     "ingresos": 3000,
+     "utilidad": 70
+    },
+    {
+     "nombre": "Banco Falabella Perú",
+     "ingresos": 900,
+     "utilidad": 150
+    },
+    {
+     "nombre": "Mallplaza Perú",
+     "ingresos": 400,
+     "utilidad": 0
+    }
+   ]
+  },
+  {
+   "id": "g-ferreycorp",
+   "nombre": "Ferreycorp",
+   "ingresos": 14900,
+   "utilidad": 980,
+   "ebitda": 1800,
+   "activos": 14500,
+   "patrimonio": 6000,
+   "market_cap": 3500,
+   "margen_neto": 6.6,
+   "roe": 16.3,
+   "empresas": [
+    {
+     "nombre": "Ferreycorp",
+     "ingresos": 8200,
+     "utilidad": 600
+    },
+    {
+     "nombre": "Ferreyros",
+     "ingresos": 5500,
+     "utilidad": 380
+    },
+    {
+     "nombre": "Unimaq",
+     "ingresos": 700,
+     "utilidad": 0
+    },
+    {
+     "nombre": "Soltrak",
+     "ingresos": 500,
+     "utilidad": 0
+    }
+   ]
+  },
+  {
+   "id": "g-benavides",
+   "nombre": "Familia Benavides",
+   "ingresos": 6000,
+   "utilidad": 780,
+   "ebitda": 1650,
+   "activos": 17500,
+   "patrimonio": 10800,
+   "market_cap": 13000,
+   "margen_neto": 13.0,
+   "roe": 7.2,
+   "empresas": [
+    {
+     "nombre": "Cía. de Minas Buenaventura",
+     "ingresos": 4200,
+     "utilidad": 600
+    },
+    {
+     "nombre": "El Brocal",
+     "ingresos": 1800,
+     "utilidad": 180
+    }
+   ]
+  },
+  {
+   "id": "g-bns",
+   "nombre": "Bank of Nova Scotia",
+   "ingresos": 5380,
+   "utilidad": 1080,
+   "ebitda": 0,
+   "activos": 86500,
+   "patrimonio": 11800,
+   "market_cap": 0,
+   "margen_neto": 20.1,
+   "roe": 9.2,
+   "empresas": [
+    {
+     "nombre": "Scotiabank Perú",
+     "ingresos": 5000,
+     "utilidad": 900
+    },
+    {
+     "nombre": "Profuturo AFP",
+     "ingresos": 380,
+     "utilidad": 180
+    }
+   ]
+  },
+  {
+   "id": "g-hochschild",
+   "nombre": "Grupo Hochschild",
+   "ingresos": 5600,
+   "utilidad": 550,
+   "ebitda": 1700,
+   "activos": 10000,
+   "patrimonio": 5000,
+   "market_cap": 9500,
+   "margen_neto": 9.8,
+   "roe": 11.0,
+   "empresas": [
+    {
+     "nombre": "Hochschild Mining",
+     "ingresos": 3600,
+     "utilidad": 300
+    },
+    {
+     "nombre": "Cementos Pacasmayo",
+     "ingresos": 2000,
+     "utilidad": 250
+    }
+   ]
+  },
+  {
+   "id": "g-ig4",
+   "nombre": "IG4 Capital",
+   "ingresos": 7500,
+   "utilidad": 240,
+   "ebitda": 650,
+   "activos": 9000,
+   "patrimonio": 2400,
+   "market_cap": 1500,
+   "margen_neto": 3.2,
+   "roe": 10.0,
+   "empresas": [
+    {
+     "nombre": "AENZA (ex Graña y Montero)",
+     "ingresos": 5000,
+     "utilidad": 150
+    },
+    {
+     "nombre": "Cumbra (ex GyM)",
+     "ingresos": 2500,
+     "utilidad": 90
+    }
+   ]
+  },
+  {
+   "id": "g-sura",
+   "nombre": "Grupo SURA",
+   "ingresos": 450,
+   "utilidad": 220,
+   "ebitda": 0,
+   "activos": 1800,
+   "patrimonio": 1000,
+   "market_cap": 0,
+   "margen_neto": 48.9,
+   "roe": 22.0,
+   "empresas": [
+    {
+     "nombre": "AFP Integra",
+     "ingresos": 450,
+     "utilidad": 220
+    }
+   ]
+  },
+  {
+   "id": "g-habitat",
+   "nombre": "Habitat",
+   "ingresos": 250,
+   "utilidad": 90,
+   "ebitda": 0,
+   "activos": 700,
+   "patrimonio": 400,
+   "market_cap": 0,
+   "margen_neto": 36.0,
+   "roe": 22.5,
+   "empresas": [
+    {
+     "nombre": "AFP Habitat Perú",
+     "ingresos": 250,
+     "utilidad": 90
+    }
+   ]
+  }
+ ],
  "puentes": [
   {
    "id": "inretail",

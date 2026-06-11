@@ -59,6 +59,16 @@ apalancamiento = activos / patrimonio`}</div>
           <code> market cap / utilidad</code>, indicativo.
         </p>
 
+        <h3>Composición accionarial</h3>
+        <p>
+          Para cada empresa se reconstruye su estructura de propiedad a partir de las
+          participaciones declaradas (control, participación, matriz). Cuando la suma de los
+          porcentajes conocidos no llega a 100%, el remanente se etiqueta
+          <strong> «Otros / free float / no detallado»</strong>: <em>no</em> asumimos a quién
+          pertenece. Las empresas cuyo control está declarado pero sin porcentaje público se listan
+          aparte, como control cualitativo.
+        </p>
+
         <h3>Gerencias</h3>
         <p>
           El grafo distingue <strong>directores</strong> (presidencia y directorio) de

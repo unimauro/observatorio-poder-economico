@@ -434,6 +434,56 @@ def main() -> None:
         [{"sector": s, "market_cap": round(v)} for s, v in cap_sector.items()],
         key=lambda x: -x["market_cap"])
 
+    # ── Composición accionarial por empresa ──────────────────────────────────
+    TIPOS_PROP = ("control", "participacion", "matriz")
+    TIPO_LABEL = {"control": "control", "participacion": "participación",
+                  "matriz": "matriz (holding)"}
+    composicion = []
+    for eid, e in empresas.items():
+        incoming = [o for o in seed["propiedad"]
+                    if o["a"] == eid and o["tipo"] in TIPOS_PROP]
+        if not incoming:
+            continue
+        accionistas = [{
+            "nombre": nombre_de(o["de"]), "id": o["de"], "pct": o.get("pct"),
+            "tipo": o["tipo"], "tipo_label": TIPO_LABEL[o["tipo"]], "fuente": o.get("fuente"),
+        } for o in incoming]
+        institucionales = sorted({nombre_de(o["de"]) for o in seed["propiedad"]
+                                  if o["a"] == eid and o["tipo"] == "portafolio"})
+        con_pct = [a for a in accionistas if a["pct"] is not None]
+        sum_pct = round(sum(a["pct"] for a in con_pct), 2)
+        tiene_numerico = bool(con_pct)
+        ctrl = next((a for a in accionistas if a["tipo"] in ("control", "matriz")), None)
+        composicion.append({
+            "id": eid, "nombre": e["nombre"], "sector": e["sector"],
+            "grupo_nombre": grupos.get(e.get("grupo"), {}).get("nombre"),
+            "bvl": e.get("bvl", False),
+            "accionistas": sorted(accionistas, key=lambda a: -(a["pct"] or 0)),
+            "institucionales": institucionales,
+            "pct_conocido": sum_pct if tiene_numerico else None,
+            "resto": round(max(0.0, 100 - sum_pct), 2) if tiene_numerico else None,
+            "tiene_numerico": tiene_numerico,
+            "controlador": ctrl["nombre"] if ctrl else None,
+        })
+    composicion.sort(key=lambda c: (not c["tiene_numerico"], -(c["pct_conocido"] or 0), c["nombre"]))
+
+    # ── Dashboard financiero por grupo (ingresos desglosados por empresa) ────
+    fin_por_grupo = []
+    for r in ranking:
+        mids = [f for f in finanzas_out if f["grupo_nombre"] == r["nombre"]]
+        fin_por_grupo.append({
+            "id": r["id"], "nombre": r["nombre"],
+            "ingresos": r["ingresos"], "utilidad": r["utilidad"],
+            "ebitda": r["ebitda"], "activos": r["activos"],
+            "patrimonio": r["patrimonio"], "market_cap": r["market_cap"],
+            "margen_neto": r["margen_neto"],
+            "roe": round(100 * r["utilidad"] / r["patrimonio"], 1) if r["patrimonio"] else None,
+            "empresas": sorted(
+                [{"nombre": m["nombre"], "ingresos": m["ingresos"] or 0,
+                  "utilidad": m["utilidad"] or 0} for m in mids],
+                key=lambda x: -x["ingresos"]),
+        })
+
     out = {
         "meta": {
             **seed["meta"],
@@ -454,6 +504,8 @@ def main() -> None:
         "bolsa": bolsa,
         "conflictos": {"resumen": conflictos_resumen, "casos": conflictos},
         "temporal": temporal_out,
+        "composicion": composicion,
+        "fin_por_grupo": fin_por_grupo,
         "puentes": [{"id": p["id"], "label": p["label"], "tipo": p["tipo"],
                      "grupo_nombre": p["grupo_nombre"], "betweenness": p["betweenness"],
                      "grado": p["grado"]} for p in puentes],
@@ -468,6 +520,8 @@ def main() -> None:
     print(f"  {conflictos_resumen['total']} superficies de conflicto "
           f"({conflictos_resumen['alta']} alta · {conflictos_resumen['media']} media): "
           f"{conflictos_resumen['por_tipo']}")
+    print(f"  {len(composicion)} empresas con composición accionarial "
+          f"({sum(1 for c in composicion if c['tiene_numerico'])} con % numérico)")
     print(f"  Top EPI: {', '.join(r['nombre'] for r in ranking[:5])}")
 
 

@@ -143,6 +143,43 @@ export interface Temporal {
   series_grupo: { id: string; nombre: string; valores: (number | null)[] }[]
 }
 
+export interface Accionista {
+  nombre: string
+  id: string
+  pct: number | null
+  tipo: 'control' | 'participacion' | 'matriz'
+  tipo_label: string
+  fuente: string | null
+}
+
+export interface Composicion {
+  id: string
+  nombre: string
+  sector: string
+  grupo_nombre: string | null
+  bvl: boolean
+  accionistas: Accionista[]
+  institucionales: string[]
+  pct_conocido: number | null
+  resto: number | null
+  tiene_numerico: boolean
+  controlador: string | null
+}
+
+export interface FinGrupo {
+  id: string
+  nombre: string
+  ingresos: number
+  utilidad: number
+  ebitda: number
+  activos: number
+  patrimonio: number
+  market_cap: number
+  margen_neto: number | null
+  roe: number | null
+  empresas: { nombre: string; ingresos: number; utilidad: number }[]
+}
+
 export interface Puente {
   id: string
   label: string
@@ -178,6 +215,8 @@ export interface Datos {
     casos: Conflicto[]
   }
   temporal: Temporal
+  composicion: Composicion[]
+  fin_por_grupo: FinGrupo[]
   puentes: Puente[]
 }
 

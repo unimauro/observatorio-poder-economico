@@ -15,7 +15,8 @@
 | 🕸️ **Mapa de la red** | Grafo interactivo (Cytoscape): grupos → empresas → personas, con filtros por sector, carteras AFP y comunidades Louvain |
 | 🪑 **Directorios y gerencias** | Grafo bipartito persona ↔ empresa con filtro directores/gerentes + pares de empresas con directores compartidos y su **Network Affinity Score** |
 | 🏆 **Ranking EPI** | **Economic Power Index** (0–100) por grupo: tamaño financiero + amplitud + posición en la red, desagregado por componente |
-| 💰 **Finanzas** | Análisis de estados financieros: scatter tamaño/rentabilidad, ranking ordenable y ratios (margen neto/EBITDA, ROE, ROA, apalancamiento) |
+| 💰 **Finanzas** | Análisis de estados financieros: scatter tamaño/rentabilidad, dashboard por grupo (ingresos desglosados), ranking ordenable y ratios (margen neto/EBITDA, ROE, ROA, apalancamiento) |
+| 🥧 **Composición accionarial** | Estructura de propiedad por empresa (donut de accionistas + free float) y bloque de control vs. float de los emisores BVL |
 | 📈 **Bolsa (BVL)** | Emisores listados: capitalización bursátil por emisor y sector + P/U indicativo |
 | 🏭 **Sectores** | Treemap de ingresos por sector + concentración (HHI sobre la muestra) |
 | 🔍 **Conflictos de interés** | Detección automática de superficies estructurales: control compartido, directorios entrelazados, AFP en parte relacionada, conglomerado financiero — con severidad y evidencia |

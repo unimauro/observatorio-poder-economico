@@ -6,6 +6,7 @@ import Ranking from './views/Ranking'
 import Sectores from './views/Sectores'
 import Finanzas from './views/Finanzas'
 import Bolsa from './views/Bolsa'
+import Composicion from './views/Composicion'
 import Conflictos from './views/Conflictos'
 import Temporal from './views/Temporal'
 import Puentes from './views/Puentes'
@@ -17,6 +18,7 @@ const TABS = [
   { id: 'directorios', label: '🪑 Directorios y gerencias' },
   { id: 'ranking', label: '🏆 Ranking EPI' },
   { id: 'finanzas', label: '💰 Finanzas' },
+  { id: 'composicion', label: '🥧 Composición accionarial' },
   { id: 'bolsa', label: '📈 Bolsa (BVL)' },
   { id: 'sectores', label: '🏭 Sectores' },
   { id: 'conflictos', label: '🔍 Conflictos' },
@@ -101,6 +103,7 @@ export default function App() {
               {tab === 'directorios' && <Directorios datos={datos} />}
               {tab === 'ranking' && <Ranking datos={datos} />}
               {tab === 'finanzas' && <Finanzas datos={datos} />}
+              {tab === 'composicion' && <Composicion datos={datos} />}
               {tab === 'bolsa' && <Bolsa datos={datos} />}
               {tab === 'sectores' && <Sectores datos={datos} />}
               {tab === 'conflictos' && <Conflictos datos={datos} />}

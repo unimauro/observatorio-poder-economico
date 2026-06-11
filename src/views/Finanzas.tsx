@@ -19,6 +19,8 @@ const SECTOR_COLOR: Record<string, string> = {
   'Industria y maquinaria': '#b5838d',
 }
 const colorDe = (s: string) => SECTOR_COLOR[s] ?? '#a0a48e'
+const SECTOR_PALETA = ['#e8442e', '#d9a441', '#7fb069', '#6da3d8', '#c47fd4', '#4ecdc4',
+  '#e87ea1', '#f2a65a', '#a0a48e', '#b5838d', '#8d99ae', '#90be6d', '#b32417', '#5a8f7b']
 
 type Ordenar = 'ingresos' | 'utilidad' | 'ebitda' | 'activos' | 'market_cap'
 const COLS: { k: Ordenar; label: string }[] = [
@@ -103,6 +105,31 @@ export default function Finanzas({ datos }: { datos: Datos }) {
     }
   }, [fin, orden])
 
+  // Dashboard por grupo: ingresos apilados por empresa + margen neto
+  const grupos = useMemo<EChartsOption>(() => {
+    const g = datos.fin_por_grupo
+    const empresasNombre = [...new Set(g.flatMap((x) => x.empresas.map((e) => e.nombre)))]
+    return {
+      backgroundColor: 'transparent',
+      textStyle: { fontFamily: 'IBM Plex Mono, monospace' },
+      tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' },
+        formatter: (ps: unknown) => {
+          const arr = (ps as { seriesName: string; value: number }[]).filter((p) => p.value)
+          return arr.map((p) => `${p.seriesName}: ${fmtSolesCorto(p.value)}`).join('<br/>')
+        } },
+      grid: { left: 8, right: 16, top: 8, bottom: 8, containLabel: true },
+      xAxis: { type: 'value', axisLabel: { color: '#6e6557', fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: '#241f18' } } },
+      yAxis: { type: 'category', data: g.map((x) => x.nombre).reverse(),
+        axisLabel: { color: '#ece4d3', fontSize: 11 }, axisLine: { lineStyle: { color: '#2e2820' } } },
+      series: empresasNombre.map((nombre, i) => ({
+        name: nombre, type: 'bar' as const, stack: 'grp',
+        itemStyle: { color: SECTOR_PALETA[i % SECTOR_PALETA.length] },
+        emphasis: { focus: 'series' as const },
+        data: [...g].reverse().map((x) => x.empresas.find((e) => e.nombre === nombre)?.ingresos ?? 0),
+      })),
+    }
+  }, [datos])
+
   const tabla = [...fin].sort((a, b) => (b.ingresos ?? 0) - (a.ingresos ?? 0))
 
   return (
@@ -120,6 +147,11 @@ export default function Finanzas({ datos }: { datos: Datos }) {
       <div className="panel">
         <div className="panel-head">tamaño vs. rentabilidad · ingresos × utilidad × activos (burbuja) × sector (color)</div>
         <div className="panel-body"><Chart option={scatter} height={460} /></div>
+      </div>
+
+      <div className="panel" style={{ marginTop: 18 }}>
+        <div className="panel-head">dashboard por grupo · ingresos agregados desglosados por empresa (S/ M)</div>
+        <div className="panel-body"><Chart option={grupos} height={420} /></div>
       </div>
 
       <div className="panel" style={{ marginTop: 18 }}>
