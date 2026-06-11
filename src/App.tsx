@@ -11,6 +11,7 @@ import Conflictos from './views/Conflictos'
 import Temporal from './views/Temporal'
 import Puentes from './views/Puentes'
 import Metodologia from './views/Metodologia'
+import SupportModal, { YAPE_QR } from './components/SupportModal'
 import { fmtNum } from './types'
 
 const TABS = [
@@ -38,6 +39,7 @@ const hashTab = (): TabId => {
 export default function App() {
   const { datos, error } = useDatos()
   const [tab, setTabState] = useState<TabId>(hashTab)
+  const [apoyo, setApoyo] = useState(false)
   const setTab = (t: TabId) => {
     setTabState(t)
     window.location.hash = t
@@ -46,6 +48,8 @@ export default function App() {
 
   return (
     <>
+      <SupportModal open={apoyo} onClose={() => setApoyo(false)} />
+
       <div className="aviso">
         <div className="wrap">
           <b>DATOS SEMILLA</b>
@@ -90,6 +94,14 @@ export default function App() {
               {t.label}
             </button>
           ))}
+          <button
+            className="tab-apoyo"
+            onClick={() => setApoyo(true)}
+            aria-label="Apoyar el proyecto"
+            title="Apoyar el proyecto · Yape / Buy me a coffee"
+          >
+            ☕ Apoyar
+          </button>
         </div>
       </nav>
 
@@ -117,6 +129,34 @@ export default function App() {
 
       <footer>
         <div className="wrap">
+          <div className="apoyo-footer">
+            <button
+              className="apoyo-qr-mini"
+              onClick={() => setApoyo(true)}
+              aria-label="Mostrar QR de Yape"
+              title="Mostrar QR de Yape"
+            >
+              <img src={YAPE_QR} alt="Yape QR" loading="lazy" />
+            </button>
+            <div className="apoyo-footer-txt">
+              <b>¿Te sirve este observatorio?</b>
+              <span>Open source y gratuito. Tu aporte mantiene el hosting y el ETL.</span>
+              <div className="apoyo-footer-botones">
+                <button className="apoyo-btn" onClick={() => setApoyo(true)}>
+                  📲 Yape · 940 584 307
+                </button>
+                <a
+                  className="apoyo-btn"
+                  href="https://buymeacoffee.com/unimauro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ☕ Buy me a coffee
+                </a>
+              </div>
+            </div>
+          </div>
+
           <span>
             Proyecto de transparencia económica con datos públicos. No constituye asesoría
             financiera ni imputación de conducta alguna: muestra estructuras societarias declaradas
