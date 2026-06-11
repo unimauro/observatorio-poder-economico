@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import type { EChartsOption } from 'echarts'
 import Chart from '../components/Chart'
+import { useTheme, tones } from '../theme'
 import type { Datos } from '../types'
 import { fmtNum, fmtSoles } from '../types'
 
@@ -30,6 +31,7 @@ const COMP_COLOR: Record<string, string> = {
 }
 
 export default function Ranking({ datos }: { datos: Datos }) {
+  const theme = useTheme()
   const ranking = datos.ranking
 
   const option = useMemo<EChartsOption>(() => {
@@ -40,7 +42,7 @@ export default function Ranking({ datos }: { datos: Datos }) {
       tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
       legend: {
         data: claves.map((k) => COMP_LABEL[k]),
-        textStyle: { color: '#9d9180', fontSize: 10 },
+        textStyle: { color: tones().legend, fontSize: 10 },
         top: 0,
       },
       grid: { left: 8, right: 30, top: 34, bottom: 8, containLabel: true },
@@ -48,15 +50,15 @@ export default function Ranking({ datos }: { datos: Datos }) {
         type: 'value',
         max: 100,
         name: 'EPI',
-        axisLabel: { color: '#6e6557', fontSize: 10 },
-        splitLine: { lineStyle: { color: '#241f18' } },
+        axisLabel: { color: tones().dim, fontSize: 10 },
+        splitLine: { lineStyle: { color: tones().split } },
       },
       yAxis: {
         type: 'category',
         inverse: true,
         data: ranking.map((r) => r.nombre),
-        axisLabel: { color: '#ece4d3', fontSize: 12, fontFamily: 'Fraunces, serif' },
-        axisLine: { lineStyle: { color: '#2e2820' } },
+        axisLabel: { color: tones().label, fontSize: 12, fontFamily: 'Fraunces, serif' },
+        axisLine: { lineStyle: { color: tones().line } },
       },
       series: claves.map((k) => ({
         name: COMP_LABEL[k],
@@ -67,7 +69,7 @@ export default function Ranking({ datos }: { datos: Datos }) {
         data: ranking.map((r) => r.componentes[k] ?? 0),
       })),
     }
-  }, [ranking])
+  }, [ranking, theme])
 
   return (
     <section>

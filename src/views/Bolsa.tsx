@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import type { EChartsOption } from 'echarts'
 import Chart from '../components/Chart'
+import { useTheme, tones } from '../theme'
 import type { Datos, Finanza } from '../types'
 import { fmtPct, fmtSoles, fmtSolesCorto } from '../types'
 
@@ -8,6 +9,7 @@ const PALETA = ['#e8442e', '#d9a441', '#7fb069', '#6da3d8', '#c47fd4', '#4ecdc4'
   '#e87ea1', '#f2a65a', '#a0a48e', '#b5838d', '#8d99ae', '#90be6d']
 
 export default function Bolsa({ datos }: { datos: Datos }) {
+  const theme = useTheme()
   const b = datos.bolsa
 
   // Market cap por emisor (barras horizontales)
@@ -22,16 +24,16 @@ export default function Bolsa({ datos }: { datos: Datos }) {
           return `${a.name}<br/>Capitalización: ${fmtSoles(a.value)}`
         } },
       grid: { left: 8, right: 70, top: 8, bottom: 8, containLabel: true },
-      xAxis: { type: 'value', axisLabel: { color: '#6e6557', fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: '#241f18' } } },
+      xAxis: { type: 'value', axisLabel: { color: tones().dim, fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: tones().split } } },
       yAxis: { type: 'category', data: top.map((f) => f.nombre),
-        axisLabel: { color: '#ece4d3', fontSize: 11 }, axisLine: { lineStyle: { color: '#2e2820' } } },
+        axisLabel: { color: tones().label, fontSize: 11 }, axisLine: { lineStyle: { color: tones().line } } },
       series: [{
         type: 'bar', barWidth: 15, itemStyle: { color: '#d9a441' },
-        label: { show: true, position: 'right', color: '#9d9180', fontSize: 9, formatter: (p: unknown) => fmtSolesCorto((p as { value: number }).value) },
+        label: { show: true, position: 'right', color: tones().legend, fontSize: 9, formatter: (p: unknown) => fmtSolesCorto((p as { value: number }).value) },
         data: top.map((f) => f.market_cap),
       }],
     }
-  }, [b])
+  }, [b, theme])
 
   // Capitalización por sector (donut)
   const sectorChart = useMemo<EChartsOption>(() => ({
@@ -42,15 +44,15 @@ export default function Bolsa({ datos }: { datos: Datos }) {
       return `${d.name}<br/>${fmtSoles(d.value)} · ${d.percent}%`
     } },
     legend: { type: 'scroll', orient: 'vertical', right: 0, top: 'center',
-      textStyle: { color: '#9d9180', fontSize: 10 } },
+      textStyle: { color: tones().legend, fontSize: 10 } },
     series: [{
       type: 'pie', radius: ['42%', '70%'], center: ['38%', '50%'],
       itemStyle: { borderColor: '#1a1712', borderWidth: 2 },
-      label: { color: '#ece4d3', fontSize: 10, formatter: '{b}\n{d}%' },
+      label: { color: tones().label, fontSize: 10, formatter: '{b}\n{d}%' },
       color: PALETA,
       data: b.por_sector.map((s) => ({ name: s.sector, value: s.market_cap })),
     }],
-  }), [b])
+  }), [b, theme])
 
   const valorizadas = [...b.emisores].sort((a, b2) => (b2.market_cap ?? 0) - (a.market_cap ?? 0))
 

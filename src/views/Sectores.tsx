@@ -1,10 +1,12 @@
 import { useMemo } from 'react'
 import type { EChartsOption } from 'echarts'
 import Chart from '../components/Chart'
+import { useTheme, tones } from '../theme'
 import type { Datos } from '../types'
 import { fmtSoles } from '../types'
 
 export default function Sectores({ datos }: { datos: Datos }) {
+  const theme = useTheme()
   const option = useMemo<EChartsOption>(() => ({
     backgroundColor: 'transparent',
     textStyle: { fontFamily: 'IBM Plex Mono, monospace' },
@@ -18,9 +20,9 @@ export default function Sectores({ datos }: { datos: Datos }) {
       type: 'treemap',
       roam: false,
       nodeClick: 'zoomToNode',
-      breadcrumb: { show: true, itemStyle: { color: '#1a1712', textStyle: { color: '#9d9180' } } },
+      breadcrumb: { show: true, itemStyle: { color: '#1a1712', textStyle: { color: tones().legend } } },
       label: { show: true, fontSize: 11, color: '#0f0d0a', fontWeight: 'bold' },
-      upperLabel: { show: true, height: 22, color: '#ece4d3', fontSize: 11 },
+      upperLabel: { show: true, height: 22, color: tones().label, fontSize: 11 },
       itemStyle: { borderColor: '#0f0d0a', borderWidth: 2, gapWidth: 2 },
       levels: [
         { itemStyle: { borderWidth: 0, gapWidth: 3 } },
@@ -36,7 +38,7 @@ export default function Sectores({ datos }: { datos: Datos }) {
         })),
       })),
     }],
-  }), [datos])
+  }), [datos, theme])
 
   return (
     <section>

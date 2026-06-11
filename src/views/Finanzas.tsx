@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { EChartsOption } from 'echarts'
 import Chart from '../components/Chart'
+import { useTheme, tones } from '../theme'
 import type { Datos, Finanza } from '../types'
 import { fmtPct, fmtSoles, fmtSolesCorto } from '../types'
 
@@ -32,6 +33,7 @@ const COLS: { k: Ordenar; label: string }[] = [
 ]
 
 export default function Finanzas({ datos }: { datos: Datos }) {
+  const theme = useTheme()
   const [orden, setOrden] = useState<Ordenar>('ingresos')
   const fin = datos.finanzas
 
@@ -53,13 +55,13 @@ export default function Finanzas({ datos }: { datos: Datos }) {
       grid: { left: 8, right: 24, top: 16, bottom: 48, containLabel: true },
       xAxis: {
         type: 'log', name: 'Ingresos (S/ M, log)', nameLocation: 'middle', nameGap: 32,
-        nameTextStyle: { color: '#9d9180', fontSize: 11 },
-        axisLabel: { color: '#6e6557', fontSize: 10 }, splitLine: { lineStyle: { color: '#241f18' } },
+        nameTextStyle: { color: tones().legend, fontSize: 11 },
+        axisLabel: { color: tones().dim, fontSize: 10 }, splitLine: { lineStyle: { color: tones().split } },
       },
       yAxis: {
         type: 'log', name: 'Utilidad neta (S/ M, log)',
-        nameTextStyle: { color: '#9d9180', fontSize: 11 },
-        axisLabel: { color: '#6e6557', fontSize: 10 }, splitLine: { lineStyle: { color: '#241f18' } },
+        nameTextStyle: { color: tones().legend, fontSize: 11 },
+        axisLabel: { color: tones().dim, fontSize: 10 }, splitLine: { lineStyle: { color: tones().split } },
       },
       series: [{
         type: 'scatter',
@@ -74,12 +76,12 @@ export default function Finanzas({ datos }: { datos: Datos }) {
         },
         label: {
           show: true, formatter: (p: unknown) => (p as { data: { f: Finanza } }).data.f.nombre.split(' ')[0],
-          position: 'top', color: '#9d9180', fontSize: 8,
+          position: 'top', color: tones().legend, fontSize: 8,
         },
         data: conDatos.map((f) => ({ value: [f.ingresos, f.utilidad, f.activos ?? 0], f })),
       }],
     }
-  }, [fin])
+  }, [fin, theme])
 
   // Barras ordenables top 18
   const barras = useMemo<EChartsOption>(() => {
@@ -93,17 +95,17 @@ export default function Finanzas({ datos }: { datos: Datos }) {
           return `${a.name}<br/>${fmtSoles(a.value)}`
         } },
       grid: { left: 8, right: 60, top: 8, bottom: 8, containLabel: true },
-      xAxis: { type: 'value', axisLabel: { color: '#6e6557', fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: '#241f18' } } },
+      xAxis: { type: 'value', axisLabel: { color: tones().dim, fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: tones().split } } },
       yAxis: { type: 'category', data: top.map((f) => f.nombre),
-        axisLabel: { color: '#ece4d3', fontSize: 11 }, axisLine: { lineStyle: { color: '#2e2820' } } },
+        axisLabel: { color: tones().label, fontSize: 11 }, axisLine: { lineStyle: { color: tones().line } } },
       series: [{
         type: 'bar', barWidth: 14,
         itemStyle: { color: (p: unknown) => colorDe(top[(p as { dataIndex: number }).dataIndex].sector) },
-        label: { show: true, position: 'right', color: '#9d9180', fontSize: 9, formatter: (p: unknown) => fmtSolesCorto((p as { value: number }).value) },
+        label: { show: true, position: 'right', color: tones().legend, fontSize: 9, formatter: (p: unknown) => fmtSolesCorto((p as { value: number }).value) },
         data: top.map((f) => f[orden]),
       }],
     }
-  }, [fin, orden])
+  }, [fin, orden, theme])
 
   // Dashboard por grupo: ingresos apilados por empresa + margen neto
   const grupos = useMemo<EChartsOption>(() => {
@@ -118,9 +120,9 @@ export default function Finanzas({ datos }: { datos: Datos }) {
           return arr.map((p) => `${p.seriesName}: ${fmtSolesCorto(p.value)}`).join('<br/>')
         } },
       grid: { left: 8, right: 16, top: 8, bottom: 8, containLabel: true },
-      xAxis: { type: 'value', axisLabel: { color: '#6e6557', fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: '#241f18' } } },
+      xAxis: { type: 'value', axisLabel: { color: tones().dim, fontSize: 10, formatter: (v: number) => fmtSolesCorto(v) }, splitLine: { lineStyle: { color: tones().split } } },
       yAxis: { type: 'category', data: g.map((x) => x.nombre).reverse(),
-        axisLabel: { color: '#ece4d3', fontSize: 11 }, axisLine: { lineStyle: { color: '#2e2820' } } },
+        axisLabel: { color: tones().label, fontSize: 11 }, axisLine: { lineStyle: { color: tones().line } } },
       series: empresasNombre.map((nombre, i) => ({
         name: nombre, type: 'bar' as const, stack: 'grp',
         itemStyle: { color: SECTOR_PALETA[i % SECTOR_PALETA.length] },
@@ -128,7 +130,7 @@ export default function Finanzas({ datos }: { datos: Datos }) {
         data: [...g].reverse().map((x) => x.empresas.find((e) => e.nombre === nombre)?.ingresos ?? 0),
       })),
     }
-  }, [datos])
+  }, [datos, theme])
 
   const tabla = [...fin].sort((a, b) => (b.ingresos ?? 0) - (a.ingresos ?? 0))
 

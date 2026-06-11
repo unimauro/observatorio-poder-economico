@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { EChartsOption } from 'echarts'
 import Chart from '../components/Chart'
+import { useTheme, tones } from '../theme'
 import type { Datos } from '../types'
 import { fmtPct } from '../types'
 
@@ -10,6 +11,7 @@ const TIPO_COLOR: Record<string, string> = {
 const RESTO_COLOR = '#3d362b'
 
 export default function Composicion({ datos }: { datos: Datos }) {
+  const theme = useTheme()
   const numericas = useMemo(() => datos.composicion.filter((c) => c.tiene_numerico), [datos])
   const cualitativas = useMemo(() => datos.composicion.filter((c) => !c.tiene_numerico), [datos])
   // arranca con una empresa de propiedad repartida (más ilustrativa que un 100%)
@@ -42,15 +44,15 @@ export default function Composicion({ datos }: { datos: Datos }) {
         return `${d.name}<br/>${fmtPct(d.value)}`
       } },
       legend: { type: 'scroll', orient: 'horizontal', bottom: 0,
-        textStyle: { color: '#9d9180', fontSize: 10 } },
+        textStyle: { color: tones().legend, fontSize: 10 } },
       series: [{
         type: 'pie', radius: ['46%', '74%'], center: ['50%', '44%'],
         itemStyle: { borderColor: '#1a1712', borderWidth: 2 },
-        label: { color: '#ece4d3', fontSize: 10, formatter: '{d}%' },
+        label: { color: tones().label, fontSize: 10, formatter: '{d}%' },
         data,
       }],
     } as EChartsOption
-  }, [empresa])
+  }, [empresa, theme])
 
   // Barra apilada de free float para las listadas con control numérico
   const floatBar = useMemo<EChartsOption>(() => {
@@ -62,22 +64,22 @@ export default function Composicion({ datos }: { datos: Datos }) {
       textStyle: { fontFamily: 'IBM Plex Mono, monospace' },
       tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
       legend: { data: ['Bloque de control', 'Otros / float'], top: 0,
-        textStyle: { color: '#9d9180', fontSize: 10 } },
+        textStyle: { color: tones().legend, fontSize: 10 } },
       grid: { left: 8, right: 40, top: 34, bottom: 8, containLabel: true },
-      xAxis: { type: 'value', max: 100, axisLabel: { color: '#6e6557', fontSize: 10, formatter: '{value}%' },
-        splitLine: { lineStyle: { color: '#241f18' } } },
+      xAxis: { type: 'value', max: 100, axisLabel: { color: tones().dim, fontSize: 10, formatter: '{value}%' },
+        splitLine: { lineStyle: { color: tones().split } } },
       yAxis: { type: 'category', data: listadas.map((c) => c.nombre),
-        axisLabel: { color: '#ece4d3', fontSize: 11 }, axisLine: { lineStyle: { color: '#2e2820' } } },
+        axisLabel: { color: tones().label, fontSize: 11 }, axisLine: { lineStyle: { color: tones().line } } },
       series: [
         { name: 'Bloque de control', type: 'bar', stack: 't', itemStyle: { color: '#e8442e' },
           data: listadas.map((c) => c.pct_conocido) },
         { name: 'Otros / float', type: 'bar', stack: 't', itemStyle: { color: RESTO_COLOR },
-          label: { show: true, position: 'right', color: '#9d9180', fontSize: 9,
+          label: { show: true, position: 'right', color: tones().legend, fontSize: 9,
             formatter: (p: unknown) => fmtPct((p as { value: number }).value) },
           data: listadas.map((c) => c.resto) },
       ],
     }
-  }, [numericas])
+  }, [numericas, theme])
 
   return (
     <section>

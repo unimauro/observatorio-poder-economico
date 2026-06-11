@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { EChartsOption } from 'echarts'
 import Chart from '../components/Chart'
+import { useTheme, tones } from '../theme'
 import type { Datos, EventoTemporal } from '../types'
 
 const TIPO_EMOJI: Record<string, string> = {
@@ -11,6 +12,7 @@ const TIPO_EMOJI: Record<string, string> = {
 const SERIE_COLOR = ['#e8442e', '#d9a441', '#6da3d8', '#7fb069', '#c47fd4', '#4ecdc4', '#e87ea1', '#f2a65a']
 
 export default function Temporal({ datos }: { datos: Datos }) {
+  const theme = useTheme()
   const t = datos.temporal
   const [grupo, setGrupo] = useState<string>('')
 
@@ -23,16 +25,16 @@ export default function Temporal({ datos }: { datos: Datos }) {
     backgroundColor: 'transparent',
     textStyle: { fontFamily: 'IBM Plex Mono, monospace' },
     tooltip: { trigger: 'axis' },
-    legend: { type: 'scroll', top: 0, textStyle: { color: '#9d9180', fontSize: 10 } },
+    legend: { type: 'scroll', top: 0, textStyle: { color: tones().legend, fontSize: 10 } },
     grid: { left: 8, right: 24, top: 38, bottom: 8, containLabel: true },
     xAxis: {
       type: 'category', data: t.anios, boundaryGap: false,
-      axisLabel: { color: '#9d9180', fontSize: 11 }, axisLine: { lineStyle: { color: '#2e2820' } },
+      axisLabel: { color: tones().legend, fontSize: 11 }, axisLine: { lineStyle: { color: tones().line } },
     },
     yAxis: {
       type: 'value', name: 'Ingresos (S/ mil M)',
-      nameTextStyle: { color: '#9d9180', fontSize: 10 },
-      axisLabel: { color: '#6e6557', fontSize: 10 }, splitLine: { lineStyle: { color: '#241f18' } },
+      nameTextStyle: { color: tones().legend, fontSize: 10 },
+      axisLabel: { color: tones().dim, fontSize: 10 }, splitLine: { lineStyle: { color: tones().split } },
     },
     series: t.series_grupo.map((s, i) => ({
       name: s.nombre, type: 'line' as const, smooth: true, symbol: 'circle', symbolSize: 6,
@@ -42,7 +44,7 @@ export default function Temporal({ datos }: { datos: Datos }) {
       opacity: grupo && s.id !== grupo ? 0.25 : 1,
       data: s.valores,
     })),
-  }), [t, grupo])
+  }), [t, grupo, theme])
 
   return (
     <section>

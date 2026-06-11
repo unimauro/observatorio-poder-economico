@@ -590,3 +590,90 @@ footer .firma { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em
   margin: 3px 0 10px;
 }
 .apoyo-footer-botones { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* ── Barra superior estática (contacto + tema) ── */
+.topbar {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  flex-wrap: wrap;
+}
+.topbar-brand {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+.topbar-right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  appearance: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+.topbar-link:hover { color: var(--text); border-color: var(--ocre); transform: translateY(-1px); }
+.topbar-link.wa:hover { border-color: #25d366; color: #25d366; }
+.topbar-link.bmc { background: #ffdd00; color: #1a1208; border-color: #e6c700; font-weight: 600; }
+.topbar-link.bmc:hover { background: #ffe537; color: #1a1208; }
+.topbar-link.yape { font-weight: 600; }
+.topbar-link.yape img {
+  width: 16px; height: 16px; object-fit: contain;
+  background: #fff; border-radius: 3px; padding: 1px;
+}
+.topbar-theme {
+  appearance: none;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 13px;
+  width: 30px; height: 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.topbar-theme:hover { border-color: var(--ocre); transform: translateY(-1px); }
+
+/* ── Tema claro (día) ── */
+:root[data-theme='light'] {
+  --bg: #f4efe3;
+  --bg2: #ece4d3;
+  --panel: #faf6ec;
+  --panel2: #f1ebdd;
+  --line: #d8cdb6;
+  --line-soft: #e4dcc9;
+  --text: #2a2118;
+  --muted: #6e6151;
+  --faint: #9a8c76;
+  --carmin: #c5341f;
+  --carmin-deep: #a31f12;
+  --ocre: #b07d1e;
+  --azul: #3f7bb6;
+  --verde: #4f8f3e;
+}
+:root[data-theme='light'] body::before { opacity: 0.03; }
+:root[data-theme='light'] nav.tabs { background: rgba(244, 239, 227, 0.92); }
+:root[data-theme='light'] .masthead {
+  background:
+    radial-gradient(1200px 420px at 18% -60%, rgba(197, 52, 31, 0.10), transparent 60%),
+    radial-gradient(900px 380px at 85% -50%, rgba(176, 125, 30, 0.10), transparent 60%),
+    var(--bg2);
+}
+:root[data-theme='light'] .apoyo-modal { box-shadow: 0 24px 60px rgba(120, 90, 40, 0.25); }

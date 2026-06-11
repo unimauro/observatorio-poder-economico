@@ -12,6 +12,7 @@ import Temporal from './views/Temporal'
 import Puentes from './views/Puentes'
 import Metodologia from './views/Metodologia'
 import SupportModal, { YAPE_QR } from './components/SupportModal'
+import { useTheme, toggleTheme } from './theme'
 import { fmtNum } from './types'
 
 const TABS = [
@@ -38,6 +39,7 @@ const hashTab = (): TabId => {
 
 export default function App() {
   const { datos, error } = useDatos()
+  const theme = useTheme()
   const [tab, setTabState] = useState<TabId>(hashTab)
   const [apoyo, setApoyo] = useState(false)
   const setTab = (t: TabId) => {
@@ -49,6 +51,31 @@ export default function App() {
   return (
     <>
       <SupportModal open={apoyo} onClose={() => setApoyo(false)} />
+
+      <div className="topbar">
+        <div className="wrap">
+          <span className="topbar-brand">Observatorio del Poder Económico · Perú 🇵🇪</span>
+          <div className="topbar-right">
+            <a className="topbar-link wa" href="https://wa.me/51940584307" target="_blank" rel="noopener noreferrer">
+              💬 WhatsApp
+            </a>
+            <button className="topbar-link yape" onClick={() => setApoyo(true)} title="Yape — ver QR para aportar">
+              <img src={YAPE_QR} alt="Yape" /> Yape
+            </button>
+            <a className="topbar-link bmc" href="https://buymeacoffee.com/unimauro" target="_blank" rel="noopener noreferrer">
+              ☕ Café
+            </a>
+            <button
+              className="topbar-theme"
+              onClick={toggleTheme}
+              title={theme === 'dark' ? 'Cambiar a modo día' : 'Cambiar a modo noche'}
+              aria-label="Cambiar tema día/noche"
+            >
+              {theme === 'dark' ? '☀️' : '🌙'}
+            </button>
+          </div>
+        </div>
+      </div>
 
       <div className="aviso">
         <div className="wrap">
