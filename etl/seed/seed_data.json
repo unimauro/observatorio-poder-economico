@@ -1,316 +1,3835 @@
 {
-  "meta": {
-    "version": "0.2.0",
-    "actualizado": "2026-06-10",
-    "disclaimer": "Conjunto de datos SEMILLA con fines demostrativos, elaborado a partir de información pública (memorias anuales, SMV, BVL, SBS, sitios corporativos). Las cifras son aproximadas, los porcentajes accionariales son referenciales y los cargos directivos pueden haber cambiado. Verificar contra la fuente primaria antes de citar.",
-    "fuentes": [
-      {"nombre": "SMV — Superintendencia del Mercado de Valores", "url": "https://www.smv.gob.pe"},
-      {"nombre": "BVL — Bolsa de Valores de Lima", "url": "https://www.bvl.com.pe"},
-      {"nombre": "SBS — Superintendencia de Banca, Seguros y AFP", "url": "https://www.sbs.gob.pe"},
-      {"nombre": "Memorias anuales y EEFF auditados de los emisores (2023–2024)", "url": "https://www.smv.gob.pe/Frm_InformacionFinanciera"}
-    ]
+ "meta": {
+  "version": "0.3.0",
+  "actualizado": "2026-06-10",
+  "disclaimer": "Conjunto de datos SEMILLA con fines demostrativos, elaborado a partir de información pública (memorias anuales, SMV, BVL, SBS, sitios corporativos). Las cifras son aproximadas, los porcentajes accionariales son referenciales y los cargos directivos pueden haber cambiado. Verificar contra la fuente primaria antes de citar.",
+  "fuentes": [
+   {
+    "nombre": "SMV — Superintendencia del Mercado de Valores",
+    "url": "https://www.smv.gob.pe"
+   },
+   {
+    "nombre": "BVL — Bolsa de Valores de Lima",
+    "url": "https://www.bvl.com.pe"
+   },
+   {
+    "nombre": "SBS — Superintendencia de Banca, Seguros y AFP",
+    "url": "https://www.sbs.gob.pe"
+   },
+   {
+    "nombre": "Memorias anuales y EEFF auditados de los emisores (2023–2024)",
+    "url": "https://www.smv.gob.pe/Frm_InformacionFinanciera"
+   }
+  ]
+ },
+ "grupos": [
+  {
+   "id": "g-intercorp",
+   "nombre": "Intercorp",
+   "control": "Familia Rodríguez-Pastor",
+   "pais": "Perú",
+   "nota": "Conglomerado diversificado: banca, retail, educación, salud, inmobiliario, entretenimiento.",
+   "fuente": "Memoria anual Intercorp Perú / IFS (SMV)"
   },
-  "grupos": [
-    {"id": "g-intercorp", "nombre": "Intercorp", "control": "Familia Rodríguez-Pastor", "pais": "Perú", "nota": "Conglomerado diversificado: banca, retail, educación, salud, inmobiliario, entretenimiento.", "fuente": "Memoria anual Intercorp Perú / IFS (SMV)"},
-    {"id": "g-romero", "nombre": "Grupo Romero", "control": "Familia Romero", "pais": "Perú", "nota": "Consumo masivo, combustibles, logística, agroindustria; accionista de referencia de Credicorp.", "fuente": "Memorias Alicorp / Credicorp (SMV)"},
-    {"id": "g-credicorp", "nombre": "Credicorp", "control": "Accionariado difundido; Familia Romero como accionista de referencia", "pais": "Perú", "nota": "Holding financiero listado en NYSE y BVL: banca, seguros, AFP, banca de inversión.", "fuente": "Form 20-F Credicorp / SMV"},
-    {"id": "g-breca", "nombre": "Breca", "control": "Familia Brescia", "pais": "Perú", "nota": "Minería, seguros, banca (con BBVA), pesca, inmobiliario, salud, hotelería.", "fuente": "Memorias Minsur / Rímac (SMV)"},
-    {"id": "g-gloria", "nombre": "Grupo Gloria", "control": "Familia Rodríguez Rodríguez", "pais": "Perú", "nota": "Lácteos y alimentos, cemento, azúcar, papeles y empaques.", "fuente": "Memoria Leche Gloria / Yura (SMV)"},
-    {"id": "g-ferreycorp", "nombre": "Ferreycorp", "control": "Corporación de accionariado difundido (AFPs y fondos ~40%)", "pais": "Perú", "nota": "Corporación listada sin grupo familiar de control: maquinaria y bienes de capital.", "fuente": "Memoria Ferreycorp (SMV)"},
-    {"id": "g-benavides", "nombre": "Familia Benavides", "control": "Familia Benavides", "pais": "Perú", "nota": "Accionista de referencia de Compañía de Minas Buenaventura.", "fuente": "Memoria Buenaventura (SMV)"},
-    {"id": "g-hochschild", "nombre": "Grupo Hochschild", "control": "Familia Hochschild", "pais": "Perú", "nota": "Minería de metales preciosos y cemento.", "fuente": "Memorias Hochschild Mining / Cementos Pacasmayo"},
-    {"id": "g-falabella", "nombre": "Falabella", "control": "Familias Solari / Del Río (Chile)", "pais": "Chile", "nota": "Retail multinacional chileno con fuerte presencia en el Perú.", "fuente": "Memoria Falabella Perú (SMV)"},
-    {"id": "g-bns", "nombre": "Bank of Nova Scotia", "control": "Accionariado difundido (Canadá)", "pais": "Canadá", "nota": "Matriz canadiense de Scotiabank Perú y Profuturo AFP.", "fuente": "Memoria Scotiabank Perú (SMV)"},
-    {"id": "g-sura", "nombre": "Grupo SURA", "control": "Accionariado difundido (Colombia)", "pais": "Colombia", "nota": "Matriz colombiana de AFP Integra.", "fuente": "Memoria AFP Integra (SBS)"},
-    {"id": "g-habitat", "nombre": "Habitat", "control": "Cámara Chilena de la Construcción / Prudential (Chile)", "pais": "Chile", "nota": "Matriz chilena de AFP Habitat Perú.", "fuente": "Memoria AFP Habitat (SBS)"},
-    {"id": "g-bbva", "nombre": "BBVA", "control": "Accionariado difundido (España)", "pais": "España", "nota": "Socio 50/50 de Breca en Holding Continental, matriz de BBVA Perú.", "fuente": "Memoria BBVA Perú (SMV)"},
-    {"id": "g-freeport", "nombre": "Freeport-McMoRan", "control": "Accionariado difundido (EE.UU.)", "pais": "EE.UU.", "nota": "Operador y accionista mayoritario de Sociedad Minera Cerro Verde.", "fuente": "Memoria Cerro Verde (SMV)"},
-    {"id": "g-ig4", "nombre": "IG4 Capital", "control": "Fondo de inversión (Brasil)", "pais": "Brasil", "nota": "Accionista de control de AENZA (ex Graña y Montero).", "fuente": "Hechos de importancia AENZA (SMV)"}
-  ],
-  "empresas": [
-    {"id": "ifs", "nombre": "Intercorp Financial Services", "grupo": "g-intercorp", "sector": "Finanzas y banca", "tipo": "holding", "bvl": true, "ingresos_aprox": 7800, "empleados_aprox": 9000, "nota": "Holding financiero del grupo (Interbank, Interseguro, Inteligo). Listado en BVL y NYSE.", "fuente": "Memoria IFS 2024 (aprox.)"},
-    {"id": "interbank", "nombre": "Interbank", "grupo": "g-intercorp", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": true, "ingresos_aprox": 6200, "empleados_aprox": 7000, "nota": "Cuarto banco del sistema por colocaciones.", "fuente": "EEFF Interbank 2024 (aprox.)"},
-    {"id": "interseguro", "nombre": "Interseguro", "grupo": "g-intercorp", "sector": "Seguros", "tipo": "empresa", "bvl": false, "ingresos_aprox": 1300, "empleados_aprox": 700, "nota": "Seguros de vida y rentas vitalicias.", "fuente": "SBS (aprox.)"},
-    {"id": "inteligo", "nombre": "Inteligo", "grupo": "g-intercorp", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": false, "ingresos_aprox": 400, "empleados_aprox": 400, "nota": "Banca privada y gestión patrimonial.", "fuente": "Memoria IFS (aprox.)"},
-    {"id": "inretail", "nombre": "InRetail Perú", "grupo": "g-intercorp", "sector": "Retail", "tipo": "holding", "bvl": true, "ingresos_aprox": 22000, "empleados_aprox": 60000, "nota": "Holding retail: supermercados, farmacias y centros comerciales.", "fuente": "Memoria InRetail 2024 (aprox.)"},
-    {"id": "spsa", "nombre": "Supermercados Peruanos (Plaza Vea)", "grupo": "g-intercorp", "sector": "Retail", "tipo": "empresa", "bvl": false, "ingresos_aprox": 9500, "empleados_aprox": 30000, "nota": "Plaza Vea, Vivanda, Mass.", "fuente": "Memoria InRetail (aprox.)"},
-    {"id": "inkafarma", "nombre": "InRetail Pharma (Inkafarma · Mifarma)", "grupo": "g-intercorp", "sector": "Salud", "tipo": "empresa", "bvl": false, "ingresos_aprox": 8500, "empleados_aprox": 20000, "nota": "Mayor cadena de farmacias del país tras la fusión Inkafarma–Mifarma (Quicorp, 2018).", "fuente": "Memoria InRetail (aprox.)"},
-    {"id": "real-plaza", "nombre": "Real Plaza", "grupo": "g-intercorp", "sector": "Inmobiliario", "tipo": "empresa", "bvl": false, "ingresos_aprox": 800, "empleados_aprox": 1500, "nota": "Mayor operador de centros comerciales del Perú.", "fuente": "Memoria InRetail (aprox.)"},
-    {"id": "utp", "nombre": "UTP — Universidad Tecnológica del Perú", "grupo": "g-intercorp", "sector": "Educación", "tipo": "empresa", "bvl": false, "ingresos_aprox": 1200, "empleados_aprox": 8000, "nota": "Brazo universitario de Intercorp Education.", "fuente": "Sitio corporativo (aprox.)"},
-    {"id": "innova-schools", "nombre": "Innova Schools", "grupo": "g-intercorp", "sector": "Educación", "tipo": "empresa", "bvl": false, "ingresos_aprox": 500, "empleados_aprox": 5000, "nota": "Red de colegios privados de bajo costo.", "fuente": "Sitio corporativo (aprox.)"},
-    {"id": "cineplanet", "nombre": "Cineplanet", "grupo": "g-intercorp", "sector": "Turismo y entretenimiento", "tipo": "empresa", "bvl": false, "ingresos_aprox": 600, "empleados_aprox": 4000, "nota": "Mayor cadena de cines del Perú.", "fuente": "Memoria Cineplex (aprox.)"},
-    {"id": "casa-andina", "nombre": "Casa Andina", "grupo": "g-intercorp", "sector": "Turismo y entretenimiento", "tipo": "empresa", "bvl": false, "ingresos_aprox": 350, "empleados_aprox": 2000, "nota": "Mayor cadena hotelera peruana.", "fuente": "Sitio corporativo (aprox.)"},
-    {"id": "financiera-oh", "nombre": "Financiera Oh!", "grupo": "g-intercorp", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": false, "ingresos_aprox": 700, "empleados_aprox": 1500, "nota": "Financiera de consumo vinculada al retail del grupo.", "fuente": "SBS (aprox.)"},
-    {"id": "credicorp", "nombre": "Credicorp Ltd.", "grupo": "g-credicorp", "sector": "Finanzas y banca", "tipo": "holding", "bvl": true, "ingresos_aprox": 22000, "empleados_aprox": 37000, "nota": "Mayor holding financiero del país; listado en NYSE y BVL.", "fuente": "Form 20-F 2024 (aprox.)"},
-    {"id": "bcp", "nombre": "Banco de Crédito del Perú (BCP)", "grupo": "g-credicorp", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": true, "ingresos_aprox": 14000, "empleados_aprox": 18000, "nota": "Mayor banco del sistema financiero peruano.", "fuente": "EEFF BCP 2024 (aprox.)"},
-    {"id": "mibanco", "nombre": "Mibanco", "grupo": "g-credicorp", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": false, "ingresos_aprox": 2800, "empleados_aprox": 10000, "nota": "Líder en microfinanzas.", "fuente": "SBS (aprox.)"},
-    {"id": "pacifico", "nombre": "Pacífico Seguros", "grupo": "g-credicorp", "sector": "Seguros", "tipo": "empresa", "bvl": false, "ingresos_aprox": 5000, "empleados_aprox": 4000, "nota": "Segunda aseguradora del mercado.", "fuente": "SBS (aprox.)"},
-    {"id": "prima-afp", "nombre": "Prima AFP", "grupo": "g-credicorp", "sector": "AFP y fondos", "tipo": "empresa", "bvl": false, "ingresos_aprox": 400, "empleados_aprox": 600, "nota": "AFP del grupo Credicorp; inversionista institucional en la BVL.", "fuente": "SBS (aprox.)"},
-    {"id": "credicorp-capital", "nombre": "Credicorp Capital", "grupo": "g-credicorp", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": false, "ingresos_aprox": 800, "empleados_aprox": 1500, "nota": "Banca de inversión regional (Perú, Chile, Colombia).", "fuente": "Memoria Credicorp (aprox.)"},
-    {"id": "alicorp", "nombre": "Alicorp", "grupo": "g-romero", "sector": "Consumo masivo", "tipo": "empresa", "bvl": true, "ingresos_aprox": 12500, "empleados_aprox": 11000, "nota": "Mayor empresa de consumo masivo del Perú; opera en 5 países.", "fuente": "Memoria Alicorp 2024 (aprox.)"},
-    {"id": "vitapro", "nombre": "Vitapro", "grupo": "g-romero", "sector": "Agroindustria", "tipo": "empresa", "bvl": false, "ingresos_aprox": 3000, "empleados_aprox": 2000, "nota": "Nutrición acuícola (subsidiaria de Alicorp).", "fuente": "Memoria Alicorp (aprox.)"},
-    {"id": "primax", "nombre": "Primax", "grupo": "g-romero", "sector": "Energía y combustibles", "tipo": "empresa", "bvl": false, "ingresos_aprox": 19000, "empleados_aprox": 5000, "nota": "Mayor red de estaciones de servicio (Perú, Ecuador, Colombia).", "fuente": "Memoria Primax (aprox.)"},
-    {"id": "ransa", "nombre": "Ransa", "grupo": "g-romero", "sector": "Logística", "tipo": "empresa", "bvl": false, "ingresos_aprox": 1500, "empleados_aprox": 6500, "nota": "Operador logístico regional. En 2021 el grupo vendió participación mayoritaria a H.I.G. Capital (se mantiene vínculo histórico).", "fuente": "Hechos de importancia (aprox.)"},
-    {"id": "palmas", "nombre": "Palmas del Espino", "grupo": "g-romero", "sector": "Agroindustria", "tipo": "empresa", "bvl": false, "ingresos_aprox": 900, "empleados_aprox": 4000, "nota": "Palma aceitera en San Martín.", "fuente": "Memoria Palmas (aprox.)"},
-    {"id": "rimac", "nombre": "Rímac Seguros", "grupo": "g-breca", "sector": "Seguros", "tipo": "empresa", "bvl": true, "ingresos_aprox": 6500, "empleados_aprox": 4500, "nota": "Mayor aseguradora del Perú.", "fuente": "SBS / Memoria Rímac (aprox.)"},
-    {"id": "minsur", "nombre": "Minsur", "grupo": "g-breca", "sector": "Minería", "tipo": "empresa", "bvl": true, "ingresos_aprox": 7500, "empleados_aprox": 4000, "nota": "Uno de los mayores productores de estaño del mundo (San Rafael) y cobre (Mina Justa).", "fuente": "Memoria Minsur 2024 (aprox.)"},
-    {"id": "marcobre", "nombre": "Marcobre (Mina Justa)", "grupo": "g-breca", "sector": "Minería", "tipo": "empresa", "bvl": false, "ingresos_aprox": 4500, "empleados_aprox": 2500, "nota": "Operación cuprífera en Ica; Minsur 60%, Alxar (Chile) 40%.", "fuente": "Memoria Minsur (aprox.)"},
-    {"id": "tasa", "nombre": "TASA — Tecnológica de Alimentos", "grupo": "g-breca", "sector": "Pesca", "tipo": "empresa", "bvl": false, "ingresos_aprox": 2500, "empleados_aprox": 3000, "nota": "Mayor productora mundial de harina y aceite de pescado.", "fuente": "Memoria TASA (aprox.)"},
-    {"id": "intursa", "nombre": "Intursa (hoteles Westin, Libertador)", "grupo": "g-breca", "sector": "Turismo y entretenimiento", "tipo": "empresa", "bvl": false, "ingresos_aprox": 400, "empleados_aprox": 1500, "nota": "Brazo hotelero de Breca.", "fuente": "Memoria Intursa (aprox.)"},
-    {"id": "urbanova", "nombre": "Urbanova", "grupo": "g-breca", "sector": "Inmobiliario", "tipo": "empresa", "bvl": false, "ingresos_aprox": 300, "empleados_aprox": 300, "nota": "Inmobiliaria de oficinas prime (San Isidro).", "fuente": "Sitio corporativo (aprox.)"},
-    {"id": "clinica-internacional", "nombre": "Clínica Internacional", "grupo": "g-breca", "sector": "Salud", "tipo": "empresa", "bvl": false, "ingresos_aprox": 900, "empleados_aprox": 4000, "nota": "Red de clínicas privadas vinculada a Rímac.", "fuente": "Sitio corporativo (aprox.)"},
-    {"id": "holding-continental", "nombre": "Holding Continental", "grupo": "g-breca", "sector": "Finanzas y banca", "tipo": "holding", "bvl": false, "ingresos_aprox": null, "empleados_aprox": null, "nota": "Vehículo 50/50 entre Breca y BBVA que controla BBVA Perú.", "fuente": "Memoria BBVA Perú"},
-    {"id": "bbva-peru", "nombre": "BBVA Perú", "grupo": null, "sector": "Finanzas y banca", "tipo": "empresa", "bvl": true, "ingresos_aprox": 6800, "empleados_aprox": 6500, "nota": "Segundo banco del sistema; control compartido Breca–BBVA vía Holding Continental.", "fuente": "EEFF BBVA Perú 2024 (aprox.)"},
-    {"id": "leche-gloria", "nombre": "Leche Gloria", "grupo": "g-gloria", "sector": "Consumo masivo", "tipo": "empresa", "bvl": true, "ingresos_aprox": 6500, "empleados_aprox": 6000, "nota": "Líder en lácteos; matriz industrial del grupo.", "fuente": "Memoria Leche Gloria 2024 (aprox.)"},
-    {"id": "yura", "nombre": "Yura", "grupo": "g-gloria", "sector": "Cemento y construcción", "tipo": "empresa", "bvl": true, "ingresos_aprox": 3200, "empleados_aprox": 3000, "nota": "Cementera del sur del Perú; opera también en Bolivia y Ecuador.", "fuente": "Memoria Yura (aprox.)"},
-    {"id": "coazucar", "nombre": "Coazucar", "grupo": "g-gloria", "sector": "Agroindustria", "tipo": "holding", "bvl": false, "ingresos_aprox": 2800, "empleados_aprox": 13000, "nota": "Holding azucarero (Casa Grande, Cartavio, San Jacinto).", "fuente": "Memoria Coazucar (aprox.)"},
-    {"id": "casa-grande", "nombre": "Casa Grande", "grupo": "g-gloria", "sector": "Agroindustria", "tipo": "empresa", "bvl": true, "ingresos_aprox": 900, "empleados_aprox": 4000, "nota": "Mayor azucarera del país (La Libertad).", "fuente": "Memoria Casa Grande (aprox.)"},
-    {"id": "cartavio", "nombre": "Cartavio", "grupo": "g-gloria", "sector": "Agroindustria", "tipo": "empresa", "bvl": true, "ingresos_aprox": 700, "empleados_aprox": 3000, "nota": "Azucarera del valle Chicama.", "fuente": "Memoria Cartavio (aprox.)"},
-    {"id": "trupal", "nombre": "Trupal", "grupo": "g-gloria", "sector": "Papel y empaques", "tipo": "empresa", "bvl": false, "ingresos_aprox": 800, "empleados_aprox": 2000, "nota": "Papeles y empaques a partir de bagazo de caña.", "fuente": "Memoria Trupal (aprox.)"},
-    {"id": "ferreycorp", "nombre": "Ferreycorp", "grupo": "g-ferreycorp", "sector": "Industria y maquinaria", "tipo": "holding", "bvl": true, "ingresos_aprox": 8200, "empleados_aprox": 10000, "nota": "Corporación de bienes de capital; representante histórico de Caterpillar.", "fuente": "Memoria Ferreycorp 2024 (aprox.)"},
-    {"id": "ferreyros", "nombre": "Ferreyros", "grupo": "g-ferreycorp", "sector": "Industria y maquinaria", "tipo": "empresa", "bvl": false, "ingresos_aprox": 5500, "empleados_aprox": 6000, "nota": "Distribuidor Caterpillar en el Perú.", "fuente": "Memoria Ferreycorp (aprox.)"},
-    {"id": "unimaq", "nombre": "Unimaq", "grupo": "g-ferreycorp", "sector": "Industria y maquinaria", "tipo": "empresa", "bvl": false, "ingresos_aprox": 700, "empleados_aprox": 1000, "nota": "Equipos ligeros multimarcas.", "fuente": "Memoria Ferreycorp (aprox.)"},
-    {"id": "soltrak", "nombre": "Soltrak", "grupo": "g-ferreycorp", "sector": "Industria y maquinaria", "tipo": "empresa", "bvl": false, "ingresos_aprox": 500, "empleados_aprox": 800, "nota": "Neumáticos, lubricantes e insumos.", "fuente": "Memoria Ferreycorp (aprox.)"},
-    {"id": "buenaventura", "nombre": "Cía. de Minas Buenaventura", "grupo": "g-benavides", "sector": "Minería", "tipo": "empresa", "bvl": true, "ingresos_aprox": 4200, "empleados_aprox": 4500, "nota": "Mayor minera de metales preciosos de capital peruano; listada en NYSE y BVL.", "fuente": "Form 20-F Buenaventura (aprox.)"},
-    {"id": "el-brocal", "nombre": "El Brocal", "grupo": "g-benavides", "sector": "Minería", "tipo": "empresa", "bvl": true, "ingresos_aprox": 1800, "empleados_aprox": 1500, "nota": "Polimetálica en Pasco; subsidiaria de Buenaventura.", "fuente": "Memoria El Brocal (aprox.)"},
-    {"id": "cerro-verde", "nombre": "Sociedad Minera Cerro Verde", "grupo": null, "sector": "Minería", "tipo": "empresa", "bvl": true, "ingresos_aprox": 16500, "empleados_aprox": 6000, "nota": "Una de las mayores minas de cobre del mundo (Arequipa). Freeport ~53.6%, Buenaventura ~19.6%, SMM Cerro Verde (Sumitomo) ~21%.", "fuente": "Memoria Cerro Verde 2024 (aprox.)"},
-    {"id": "hochschild-mining", "nombre": "Hochschild Mining", "grupo": "g-hochschild", "sector": "Minería", "tipo": "empresa", "bvl": true, "ingresos_aprox": 3600, "empleados_aprox": 5000, "nota": "Oro y plata (Perú y Brasil); listada en Londres.", "fuente": "Annual Report Hochschild (aprox.)"},
-    {"id": "pacasmayo", "nombre": "Cementos Pacasmayo", "grupo": "g-hochschild", "sector": "Cemento y construcción", "tipo": "empresa", "bvl": true, "ingresos_aprox": 2000, "empleados_aprox": 1700, "nota": "Cementera del norte del Perú; listada en NYSE y BVL.", "fuente": "Memoria Pacasmayo 2024 (aprox.)"},
-    {"id": "saga-falabella", "nombre": "Falabella Retail Perú (Saga Falabella)", "grupo": "g-falabella", "sector": "Retail", "tipo": "empresa", "bvl": false, "ingresos_aprox": 4500, "empleados_aprox": 10000, "nota": "Tiendas por departamento.", "fuente": "Memoria Falabella Perú (aprox.)"},
-    {"id": "tottus", "nombre": "Tottus", "grupo": "g-falabella", "sector": "Retail", "tipo": "empresa", "bvl": false, "ingresos_aprox": 4000, "empleados_aprox": 12000, "nota": "Supermercados.", "fuente": "Memoria Falabella Perú (aprox.)"},
-    {"id": "sodimac", "nombre": "Sodimac Perú", "grupo": "g-falabella", "sector": "Retail", "tipo": "empresa", "bvl": false, "ingresos_aprox": 3000, "empleados_aprox": 8000, "nota": "Mejoramiento del hogar (incluye Maestro).", "fuente": "Memoria Falabella Perú (aprox.)"},
-    {"id": "banco-falabella", "nombre": "Banco Falabella Perú", "grupo": "g-falabella", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": false, "ingresos_aprox": 900, "empleados_aprox": 2500, "nota": "Banca de consumo vinculada al retail.", "fuente": "SBS (aprox.)"},
-    {"id": "mallplaza", "nombre": "Mallplaza Perú", "grupo": "g-falabella", "sector": "Inmobiliario", "tipo": "empresa", "bvl": false, "ingresos_aprox": 400, "empleados_aprox": 500, "nota": "Centros comerciales (incluye los ex Open Plaza).", "fuente": "Memoria Mallplaza (aprox.)"},
-    {"id": "scotiabank-peru", "nombre": "Scotiabank Perú", "grupo": "g-bns", "sector": "Finanzas y banca", "tipo": "empresa", "bvl": true, "ingresos_aprox": 5000, "empleados_aprox": 6000, "nota": "Tercer banco del sistema.", "fuente": "EEFF Scotiabank Perú (aprox.)"},
-    {"id": "profuturo-afp", "nombre": "Profuturo AFP", "grupo": "g-bns", "sector": "AFP y fondos", "tipo": "empresa", "bvl": false, "ingresos_aprox": 380, "empleados_aprox": 500, "nota": "AFP del grupo Scotiabank.", "fuente": "SBS (aprox.)"},
-    {"id": "afp-integra", "nombre": "AFP Integra", "grupo": "g-sura", "sector": "AFP y fondos", "tipo": "empresa", "bvl": false, "ingresos_aprox": 450, "empleados_aprox": 600, "nota": "Mayor AFP por fondos administrados; inversionista institucional en la BVL.", "fuente": "SBS (aprox.)"},
-    {"id": "afp-habitat", "nombre": "AFP Habitat Perú", "grupo": "g-habitat", "sector": "AFP y fondos", "tipo": "empresa", "bvl": false, "ingresos_aprox": 250, "empleados_aprox": 400, "nota": "AFP de matriz chilena; ganó licitaciones de afiliados nuevos.", "fuente": "SBS (aprox.)"},
-    {"id": "aenza", "nombre": "AENZA (ex Graña y Montero)", "grupo": "g-ig4", "sector": "Infraestructura", "tipo": "holding", "bvl": true, "ingresos_aprox": 5000, "empleados_aprox": 12000, "nota": "Mayor grupo de ingeniería e infraestructura; controlado por IG4 Capital tras crisis reputacional.", "fuente": "Memoria AENZA (aprox.)"},
-    {"id": "cumbra", "nombre": "Cumbra (ex GyM)", "grupo": "g-ig4", "sector": "Infraestructura", "tipo": "empresa", "bvl": false, "ingresos_aprox": 2500, "empleados_aprox": 8000, "nota": "Constructora insignia de AENZA.", "fuente": "Memoria AENZA (aprox.)"}
-  ],
-  "personas": [
-    {"id": "p-crp", "nombre": "Carlos Rodríguez-Pastor Persivale", "nota": "Cabeza de Intercorp."},
-    {"id": "p-drp", "nombre": "Dionisio Romero Paoletti", "nota": "Presidente del directorio de Credicorp y BCP; familia Romero."},
-    {"id": "p-lrb", "nombre": "Luis Romero Belismelis", "nota": "Presidente ejecutivo del Grupo Romero; preside Alicorp."},
-    {"id": "p-gferrari", "nombre": "Gianfranco Ferrari de las Casas", "nota": "CEO de Credicorp (desde 2022)."},
-    {"id": "p-afb", "nombre": "Alex Fort Brescia", "nota": "Copresidente de Breca; preside el directorio de BBVA Perú."},
-    {"id": "p-fbm", "nombre": "Fortunato Brescia Moreyra", "nota": "Copresidente de Breca; preside Minsur."},
-    {"id": "p-pbm", "nombre": "Pedro Brescia Moreyra", "nota": "Familia Brescia; preside Rímac."},
-    {"id": "p-jrr", "nombre": "Jorge Rodríguez Rodríguez", "nota": "Presidente del Grupo Gloria."},
-    {"id": "p-vrr", "nombre": "Vito Rodríguez Rodríguez", "nota": "Vicepresidente del Grupo Gloria."},
-    {"id": "p-rbg", "nombre": "Roque Benavides Ganoza", "nota": "Familia Benavides; histórico líder de Buenaventura."},
-    {"id": "p-ehb", "nombre": "Eduardo Hochschild Beeck", "nota": "Preside Hochschild Mining y Cementos Pacasmayo."},
-    {"id": "p-lfc", "nombre": "Luis Felipe Castellanos", "nota": "CEO de Intercorp Financial Services."},
-    {"id": "gg-alicorp", "nombre": "Gonzalo Uribe Arbeláez", "nota": "Gerente General de Alicorp (desde nov-2025).", "cargo": "Gerente General", "fuente": "Alicorp — comunicado de cambio en gerencia general (alicorp.com.pe)"},
-    {"id": "gg-interbank", "nombre": "Carlos Tori Grande", "nota": "Gerente General de Interbank.", "cargo": "Gerente General", "fuente": "Gestión — designación de gerente general de Interbank"},
-    {"id": "gg-bcp", "nombre": "Christian Hausherr", "nota": "Gerente General del BCP (designado 2024; verificar contra memoria SMV de BCP Perú).", "cargo": "Gerente General", "fuente": "La República (oct-2024) — designación de gerente general del BCP"},
-    {"id": "gg-minsur", "nombre": "Juan Luis Kruger Sayán", "nota": "Gerente General de Minsur.", "cargo": "Gerente General", "fuente": "Minsur — alta gerencia (minsur.com)"},
-    {"id": "gg-ferreycorp", "nombre": "Mariela García Figari de Fabbri", "nota": "Gerente General de Ferreycorp.", "cargo": "Gerente General", "fuente": "Ferreycorp — gobierno corporativo / directorio (ferreycorp.com.pe)"},
-    {"id": "gg-leche-gloria", "nombre": "Cristiano Oliveira Sampaio", "nota": "Gerente General de Leche Gloria.", "cargo": "Gerente General", "fuente": "Semana Económica — designación de gerente general de Leche Gloria"},
-    {"id": "gg-inretail", "nombre": "Juan Carlos Vallejo Blanco", "nota": "CEO / Gerente General de InRetail Perú.", "cargo": "Gerente General", "fuente": "InRetail — Datos de Información Anual 2024 (inretail.pe)"},
-    {"id": "gg-buenaventura", "nombre": "Leandro García Raggio", "nota": "CEO de Compañía de Minas Buenaventura.", "cargo": "CEO", "fuente": "Buenaventura — Annual Report / SEC 20-F"},
-    {"id": "gg-rimac", "nombre": "Mario Potestá Martínez", "nota": "Gerente General de Rímac Seguros (titular desde 2025).", "cargo": "Gerente General", "fuente": "Gestión — designación de gerente general de Rímac Seguros"},
-    {"id": "gg-aenza", "nombre": "Francisco Sardón de Taboada", "nota": "CEO / Gerente General de AENZA (desde ene-2026).", "cargo": "CEO", "fuente": "El Comercio — AENZA designa a Francisco Sardón como CEO"}
-  ],
-  "propiedad": [
-    {"de": "g-intercorp", "a": "ifs", "pct": 70, "tipo": "control", "fuente": "Memoria IFS (aprox.)"},
-    {"de": "ifs", "a": "interbank", "pct": 99, "tipo": "control", "fuente": "Memoria IFS"},
-    {"de": "ifs", "a": "interseguro", "pct": 100, "tipo": "control", "fuente": "Memoria IFS"},
-    {"de": "ifs", "a": "inteligo", "pct": 100, "tipo": "control", "fuente": "Memoria IFS"},
-    {"de": "g-intercorp", "a": "inretail", "pct": 70, "tipo": "control", "fuente": "Memoria InRetail (aprox.)"},
-    {"de": "inretail", "a": "spsa", "pct": 100, "tipo": "control", "fuente": "Memoria InRetail"},
-    {"de": "inretail", "a": "inkafarma", "pct": 100, "tipo": "control", "fuente": "Memoria InRetail"},
-    {"de": "inretail", "a": "real-plaza", "pct": 100, "tipo": "control", "fuente": "Memoria InRetail"},
-    {"de": "g-intercorp", "a": "utp", "pct": null, "tipo": "control", "fuente": "Intercorp Education"},
-    {"de": "g-intercorp", "a": "innova-schools", "pct": null, "tipo": "control", "fuente": "Intercorp Education"},
-    {"de": "g-intercorp", "a": "cineplanet", "pct": null, "tipo": "control", "fuente": "Memoria Cineplex"},
-    {"de": "g-intercorp", "a": "casa-andina", "pct": null, "tipo": "control", "fuente": "Sitio corporativo"},
-    {"de": "g-intercorp", "a": "financiera-oh", "pct": null, "tipo": "control", "fuente": "SBS (aprox.)"},
-    {"de": "g-romero", "a": "credicorp", "pct": 16, "tipo": "participacion", "fuente": "Form 20-F (accionista de referencia, aprox.)"},
-    {"de": "g-credicorp", "a": "credicorp", "pct": null, "tipo": "matriz", "fuente": "Estructura societaria"},
-    {"de": "credicorp", "a": "bcp", "pct": 97, "tipo": "control", "fuente": "Form 20-F"},
-    {"de": "bcp", "a": "mibanco", "pct": 95, "tipo": "control", "fuente": "Memoria BCP (aprox.)"},
-    {"de": "credicorp", "a": "pacifico", "pct": 98, "tipo": "control", "fuente": "Form 20-F (aprox.)"},
-    {"de": "credicorp", "a": "prima-afp", "pct": 100, "tipo": "control", "fuente": "Form 20-F"},
-    {"de": "credicorp", "a": "credicorp-capital", "pct": 100, "tipo": "control", "fuente": "Form 20-F"},
-    {"de": "g-romero", "a": "alicorp", "pct": 46, "tipo": "control", "fuente": "Memoria Alicorp (aprox.)"},
-    {"de": "alicorp", "a": "vitapro", "pct": 100, "tipo": "control", "fuente": "Memoria Alicorp"},
-    {"de": "g-romero", "a": "primax", "pct": null, "tipo": "control", "fuente": "Memoria Primax"},
-    {"de": "g-romero", "a": "ransa", "pct": null, "tipo": "participacion", "fuente": "Vínculo histórico; control vendido a H.I.G. (2021)"},
-    {"de": "g-romero", "a": "palmas", "pct": null, "tipo": "control", "fuente": "Memoria Palmas"},
-    {"de": "g-breca", "a": "rimac", "pct": null, "tipo": "control", "fuente": "Memoria Rímac"},
-    {"de": "g-breca", "a": "minsur", "pct": null, "tipo": "control", "fuente": "Memoria Minsur"},
-    {"de": "minsur", "a": "marcobre", "pct": 60, "tipo": "control", "fuente": "Memoria Minsur"},
-    {"de": "g-breca", "a": "tasa", "pct": null, "tipo": "control", "fuente": "Memoria TASA"},
-    {"de": "g-breca", "a": "intursa", "pct": null, "tipo": "control", "fuente": "Memoria Intursa"},
-    {"de": "g-breca", "a": "urbanova", "pct": null, "tipo": "control", "fuente": "Sitio corporativo"},
-    {"de": "rimac", "a": "clinica-internacional", "pct": null, "tipo": "control", "fuente": "Sitio corporativo (aprox.)"},
-    {"de": "g-breca", "a": "holding-continental", "pct": 50, "tipo": "participacion", "fuente": "Memoria BBVA Perú"},
-    {"de": "g-bbva", "a": "holding-continental", "pct": 50, "tipo": "participacion", "fuente": "Memoria BBVA Perú"},
-    {"de": "holding-continental", "a": "bbva-peru", "pct": 92, "tipo": "control", "fuente": "Memoria BBVA Perú"},
-    {"de": "g-gloria", "a": "leche-gloria", "pct": null, "tipo": "control", "fuente": "Memoria Leche Gloria"},
-    {"de": "g-gloria", "a": "yura", "pct": null, "tipo": "control", "fuente": "Memoria Yura"},
-    {"de": "g-gloria", "a": "coazucar", "pct": null, "tipo": "control", "fuente": "Memoria Coazucar"},
-    {"de": "coazucar", "a": "casa-grande", "pct": 57, "tipo": "control", "fuente": "Memoria Casa Grande"},
-    {"de": "coazucar", "a": "cartavio", "pct": 90, "tipo": "control", "fuente": "Memoria Cartavio (aprox.)"},
-    {"de": "g-gloria", "a": "trupal", "pct": null, "tipo": "control", "fuente": "Memoria Trupal"},
-    {"de": "g-ferreycorp", "a": "ferreycorp", "pct": null, "tipo": "matriz", "fuente": "Estructura societaria"},
-    {"de": "ferreycorp", "a": "ferreyros", "pct": 100, "tipo": "control", "fuente": "Memoria Ferreycorp"},
-    {"de": "ferreycorp", "a": "unimaq", "pct": 100, "tipo": "control", "fuente": "Memoria Ferreycorp"},
-    {"de": "ferreycorp", "a": "soltrak", "pct": 100, "tipo": "control", "fuente": "Memoria Ferreycorp"},
-    {"de": "g-benavides", "a": "buenaventura", "pct": 27, "tipo": "participacion", "fuente": "Form 20-F (aprox.)"},
-    {"de": "buenaventura", "a": "el-brocal", "pct": 61, "tipo": "control", "fuente": "Memoria El Brocal (aprox.)"},
-    {"de": "buenaventura", "a": "cerro-verde", "pct": 19.58, "tipo": "participacion", "fuente": "Memoria Cerro Verde"},
-    {"de": "g-freeport", "a": "cerro-verde", "pct": 53.56, "tipo": "control", "fuente": "Memoria Cerro Verde"},
-    {"de": "g-hochschild", "a": "hochschild-mining", "pct": 38, "tipo": "control", "fuente": "Annual Report (aprox.)"},
-    {"de": "g-hochschild", "a": "pacasmayo", "pct": 50, "tipo": "control", "fuente": "Memoria Pacasmayo (vía Inv. ASPI, aprox.)"},
-    {"de": "g-falabella", "a": "saga-falabella", "pct": null, "tipo": "control", "fuente": "Memoria Falabella Perú"},
-    {"de": "g-falabella", "a": "tottus", "pct": null, "tipo": "control", "fuente": "Memoria Falabella Perú"},
-    {"de": "g-falabella", "a": "sodimac", "pct": null, "tipo": "control", "fuente": "Memoria Falabella Perú"},
-    {"de": "g-falabella", "a": "banco-falabella", "pct": null, "tipo": "control", "fuente": "SBS"},
-    {"de": "g-falabella", "a": "mallplaza", "pct": null, "tipo": "control", "fuente": "Memoria Mallplaza"},
-    {"de": "g-bns", "a": "scotiabank-peru", "pct": 98, "tipo": "control", "fuente": "Memoria Scotiabank Perú (aprox.)"},
-    {"de": "scotiabank-peru", "a": "profuturo-afp", "pct": 100, "tipo": "control", "fuente": "SBS (aprox.)"},
-    {"de": "g-sura", "a": "afp-integra", "pct": 100, "tipo": "control", "fuente": "SBS"},
-    {"de": "g-habitat", "a": "afp-habitat", "pct": 100, "tipo": "control", "fuente": "SBS"},
-    {"de": "g-ig4", "a": "aenza", "pct": 25, "tipo": "control", "fuente": "Hechos de importancia SMV (control efectivo, aprox.)"},
-    {"de": "aenza", "a": "cumbra", "pct": 100, "tipo": "control", "fuente": "Memoria AENZA"},
-    {"de": "prima-afp", "a": "alicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "prima-afp", "a": "ferreycorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "prima-afp", "a": "inretail", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-integra", "a": "credicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-integra", "a": "alicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-integra", "a": "buenaventura", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-integra", "a": "ferreycorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "profuturo-afp", "a": "credicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "profuturo-afp", "a": "inretail", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-habitat", "a": "ferreycorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "afp-habitat", "a": "alicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera AFP (SBS/SMV, aprox.)"},
-    {"de": "prima-afp", "a": "credicorp", "pct": null, "tipo": "portafolio", "fuente": "Cartera Prima AFP — Credicorp es la mayor ponderación de la BVL (SBS/SMV, aprox.)"}
-  ],
-  "directorios": [
-    {"persona": "p-crp", "empresa": "ifs", "rol": "presidente", "fuente": "Memoria IFS 2024"},
-    {"persona": "p-crp", "empresa": "interbank", "rol": "presidente", "fuente": "Memoria Interbank"},
-    {"persona": "p-crp", "empresa": "inretail", "rol": "presidente", "fuente": "Memoria InRetail"},
-    {"persona": "p-lfc", "empresa": "ifs", "rol": "gerente_general", "fuente": "Memoria IFS"},
-    {"persona": "p-lfc", "empresa": "interbank", "rol": "director", "fuente": "Memoria Interbank (aprox.)"},
-    {"persona": "p-drp", "empresa": "credicorp", "rol": "presidente", "fuente": "Form 20-F 2024"},
-    {"persona": "p-drp", "empresa": "bcp", "rol": "presidente", "fuente": "Memoria BCP"},
-    {"persona": "p-drp", "empresa": "alicorp", "rol": "director", "fuente": "Memoria Alicorp (aprox.)"},
-    {"persona": "p-lrb", "empresa": "alicorp", "rol": "presidente", "fuente": "Memoria Alicorp"},
-    {"persona": "p-lrb", "empresa": "primax", "rol": "presidente", "fuente": "Memoria Primax (aprox.)"},
-    {"persona": "p-lrb", "empresa": "credicorp", "rol": "director", "fuente": "Form 20-F (aprox.)"},
-    {"persona": "p-gferrari", "empresa": "credicorp", "rol": "gerente_general", "fuente": "Form 20-F"},
-    {"persona": "p-gferrari", "empresa": "bcp", "rol": "director", "fuente": "Memoria BCP (aprox.)"},
-    {"persona": "p-afb", "empresa": "bbva-peru", "rol": "presidente", "fuente": "Memoria BBVA Perú"},
-    {"persona": "p-afb", "empresa": "rimac", "rol": "director", "fuente": "Memoria Rímac (aprox.)"},
-    {"persona": "p-afb", "empresa": "minsur", "rol": "director", "fuente": "Memoria Minsur (aprox.)"},
-    {"persona": "p-fbm", "empresa": "minsur", "rol": "presidente", "fuente": "Memoria Minsur"},
-    {"persona": "p-fbm", "empresa": "tasa", "rol": "director", "fuente": "Memoria TASA (aprox.)"},
-    {"persona": "p-fbm", "empresa": "bbva-peru", "rol": "director", "fuente": "Memoria BBVA Perú (aprox.)"},
-    {"persona": "p-pbm", "empresa": "rimac", "rol": "presidente", "fuente": "Memoria Rímac"},
-    {"persona": "p-pbm", "empresa": "intursa", "rol": "director", "fuente": "Memoria Intursa (aprox.)"},
-    {"persona": "p-jrr", "empresa": "leche-gloria", "rol": "presidente", "fuente": "Memoria Leche Gloria"},
-    {"persona": "p-jrr", "empresa": "yura", "rol": "presidente", "fuente": "Memoria Yura"},
-    {"persona": "p-jrr", "empresa": "coazucar", "rol": "presidente", "fuente": "Memoria Coazucar"},
-    {"persona": "p-vrr", "empresa": "leche-gloria", "rol": "director", "fuente": "Memoria Leche Gloria"},
-    {"persona": "p-vrr", "empresa": "yura", "rol": "director", "fuente": "Memoria Yura"},
-    {"persona": "p-vrr", "empresa": "trupal", "rol": "presidente", "fuente": "Memoria Trupal (aprox.)"},
-    {"persona": "p-rbg", "empresa": "buenaventura", "rol": "director", "fuente": "Memoria Buenaventura"},
-    {"persona": "p-rbg", "empresa": "el-brocal", "rol": "director", "fuente": "Memoria El Brocal (aprox.)"},
-    {"persona": "p-rbg", "empresa": "cerro-verde", "rol": "director", "fuente": "Memoria Cerro Verde (representación de Buenaventura, aprox.)"},
-    {"persona": "p-ehb", "empresa": "hochschild-mining", "rol": "presidente", "fuente": "Annual Report Hochschild"},
-    {"persona": "p-ehb", "empresa": "pacasmayo", "rol": "presidente", "fuente": "Memoria Pacasmayo"},
-    {"persona": "gg-alicorp", "empresa": "alicorp", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-interbank", "empresa": "interbank", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-bcp", "empresa": "bcp", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-minsur", "empresa": "minsur", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-ferreycorp", "empresa": "ferreycorp", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-leche-gloria", "empresa": "leche-gloria", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-inretail", "empresa": "inretail", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-buenaventura", "empresa": "buenaventura", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-rimac", "empresa": "rimac", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"},
-    {"persona": "gg-aenza", "empresa": "aenza", "rol": "gerente_general", "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"}
-  ],
-  "finanzas": {
-    "_nota": "Cifras en millones de S/ aprox. (EEFF auditados 2023–2024 / memorias / Form 20-F). En bancos y aseguradoras el EBITDA no aplica (estructura de balance distinta): se deja en null. market_cap solo para emisores listados. Verificar contra la fuente primaria antes de citar.",
-    "credicorp":    {"ebitda": null, "utilidad": 5500, "activos": 270000, "patrimonio": 36000, "market_cap": 138000},
-    "bcp":          {"ebitda": null, "utilidad": 5000, "activos": 230000, "patrimonio": 30000, "market_cap": null},
-    "mibanco":      {"ebitda": null, "utilidad": 320,  "activos": 15000,  "patrimonio": 2600,  "market_cap": null},
-    "pacifico":     {"ebitda": null, "utilidad": 620,  "activos": 16000,  "patrimonio": 3500,  "market_cap": null},
-    "prima-afp":    {"ebitda": null, "utilidad": 230,  "activos": 2000,   "patrimonio": 1100,  "market_cap": null},
-    "credicorp-capital": {"ebitda": null, "utilidad": 110, "activos": 6000, "patrimonio": 1200, "market_cap": null},
-    "ifs":          {"ebitda": null, "utilidad": 1550, "activos": 90000,  "patrimonio": 11000, "market_cap": 12500},
-    "interbank":    {"ebitda": null, "utilidad": 1150, "activos": 75000,  "patrimonio": 9000,  "market_cap": null},
-    "interseguro":  {"ebitda": null, "utilidad": 210,  "activos": 14000,  "patrimonio": 1200,  "market_cap": null},
-    "inteligo":     {"ebitda": null, "utilidad": 230,  "activos": 9000,   "patrimonio": 1600,  "market_cap": null},
-    "bbva-peru":    {"ebitda": null, "utilidad": 1650, "activos": 110000, "patrimonio": 12000, "market_cap": null},
-    "scotiabank-peru": {"ebitda": null, "utilidad": 900, "activos": 85000, "patrimonio": 11000, "market_cap": null},
-    "banco-falabella": {"ebitda": null, "utilidad": 150, "activos": 6000, "patrimonio": 900,   "market_cap": null},
-    "financiera-oh":   {"ebitda": null, "utilidad": 120, "activos": 4500, "patrimonio": 800,   "market_cap": null},
-    "rimac":        {"ebitda": null, "utilidad": 520,  "activos": 18000,  "patrimonio": 3000,  "market_cap": null},
-    "profuturo-afp":   {"ebitda": null, "utilidad": 180, "activos": 1500, "patrimonio": 800,   "market_cap": null},
-    "afp-integra":  {"ebitda": null, "utilidad": 220,  "activos": 1800,   "patrimonio": 1000,  "market_cap": null},
-    "afp-habitat":  {"ebitda": null, "utilidad": 90,   "activos": 700,    "patrimonio": 400,   "market_cap": null},
-    "inretail":     {"ebitda": 3000, "utilidad": 900,  "activos": 25000,  "patrimonio": 8000,  "market_cap": 14000},
-    "spsa":         {"ebitda": 950,  "utilidad": 260,  "activos": 8500,   "patrimonio": 2200,  "market_cap": null},
-    "inkafarma":    {"ebitda": 900,  "utilidad": 240,  "activos": 7000,   "patrimonio": 2000,  "market_cap": null},
-    "real-plaza":   {"ebitda": 620,  "utilidad": 300,  "activos": 6500,   "patrimonio": 3200,  "market_cap": null},
-    "alicorp":      {"ebitda": 1400, "utilidad": 400,  "activos": 12000,  "patrimonio": 5000,  "market_cap": 5500},
-    "vitapro":      {"ebitda": 350,  "utilidad": 120,  "activos": 2500,   "patrimonio": 1100,  "market_cap": null},
-    "primax":       {"ebitda": 900,  "utilidad": 350,  "activos": 7000,   "patrimonio": 2500,  "market_cap": null},
-    "ransa":        {"ebitda": 230,  "utilidad": 70,   "activos": 2000,   "patrimonio": 800,   "market_cap": null},
-    "palmas":       {"ebitda": 200,  "utilidad": 90,   "activos": 1800,   "patrimonio": 1100,  "market_cap": null},
-    "minsur":       {"ebitda": 3000, "utilidad": 1500, "activos": 15000,  "patrimonio": 8000,  "market_cap": 10500},
-    "marcobre":     {"ebitda": 1900, "utilidad": 800,  "activos": 6500,   "patrimonio": 2800,  "market_cap": null},
-    "tasa":         {"ebitda": 520,  "utilidad": 180,  "activos": 3500,   "patrimonio": 1800,  "market_cap": null},
-    "clinica-internacional": {"ebitda": 180, "utilidad": 60, "activos": 1500, "patrimonio": 700, "market_cap": null},
-    "leche-gloria": {"ebitda": 700,  "utilidad": 350,  "activos": 6000,   "patrimonio": 3500,  "market_cap": 3000},
-    "yura":         {"ebitda": 900,  "utilidad": 500,  "activos": 7000,   "patrimonio": 3500,  "market_cap": 4200},
-    "coazucar":     {"ebitda": 600,  "utilidad": 200,  "activos": 5500,   "patrimonio": 2800,  "market_cap": null},
-    "casa-grande":  {"ebitda": 220,  "utilidad": 110,  "activos": 2000,   "patrimonio": 1500,  "market_cap": 1200},
-    "cartavio":     {"ebitda": 170,  "utilidad": 80,   "activos": 1500,   "patrimonio": 1100,  "market_cap": 750},
-    "trupal":       {"ebitda": 150,  "utilidad": 60,   "activos": 1100,   "patrimonio": 600,   "market_cap": null},
-    "ferreycorp":   {"ebitda": 1100, "utilidad": 600,  "activos": 9000,   "patrimonio": 3800,  "market_cap": 3500},
-    "ferreyros":    {"ebitda": 700,  "utilidad": 380,  "activos": 5500,   "patrimonio": 2200,  "market_cap": null},
-    "buenaventura": {"ebitda": 1200, "utilidad": 600,  "activos": 14000,  "patrimonio": 9000,  "market_cap": 13000},
-    "el-brocal":    {"ebitda": 450,  "utilidad": 180,  "activos": 3500,   "patrimonio": 1800,  "market_cap": null},
-    "cerro-verde":  {"ebitda": 7000, "utilidad": 3500, "activos": 20000,  "patrimonio": 14000, "market_cap": null},
-    "hochschild-mining": {"ebitda": 1200, "utilidad": 300, "activos": 6000, "patrimonio": 3000, "market_cap": 7000},
-    "pacasmayo":    {"ebitda": 500,  "utilidad": 250,  "activos": 4000,   "patrimonio": 2000,  "market_cap": 2500},
-    "saga-falabella":  {"ebitda": 380, "utilidad": 110, "activos": 3500, "patrimonio": 1200, "market_cap": null},
-    "tottus":       {"ebitda": 340,  "utilidad": 90,   "activos": 3200,   "patrimonio": 1000,  "market_cap": null},
-    "sodimac":      {"ebitda": 260,  "utilidad": 70,   "activos": 2600,   "patrimonio": 900,   "market_cap": null},
-    "aenza":        {"ebitda": 420,  "utilidad": 150,  "activos": 6000,   "patrimonio": 1500,  "market_cap": 1500},
-    "cumbra":       {"ebitda": 230,  "utilidad": 90,   "activos": 3000,   "patrimonio": 900,   "market_cap": null}
+  {
+   "id": "g-romero",
+   "nombre": "Grupo Romero",
+   "control": "Familia Romero",
+   "pais": "Perú",
+   "nota": "Consumo masivo, combustibles, logística, agroindustria; accionista de referencia de Credicorp.",
+   "fuente": "Memorias Alicorp / Credicorp (SMV)"
   },
-  "temporal": {
-    "_nota": "Hitos corporativos documentados (años aproximados) y trayectoria de ingresos por grupo en S/ miles de millones (ILUSTRATIVA, para mostrar forma de crecimiento; no son cifras auditadas año a año). Verificar antes de citar.",
-    "eventos": [
-      {"anio": 1994, "tipo": "fundacion", "grupo": "g-intercorp", "titulo": "Rodríguez-Pastor compra el Banco Internacional (luego Interbank)", "descripcion": "Nace el núcleo del futuro conglomerado Intercorp.", "fuente": "Memoria Intercorp"},
-      {"anio": 1995, "tipo": "consolidacion", "grupo": "g-credicorp", "titulo": "Se crea Credicorp como holding (cotiza en NYSE)", "descripcion": "El BCP y sus afiliadas se agrupan bajo Credicorp Ltd., listado en Nueva York.", "fuente": "Form 20-F Credicorp"},
-      {"anio": 2004, "tipo": "fusion", "grupo": "g-gloria", "titulo": "Grupo Gloria consolida el negocio azucarero (Coazucar)", "descripcion": "Adquisición de Casa Grande y otras azucareras del norte.", "fuente": "Memoria Coazucar"},
-      {"anio": 2007, "tipo": "salida_bolsa", "grupo": "g-intercorp", "titulo": "InRetail e IFS preparan su expansión", "descripcion": "El grupo estructura sus brazos de retail y financiero para listarlos.", "fuente": "Memoria InRetail"},
-      {"anio": 2011, "tipo": "salida_bolsa", "grupo": "g-intercorp", "titulo": "InRetail Perú sale a bolsa (BVL)", "descripcion": "IPO que financia la expansión de supermercados, farmacias y malls.", "fuente": "Memoria InRetail"},
-      {"anio": 2018, "tipo": "fusion", "grupo": "g-intercorp", "titulo": "Inkafarma + Mifarma: nace InRetail Pharma", "descripcion": "La compra de Quicorp (Mifarma, BTL, Fasa) crea la mayor cadena de farmacias del país; observada por Indecopi.", "fuente": "Hechos de importancia SMV / Indecopi"},
-      {"anio": 2019, "tipo": "crisis", "grupo": "g-ig4", "titulo": "Graña y Montero en el caso Lava Jato", "descripcion": "La crisis reputacional por colusión hunde el valor y abre la puerta a un nuevo controlador.", "fuente": "Hechos de importancia SMV"},
-      {"anio": 2020, "tipo": "cambio_control", "grupo": "g-ig4", "titulo": "El fondo IG4 Capital toma el control de Graña y Montero", "descripcion": "El fondo brasileño se convierte en accionista de control del grupo de infraestructura.", "fuente": "Hechos de importancia SMV"},
-      {"anio": 2021, "tipo": "rebranding", "grupo": "g-ig4", "titulo": "Graña y Montero se renombra AENZA; GyM pasa a Cumbra", "descripcion": "Cambio de marca para distanciarse del pasado reputacional.", "fuente": "Hechos de importancia SMV"},
-      {"anio": 2021, "tipo": "inauguracion", "grupo": "g-breca", "titulo": "Mina Justa (Marcobre) entra en producción", "descripcion": "Minsur (60%) y Alxar (40%) ponen en marcha la operación cuprífera en Ica.", "fuente": "Memoria Minsur"},
-      {"anio": 2021, "tipo": "venta", "grupo": "g-romero", "titulo": "El Grupo Romero vende el control de Ransa a H.I.G. Capital", "descripcion": "El operador logístico pasa a manos del fondo estadounidense.", "fuente": "Hechos de importancia SMV"},
-      {"anio": 2022, "tipo": "relevo", "grupo": "g-credicorp", "titulo": "Gianfranco Ferrari asume como CEO de Credicorp", "descripcion": "Relevo en la cabeza ejecutiva del mayor holding financiero.", "fuente": "Form 20-F Credicorp"},
-      {"anio": 2023, "tipo": "expansion", "grupo": "g-intercorp", "titulo": "Intercorp profundiza su apuesta digital (Plin, banca abierta)", "descripcion": "Integración de pagos y datos a través del ecosistema del grupo.", "fuente": "Memoria Intercorp"},
-      {"anio": 2024, "tipo": "consolidacion", "grupo": "g-breca", "titulo": "Minsur consolida cobre (Mina Justa) y estaño como motor", "descripcion": "El cobre eleva los ingresos del brazo minero de Breca.", "fuente": "Memoria Minsur"}
-    ],
-    "ingresos_grupo": {
-      "g-intercorp":  {"2019": 28, "2020": 26, "2021": 32, "2022": 37, "2023": 39, "2024": 41},
-      "g-credicorp":  {"2019": 14, "2020": 13, "2021": 16, "2022": 19, "2023": 21, "2024": 22},
-      "g-breca":      {"2019": 11, "2020": 10, "2021": 15, "2022": 18, "2023": 18, "2024": 19},
-      "g-romero":     {"2019": 24, "2020": 25, "2021": 30, "2022": 34, "2023": 34, "2024": 35},
-      "g-gloria":     {"2019": 11, "2020": 11, "2021": 13, "2022": 14, "2023": 14, "2024": 15},
-      "g-ferreycorp": {"2019": 5,  "2020": 4,  "2021": 6,  "2022": 7,  "2023": 8,  "2024": 8},
-      "g-falabella":  {"2019": 13, "2020": 11, "2021": 14, "2022": 15, "2023": 15, "2024": 15},
-      "g-ig4":        {"2019": 8,  "2020": 4,  "2021": 4,  "2022": 5,  "2023": 5,  "2024": 5}
-    }
+  {
+   "id": "g-credicorp",
+   "nombre": "Credicorp",
+   "control": "Accionariado difundido; Familia Romero como accionista de referencia",
+   "pais": "Perú",
+   "nota": "Holding financiero listado en NYSE y BVL: banca, seguros, AFP, banca de inversión.",
+   "fuente": "Form 20-F Credicorp / SMV"
+  },
+  {
+   "id": "g-breca",
+   "nombre": "Breca",
+   "control": "Familia Brescia",
+   "pais": "Perú",
+   "nota": "Minería, seguros, banca (con BBVA), pesca, inmobiliario, salud, hotelería.",
+   "fuente": "Memorias Minsur / Rímac (SMV)"
+  },
+  {
+   "id": "g-gloria",
+   "nombre": "Grupo Gloria",
+   "control": "Familia Rodríguez Rodríguez",
+   "pais": "Perú",
+   "nota": "Lácteos y alimentos, cemento, azúcar, papeles y empaques.",
+   "fuente": "Memoria Leche Gloria / Yura (SMV)"
+  },
+  {
+   "id": "g-ferreycorp",
+   "nombre": "Ferreycorp",
+   "control": "Corporación de accionariado difundido (AFPs y fondos ~40%)",
+   "pais": "Perú",
+   "nota": "Corporación listada sin grupo familiar de control: maquinaria y bienes de capital.",
+   "fuente": "Memoria Ferreycorp (SMV)"
+  },
+  {
+   "id": "g-benavides",
+   "nombre": "Familia Benavides",
+   "control": "Familia Benavides",
+   "pais": "Perú",
+   "nota": "Accionista de referencia de Compañía de Minas Buenaventura.",
+   "fuente": "Memoria Buenaventura (SMV)"
+  },
+  {
+   "id": "g-hochschild",
+   "nombre": "Grupo Hochschild",
+   "control": "Familia Hochschild",
+   "pais": "Perú",
+   "nota": "Minería de metales preciosos y cemento.",
+   "fuente": "Memorias Hochschild Mining / Cementos Pacasmayo"
+  },
+  {
+   "id": "g-falabella",
+   "nombre": "Falabella",
+   "control": "Familias Solari / Del Río (Chile)",
+   "pais": "Chile",
+   "nota": "Retail multinacional chileno con fuerte presencia en el Perú.",
+   "fuente": "Memoria Falabella Perú (SMV)"
+  },
+  {
+   "id": "g-bns",
+   "nombre": "Bank of Nova Scotia",
+   "control": "Accionariado difundido (Canadá)",
+   "pais": "Canadá",
+   "nota": "Matriz canadiense de Scotiabank Perú y Profuturo AFP.",
+   "fuente": "Memoria Scotiabank Perú (SMV)"
+  },
+  {
+   "id": "g-sura",
+   "nombre": "Grupo SURA",
+   "control": "Accionariado difundido (Colombia)",
+   "pais": "Colombia",
+   "nota": "Matriz colombiana de AFP Integra.",
+   "fuente": "Memoria AFP Integra (SBS)"
+  },
+  {
+   "id": "g-habitat",
+   "nombre": "Habitat",
+   "control": "Cámara Chilena de la Construcción / Prudential (Chile)",
+   "pais": "Chile",
+   "nota": "Matriz chilena de AFP Habitat Perú.",
+   "fuente": "Memoria AFP Habitat (SBS)"
+  },
+  {
+   "id": "g-bbva",
+   "nombre": "BBVA",
+   "control": "Accionariado difundido (España)",
+   "pais": "España",
+   "nota": "Socio 50/50 de Breca en Holding Continental, matriz de BBVA Perú.",
+   "fuente": "Memoria BBVA Perú (SMV)"
+  },
+  {
+   "id": "g-freeport",
+   "nombre": "Freeport-McMoRan",
+   "control": "Accionariado difundido (EE.UU.)",
+   "pais": "EE.UU.",
+   "nota": "Operador y accionista mayoritario de Sociedad Minera Cerro Verde.",
+   "fuente": "Memoria Cerro Verde (SMV)"
+  },
+  {
+   "id": "g-ig4",
+   "nombre": "IG4 Capital",
+   "control": "Fondo de inversión (Brasil)",
+   "pais": "Brasil",
+   "nota": "Accionista de control de AENZA (ex Graña y Montero).",
+   "fuente": "Hechos de importancia AENZA (SMV)"
+  },
+  {
+   "id": "g-grupo-mexico",
+   "nombre": "Grupo México",
+   "control": "Germán Larrea (Grupo México)",
+   "pais": "México",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-glencore",
+   "nombre": "Glencore",
+   "control": "Glencore plc",
+   "pais": "Suiza",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-votorantim",
+   "nombre": "Votorantim",
+   "control": "Familia Ermírio de Moraes (Votorantim/Nexa)",
+   "pais": "Brasil",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-shougang",
+   "nombre": "Shougang Group",
+   "control": "Shougang Group (estatal China)",
+   "pais": "China",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-repsol",
+   "nombre": "Repsol",
+   "control": "Repsol S.A.",
+   "pais": "España",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-engie",
+   "nombre": "Engie",
+   "control": "ENGIE S.A.",
+   "pais": "Francia",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-actis",
+   "nombre": "Actis",
+   "control": "Actis (fondo) vía Niagara Energy",
+   "pais": "Reino Unido",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-ctg",
+   "nombre": "China Three Gorges",
+   "control": "China Three Gorges Corp. (estatal)",
+   "pais": "China",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-statkraft",
+   "nombre": "Statkraft",
+   "control": "Statkraft AS (estatal noruega)",
+   "pais": "Noruega",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-unacem",
+   "nombre": "UNACEM",
+   "control": "Familia Rizo Patrón (Grupo UNACEM)",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-aceros-arequipa",
+   "nombre": "Aceros Arequipa",
+   "control": "Familia Cilloniz",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-gerdau",
+   "nombre": "Gerdau",
+   "control": "Familia Gerdau Johannpeter",
+   "pais": "Brasil",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-austevoll",
+   "nombre": "Austevoll",
+   "control": "Austevoll Seafood ASA",
+   "pais": "Noruega",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-matta",
+   "nombre": "Grupo Matta",
+   "control": "Familia Matta Curotto",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-pichincha",
+   "nombre": "Grupo Pichincha",
+   "control": "Familia Egas (Banco Pichincha)",
+   "pais": "Ecuador",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-coril",
+   "nombre": "Grupo Coril",
+   "control": "Grupo Coril",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-diviso",
+   "nombre": "Diviso",
+   "control": "Diviso Grupo Financiero",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-bbva-mf",
+   "nombre": "BBVA Microfinanzas",
+   "control": "Fundación Microfinanzas BBVA",
+   "pais": "España",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-bvl",
+   "nombre": "Grupo BVL",
+   "control": "Bolsa de Valores de Lima (accionariado difundido)",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-la-positiva",
+   "nombre": "Grupo La Positiva",
+   "control": "Grupo La Positiva",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-mapfre",
+   "nombre": "Mapfre",
+   "control": "Mapfre S.A.",
+   "pais": "España",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-qualitas",
+   "nombre": "Quálitas",
+   "control": "Quálitas Controladora",
+   "pais": "México",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-abinbev",
+   "nombre": "AB InBev",
+   "control": "Anheuser-Busch InBev",
+   "pais": "Bélgica",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-arca",
+   "nombre": "Arca Continental",
+   "control": "Arca Continental / Coca-Cola",
+   "pais": "México",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-manuelita",
+   "nombre": "Manuelita",
+   "control": "Grupo Manuelita",
+   "pais": "Colombia",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-oviedo",
+   "nombre": "Grupo Oviedo",
+   "control": "Grupo Oviedo",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-wiese",
+   "nombre": "Grupo Wiese",
+   "control": "Grupo Wiese",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-raffo",
+   "nombre": "Grupo Raffo",
+   "control": "Grupo Raffo (GR Holding)",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-michell",
+   "nombre": "Grupo Michell",
+   "control": "Familia Michell",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-cervesur",
+   "nombre": "Grupo Cervesur",
+   "control": "Grupo Cervesur (familia Ricketts)",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "id": "g-el-comercio",
+   "nombre": "Grupo El Comercio",
+   "control": "Familia Miró Quesada",
+   "pais": "Perú",
+   "nota": "Grupo controlador de emisores BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
   }
+ ],
+ "empresas": [
+  {
+   "id": "ifs",
+   "nombre": "Intercorp Financial Services",
+   "grupo": "g-intercorp",
+   "sector": "Finanzas y banca",
+   "tipo": "holding",
+   "bvl": true,
+   "ingresos_aprox": 7800,
+   "empleados_aprox": 9000,
+   "nota": "Holding financiero del grupo (Interbank, Interseguro, Inteligo). Listado en BVL y NYSE.",
+   "fuente": "Memoria IFS 2024 (aprox.)"
+  },
+  {
+   "id": "interbank",
+   "nombre": "Interbank",
+   "grupo": "g-intercorp",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 6200,
+   "empleados_aprox": 7000,
+   "nota": "Cuarto banco del sistema por colocaciones.",
+   "fuente": "EEFF Interbank 2024 (aprox.)"
+  },
+  {
+   "id": "interseguro",
+   "nombre": "Interseguro",
+   "grupo": "g-intercorp",
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 1300,
+   "empleados_aprox": 700,
+   "nota": "Seguros de vida y rentas vitalicias.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "inteligo",
+   "nombre": "Inteligo",
+   "grupo": "g-intercorp",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 400,
+   "empleados_aprox": 400,
+   "nota": "Banca privada y gestión patrimonial.",
+   "fuente": "Memoria IFS (aprox.)"
+  },
+  {
+   "id": "inretail",
+   "nombre": "InRetail Perú",
+   "grupo": "g-intercorp",
+   "sector": "Retail",
+   "tipo": "holding",
+   "bvl": true,
+   "ingresos_aprox": 22000,
+   "empleados_aprox": 60000,
+   "nota": "Holding retail: supermercados, farmacias y centros comerciales.",
+   "fuente": "Memoria InRetail 2024 (aprox.)"
+  },
+  {
+   "id": "spsa",
+   "nombre": "Supermercados Peruanos (Plaza Vea)",
+   "grupo": "g-intercorp",
+   "sector": "Retail",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 9500,
+   "empleados_aprox": 30000,
+   "nota": "Plaza Vea, Vivanda, Mass.",
+   "fuente": "Memoria InRetail (aprox.)"
+  },
+  {
+   "id": "inkafarma",
+   "nombre": "InRetail Pharma (Inkafarma · Mifarma)",
+   "grupo": "g-intercorp",
+   "sector": "Salud",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 8500,
+   "empleados_aprox": 20000,
+   "nota": "Mayor cadena de farmacias del país tras la fusión Inkafarma–Mifarma (Quicorp, 2018).",
+   "fuente": "Memoria InRetail (aprox.)"
+  },
+  {
+   "id": "real-plaza",
+   "nombre": "Real Plaza",
+   "grupo": "g-intercorp",
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 800,
+   "empleados_aprox": 1500,
+   "nota": "Mayor operador de centros comerciales del Perú.",
+   "fuente": "Memoria InRetail (aprox.)"
+  },
+  {
+   "id": "utp",
+   "nombre": "UTP — Universidad Tecnológica del Perú",
+   "grupo": "g-intercorp",
+   "sector": "Educación",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 1200,
+   "empleados_aprox": 8000,
+   "nota": "Brazo universitario de Intercorp Education.",
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "id": "innova-schools",
+   "nombre": "Innova Schools",
+   "grupo": "g-intercorp",
+   "sector": "Educación",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 500,
+   "empleados_aprox": 5000,
+   "nota": "Red de colegios privados de bajo costo.",
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "id": "cineplanet",
+   "nombre": "Cineplanet",
+   "grupo": "g-intercorp",
+   "sector": "Turismo y entretenimiento",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 600,
+   "empleados_aprox": 4000,
+   "nota": "Mayor cadena de cines del Perú.",
+   "fuente": "Memoria Cineplex (aprox.)"
+  },
+  {
+   "id": "casa-andina",
+   "nombre": "Casa Andina",
+   "grupo": "g-intercorp",
+   "sector": "Turismo y entretenimiento",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 350,
+   "empleados_aprox": 2000,
+   "nota": "Mayor cadena hotelera peruana.",
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "id": "financiera-oh",
+   "nombre": "Financiera Oh!",
+   "grupo": "g-intercorp",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 700,
+   "empleados_aprox": 1500,
+   "nota": "Financiera de consumo vinculada al retail del grupo.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "credicorp",
+   "nombre": "Credicorp Ltd.",
+   "grupo": "g-credicorp",
+   "sector": "Finanzas y banca",
+   "tipo": "holding",
+   "bvl": true,
+   "ingresos_aprox": 22000,
+   "empleados_aprox": 37000,
+   "nota": "Mayor holding financiero del país; listado en NYSE y BVL.",
+   "fuente": "Form 20-F 2024 (aprox.)"
+  },
+  {
+   "id": "bcp",
+   "nombre": "Banco de Crédito del Perú (BCP)",
+   "grupo": "g-credicorp",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 14000,
+   "empleados_aprox": 18000,
+   "nota": "Mayor banco del sistema financiero peruano.",
+   "fuente": "EEFF BCP 2024 (aprox.)"
+  },
+  {
+   "id": "mibanco",
+   "nombre": "Mibanco",
+   "grupo": "g-credicorp",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 2800,
+   "empleados_aprox": 10000,
+   "nota": "Líder en microfinanzas.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "pacifico",
+   "nombre": "Pacífico Seguros",
+   "grupo": "g-credicorp",
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 5000,
+   "empleados_aprox": 4000,
+   "nota": "Segunda aseguradora del mercado.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "prima-afp",
+   "nombre": "Prima AFP",
+   "grupo": "g-credicorp",
+   "sector": "AFP y fondos",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 400,
+   "empleados_aprox": 600,
+   "nota": "AFP del grupo Credicorp; inversionista institucional en la BVL.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "credicorp-capital",
+   "nombre": "Credicorp Capital",
+   "grupo": "g-credicorp",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 800,
+   "empleados_aprox": 1500,
+   "nota": "Banca de inversión regional (Perú, Chile, Colombia).",
+   "fuente": "Memoria Credicorp (aprox.)"
+  },
+  {
+   "id": "alicorp",
+   "nombre": "Alicorp",
+   "grupo": "g-romero",
+   "sector": "Consumo masivo",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 12500,
+   "empleados_aprox": 11000,
+   "nota": "Mayor empresa de consumo masivo del Perú; opera en 5 países.",
+   "fuente": "Memoria Alicorp 2024 (aprox.)"
+  },
+  {
+   "id": "vitapro",
+   "nombre": "Vitapro",
+   "grupo": "g-romero",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 3000,
+   "empleados_aprox": 2000,
+   "nota": "Nutrición acuícola (subsidiaria de Alicorp).",
+   "fuente": "Memoria Alicorp (aprox.)"
+  },
+  {
+   "id": "primax",
+   "nombre": "Primax",
+   "grupo": "g-romero",
+   "sector": "Energía y combustibles",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 19000,
+   "empleados_aprox": 5000,
+   "nota": "Mayor red de estaciones de servicio (Perú, Ecuador, Colombia).",
+   "fuente": "Memoria Primax (aprox.)"
+  },
+  {
+   "id": "ransa",
+   "nombre": "Ransa",
+   "grupo": "g-romero",
+   "sector": "Logística",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 1500,
+   "empleados_aprox": 6500,
+   "nota": "Operador logístico regional. En 2021 el grupo vendió participación mayoritaria a H.I.G. Capital (se mantiene vínculo histórico).",
+   "fuente": "Hechos de importancia (aprox.)"
+  },
+  {
+   "id": "palmas",
+   "nombre": "Palmas del Espino",
+   "grupo": "g-romero",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 900,
+   "empleados_aprox": 4000,
+   "nota": "Palma aceitera en San Martín.",
+   "fuente": "Memoria Palmas (aprox.)"
+  },
+  {
+   "id": "rimac",
+   "nombre": "Rímac Seguros",
+   "grupo": "g-breca",
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 6500,
+   "empleados_aprox": 4500,
+   "nota": "Mayor aseguradora del Perú.",
+   "fuente": "SBS / Memoria Rímac (aprox.)"
+  },
+  {
+   "id": "minsur",
+   "nombre": "Minsur",
+   "grupo": "g-breca",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 7500,
+   "empleados_aprox": 4000,
+   "nota": "Uno de los mayores productores de estaño del mundo (San Rafael) y cobre (Mina Justa).",
+   "fuente": "Memoria Minsur 2024 (aprox.)"
+  },
+  {
+   "id": "marcobre",
+   "nombre": "Marcobre (Mina Justa)",
+   "grupo": "g-breca",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 4500,
+   "empleados_aprox": 2500,
+   "nota": "Operación cuprífera en Ica; Minsur 60%, Alxar (Chile) 40%.",
+   "fuente": "Memoria Minsur (aprox.)"
+  },
+  {
+   "id": "tasa",
+   "nombre": "TASA — Tecnológica de Alimentos",
+   "grupo": "g-breca",
+   "sector": "Pesca",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 2500,
+   "empleados_aprox": 3000,
+   "nota": "Mayor productora mundial de harina y aceite de pescado.",
+   "fuente": "Memoria TASA (aprox.)"
+  },
+  {
+   "id": "intursa",
+   "nombre": "Intursa (hoteles Westin, Libertador)",
+   "grupo": "g-breca",
+   "sector": "Turismo y entretenimiento",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 400,
+   "empleados_aprox": 1500,
+   "nota": "Brazo hotelero de Breca.",
+   "fuente": "Memoria Intursa (aprox.)"
+  },
+  {
+   "id": "urbanova",
+   "nombre": "Urbanova",
+   "grupo": "g-breca",
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 300,
+   "empleados_aprox": 300,
+   "nota": "Inmobiliaria de oficinas prime (San Isidro).",
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "id": "clinica-internacional",
+   "nombre": "Clínica Internacional",
+   "grupo": "g-breca",
+   "sector": "Salud",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 900,
+   "empleados_aprox": 4000,
+   "nota": "Red de clínicas privadas vinculada a Rímac.",
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "id": "holding-continental",
+   "nombre": "Holding Continental",
+   "grupo": "g-breca",
+   "sector": "Finanzas y banca",
+   "tipo": "holding",
+   "bvl": false,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Vehículo 50/50 entre Breca y BBVA que controla BBVA Perú.",
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "id": "bbva-peru",
+   "nombre": "BBVA Perú",
+   "grupo": null,
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 6800,
+   "empleados_aprox": 6500,
+   "nota": "Segundo banco del sistema; control compartido Breca–BBVA vía Holding Continental.",
+   "fuente": "EEFF BBVA Perú 2024 (aprox.)"
+  },
+  {
+   "id": "leche-gloria",
+   "nombre": "Leche Gloria",
+   "grupo": "g-gloria",
+   "sector": "Consumo masivo",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 6500,
+   "empleados_aprox": 6000,
+   "nota": "Líder en lácteos; matriz industrial del grupo.",
+   "fuente": "Memoria Leche Gloria 2024 (aprox.)"
+  },
+  {
+   "id": "yura",
+   "nombre": "Yura",
+   "grupo": "g-gloria",
+   "sector": "Cemento y construcción",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 3200,
+   "empleados_aprox": 3000,
+   "nota": "Cementera del sur del Perú; opera también en Bolivia y Ecuador.",
+   "fuente": "Memoria Yura (aprox.)"
+  },
+  {
+   "id": "coazucar",
+   "nombre": "Coazucar",
+   "grupo": "g-gloria",
+   "sector": "Agroindustria",
+   "tipo": "holding",
+   "bvl": false,
+   "ingresos_aprox": 2800,
+   "empleados_aprox": 13000,
+   "nota": "Holding azucarero (Casa Grande, Cartavio, San Jacinto).",
+   "fuente": "Memoria Coazucar (aprox.)"
+  },
+  {
+   "id": "casa-grande",
+   "nombre": "Casa Grande",
+   "grupo": "g-gloria",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 900,
+   "empleados_aprox": 4000,
+   "nota": "Mayor azucarera del país (La Libertad).",
+   "fuente": "Memoria Casa Grande (aprox.)"
+  },
+  {
+   "id": "cartavio",
+   "nombre": "Cartavio",
+   "grupo": "g-gloria",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 700,
+   "empleados_aprox": 3000,
+   "nota": "Azucarera del valle Chicama.",
+   "fuente": "Memoria Cartavio (aprox.)"
+  },
+  {
+   "id": "trupal",
+   "nombre": "Trupal",
+   "grupo": "g-gloria",
+   "sector": "Papel y empaques",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 800,
+   "empleados_aprox": 2000,
+   "nota": "Papeles y empaques a partir de bagazo de caña.",
+   "fuente": "Memoria Trupal (aprox.)"
+  },
+  {
+   "id": "ferreycorp",
+   "nombre": "Ferreycorp",
+   "grupo": "g-ferreycorp",
+   "sector": "Industria y maquinaria",
+   "tipo": "holding",
+   "bvl": true,
+   "ingresos_aprox": 8200,
+   "empleados_aprox": 10000,
+   "nota": "Corporación de bienes de capital; representante histórico de Caterpillar.",
+   "fuente": "Memoria Ferreycorp 2024 (aprox.)"
+  },
+  {
+   "id": "ferreyros",
+   "nombre": "Ferreyros",
+   "grupo": "g-ferreycorp",
+   "sector": "Industria y maquinaria",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 5500,
+   "empleados_aprox": 6000,
+   "nota": "Distribuidor Caterpillar en el Perú.",
+   "fuente": "Memoria Ferreycorp (aprox.)"
+  },
+  {
+   "id": "unimaq",
+   "nombre": "Unimaq",
+   "grupo": "g-ferreycorp",
+   "sector": "Industria y maquinaria",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 700,
+   "empleados_aprox": 1000,
+   "nota": "Equipos ligeros multimarcas.",
+   "fuente": "Memoria Ferreycorp (aprox.)"
+  },
+  {
+   "id": "soltrak",
+   "nombre": "Soltrak",
+   "grupo": "g-ferreycorp",
+   "sector": "Industria y maquinaria",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 500,
+   "empleados_aprox": 800,
+   "nota": "Neumáticos, lubricantes e insumos.",
+   "fuente": "Memoria Ferreycorp (aprox.)"
+  },
+  {
+   "id": "buenaventura",
+   "nombre": "Cía. de Minas Buenaventura",
+   "grupo": "g-benavides",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 4200,
+   "empleados_aprox": 4500,
+   "nota": "Mayor minera de metales preciosos de capital peruano; listada en NYSE y BVL.",
+   "fuente": "Form 20-F Buenaventura (aprox.)"
+  },
+  {
+   "id": "el-brocal",
+   "nombre": "El Brocal",
+   "grupo": "g-benavides",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 1800,
+   "empleados_aprox": 1500,
+   "nota": "Polimetálica en Pasco; subsidiaria de Buenaventura.",
+   "fuente": "Memoria El Brocal (aprox.)"
+  },
+  {
+   "id": "cerro-verde",
+   "nombre": "Sociedad Minera Cerro Verde",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 16500,
+   "empleados_aprox": 6000,
+   "nota": "Una de las mayores minas de cobre del mundo (Arequipa). Freeport ~53.6%, Buenaventura ~19.6%, SMM Cerro Verde (Sumitomo) ~21%.",
+   "fuente": "Memoria Cerro Verde 2024 (aprox.)"
+  },
+  {
+   "id": "hochschild-mining",
+   "nombre": "Hochschild Mining",
+   "grupo": "g-hochschild",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 3600,
+   "empleados_aprox": 5000,
+   "nota": "Oro y plata (Perú y Brasil); listada en Londres.",
+   "fuente": "Annual Report Hochschild (aprox.)"
+  },
+  {
+   "id": "pacasmayo",
+   "nombre": "Cementos Pacasmayo",
+   "grupo": "g-hochschild",
+   "sector": "Cemento y construcción",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 2000,
+   "empleados_aprox": 1700,
+   "nota": "Cementera del norte del Perú; listada en NYSE y BVL.",
+   "fuente": "Memoria Pacasmayo 2024 (aprox.)"
+  },
+  {
+   "id": "saga-falabella",
+   "nombre": "Falabella Retail Perú (Saga Falabella)",
+   "grupo": "g-falabella",
+   "sector": "Retail",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 4500,
+   "empleados_aprox": 10000,
+   "nota": "Tiendas por departamento.",
+   "fuente": "Memoria Falabella Perú (aprox.)"
+  },
+  {
+   "id": "tottus",
+   "nombre": "Tottus",
+   "grupo": "g-falabella",
+   "sector": "Retail",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 4000,
+   "empleados_aprox": 12000,
+   "nota": "Supermercados.",
+   "fuente": "Memoria Falabella Perú (aprox.)"
+  },
+  {
+   "id": "sodimac",
+   "nombre": "Sodimac Perú",
+   "grupo": "g-falabella",
+   "sector": "Retail",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 3000,
+   "empleados_aprox": 8000,
+   "nota": "Mejoramiento del hogar (incluye Maestro).",
+   "fuente": "Memoria Falabella Perú (aprox.)"
+  },
+  {
+   "id": "banco-falabella",
+   "nombre": "Banco Falabella Perú",
+   "grupo": "g-falabella",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 900,
+   "empleados_aprox": 2500,
+   "nota": "Banca de consumo vinculada al retail.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "mallplaza",
+   "nombre": "Mallplaza Perú",
+   "grupo": "g-falabella",
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 400,
+   "empleados_aprox": 500,
+   "nota": "Centros comerciales (incluye los ex Open Plaza).",
+   "fuente": "Memoria Mallplaza (aprox.)"
+  },
+  {
+   "id": "scotiabank-peru",
+   "nombre": "Scotiabank Perú",
+   "grupo": "g-bns",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": 5000,
+   "empleados_aprox": 6000,
+   "nota": "Tercer banco del sistema.",
+   "fuente": "EEFF Scotiabank Perú (aprox.)"
+  },
+  {
+   "id": "profuturo-afp",
+   "nombre": "Profuturo AFP",
+   "grupo": "g-bns",
+   "sector": "AFP y fondos",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 380,
+   "empleados_aprox": 500,
+   "nota": "AFP del grupo Scotiabank.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "afp-integra",
+   "nombre": "AFP Integra",
+   "grupo": "g-sura",
+   "sector": "AFP y fondos",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 450,
+   "empleados_aprox": 600,
+   "nota": "Mayor AFP por fondos administrados; inversionista institucional en la BVL.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "afp-habitat",
+   "nombre": "AFP Habitat Perú",
+   "grupo": "g-habitat",
+   "sector": "AFP y fondos",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 250,
+   "empleados_aprox": 400,
+   "nota": "AFP de matriz chilena; ganó licitaciones de afiliados nuevos.",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "id": "aenza",
+   "nombre": "AENZA (ex Graña y Montero)",
+   "grupo": "g-ig4",
+   "sector": "Infraestructura",
+   "tipo": "holding",
+   "bvl": true,
+   "ingresos_aprox": 5000,
+   "empleados_aprox": 12000,
+   "nota": "Mayor grupo de ingeniería e infraestructura; controlado por IG4 Capital tras crisis reputacional.",
+   "fuente": "Memoria AENZA (aprox.)"
+  },
+  {
+   "id": "cumbra",
+   "nombre": "Cumbra (ex GyM)",
+   "grupo": "g-ig4",
+   "sector": "Infraestructura",
+   "tipo": "empresa",
+   "bvl": false,
+   "ingresos_aprox": 2500,
+   "empleados_aprox": 8000,
+   "nota": "Constructora insignia de AENZA.",
+   "fuente": "Memoria AENZA (aprox.)"
+  },
+  {
+   "id": "southern-copper",
+   "nombre": "Southern Copper Corporation",
+   "grupo": "g-grupo-mexico",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Cobre (Toquepala, Cuajone); cotiza NYSE y BVL (SCCO/SPCCPI2).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "México"
+  },
+  {
+   "id": "volcan",
+   "nombre": "Volcan Compañía Minera",
+   "grupo": "g-glencore",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Polimetálica (zinc, plomo, plata); controlada por Glencore (VOLCABC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Suiza"
+  },
+  {
+   "id": "nexa-peru",
+   "nombre": "Nexa Resources Perú (ex Milpo)",
+   "grupo": "g-votorantim",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Zinc/cobre/plomo (Cerro Lindo, El Porvenir); Votorantim (NEXAPEC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Brasil"
+  },
+  {
+   "id": "nexa-atacocha",
+   "nombre": "Nexa Resources Atacocha (ex Atacocha)",
+   "grupo": "g-votorantim",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Polimetálica controlada por Nexa Perú (ATACOBC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Brasil"
+  },
+  {
+   "id": "sierra-metals",
+   "nombre": "Sierra Metals",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Polimetálica (mina Yauricocha); cotiza Toronto/NYSE y BVL.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Canadá"
+  },
+  {
+   "id": "shougang-hierro",
+   "nombre": "Shougang Hierro Perú",
+   "grupo": "g-shougang",
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Único gran productor de hierro del país (Marcona). Cap ~S/10.7 mil M (SHPC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "China"
+  },
+  {
+   "id": "poderosa",
+   "nombre": "Compañía Minera Poderosa",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Oro en Pataz (La Libertad); capital peruano (PODERC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "minera-irl",
+   "nombre": "Minera IRL",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Junior de oro (proyecto Ollachea, Puno); trading limitado.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Reino Unido"
+  },
+  {
+   "id": "minera-corona",
+   "nombre": "Sociedad Minera Corona",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Polimetálica (mina Yauricocha, operada con Sierra Metals).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "minera-santa-luisa",
+   "nombre": "Compañía Minera Santa Luisa",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Polimetálica (Huanzalá, Pallca); ligada a Mitsui Mining.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Japón"
+  },
+  {
+   "id": "simsa",
+   "nombre": "Minera San Ignacio de Morococha (SIMSA)",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Polimetálica en Junín; capital peruano.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "minera-andina-expl",
+   "nombre": "Minera Andina de Exploraciones",
+   "grupo": null,
+   "sector": "Minería",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Junior de exploración polimetálica; trading reducido.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "petroperu",
+   "nombre": "Petroperú",
+   "grupo": null,
+   "sector": "Energía y combustibles",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Petrolera estatal (Refinería de Talara); emisor de bonos (FONAFE).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "relapasa",
+   "nombre": "Refinería La Pampilla (Relapasa)",
+   "grupo": "g-repsol",
+   "sector": "Energía y combustibles",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Principal refinería privada; controlada por Repsol (RELAPAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "España"
+  },
+  {
+   "id": "engie-peru",
+   "nombre": "ENGIE Energía Perú (ex EnerSur)",
+   "grupo": "g-engie",
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Generación térmica, hidro y renovable (ENGIEC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Francia"
+  },
+  {
+   "id": "orygen-peru",
+   "nombre": "Orygen Perú (ex Enel Generación / Edegel)",
+   "grupo": "g-actis",
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Principal generadora privada; ex Enel, hoy Actis/Niagara (ORYGENC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Reino Unido"
+  },
+  {
+   "id": "enel-distribucion",
+   "nombre": "Enel Distribución Perú (ex Edelnor)",
+   "grupo": "g-actis",
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Distribuidora de Lima norte; ex Enel, hoy Actis/Niagara.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Reino Unido"
+  },
+  {
+   "id": "luz-del-sur",
+   "nombre": "Luz del Sur",
+   "grupo": "g-ctg",
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Distribuidora de Lima sur; controlada por China Three Gorges (LUSURC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "China"
+  },
+  {
+   "id": "electro-dunas",
+   "nombre": "Electro Dunas",
+   "grupo": null,
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Distribuidora del centro-sur (Ica, Huancavelica, Ayacucho).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "statkraft-peru",
+   "nombre": "Statkraft Perú",
+   "grupo": "g-statkraft",
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Generadora hidroeléctrica (ex SN Power/Cheves); emisor de deuda.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Noruega"
+  },
+  {
+   "id": "celepsa",
+   "nombre": "CELEPSA (El Platanal)",
+   "grupo": "g-unacem",
+   "sector": "Servicios públicos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Hidroeléctrica El Platanal (Cañete) del Grupo UNACEM.",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "unacem",
+   "nombre": "UNACEM Corp",
+   "grupo": "g-unacem",
+   "sector": "Cemento y construcción",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Mayor cementera del país (Andino + Atocongo) (UNACEMC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "aceros-arequipa",
+   "nombre": "Corporación Aceros Arequipa",
+   "grupo": "g-aceros-arequipa",
+   "sector": "Industria y maquinaria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Mayor siderúrgica del país (barras, perfiles) (CORAREC1/CORAREI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "siderperu",
+   "nombre": "Siderperú",
+   "grupo": "g-gerdau",
+   "sector": "Industria y maquinaria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Siderúrgica de Chimbote controlada por Gerdau (SIDERC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Brasil"
+  },
+  {
+   "id": "austral-group",
+   "nombre": "Austral Group",
+   "grupo": "g-austevoll",
+   "sector": "Pesca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Pesquera de harina/aceite y consumo humano; Austevoll (AUSTRAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Noruega"
+  },
+  {
+   "id": "exalmar",
+   "nombre": "Pesquera Exalmar",
+   "grupo": "g-matta",
+   "sector": "Pesca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Pesquera de harina/aceite y CHD; capital peruano (EXALMC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "banco-pichincha",
+   "nombre": "Banco Pichincha Perú (ex Banco Financiero)",
+   "grupo": "g-pichincha",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Banco múltiple del grupo ecuatoriano Pichincha (BPICHC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Ecuador"
+  },
+  {
+   "id": "alfin-banco",
+   "nombre": "Alfin Banco (ex Banco Azteca)",
+   "grupo": "g-coril",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Banca de consumo; ex Banco Azteca (ALFINAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "credinka",
+   "nombre": "Financiera Credinka",
+   "grupo": "g-diviso",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Microfinanzas rurales del grupo Diviso (FCREDIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "financiera-confianza",
+   "nombre": "Financiera Confianza",
+   "grupo": "g-bbva-mf",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Microfinanzas de la Fundación BBVA Microfinanzas (FCONFIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "España"
+  },
+  {
+   "id": "proempresa",
+   "nombre": "Financiera ProEmpresa",
+   "grupo": null,
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Microfinanzas de origen ONG (IDESI) (FPROEMC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "caja-los-andes",
+   "nombre": "Caja Rural Los Andes",
+   "grupo": null,
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Caja rural andina con valores inscritos (CRANDEC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "grupo-bvl",
+   "nombre": "Grupo BVL (Bolsa de Valores de Lima)",
+   "grupo": "g-bvl",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Operador de la bolsa; holding (GBVLAC1/GBVLBC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "cavali",
+   "nombre": "Cavali ICLV",
+   "grupo": "g-bvl",
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Depositario central de valores (registro y liquidación) (CAVALIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "infinance-xp",
+   "nombre": "InFinance XP",
+   "grupo": null,
+   "sector": "Finanzas y banca",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Entidad financiera no bancaria con valores inscritos (INFIXPC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "la-positiva",
+   "nombre": "La Positiva Seguros",
+   "grupo": "g-la-positiva",
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Aseguradora arequipeña de capital peruano (POSITIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "mapfre-peru",
+   "nombre": "Mapfre Perú",
+   "grupo": "g-mapfre",
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Filial peruana de la aseguradora española Mapfre (MAPFSGC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "España"
+  },
+  {
+   "id": "vivir-seguros",
+   "nombre": "Vivir Seguros",
+   "grupo": null,
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Aseguradora de vida con valores inscritos (VIVSEGC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "qualitas-peru",
+   "nombre": "Quálitas Seguros Perú",
+   "grupo": "g-qualitas",
+   "sector": "Seguros",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Filial peruana de la aseguradora mexicana de autos Quálitas (QUALSGC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "México"
+  },
+  {
+   "id": "backus",
+   "nombre": "Unión de Cervecerías Backus y Johnston",
+   "grupo": "g-abinbev",
+   "sector": "Consumo masivo",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Cervecera dominante del país; AB InBev (BACKUSI1/BACKUAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Bélgica"
+  },
+  {
+   "id": "cerveceria-san-juan",
+   "nombre": "Cervecería San Juan",
+   "grupo": "g-abinbev",
+   "sector": "Consumo masivo",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Cervecera de la selva (Pucallpa); subsidiaria de Backus (SNJUANC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Bélgica"
+  },
+  {
+   "id": "laive",
+   "nombre": "Laive",
+   "grupo": null,
+   "sector": "Consumo masivo",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Segunda láctea del país (lácteos, embutidos, jugos) (LAIVEBC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "corporacion-lindley",
+   "nombre": "Corporación Lindley (Coca-Cola · Inca Kola)",
+   "grupo": "g-arca",
+   "sector": "Consumo masivo",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Embotellador de Coca-Cola e Inca Kola; Arca Continental (CORLINI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "México"
+  },
+  {
+   "id": "agro-laredo",
+   "nombre": "Agroindustrial Laredo",
+   "grupo": "g-manuelita",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Trujillo del grupo colombiano Manuelita (LAREDOC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": "Colombia"
+  },
+  {
+   "id": "agro-pomalca",
+   "nombre": "Agroindustrial Pomalca",
+   "grupo": "g-oviedo",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Lambayeque; grupo Oviedo (POMALCC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "agro-tuman",
+   "nombre": "Agroindustrial Tumán",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Lambayeque con conflictos societarios (TUMANC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "agro-pucala",
+   "nombre": "Agro Pucalá",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Lambayeque (ex Pucalá) (PUCALAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "agro-paramonga",
+   "nombre": "Agro Industrial Paramonga (AIPSA)",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de la costa norte-centro (PARAMOC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "andahuasi",
+   "nombre": "Azucarera Andahuasi",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Huaura (ANDAHUC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "cayalti",
+   "nombre": "Agrícola Cayaltí",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Agroindustrial azucarera de Lambayeque (CAYALTC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "san-jacinto",
+   "nombre": "Agroindustrias San Jacinto",
+   "grupo": "g-gloria",
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Áncash del grupo Gloria (SNJACIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "chucarapi",
+   "nombre": "Central Azucarera Chucarapi",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera de Arequipa (valle de Tambo) (CHUCARC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "agro-el-ingenio",
+   "nombre": "Azucarera El Ingenio",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Azucarera con valores inscritos (INGENIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "agricola-san-juan",
+   "nombre": "Empresa Agrícola San Juan",
+   "grupo": null,
+   "sector": "Agroindustria",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Agroexportadora con valores inscritos (ASJUANC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "inv-centenario",
+   "nombre": "Inversiones Centenario",
+   "grupo": "g-wiese",
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Desarrolladora inmobiliaria del grupo Wiese (INVCENC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "los-portales",
+   "nombre": "Los Portales",
+   "grupo": "g-raffo",
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Inmobiliaria, estacionamientos y hotelería (PORTAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "fibra-prime",
+   "nombre": "FIBRA Prime",
+   "grupo": null,
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Primer FIBRA del Perú (renta de bienes raíces) (FIBPRIME).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "activo-inmob-peruano",
+   "nombre": "Activo Inmobiliario Peruano",
+   "grupo": null,
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Vehículo de inversión inmobiliaria (AIPC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "inmobiliaria-sic",
+   "nombre": "Inmobiliaria SIC",
+   "grupo": null,
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Inmobiliaria con valores inscritos (ISICC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "futura-inmob",
+   "nombre": "Futura Consorcio Inmobiliario",
+   "grupo": null,
+   "sector": "Inmobiliario",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Inmobiliaria (FUTURAC1/FUTURAI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "integratel",
+   "nombre": "Integratel Perú",
+   "grupo": null,
+   "sector": "Telecomunicaciones",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Operador de telecom / infraestructura (INTPEBC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "creditex",
+   "nombre": "Creditex",
+   "grupo": "g-romero",
+   "sector": "Textil",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Textil de algodón pima; grupo Romero (CRETEXC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "universal-textil",
+   "nombre": "Compañía Universal Textil",
+   "grupo": null,
+   "sector": "Textil",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Fabricante de tejidos planos (UNITEXC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "textil-piura",
+   "nombre": "Industria Textil Piura",
+   "grupo": "g-romero",
+   "sector": "Textil",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Hilados de algodón pima; grupo Romero (PIURAC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "filamentos",
+   "nombre": "Filamentos Industriales",
+   "grupo": null,
+   "sector": "Textil",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Fabricante de filamentos/fibras textiles (FILAMEI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "michell",
+   "nombre": "Michell y Cía.",
+   "grupo": "g-michell",
+   "sector": "Textil",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Procesador y exportador de fibra de alpaca (Arequipa) (MICHEI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "cervesur",
+   "nombre": "Corporación Cervesur",
+   "grupo": "g-cervesur",
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding arequipeño diversificado (ex cervecero) (COCESUC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "inverfal",
+   "nombre": "Inverfal Perú",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding de inversiones (INVFALC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "inv-corp-a1",
+   "nombre": "Inversiones Corporativas A1",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding de inversiones (INVCO2C1/INVCORI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "gr-holding",
+   "nombre": "GR Holding",
+   "grupo": "g-raffo",
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding del grupo Raffo (matriz de Los Portales) (GRHOLDC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "andino-investment",
+   "nombre": "Andino Investment Holding",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding de servicios logísticos y portuarios (AIHC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "peru-holding-turismo",
+   "nombre": "Perú Holding de Turismo",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding de hotelería y turismo (PHTBC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "invertur",
+   "nombre": "Inversiones en Turismo (Invertur)",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Holding de turismo/hotelería (INVERTC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "el-comercio",
+   "nombre": "Empresa Editora El Comercio",
+   "grupo": "g-el-comercio",
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Mayor grupo de medios del país (diario El Comercio) (ELCOMEI1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "tradi",
+   "nombre": "Tradi",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Comercializadora de fierros y aceros de construcción (TRADIC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "hermes",
+   "nombre": "Hermes Transportes Blindados",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Transporte de valores y gestión de efectivo (HERMESC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  },
+  {
+   "id": "bosques-amazonicos",
+   "nombre": "Bosques Amazónicos (BAM)",
+   "grupo": null,
+   "sector": "Diversos",
+   "tipo": "empresa",
+   "bvl": true,
+   "ingresos_aprox": null,
+   "empleados_aprox": null,
+   "nota": "Reforestación y créditos de carbono en la Amazonía (BAMC1).",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "pais": null
+  }
+ ],
+ "personas": [
+  {
+   "id": "p-crp",
+   "nombre": "Carlos Rodríguez-Pastor Persivale",
+   "nota": "Cabeza de Intercorp."
+  },
+  {
+   "id": "p-drp",
+   "nombre": "Dionisio Romero Paoletti",
+   "nota": "Presidente del directorio de Credicorp y BCP; familia Romero."
+  },
+  {
+   "id": "p-lrb",
+   "nombre": "Luis Romero Belismelis",
+   "nota": "Presidente ejecutivo del Grupo Romero; preside Alicorp."
+  },
+  {
+   "id": "p-gferrari",
+   "nombre": "Gianfranco Ferrari de las Casas",
+   "nota": "CEO de Credicorp (desde 2022)."
+  },
+  {
+   "id": "p-afb",
+   "nombre": "Alex Fort Brescia",
+   "nota": "Copresidente de Breca; preside el directorio de BBVA Perú."
+  },
+  {
+   "id": "p-fbm",
+   "nombre": "Fortunato Brescia Moreyra",
+   "nota": "Copresidente de Breca; preside Minsur."
+  },
+  {
+   "id": "p-pbm",
+   "nombre": "Pedro Brescia Moreyra",
+   "nota": "Familia Brescia; preside Rímac."
+  },
+  {
+   "id": "p-jrr",
+   "nombre": "Jorge Rodríguez Rodríguez",
+   "nota": "Presidente del Grupo Gloria."
+  },
+  {
+   "id": "p-vrr",
+   "nombre": "Vito Rodríguez Rodríguez",
+   "nota": "Vicepresidente del Grupo Gloria."
+  },
+  {
+   "id": "p-rbg",
+   "nombre": "Roque Benavides Ganoza",
+   "nota": "Familia Benavides; histórico líder de Buenaventura."
+  },
+  {
+   "id": "p-ehb",
+   "nombre": "Eduardo Hochschild Beeck",
+   "nota": "Preside Hochschild Mining y Cementos Pacasmayo."
+  },
+  {
+   "id": "p-lfc",
+   "nombre": "Luis Felipe Castellanos",
+   "nota": "CEO de Intercorp Financial Services."
+  },
+  {
+   "id": "gg-alicorp",
+   "nombre": "Gonzalo Uribe Arbeláez",
+   "nota": "Gerente General de Alicorp (desde nov-2025).",
+   "cargo": "Gerente General",
+   "fuente": "Alicorp — comunicado de cambio en gerencia general (alicorp.com.pe)"
+  },
+  {
+   "id": "gg-interbank",
+   "nombre": "Carlos Tori Grande",
+   "nota": "Gerente General de Interbank.",
+   "cargo": "Gerente General",
+   "fuente": "Gestión — designación de gerente general de Interbank"
+  },
+  {
+   "id": "gg-bcp",
+   "nombre": "Christian Hausherr",
+   "nota": "Gerente General del BCP (designado 2024; verificar contra memoria SMV de BCP Perú).",
+   "cargo": "Gerente General",
+   "fuente": "La República (oct-2024) — designación de gerente general del BCP"
+  },
+  {
+   "id": "gg-minsur",
+   "nombre": "Juan Luis Kruger Sayán",
+   "nota": "Gerente General de Minsur.",
+   "cargo": "Gerente General",
+   "fuente": "Minsur — alta gerencia (minsur.com)"
+  },
+  {
+   "id": "gg-ferreycorp",
+   "nombre": "Mariela García Figari de Fabbri",
+   "nota": "Gerente General de Ferreycorp.",
+   "cargo": "Gerente General",
+   "fuente": "Ferreycorp — gobierno corporativo / directorio (ferreycorp.com.pe)"
+  },
+  {
+   "id": "gg-leche-gloria",
+   "nombre": "Cristiano Oliveira Sampaio",
+   "nota": "Gerente General de Leche Gloria.",
+   "cargo": "Gerente General",
+   "fuente": "Semana Económica — designación de gerente general de Leche Gloria"
+  },
+  {
+   "id": "gg-inretail",
+   "nombre": "Juan Carlos Vallejo Blanco",
+   "nota": "CEO / Gerente General de InRetail Perú.",
+   "cargo": "Gerente General",
+   "fuente": "InRetail — Datos de Información Anual 2024 (inretail.pe)"
+  },
+  {
+   "id": "gg-buenaventura",
+   "nombre": "Leandro García Raggio",
+   "nota": "CEO de Compañía de Minas Buenaventura.",
+   "cargo": "CEO",
+   "fuente": "Buenaventura — Annual Report / SEC 20-F"
+  },
+  {
+   "id": "gg-rimac",
+   "nombre": "Mario Potestá Martínez",
+   "nota": "Gerente General de Rímac Seguros (titular desde 2025).",
+   "cargo": "Gerente General",
+   "fuente": "Gestión — designación de gerente general de Rímac Seguros"
+  },
+  {
+   "id": "gg-aenza",
+   "nombre": "Francisco Sardón de Taboada",
+   "nota": "CEO / Gerente General de AENZA (desde ene-2026).",
+   "cargo": "CEO",
+   "fuente": "El Comercio — AENZA designa a Francisco Sardón como CEO"
+  }
+ ],
+ "propiedad": [
+  {
+   "de": "g-intercorp",
+   "a": "ifs",
+   "pct": 70,
+   "tipo": "control",
+   "fuente": "Memoria IFS (aprox.)"
+  },
+  {
+   "de": "ifs",
+   "a": "interbank",
+   "pct": 99,
+   "tipo": "control",
+   "fuente": "Memoria IFS"
+  },
+  {
+   "de": "ifs",
+   "a": "interseguro",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria IFS"
+  },
+  {
+   "de": "ifs",
+   "a": "inteligo",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria IFS"
+  },
+  {
+   "de": "g-intercorp",
+   "a": "inretail",
+   "pct": 70,
+   "tipo": "control",
+   "fuente": "Memoria InRetail (aprox.)"
+  },
+  {
+   "de": "inretail",
+   "a": "spsa",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "de": "inretail",
+   "a": "inkafarma",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "de": "inretail",
+   "a": "real-plaza",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "de": "g-intercorp",
+   "a": "utp",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Intercorp Education"
+  },
+  {
+   "de": "g-intercorp",
+   "a": "innova-schools",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Intercorp Education"
+  },
+  {
+   "de": "g-intercorp",
+   "a": "cineplanet",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Cineplex"
+  },
+  {
+   "de": "g-intercorp",
+   "a": "casa-andina",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Sitio corporativo"
+  },
+  {
+   "de": "g-intercorp",
+   "a": "financiera-oh",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "de": "g-romero",
+   "a": "credicorp",
+   "pct": 16,
+   "tipo": "participacion",
+   "fuente": "Form 20-F (accionista de referencia, aprox.)"
+  },
+  {
+   "de": "g-credicorp",
+   "a": "credicorp",
+   "pct": null,
+   "tipo": "matriz",
+   "fuente": "Estructura societaria"
+  },
+  {
+   "de": "credicorp",
+   "a": "bcp",
+   "pct": 97,
+   "tipo": "control",
+   "fuente": "Form 20-F"
+  },
+  {
+   "de": "bcp",
+   "a": "mibanco",
+   "pct": 95,
+   "tipo": "control",
+   "fuente": "Memoria BCP (aprox.)"
+  },
+  {
+   "de": "credicorp",
+   "a": "pacifico",
+   "pct": 98,
+   "tipo": "control",
+   "fuente": "Form 20-F (aprox.)"
+  },
+  {
+   "de": "credicorp",
+   "a": "prima-afp",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Form 20-F"
+  },
+  {
+   "de": "credicorp",
+   "a": "credicorp-capital",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Form 20-F"
+  },
+  {
+   "de": "g-romero",
+   "a": "alicorp",
+   "pct": 46,
+   "tipo": "control",
+   "fuente": "Memoria Alicorp (aprox.)"
+  },
+  {
+   "de": "alicorp",
+   "a": "vitapro",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria Alicorp"
+  },
+  {
+   "de": "g-romero",
+   "a": "primax",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Primax"
+  },
+  {
+   "de": "g-romero",
+   "a": "ransa",
+   "pct": null,
+   "tipo": "participacion",
+   "fuente": "Vínculo histórico; control vendido a H.I.G. (2021)"
+  },
+  {
+   "de": "g-romero",
+   "a": "palmas",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Palmas"
+  },
+  {
+   "de": "g-breca",
+   "a": "rimac",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Rímac"
+  },
+  {
+   "de": "g-breca",
+   "a": "minsur",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Minsur"
+  },
+  {
+   "de": "minsur",
+   "a": "marcobre",
+   "pct": 60,
+   "tipo": "control",
+   "fuente": "Memoria Minsur"
+  },
+  {
+   "de": "g-breca",
+   "a": "tasa",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria TASA"
+  },
+  {
+   "de": "g-breca",
+   "a": "intursa",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Intursa"
+  },
+  {
+   "de": "g-breca",
+   "a": "urbanova",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Sitio corporativo"
+  },
+  {
+   "de": "rimac",
+   "a": "clinica-internacional",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Sitio corporativo (aprox.)"
+  },
+  {
+   "de": "g-breca",
+   "a": "holding-continental",
+   "pct": 50,
+   "tipo": "participacion",
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "de": "g-bbva",
+   "a": "holding-continental",
+   "pct": 50,
+   "tipo": "participacion",
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "de": "holding-continental",
+   "a": "bbva-peru",
+   "pct": 92,
+   "tipo": "control",
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "de": "g-gloria",
+   "a": "leche-gloria",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Leche Gloria"
+  },
+  {
+   "de": "g-gloria",
+   "a": "yura",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Yura"
+  },
+  {
+   "de": "g-gloria",
+   "a": "coazucar",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Coazucar"
+  },
+  {
+   "de": "coazucar",
+   "a": "casa-grande",
+   "pct": 57,
+   "tipo": "control",
+   "fuente": "Memoria Casa Grande"
+  },
+  {
+   "de": "coazucar",
+   "a": "cartavio",
+   "pct": 90,
+   "tipo": "control",
+   "fuente": "Memoria Cartavio (aprox.)"
+  },
+  {
+   "de": "g-gloria",
+   "a": "trupal",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Trupal"
+  },
+  {
+   "de": "g-ferreycorp",
+   "a": "ferreycorp",
+   "pct": null,
+   "tipo": "matriz",
+   "fuente": "Estructura societaria"
+  },
+  {
+   "de": "ferreycorp",
+   "a": "ferreyros",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria Ferreycorp"
+  },
+  {
+   "de": "ferreycorp",
+   "a": "unimaq",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria Ferreycorp"
+  },
+  {
+   "de": "ferreycorp",
+   "a": "soltrak",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria Ferreycorp"
+  },
+  {
+   "de": "g-benavides",
+   "a": "buenaventura",
+   "pct": 27,
+   "tipo": "participacion",
+   "fuente": "Form 20-F (aprox.)"
+  },
+  {
+   "de": "buenaventura",
+   "a": "el-brocal",
+   "pct": 61,
+   "tipo": "control",
+   "fuente": "Memoria El Brocal (aprox.)"
+  },
+  {
+   "de": "buenaventura",
+   "a": "cerro-verde",
+   "pct": 19.58,
+   "tipo": "participacion",
+   "fuente": "Memoria Cerro Verde"
+  },
+  {
+   "de": "g-freeport",
+   "a": "cerro-verde",
+   "pct": 53.56,
+   "tipo": "control",
+   "fuente": "Memoria Cerro Verde"
+  },
+  {
+   "de": "g-hochschild",
+   "a": "hochschild-mining",
+   "pct": 38,
+   "tipo": "control",
+   "fuente": "Annual Report (aprox.)"
+  },
+  {
+   "de": "g-hochschild",
+   "a": "pacasmayo",
+   "pct": 50,
+   "tipo": "control",
+   "fuente": "Memoria Pacasmayo (vía Inv. ASPI, aprox.)"
+  },
+  {
+   "de": "g-falabella",
+   "a": "saga-falabella",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Falabella Perú"
+  },
+  {
+   "de": "g-falabella",
+   "a": "tottus",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Falabella Perú"
+  },
+  {
+   "de": "g-falabella",
+   "a": "sodimac",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Falabella Perú"
+  },
+  {
+   "de": "g-falabella",
+   "a": "banco-falabella",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "SBS"
+  },
+  {
+   "de": "g-falabella",
+   "a": "mallplaza",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "Memoria Mallplaza"
+  },
+  {
+   "de": "g-bns",
+   "a": "scotiabank-peru",
+   "pct": 98,
+   "tipo": "control",
+   "fuente": "Memoria Scotiabank Perú (aprox.)"
+  },
+  {
+   "de": "scotiabank-peru",
+   "a": "profuturo-afp",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "SBS (aprox.)"
+  },
+  {
+   "de": "g-sura",
+   "a": "afp-integra",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "SBS"
+  },
+  {
+   "de": "g-habitat",
+   "a": "afp-habitat",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "SBS"
+  },
+  {
+   "de": "g-ig4",
+   "a": "aenza",
+   "pct": 25,
+   "tipo": "control",
+   "fuente": "Hechos de importancia SMV (control efectivo, aprox.)"
+  },
+  {
+   "de": "aenza",
+   "a": "cumbra",
+   "pct": 100,
+   "tipo": "control",
+   "fuente": "Memoria AENZA"
+  },
+  {
+   "de": "prima-afp",
+   "a": "alicorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "prima-afp",
+   "a": "ferreycorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "prima-afp",
+   "a": "inretail",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "afp-integra",
+   "a": "credicorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "afp-integra",
+   "a": "alicorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "afp-integra",
+   "a": "buenaventura",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "afp-integra",
+   "a": "ferreycorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "profuturo-afp",
+   "a": "credicorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "profuturo-afp",
+   "a": "inretail",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "afp-habitat",
+   "a": "ferreycorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "afp-habitat",
+   "a": "alicorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera AFP (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "prima-afp",
+   "a": "credicorp",
+   "pct": null,
+   "tipo": "portafolio",
+   "fuente": "Cartera Prima AFP — Credicorp es la mayor ponderación de la BVL (SBS/SMV, aprox.)"
+  },
+  {
+   "de": "g-grupo-mexico",
+   "a": "southern-copper",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-glencore",
+   "a": "volcan",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-votorantim",
+   "a": "nexa-peru",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-votorantim",
+   "a": "nexa-atacocha",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-shougang",
+   "a": "shougang-hierro",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-repsol",
+   "a": "relapasa",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-engie",
+   "a": "engie-peru",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-actis",
+   "a": "orygen-peru",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-actis",
+   "a": "enel-distribucion",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-ctg",
+   "a": "luz-del-sur",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-statkraft",
+   "a": "statkraft-peru",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-unacem",
+   "a": "celepsa",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-unacem",
+   "a": "unacem",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-aceros-arequipa",
+   "a": "aceros-arequipa",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-gerdau",
+   "a": "siderperu",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-austevoll",
+   "a": "austral-group",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-matta",
+   "a": "exalmar",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-pichincha",
+   "a": "banco-pichincha",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-coril",
+   "a": "alfin-banco",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-diviso",
+   "a": "credinka",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-bbva-mf",
+   "a": "financiera-confianza",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-bvl",
+   "a": "grupo-bvl",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-bvl",
+   "a": "cavali",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-la-positiva",
+   "a": "la-positiva",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-mapfre",
+   "a": "mapfre-peru",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-qualitas",
+   "a": "qualitas-peru",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-abinbev",
+   "a": "backus",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-abinbev",
+   "a": "cerveceria-san-juan",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-arca",
+   "a": "corporacion-lindley",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-manuelita",
+   "a": "agro-laredo",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-oviedo",
+   "a": "agro-pomalca",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-gloria",
+   "a": "san-jacinto",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-wiese",
+   "a": "inv-centenario",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-raffo",
+   "a": "los-portales",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-romero",
+   "a": "creditex",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-romero",
+   "a": "textil-piura",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-michell",
+   "a": "michell",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-cervesur",
+   "a": "cervesur",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-raffo",
+   "a": "gr-holding",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  },
+  {
+   "de": "g-el-comercio",
+   "a": "el-comercio",
+   "pct": null,
+   "tipo": "control",
+   "fuente": "BVL — listado de emisores / SMV (verificado 2025)"
+  }
+ ],
+ "directorios": [
+  {
+   "persona": "p-crp",
+   "empresa": "ifs",
+   "rol": "presidente",
+   "fuente": "Memoria IFS 2024"
+  },
+  {
+   "persona": "p-crp",
+   "empresa": "interbank",
+   "rol": "presidente",
+   "fuente": "Memoria Interbank"
+  },
+  {
+   "persona": "p-crp",
+   "empresa": "inretail",
+   "rol": "presidente",
+   "fuente": "Memoria InRetail"
+  },
+  {
+   "persona": "p-lfc",
+   "empresa": "ifs",
+   "rol": "gerente_general",
+   "fuente": "Memoria IFS"
+  },
+  {
+   "persona": "p-lfc",
+   "empresa": "interbank",
+   "rol": "director",
+   "fuente": "Memoria Interbank (aprox.)"
+  },
+  {
+   "persona": "p-drp",
+   "empresa": "credicorp",
+   "rol": "presidente",
+   "fuente": "Form 20-F 2024"
+  },
+  {
+   "persona": "p-drp",
+   "empresa": "bcp",
+   "rol": "presidente",
+   "fuente": "Memoria BCP"
+  },
+  {
+   "persona": "p-drp",
+   "empresa": "alicorp",
+   "rol": "director",
+   "fuente": "Memoria Alicorp (aprox.)"
+  },
+  {
+   "persona": "p-lrb",
+   "empresa": "alicorp",
+   "rol": "presidente",
+   "fuente": "Memoria Alicorp"
+  },
+  {
+   "persona": "p-lrb",
+   "empresa": "primax",
+   "rol": "presidente",
+   "fuente": "Memoria Primax (aprox.)"
+  },
+  {
+   "persona": "p-lrb",
+   "empresa": "credicorp",
+   "rol": "director",
+   "fuente": "Form 20-F (aprox.)"
+  },
+  {
+   "persona": "p-gferrari",
+   "empresa": "credicorp",
+   "rol": "gerente_general",
+   "fuente": "Form 20-F"
+  },
+  {
+   "persona": "p-gferrari",
+   "empresa": "bcp",
+   "rol": "director",
+   "fuente": "Memoria BCP (aprox.)"
+  },
+  {
+   "persona": "p-afb",
+   "empresa": "bbva-peru",
+   "rol": "presidente",
+   "fuente": "Memoria BBVA Perú"
+  },
+  {
+   "persona": "p-afb",
+   "empresa": "rimac",
+   "rol": "director",
+   "fuente": "Memoria Rímac (aprox.)"
+  },
+  {
+   "persona": "p-afb",
+   "empresa": "minsur",
+   "rol": "director",
+   "fuente": "Memoria Minsur (aprox.)"
+  },
+  {
+   "persona": "p-fbm",
+   "empresa": "minsur",
+   "rol": "presidente",
+   "fuente": "Memoria Minsur"
+  },
+  {
+   "persona": "p-fbm",
+   "empresa": "tasa",
+   "rol": "director",
+   "fuente": "Memoria TASA (aprox.)"
+  },
+  {
+   "persona": "p-fbm",
+   "empresa": "bbva-peru",
+   "rol": "director",
+   "fuente": "Memoria BBVA Perú (aprox.)"
+  },
+  {
+   "persona": "p-pbm",
+   "empresa": "rimac",
+   "rol": "presidente",
+   "fuente": "Memoria Rímac"
+  },
+  {
+   "persona": "p-pbm",
+   "empresa": "intursa",
+   "rol": "director",
+   "fuente": "Memoria Intursa (aprox.)"
+  },
+  {
+   "persona": "p-jrr",
+   "empresa": "leche-gloria",
+   "rol": "presidente",
+   "fuente": "Memoria Leche Gloria"
+  },
+  {
+   "persona": "p-jrr",
+   "empresa": "yura",
+   "rol": "presidente",
+   "fuente": "Memoria Yura"
+  },
+  {
+   "persona": "p-jrr",
+   "empresa": "coazucar",
+   "rol": "presidente",
+   "fuente": "Memoria Coazucar"
+  },
+  {
+   "persona": "p-vrr",
+   "empresa": "leche-gloria",
+   "rol": "director",
+   "fuente": "Memoria Leche Gloria"
+  },
+  {
+   "persona": "p-vrr",
+   "empresa": "yura",
+   "rol": "director",
+   "fuente": "Memoria Yura"
+  },
+  {
+   "persona": "p-vrr",
+   "empresa": "trupal",
+   "rol": "presidente",
+   "fuente": "Memoria Trupal (aprox.)"
+  },
+  {
+   "persona": "p-rbg",
+   "empresa": "buenaventura",
+   "rol": "director",
+   "fuente": "Memoria Buenaventura"
+  },
+  {
+   "persona": "p-rbg",
+   "empresa": "el-brocal",
+   "rol": "director",
+   "fuente": "Memoria El Brocal (aprox.)"
+  },
+  {
+   "persona": "p-rbg",
+   "empresa": "cerro-verde",
+   "rol": "director",
+   "fuente": "Memoria Cerro Verde (representación de Buenaventura, aprox.)"
+  },
+  {
+   "persona": "p-ehb",
+   "empresa": "hochschild-mining",
+   "rol": "presidente",
+   "fuente": "Annual Report Hochschild"
+  },
+  {
+   "persona": "p-ehb",
+   "empresa": "pacasmayo",
+   "rol": "presidente",
+   "fuente": "Memoria Pacasmayo"
+  },
+  {
+   "persona": "gg-alicorp",
+   "empresa": "alicorp",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-interbank",
+   "empresa": "interbank",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-bcp",
+   "empresa": "bcp",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-minsur",
+   "empresa": "minsur",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-ferreycorp",
+   "empresa": "ferreycorp",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-leche-gloria",
+   "empresa": "leche-gloria",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-inretail",
+   "empresa": "inretail",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-buenaventura",
+   "empresa": "buenaventura",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-rimac",
+   "empresa": "rimac",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  },
+  {
+   "persona": "gg-aenza",
+   "empresa": "aenza",
+   "rol": "gerente_general",
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
+  }
+ ],
+ "finanzas": {
+  "_nota": "Cifras en millones de S/ aprox. (EEFF auditados 2023–2024 / memorias / Form 20-F). En bancos y aseguradoras el EBITDA no aplica (estructura de balance distinta): se deja en null. market_cap solo para emisores listados. Verificar contra la fuente primaria antes de citar.",
+  "credicorp": {
+   "ebitda": null,
+   "utilidad": 5500,
+   "activos": 270000,
+   "patrimonio": 36000,
+   "market_cap": 138000
+  },
+  "bcp": {
+   "ebitda": null,
+   "utilidad": 5000,
+   "activos": 230000,
+   "patrimonio": 30000,
+   "market_cap": null
+  },
+  "mibanco": {
+   "ebitda": null,
+   "utilidad": 320,
+   "activos": 15000,
+   "patrimonio": 2600,
+   "market_cap": null
+  },
+  "pacifico": {
+   "ebitda": null,
+   "utilidad": 620,
+   "activos": 16000,
+   "patrimonio": 3500,
+   "market_cap": null
+  },
+  "prima-afp": {
+   "ebitda": null,
+   "utilidad": 230,
+   "activos": 2000,
+   "patrimonio": 1100,
+   "market_cap": null
+  },
+  "credicorp-capital": {
+   "ebitda": null,
+   "utilidad": 110,
+   "activos": 6000,
+   "patrimonio": 1200,
+   "market_cap": null
+  },
+  "ifs": {
+   "ebitda": null,
+   "utilidad": 1550,
+   "activos": 90000,
+   "patrimonio": 11000,
+   "market_cap": 12500
+  },
+  "interbank": {
+   "ebitda": null,
+   "utilidad": 1150,
+   "activos": 75000,
+   "patrimonio": 9000,
+   "market_cap": null
+  },
+  "interseguro": {
+   "ebitda": null,
+   "utilidad": 210,
+   "activos": 14000,
+   "patrimonio": 1200,
+   "market_cap": null
+  },
+  "inteligo": {
+   "ebitda": null,
+   "utilidad": 230,
+   "activos": 9000,
+   "patrimonio": 1600,
+   "market_cap": null
+  },
+  "bbva-peru": {
+   "ebitda": null,
+   "utilidad": 1650,
+   "activos": 110000,
+   "patrimonio": 12000,
+   "market_cap": null
+  },
+  "scotiabank-peru": {
+   "ebitda": null,
+   "utilidad": 900,
+   "activos": 85000,
+   "patrimonio": 11000,
+   "market_cap": null
+  },
+  "banco-falabella": {
+   "ebitda": null,
+   "utilidad": 150,
+   "activos": 6000,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "financiera-oh": {
+   "ebitda": null,
+   "utilidad": 120,
+   "activos": 4500,
+   "patrimonio": 800,
+   "market_cap": null
+  },
+  "rimac": {
+   "ebitda": null,
+   "utilidad": 520,
+   "activos": 18000,
+   "patrimonio": 3000,
+   "market_cap": null
+  },
+  "profuturo-afp": {
+   "ebitda": null,
+   "utilidad": 180,
+   "activos": 1500,
+   "patrimonio": 800,
+   "market_cap": null
+  },
+  "afp-integra": {
+   "ebitda": null,
+   "utilidad": 220,
+   "activos": 1800,
+   "patrimonio": 1000,
+   "market_cap": null
+  },
+  "afp-habitat": {
+   "ebitda": null,
+   "utilidad": 90,
+   "activos": 700,
+   "patrimonio": 400,
+   "market_cap": null
+  },
+  "inretail": {
+   "ebitda": 3000,
+   "utilidad": 900,
+   "activos": 25000,
+   "patrimonio": 8000,
+   "market_cap": 14000
+  },
+  "spsa": {
+   "ebitda": 950,
+   "utilidad": 260,
+   "activos": 8500,
+   "patrimonio": 2200,
+   "market_cap": null
+  },
+  "inkafarma": {
+   "ebitda": 900,
+   "utilidad": 240,
+   "activos": 7000,
+   "patrimonio": 2000,
+   "market_cap": null
+  },
+  "real-plaza": {
+   "ebitda": 620,
+   "utilidad": 300,
+   "activos": 6500,
+   "patrimonio": 3200,
+   "market_cap": null
+  },
+  "alicorp": {
+   "ebitda": 1400,
+   "utilidad": 400,
+   "activos": 12000,
+   "patrimonio": 5000,
+   "market_cap": 5500
+  },
+  "vitapro": {
+   "ebitda": 350,
+   "utilidad": 120,
+   "activos": 2500,
+   "patrimonio": 1100,
+   "market_cap": null
+  },
+  "primax": {
+   "ebitda": 900,
+   "utilidad": 350,
+   "activos": 7000,
+   "patrimonio": 2500,
+   "market_cap": null
+  },
+  "ransa": {
+   "ebitda": 230,
+   "utilidad": 70,
+   "activos": 2000,
+   "patrimonio": 800,
+   "market_cap": null
+  },
+  "palmas": {
+   "ebitda": 200,
+   "utilidad": 90,
+   "activos": 1800,
+   "patrimonio": 1100,
+   "market_cap": null
+  },
+  "minsur": {
+   "ebitda": 3000,
+   "utilidad": 1500,
+   "activos": 15000,
+   "patrimonio": 8000,
+   "market_cap": 10500
+  },
+  "marcobre": {
+   "ebitda": 1900,
+   "utilidad": 800,
+   "activos": 6500,
+   "patrimonio": 2800,
+   "market_cap": null
+  },
+  "tasa": {
+   "ebitda": 520,
+   "utilidad": 180,
+   "activos": 3500,
+   "patrimonio": 1800,
+   "market_cap": null
+  },
+  "clinica-internacional": {
+   "ebitda": 180,
+   "utilidad": 60,
+   "activos": 1500,
+   "patrimonio": 700,
+   "market_cap": null
+  },
+  "leche-gloria": {
+   "ebitda": 700,
+   "utilidad": 350,
+   "activos": 6000,
+   "patrimonio": 3500,
+   "market_cap": 3000
+  },
+  "yura": {
+   "ebitda": 900,
+   "utilidad": 500,
+   "activos": 7000,
+   "patrimonio": 3500,
+   "market_cap": 4200
+  },
+  "coazucar": {
+   "ebitda": 600,
+   "utilidad": 200,
+   "activos": 5500,
+   "patrimonio": 2800,
+   "market_cap": null
+  },
+  "casa-grande": {
+   "ebitda": 220,
+   "utilidad": 110,
+   "activos": 2000,
+   "patrimonio": 1500,
+   "market_cap": 1200
+  },
+  "cartavio": {
+   "ebitda": 170,
+   "utilidad": 80,
+   "activos": 1500,
+   "patrimonio": 1100,
+   "market_cap": 750
+  },
+  "trupal": {
+   "ebitda": 150,
+   "utilidad": 60,
+   "activos": 1100,
+   "patrimonio": 600,
+   "market_cap": null
+  },
+  "ferreycorp": {
+   "ebitda": 1100,
+   "utilidad": 600,
+   "activos": 9000,
+   "patrimonio": 3800,
+   "market_cap": 3500
+  },
+  "ferreyros": {
+   "ebitda": 700,
+   "utilidad": 380,
+   "activos": 5500,
+   "patrimonio": 2200,
+   "market_cap": null
+  },
+  "buenaventura": {
+   "ebitda": 1200,
+   "utilidad": 600,
+   "activos": 14000,
+   "patrimonio": 9000,
+   "market_cap": 13000
+  },
+  "el-brocal": {
+   "ebitda": 450,
+   "utilidad": 180,
+   "activos": 3500,
+   "patrimonio": 1800,
+   "market_cap": null
+  },
+  "cerro-verde": {
+   "ebitda": 7000,
+   "utilidad": 3500,
+   "activos": 20000,
+   "patrimonio": 14000,
+   "market_cap": null
+  },
+  "hochschild-mining": {
+   "ebitda": 1200,
+   "utilidad": 300,
+   "activos": 6000,
+   "patrimonio": 3000,
+   "market_cap": 7000
+  },
+  "pacasmayo": {
+   "ebitda": 500,
+   "utilidad": 250,
+   "activos": 4000,
+   "patrimonio": 2000,
+   "market_cap": 2500
+  },
+  "saga-falabella": {
+   "ebitda": 380,
+   "utilidad": 110,
+   "activos": 3500,
+   "patrimonio": 1200,
+   "market_cap": null
+  },
+  "tottus": {
+   "ebitda": 340,
+   "utilidad": 90,
+   "activos": 3200,
+   "patrimonio": 1000,
+   "market_cap": null
+  },
+  "sodimac": {
+   "ebitda": 260,
+   "utilidad": 70,
+   "activos": 2600,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "aenza": {
+   "ebitda": 420,
+   "utilidad": 150,
+   "activos": 6000,
+   "patrimonio": 1500,
+   "market_cap": 1500
+  },
+  "cumbra": {
+   "ebitda": 230,
+   "utilidad": 90,
+   "activos": 3000,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "shougang-hierro": {
+   "ebitda": null,
+   "utilidad": null,
+   "activos": null,
+   "patrimonio": null,
+   "market_cap": 10710
+  },
+  "inv-centenario": {
+   "ebitda": null,
+   "utilidad": null,
+   "activos": null,
+   "patrimonio": null,
+   "market_cap": 496
+  }
+ },
+ "temporal": {
+  "_nota": "Hitos corporativos documentados (años aproximados) y trayectoria de ingresos por grupo en S/ miles de millones (ILUSTRATIVA, para mostrar forma de crecimiento; no son cifras auditadas año a año). Verificar antes de citar.",
+  "eventos": [
+   {
+    "anio": 1994,
+    "tipo": "fundacion",
+    "grupo": "g-intercorp",
+    "titulo": "Rodríguez-Pastor compra el Banco Internacional (luego Interbank)",
+    "descripcion": "Nace el núcleo del futuro conglomerado Intercorp.",
+    "fuente": "Memoria Intercorp"
+   },
+   {
+    "anio": 1995,
+    "tipo": "consolidacion",
+    "grupo": "g-credicorp",
+    "titulo": "Se crea Credicorp como holding (cotiza en NYSE)",
+    "descripcion": "El BCP y sus afiliadas se agrupan bajo Credicorp Ltd., listado en Nueva York.",
+    "fuente": "Form 20-F Credicorp"
+   },
+   {
+    "anio": 2004,
+    "tipo": "fusion",
+    "grupo": "g-gloria",
+    "titulo": "Grupo Gloria consolida el negocio azucarero (Coazucar)",
+    "descripcion": "Adquisición de Casa Grande y otras azucareras del norte.",
+    "fuente": "Memoria Coazucar"
+   },
+   {
+    "anio": 2007,
+    "tipo": "salida_bolsa",
+    "grupo": "g-intercorp",
+    "titulo": "InRetail e IFS preparan su expansión",
+    "descripcion": "El grupo estructura sus brazos de retail y financiero para listarlos.",
+    "fuente": "Memoria InRetail"
+   },
+   {
+    "anio": 2011,
+    "tipo": "salida_bolsa",
+    "grupo": "g-intercorp",
+    "titulo": "InRetail Perú sale a bolsa (BVL)",
+    "descripcion": "IPO que financia la expansión de supermercados, farmacias y malls.",
+    "fuente": "Memoria InRetail"
+   },
+   {
+    "anio": 2018,
+    "tipo": "fusion",
+    "grupo": "g-intercorp",
+    "titulo": "Inkafarma + Mifarma: nace InRetail Pharma",
+    "descripcion": "La compra de Quicorp (Mifarma, BTL, Fasa) crea la mayor cadena de farmacias del país; observada por Indecopi.",
+    "fuente": "Hechos de importancia SMV / Indecopi"
+   },
+   {
+    "anio": 2019,
+    "tipo": "crisis",
+    "grupo": "g-ig4",
+    "titulo": "Graña y Montero en el caso Lava Jato",
+    "descripcion": "La crisis reputacional por colusión hunde el valor y abre la puerta a un nuevo controlador.",
+    "fuente": "Hechos de importancia SMV"
+   },
+   {
+    "anio": 2020,
+    "tipo": "cambio_control",
+    "grupo": "g-ig4",
+    "titulo": "El fondo IG4 Capital toma el control de Graña y Montero",
+    "descripcion": "El fondo brasileño se convierte en accionista de control del grupo de infraestructura.",
+    "fuente": "Hechos de importancia SMV"
+   },
+   {
+    "anio": 2021,
+    "tipo": "rebranding",
+    "grupo": "g-ig4",
+    "titulo": "Graña y Montero se renombra AENZA; GyM pasa a Cumbra",
+    "descripcion": "Cambio de marca para distanciarse del pasado reputacional.",
+    "fuente": "Hechos de importancia SMV"
+   },
+   {
+    "anio": 2021,
+    "tipo": "inauguracion",
+    "grupo": "g-breca",
+    "titulo": "Mina Justa (Marcobre) entra en producción",
+    "descripcion": "Minsur (60%) y Alxar (40%) ponen en marcha la operación cuprífera en Ica.",
+    "fuente": "Memoria Minsur"
+   },
+   {
+    "anio": 2021,
+    "tipo": "venta",
+    "grupo": "g-romero",
+    "titulo": "El Grupo Romero vende el control de Ransa a H.I.G. Capital",
+    "descripcion": "El operador logístico pasa a manos del fondo estadounidense.",
+    "fuente": "Hechos de importancia SMV"
+   },
+   {
+    "anio": 2022,
+    "tipo": "relevo",
+    "grupo": "g-credicorp",
+    "titulo": "Gianfranco Ferrari asume como CEO de Credicorp",
+    "descripcion": "Relevo en la cabeza ejecutiva del mayor holding financiero.",
+    "fuente": "Form 20-F Credicorp"
+   },
+   {
+    "anio": 2023,
+    "tipo": "expansion",
+    "grupo": "g-intercorp",
+    "titulo": "Intercorp profundiza su apuesta digital (Plin, banca abierta)",
+    "descripcion": "Integración de pagos y datos a través del ecosistema del grupo.",
+    "fuente": "Memoria Intercorp"
+   },
+   {
+    "anio": 2024,
+    "tipo": "consolidacion",
+    "grupo": "g-breca",
+    "titulo": "Minsur consolida cobre (Mina Justa) y estaño como motor",
+    "descripcion": "El cobre eleva los ingresos del brazo minero de Breca.",
+    "fuente": "Memoria Minsur"
+   }
+  ],
+  "ingresos_grupo": {
+   "g-intercorp": {
+    "2019": 28,
+    "2020": 26,
+    "2021": 32,
+    "2022": 37,
+    "2023": 39,
+    "2024": 41
+   },
+   "g-credicorp": {
+    "2019": 14,
+    "2020": 13,
+    "2021": 16,
+    "2022": 19,
+    "2023": 21,
+    "2024": 22
+   },
+   "g-breca": {
+    "2019": 11,
+    "2020": 10,
+    "2021": 15,
+    "2022": 18,
+    "2023": 18,
+    "2024": 19
+   },
+   "g-romero": {
+    "2019": 24,
+    "2020": 25,
+    "2021": 30,
+    "2022": 34,
+    "2023": 34,
+    "2024": 35
+   },
+   "g-gloria": {
+    "2019": 11,
+    "2020": 11,
+    "2021": 13,
+    "2022": 14,
+    "2023": 14,
+    "2024": 15
+   },
+   "g-ferreycorp": {
+    "2019": 5,
+    "2020": 4,
+    "2021": 6,
+    "2022": 7,
+    "2023": 8,
+    "2024": 8
+   },
+   "g-falabella": {
+    "2019": 13,
+    "2020": 11,
+    "2021": 14,
+    "2022": 15,
+    "2023": 15,
+    "2024": 15
+   },
+   "g-ig4": {
+    "2019": 8,
+    "2020": 4,
+    "2021": 4,
+    "2022": 5,
+    "2023": 5,
+    "2024": 5
+   }
+  }
+ }
 }

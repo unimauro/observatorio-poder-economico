@@ -375,6 +375,10 @@ def main() -> None:
     # ── Nodos enriquecidos para el grafo ──────────────────────────────────────
     nodes = []
     for n, d in G.nodes(data=True):
+        # no metemos al grafo empresas aisladas (sin vínculos): ensucian el layout;
+        # siguen visibles en Bolsa/Finanzas/Sectores/Composición.
+        if d["tipo"] in ("empresa", "holding") and degree.get(n, 0) == 0:
+            continue
         base = {
             "id": n, "label": d.get("nombre", n), "tipo": d["tipo"],
             "sector": d.get("sector"), "grupo": d.get("grupo"),
@@ -401,7 +405,8 @@ def main() -> None:
     # ── Análisis de estados financieros (empresa a empresa) ──────────────────
     finanzas_out = []
     for eid, e in empresas.items():
-        if e.get("ingresos_aprox") is None and e.get("utilidad") is None:
+        # incluye toda listada BVL aunque no tenga EEFF, para que aparezca en Bolsa
+        if e.get("ingresos_aprox") is None and e.get("utilidad") is None and not e.get("bvl"):
             continue
         finanzas_out.append({
             "id": eid, "nombre": e["nombre"], "sector": e["sector"],
