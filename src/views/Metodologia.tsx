@@ -69,14 +69,15 @@ apalancamiento = activos / patrimonio`}</div>
           aparte, como control cualitativo.
         </p>
 
-        <h3>Gerencias</h3>
+        <h3>Gerencias y CEOs</h3>
         <p>
           El grafo distingue <strong>directores</strong> (presidencia y directorio) de
-          <strong> gerentes generales</strong> (la línea ejecutiva). Como la SMV bloquea el scraping
-          automatizado, las gerencias generales aparecen por ahora como <em>slots «por confirmar»</em>:
-          el cargo existe y está ubicado en su empresa, pero el nombre del titular se completará
-          corriendo <code>etl/scraper_directorios.py</code> desde una conexión en el Perú. No
-          inventamos nombres de personas.
+          <strong> gerentes generales / CEOs</strong> (la línea ejecutiva). Los gerentes generales de
+          las principales empresas se incorporaron con <strong>nombre y fuente verificable</strong>
+          (memorias, SMV, prensa económica 2024–2026); cada ficha enlaza su fuente. No inventamos
+          nombres: cuando un cargo no tiene fuente pública confiable se deja vacío. La cobertura
+          completa de gerencias y directorios se ampliará con el scraper SMV
+          (<code>etl/scraper_directorios.py</code>), que debe correrse desde una conexión en el Perú.
         </p>
 
         <h3>Network Affinity Score</h3>

@@ -57,6 +57,24 @@ export default function Directorios({ datos }: { datos: Datos }) {
   const pares = datos.conexiones.pares.filter((p) => p.directores.length > 0)
   const nombreDe = (id: string) => datos.nodes.find((n) => n.id === id)?.label ?? id
 
+  // Liderazgo ejecutivo: presidente del directorio + gerente general por empresa
+  const liderazgo = useMemo(() => {
+    const empresasN = datos.nodes.filter((n) => n.tipo === 'empresa' || n.tipo === 'holding')
+    return empresasN
+      .map((e) => {
+        const pres = datos.edges.find((ed) => ed.target === e.id && ed.tipo === 'presidente')
+        const ceo = datos.edges.find((ed) => ed.target === e.id && ed.tipo === 'gerente_general')
+        return {
+          id: e.id, empresa: e.label, grupo: e.grupo_nombre,
+          presidente: pres ? nombreDe(pres.source) : null,
+          ceo: ceo ? nombreDe(ceo.source) : null,
+        }
+      })
+      .filter((x) => x.presidente || x.ceo)
+      .sort((a, b) => Number(!!b.ceo) - Number(!!a.ceo))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [datos])
+
   return (
     <section>
       <div className="section-head">
@@ -64,9 +82,33 @@ export default function Directorios({ datos }: { datos: Datos }) {
         <p>
           Quién se sienta en qué mesa: cada rombo es una persona, cada círculo una empresa, y cada
           arista un cargo (presidencia, dirección o gerencia general). Las personas que aparecen en
-          varios directorios son los <strong>puentes humanos</strong> entre empresas y grupos. Las
-          gerencias marcadas <em>«por confirmar»</em> son slots que poblará el scraper SMV.
+          varios directorios son los <strong>puentes humanos</strong> entre empresas y grupos. La
+          <strong> gerencia general (CEO)</strong> es la línea ejecutiva, distinta de la presidencia
+          del directorio.
         </p>
+      </div>
+
+      <div className="panel" style={{ marginBottom: 18 }}>
+        <div className="panel-head">liderazgo ejecutivo · presidencia del directorio y gerencia general (CEO)</div>
+        <div className="panel-body" style={{ overflowX: 'auto' }}>
+          <table className="tabla">
+            <thead>
+              <tr><th>Empresa</th><th>Grupo</th><th>Presidente del directorio</th><th>Gerente General / CEO</th></tr>
+            </thead>
+            <tbody>
+              {liderazgo.map((l) => (
+                <tr key={l.id}>
+                  <td><b>{l.empresa}</b></td>
+                  <td className="dim">{l.grupo ?? '—'}</td>
+                  <td>{l.presidente ?? <span className="dim">—</span>}</td>
+                  <td>{l.ceo
+                    ? <b style={{ color: 'var(--ocre)' }}>{l.ceo}</b>
+                    : <span className="dim">—</span>}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
       <div className="grid2">
         <div className="panel">

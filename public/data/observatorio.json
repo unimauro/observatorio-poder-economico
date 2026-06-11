@@ -2639,7 +2639,7 @@
   },
   {
    "id": "gg-alicorp",
-   "label": "Gerencia General · Alicorp",
+   "label": "Gonzalo Uribe Arbeláez",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2654,9 +2654,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General de Alicorp (desde nov-2025).",
+   "fuente": "Alicorp — comunicado de cambio en gerencia general (alicorp.com.pe)",
    "grado": 1,
    "pagerank": 0.00727,
    "betweenness": 0.0,
@@ -2665,7 +2665,7 @@
   },
   {
    "id": "gg-interbank",
-   "label": "Gerencia General · Interbank",
+   "label": "Carlos Tori Grande",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2680,9 +2680,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General de Interbank.",
+   "fuente": "Gestión — designación de gerente general de Interbank",
    "grado": 1,
    "pagerank": 0.00719,
    "betweenness": 0.0,
@@ -2691,7 +2691,7 @@
   },
   {
    "id": "gg-bcp",
-   "label": "Gerencia General · BCP",
+   "label": "Christian Hausherr",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2706,9 +2706,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General del BCP (designado 2024; verificar contra memoria SMV de BCP Perú).",
+   "fuente": "La República (oct-2024) — designación de gerente general del BCP",
    "grado": 1,
    "pagerank": 0.00826,
    "betweenness": 0.0,
@@ -2717,7 +2717,7 @@
   },
   {
    "id": "gg-minsur",
-   "label": "Gerencia General · Minsur",
+   "label": "Juan Luis Kruger Sayán",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2732,9 +2732,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General de Minsur.",
+   "fuente": "Minsur — alta gerencia (minsur.com)",
    "grado": 1,
    "pagerank": 0.00826,
    "betweenness": 0.0,
@@ -2743,7 +2743,7 @@
   },
   {
    "id": "gg-ferreycorp",
-   "label": "Gerencia General · Ferreycorp",
+   "label": "Mariela García Figari de Fabbri",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2758,9 +2758,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General de Ferreycorp.",
+   "fuente": "Ferreycorp — gobierno corporativo / directorio (ferreycorp.com.pe)",
    "grado": 1,
    "pagerank": 0.00951,
    "betweenness": 0.0,
@@ -2769,7 +2769,7 @@
   },
   {
    "id": "gg-leche-gloria",
-   "label": "Gerencia General · Leche Gloria",
+   "label": "Cristiano Oliveira Sampaio",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2784,9 +2784,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General de Leche Gloria.",
+   "fuente": "Semana Económica — designación de gerente general de Leche Gloria",
    "grado": 1,
    "pagerank": 0.00719,
    "betweenness": 0.0,
@@ -2795,7 +2795,7 @@
   },
   {
    "id": "gg-inretail",
-   "label": "Gerencia General · InRetail",
+   "label": "Juan Carlos Vallejo Blanco",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2810,9 +2810,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "CEO / Gerente General de InRetail Perú.",
+   "fuente": "InRetail — Datos de Información Anual 2024 (inretail.pe)",
    "grado": 1,
    "pagerank": 0.00951,
    "betweenness": 0.0,
@@ -2821,7 +2821,7 @@
   },
   {
    "id": "gg-buenaventura",
-   "label": "Gerencia General · Buenaventura",
+   "label": "Leandro García Raggio",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2836,9 +2836,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "CEO de Compañía de Minas Buenaventura.",
+   "fuente": "Buenaventura — Annual Report / SEC 20-F",
    "grado": 1,
    "pagerank": 0.00809,
    "betweenness": 0.0,
@@ -2847,7 +2847,7 @@
   },
   {
    "id": "gg-rimac",
-   "label": "Gerencia General · Rímac",
+   "label": "Mario Potestá Martínez",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2862,9 +2862,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "Gerente General de Rímac Seguros (titular desde 2025).",
+   "fuente": "Gestión — designación de gerente general de Rímac Seguros",
    "grado": 1,
    "pagerank": 0.00826,
    "betweenness": 0.0,
@@ -2873,7 +2873,7 @@
   },
   {
    "id": "gg-aenza",
-   "label": "Gerencia General · AENZA",
+   "label": "Francisco Sardón de Taboada",
    "tipo": "persona",
    "sector": null,
    "grupo": null,
@@ -2888,9 +2888,9 @@
    "patrimonio": null,
    "market_cap": null,
    "ratios": null,
-   "por_confirmar": true,
-   "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
-   "fuente": null,
+   "por_confirmar": false,
+   "nota": "CEO / Gerente General de AENZA (desde ene-2026).",
+   "fuente": "El Comercio — AENZA designa a Francisco Sardón como CEO",
    "grado": 1,
    "pagerank": 0.0106,
    "betweenness": 0.0,
@@ -3646,70 +3646,70 @@
    "target": "alicorp",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-interbank",
    "target": "interbank",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-bcp",
    "target": "bcp",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-minsur",
    "target": "minsur",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-ferreycorp",
    "target": "ferreycorp",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-leche-gloria",
    "target": "leche-gloria",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-inretail",
    "target": "inretail",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-buenaventura",
    "target": "buenaventura",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-rimac",
    "target": "rimac",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   },
   {
    "source": "gg-aenza",
    "target": "aenza",
    "tipo": "gerente_general",
    "pct": null,
-   "fuente": "SMV — Gerencia (slot pendiente de scraper)"
+   "fuente": "Gerencia general — fuente pública 2024–2026 (ver ficha de la persona)"
   }
  ],
  "ranking": [
@@ -5644,8 +5644,8 @@
    },
    {
     "id": "gg-alicorp",
-    "nombre": "Gerencia General · Alicorp",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Gonzalo Uribe Arbeláez",
+    "nota": "Gerente General de Alicorp (desde nov-2025).",
     "cargos": [
      {
       "empresa": "alicorp",
@@ -5659,8 +5659,8 @@
    },
    {
     "id": "gg-interbank",
-    "nombre": "Gerencia General · Interbank",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Carlos Tori Grande",
+    "nota": "Gerente General de Interbank.",
     "cargos": [
      {
       "empresa": "interbank",
@@ -5674,8 +5674,8 @@
    },
    {
     "id": "gg-bcp",
-    "nombre": "Gerencia General · BCP",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Christian Hausherr",
+    "nota": "Gerente General del BCP (designado 2024; verificar contra memoria SMV de BCP Perú).",
     "cargos": [
      {
       "empresa": "bcp",
@@ -5689,8 +5689,8 @@
    },
    {
     "id": "gg-minsur",
-    "nombre": "Gerencia General · Minsur",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Juan Luis Kruger Sayán",
+    "nota": "Gerente General de Minsur.",
     "cargos": [
      {
       "empresa": "minsur",
@@ -5704,8 +5704,8 @@
    },
    {
     "id": "gg-ferreycorp",
-    "nombre": "Gerencia General · Ferreycorp",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Mariela García Figari de Fabbri",
+    "nota": "Gerente General de Ferreycorp.",
     "cargos": [
      {
       "empresa": "ferreycorp",
@@ -5719,8 +5719,8 @@
    },
    {
     "id": "gg-leche-gloria",
-    "nombre": "Gerencia General · Leche Gloria",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Cristiano Oliveira Sampaio",
+    "nota": "Gerente General de Leche Gloria.",
     "cargos": [
      {
       "empresa": "leche-gloria",
@@ -5734,8 +5734,8 @@
    },
    {
     "id": "gg-inretail",
-    "nombre": "Gerencia General · InRetail",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Juan Carlos Vallejo Blanco",
+    "nota": "CEO / Gerente General de InRetail Perú.",
     "cargos": [
      {
       "empresa": "inretail",
@@ -5749,8 +5749,8 @@
    },
    {
     "id": "gg-buenaventura",
-    "nombre": "Gerencia General · Buenaventura",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Leandro García Raggio",
+    "nota": "CEO de Compañía de Minas Buenaventura.",
     "cargos": [
      {
       "empresa": "buenaventura",
@@ -5764,8 +5764,8 @@
    },
    {
     "id": "gg-rimac",
-    "nombre": "Gerencia General · Rímac",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Mario Potestá Martínez",
+    "nota": "Gerente General de Rímac Seguros (titular desde 2025).",
     "cargos": [
      {
       "empresa": "rimac",
@@ -5779,8 +5779,8 @@
    },
    {
     "id": "gg-aenza",
-    "nombre": "Gerencia General · AENZA",
-    "nota": "Cargo de gerencia general. Titular pendiente de verificación vía scraper SMV.",
+    "nombre": "Francisco Sardón de Taboada",
+    "nota": "CEO / Gerente General de AENZA (desde ene-2026).",
     "cargos": [
      {
       "empresa": "aenza",
@@ -8460,10 +8460,10 @@
    "alta": 7,
    "media": 3,
    "por_tipo": {
-    "afp_parte_relacionada": 1,
     "vehiculo_compartido": 2,
-    "conglomerado_financiero": 4,
-    "interlock_cruzado": 3
+    "afp_parte_relacionada": 1,
+    "interlock_cruzado": 3,
+    "conglomerado_financiero": 4
    }
   },
   "casos": [
