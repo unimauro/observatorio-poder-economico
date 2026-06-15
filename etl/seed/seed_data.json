@@ -1,6 +1,6 @@
 {
  "meta": {
-  "version": "0.3.0",
+  "version": "0.3.1",
   "actualizado": "2026-06-10",
   "disclaimer": "Conjunto de datos SEMILLA con fines demostrativos, elaborado a partir de información pública (memorias anuales, SMV, BVL, SBS, sitios corporativos). Las cifras son aproximadas, los porcentajes accionariales son referenciales y los cargos directivos pueden haber cambiado. Verificar contra la fuente primaria antes de citar.",
   "fuentes": [
@@ -1108,10 +1108,10 @@
    "sector": "Minería",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 37000,
+   "empleados_aprox": 14000,
    "nota": "Cobre (Toquepala, Cuajone); cotiza NYSE y BVL (SCCO/SPCCPI2).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "México"
   },
   {
@@ -1121,10 +1121,10 @@
    "sector": "Minería",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 3000,
+   "empleados_aprox": 4500,
    "nota": "Polimetálica (zinc, plomo, plata); controlada por Glencore (VOLCABC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Suiza"
   },
   {
@@ -1134,10 +1134,10 @@
    "sector": "Minería",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 3700,
+   "empleados_aprox": 3500,
    "nota": "Zinc/cobre/plomo (Cerro Lindo, El Porvenir); Votorantim (NEXAPEC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Brasil"
   },
   {
@@ -1173,10 +1173,10 @@
    "sector": "Minería",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 4000,
+   "empleados_aprox": 4500,
    "nota": "Único gran productor de hierro del país (Marcona). Cap ~S/10.7 mil M (SHPC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "China"
   },
   {
@@ -1186,10 +1186,10 @@
    "sector": "Minería",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 3300,
+   "empleados_aprox": 4000,
    "nota": "Oro en Pataz (La Libertad); capital peruano (PODERC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1277,10 +1277,10 @@
    "sector": "Energía y combustibles",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 20000,
+   "empleados_aprox": 700,
    "nota": "Principal refinería privada; controlada por Repsol (RELAPAC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "España"
   },
   {
@@ -1290,10 +1290,10 @@
    "sector": "Servicios públicos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 3500,
+   "empleados_aprox": 450,
    "nota": "Generación térmica, hidro y renovable (ENGIEC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Francia"
   },
   {
@@ -1303,10 +1303,10 @@
    "sector": "Servicios públicos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 3000,
+   "empleados_aprox": 500,
    "nota": "Principal generadora privada; ex Enel, hoy Actis/Niagara (ORYGENC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Reino Unido"
   },
   {
@@ -1316,10 +1316,10 @@
    "sector": "Servicios públicos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 4000,
+   "empleados_aprox": 1300,
    "nota": "Distribuidora de Lima norte; ex Enel, hoy Actis/Niagara.",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Reino Unido"
   },
   {
@@ -1329,10 +1329,10 @@
    "sector": "Servicios públicos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 4500,
+   "empleados_aprox": 1700,
    "nota": "Distribuidora de Lima sur; controlada por China Three Gorges (LUSURC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "China"
   },
   {
@@ -1368,10 +1368,10 @@
    "sector": "Servicios públicos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 400,
+   "empleados_aprox": 200,
    "nota": "Hidroeléctrica El Platanal (Cañete) del Grupo UNACEM.",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1381,10 +1381,10 @@
    "sector": "Cemento y construcción",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 6500,
+   "empleados_aprox": 7000,
    "nota": "Mayor cementera del país (Andino + Atocongo) (UNACEMC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1394,10 +1394,10 @@
    "sector": "Industria y maquinaria",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 6500,
+   "empleados_aprox": 4000,
    "nota": "Mayor siderúrgica del país (barras, perfiles) (CORAREC1/CORAREI1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1407,10 +1407,10 @@
    "sector": "Industria y maquinaria",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 2500,
+   "empleados_aprox": 1500,
    "nota": "Siderúrgica de Chimbote controlada por Gerdau (SIDERC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Brasil"
   },
   {
@@ -1420,10 +1420,10 @@
    "sector": "Pesca",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 1800,
+   "empleados_aprox": 1500,
    "nota": "Pesquera de harina/aceite y consumo humano; Austevoll (AUSTRAC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Noruega"
   },
   {
@@ -1433,10 +1433,10 @@
    "sector": "Pesca",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 1500,
+   "empleados_aprox": 2000,
    "nota": "Pesquera de harina/aceite y CHD; capital peruano (EXALMC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1446,10 +1446,10 @@
    "sector": "Finanzas y banca",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 1500,
+   "empleados_aprox": 2500,
    "nota": "Banco múltiple del grupo ecuatoriano Pichincha (BPICHC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Ecuador"
   },
   {
@@ -1563,10 +1563,10 @@
    "sector": "Seguros",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 2500,
+   "empleados_aprox": 2500,
    "nota": "Aseguradora arequipeña de capital peruano (POSITIC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1576,10 +1576,10 @@
    "sector": "Seguros",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 1200,
+   "empleados_aprox": 1500,
    "nota": "Filial peruana de la aseguradora española Mapfre (MAPFSGC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "España"
   },
   {
@@ -1615,10 +1615,10 @@
    "sector": "Consumo masivo",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 7800,
+   "empleados_aprox": 3500,
    "nota": "Cervecera dominante del país; AB InBev (BACKUSI1/BACKUAC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Bélgica"
   },
   {
@@ -1628,10 +1628,10 @@
    "sector": "Consumo masivo",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 600,
+   "empleados_aprox": 600,
    "nota": "Cervecera de la selva (Pucallpa); subsidiaria de Backus (SNJUANC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Bélgica"
   },
   {
@@ -1641,10 +1641,10 @@
    "sector": "Consumo masivo",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 1200,
+   "empleados_aprox": 1800,
    "nota": "Segunda láctea del país (lácteos, embutidos, jugos) (LAIVEBC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1654,10 +1654,10 @@
    "sector": "Consumo masivo",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 4500,
+   "empleados_aprox": 4000,
    "nota": "Embotellador de Coca-Cola e Inca Kola; Arca Continental (CORLINI1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "México"
   },
   {
@@ -1667,10 +1667,10 @@
    "sector": "Agroindustria",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 700,
+   "empleados_aprox": 2500,
    "nota": "Azucarera de Trujillo del grupo colombiano Manuelita (LAREDOC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": "Colombia"
   },
   {
@@ -1680,10 +1680,10 @@
    "sector": "Agroindustria",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 400,
+   "empleados_aprox": 3000,
    "nota": "Azucarera de Lambayeque; grupo Oviedo (POMALCC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1758,10 +1758,10 @@
    "sector": "Agroindustria",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 350,
+   "empleados_aprox": 2000,
    "nota": "Azucarera de Áncash del grupo Gloria (SNJACIC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1810,10 +1810,10 @@
    "sector": "Inmobiliario",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 500,
+   "empleados_aprox": 500,
    "nota": "Desarrolladora inmobiliaria del grupo Wiese (INVCENC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1823,10 +1823,10 @@
    "sector": "Inmobiliario",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 1200,
+   "empleados_aprox": 1500,
    "nota": "Inmobiliaria, estacionamientos y hotelería (PORTAC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1901,10 +1901,10 @@
    "sector": "Textil",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 300,
+   "empleados_aprox": 1500,
    "nota": "Textil de algodón pima; grupo Romero (CRETEXC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1914,10 +1914,10 @@
    "sector": "Textil",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 250,
+   "empleados_aprox": 800,
    "nota": "Fabricante de tejidos planos (UNITEXC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -1953,10 +1953,10 @@
    "sector": "Textil",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 500,
+   "empleados_aprox": 1200,
    "nota": "Procesador y exportador de fibra de alpaca (Arequipa) (MICHEI1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -2057,10 +2057,10 @@
    "sector": "Diversos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 800,
+   "empleados_aprox": 3000,
    "nota": "Mayor grupo de medios del país (diario El Comercio) (ELCOMEI1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -2083,10 +2083,10 @@
    "sector": "Diversos",
    "tipo": "empresa",
    "bvl": true,
-   "ingresos_aprox": null,
-   "empleados_aprox": null,
+   "ingresos_aprox": 500,
+   "empleados_aprox": 3000,
    "nota": "Transporte de valores y gestión de efectivo (HERMESC1).",
-   "fuente": "BVL — listado de emisores / SMV (verificado 2025)",
+   "fuente": "Aprox. EEFF 2023–2024 (memorias / SMV) — cifra de muestra, verificar antes de citar",
    "pais": null
   },
   {
@@ -3635,18 +3635,235 @@
    "market_cap": null
   },
   "shougang-hierro": {
-   "ebitda": null,
-   "utilidad": null,
-   "activos": null,
-   "patrimonio": null,
+   "ebitda": 1200,
+   "utilidad": 600,
+   "activos": 5000,
+   "patrimonio": 3500,
    "market_cap": 10710
   },
   "inv-centenario": {
-   "ebitda": null,
-   "utilidad": null,
-   "activos": null,
-   "patrimonio": null,
+   "ebitda": 250,
+   "utilidad": 120,
+   "activos": 3000,
+   "patrimonio": 1800,
    "market_cap": 496
+  },
+  "southern-copper": {
+   "ebitda": 20000,
+   "utilidad": 9000,
+   "activos": 63000,
+   "patrimonio": 33000,
+   "market_cap": null
+  },
+  "volcan": {
+   "ebitda": 1100,
+   "utilidad": 150,
+   "activos": 9000,
+   "patrimonio": 3000,
+   "market_cap": null
+  },
+  "nexa-peru": {
+   "ebitda": 950,
+   "utilidad": 200,
+   "activos": 6000,
+   "patrimonio": 3000,
+   "market_cap": null
+  },
+  "poderosa": {
+   "ebitda": 1000,
+   "utilidad": 500,
+   "activos": 2500,
+   "patrimonio": 1500,
+   "market_cap": null
+  },
+  "aceros-arequipa": {
+   "ebitda": 800,
+   "utilidad": 350,
+   "activos": 7000,
+   "patrimonio": 4000,
+   "market_cap": null
+  },
+  "siderperu": {
+   "ebitda": 250,
+   "utilidad": 120,
+   "activos": 2500,
+   "patrimonio": 1500,
+   "market_cap": null
+  },
+  "engie-peru": {
+   "ebitda": 1400,
+   "utilidad": 600,
+   "activos": 9000,
+   "patrimonio": 4000,
+   "market_cap": null
+  },
+  "orygen-peru": {
+   "ebitda": 1200,
+   "utilidad": 500,
+   "activos": 8000,
+   "patrimonio": 4500,
+   "market_cap": null
+  },
+  "enel-distribucion": {
+   "ebitda": 1100,
+   "utilidad": 500,
+   "activos": 7000,
+   "patrimonio": 3000,
+   "market_cap": null
+  },
+  "luz-del-sur": {
+   "ebitda": 1800,
+   "utilidad": 700,
+   "activos": 10000,
+   "patrimonio": 4000,
+   "market_cap": null
+  },
+  "relapasa": {
+   "ebitda": 500,
+   "utilidad": 200,
+   "activos": 7000,
+   "patrimonio": 2000,
+   "market_cap": null
+  },
+  "unacem": {
+   "ebitda": 1600,
+   "utilidad": 600,
+   "activos": 14000,
+   "patrimonio": 7000,
+   "market_cap": null
+  },
+  "celepsa": {
+   "ebitda": 250,
+   "utilidad": 120,
+   "activos": 1800,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "backus": {
+   "ebitda": 3000,
+   "utilidad": 1700,
+   "activos": 6500,
+   "patrimonio": 2500,
+   "market_cap": null
+  },
+  "cerveceria-san-juan": {
+   "ebitda": 200,
+   "utilidad": 120,
+   "activos": 700,
+   "patrimonio": 400,
+   "market_cap": null
+  },
+  "laive": {
+   "ebitda": 110,
+   "utilidad": 45,
+   "activos": 900,
+   "patrimonio": 500,
+   "market_cap": null
+  },
+  "corporacion-lindley": {
+   "ebitda": 700,
+   "utilidad": 250,
+   "activos": 5000,
+   "patrimonio": 1500,
+   "market_cap": null
+  },
+  "banco-pichincha": {
+   "ebitda": null,
+   "utilidad": 80,
+   "activos": 12000,
+   "patrimonio": 1200,
+   "market_cap": null
+  },
+  "la-positiva": {
+   "ebitda": null,
+   "utilidad": 150,
+   "activos": 5000,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "mapfre-peru": {
+   "ebitda": null,
+   "utilidad": 60,
+   "activos": 2500,
+   "patrimonio": 600,
+   "market_cap": null
+  },
+  "los-portales": {
+   "ebitda": 200,
+   "utilidad": 80,
+   "activos": 2500,
+   "patrimonio": 700,
+   "market_cap": null
+  },
+  "creditex": {
+   "ebitda": 30,
+   "utilidad": 10,
+   "activos": 400,
+   "patrimonio": 250,
+   "market_cap": null
+  },
+  "michell": {
+   "ebitda": 50,
+   "utilidad": 20,
+   "activos": 600,
+   "patrimonio": 350,
+   "market_cap": null
+  },
+  "universal-textil": {
+   "ebitda": 20,
+   "utilidad": 8,
+   "activos": 350,
+   "patrimonio": 200,
+   "market_cap": null
+  },
+  "el-comercio": {
+   "ebitda": 120,
+   "utilidad": 50,
+   "activos": 1200,
+   "patrimonio": 600,
+   "market_cap": null
+  },
+  "hermes": {
+   "ebitda": 90,
+   "utilidad": 35,
+   "activos": 700,
+   "patrimonio": 300,
+   "market_cap": null
+  },
+  "exalmar": {
+   "ebitda": 250,
+   "utilidad": 80,
+   "activos": 2000,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "austral-group": {
+   "ebitda": 300,
+   "utilidad": 100,
+   "activos": 2000,
+   "patrimonio": 1000,
+   "market_cap": null
+  },
+  "agro-laredo": {
+   "ebitda": 150,
+   "utilidad": 60,
+   "activos": 1500,
+   "patrimonio": 900,
+   "market_cap": null
+  },
+  "agro-pomalca": {
+   "ebitda": 50,
+   "utilidad": 10,
+   "activos": 1200,
+   "patrimonio": 600,
+   "market_cap": null
+  },
+  "san-jacinto": {
+   "ebitda": 60,
+   "utilidad": 20,
+   "activos": 900,
+   "patrimonio": 500,
+   "market_cap": null
   }
  },
  "temporal": {
